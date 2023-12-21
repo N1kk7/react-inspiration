@@ -1,11 +1,89 @@
-// .App-logo {
-//   height: 40vmin;
-//   pointer-events: none;
-// }
+.App-footer {
+  background-color: var(--footer-background-color);
+  .top-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 5vh;
+    height: 15vh;
+    .logoWrapper{
+      .logo{
+        .footerTitle{
+          color: var(--Main-dark, #141414);
+          font-family: var(--font-inter);
+          font-size: 47px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 57.6px; /* 122.553% */
+          text-transform: uppercase;
+        }
+      }
+      .logo-description {
+        span{
+          color: var(--Grey, #9E9E9E);
+          font-family: Inter;
+          font-size: 19px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px; /* 157.895% */
+        }
+      }
+    }
+    .listWrapper {
+      display: flex;
+      justify-content: flex-start;
+      .list {
+        width: 10vw;
+        ul {
+          margin: 0;
+          li{
+            color: var(--Grey, #9E9E9E);
+            font-family: var(--font-inter);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            list-style: none;
+            text-align: left;
+            padding: 7px 0;
+            cursor: pointer;
+          }
+          .titleList{
+            color: var(--Main-dark, #141414);
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  hr{
+    border-top: 1px solid var(--border-color);
+  }
+  .bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    .buttonWrapper {
+      display: flex;
+      button{
+        display: inline-block;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--Main-dark, #141414);
+        font-family: var(--font-inter);
 
-// .App-header {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   color: white;
-// }
+      }
+      .vLine {
+        display: inline-block;
+        width: 1px;
+        height: 20px;
+        background-color: var(--Grey, #9E9E9E);
+        margin: 0 10px;
+
+      }
+    }
+  }
+}
