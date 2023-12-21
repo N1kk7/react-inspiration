@@ -1,5 +1,6 @@
 import Header from './components/Header/Header.tsx';
 import Footer from './components/Footer/Footer.tsx';
+import MainPage from './pages/MainPage/MainPage.tsx'
 import './style/App.scss';
 import React from 'react';
 import {
@@ -27,7 +28,7 @@ function App() {
           <Header />
 
           <Routes>
-            <Route path="/" element={<div>Home</div>} />
+            <Route path="/" element={<MainPage />} />
             {/* <Route path="/gallery" element={<div>My Gallery</div>} /> */}
           </Routes>
 
@@ -43,7 +44,7 @@ function App() {
       </div>
 
     </Router>
-    
+
   );
 }
 
