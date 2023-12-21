@@ -16,11 +16,11 @@
     flex-grow: 1;
     flex-shrink: 1;
     .Page-Name{
-      
-      color: #141414;
+
+      color: var(--main-text-color);
       text-align: center;
       text-decoration: none;
-      font-family: --font-inter;
+      font-family: inherit;
       font-size: 14px;
       font-style: normal;
       font-weight: 600;
@@ -28,12 +28,12 @@
     }
   }
   .Title-Page{
-    
+
     flex-grow: 0;
     flex-shrink: 0;
-    color: #141414;
+    color: var(--main-text-color);
     text-align: center;
-    font-family: --font-inter;
+    font-family: inherit;
     font-size: 21px;
     font-style: normal;
     font-weight: 400;
@@ -52,8 +52,8 @@
       cursor: pointer;
     }
     .log-btn{
-      color: #141414;
-      font-family: --font-inter;
+      color: var(--main-text-color);
+      font-family: inherit;
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
@@ -73,17 +73,17 @@
     }
     .sign-btn{
       padding: 11px 19px;
-      background-color: #141414;
+      background-color: var(--main-text-color);
       border-radius: 50px;
       margin: 0 24px;
       color: #FFF;
       text-align: center;
-      font-family: --font-inter;
+      font-family: inherit;
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
       line-height: normal;
-      
+
     }
     .sign-btn:hover{
       background-color: #595959;
