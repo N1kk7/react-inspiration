@@ -7,14 +7,14 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux';
-import { decrement, increment } from './redux/rootSlice.tsx';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { decrement, increment } from './redux/rootSlice.tsx';
 // import count from './redux/rootSlice.tsx';
 
 
 function App() {
-  const dispatch = useDispatch();
-  const count = useSelector((state: any) => state.mainState.count);
+  // const dispatch = useDispatch();
+  // const count = useSelector((state: any) => state.mainState.count);
 
 
 
@@ -28,14 +28,14 @@ function App() {
 
           <Routes>
             <Route path="/" element={<div>Home</div>} />
-            <Route path="/gallery" element={<div>My Gallery</div>} />
+            {/* <Route path="/gallery" element={<div>My Gallery</div>} /> */}
           </Routes>
 
-          <main>Main</main>
+          {/* <main>Main</main>
 
           <div className="count">{count}</div>
           <button onClick={() => dispatch(increment('ololo'))}>Increment</button>
-          <button onClick={() => dispatch(decrement())}>Decrement</button>
+          <button onClick={() => dispatch(decrement())}>Decrement</button> */}
 
 
           <Footer />

@@ -2,29 +2,29 @@ import React from 'react';
 
 import './Header.scss';
 import { memo } from 'react';
-import { Link } from 'react-router-dom';
+
 
 const Header = () => {
   return (
 
       <div className="container">
       <header className="App-header">
-        {/* routes start */}
-        <a className="App-link" href="/gallery">Gallery</a>
-        <Link className="App-link" to="/gallery">My Collections</Link>
+        <div className="pageMenu">
+          <a className="Page-Name" href="/gallery">Gallery</a>
 
-        {/* routes end */}
+        </div>
+
 
         <a
-          className="App-link"
+          className="App-link Title-Page"
           href="/"
         >
           Adinspiration
         </a>
 
         <div className="login-menu">
-          <button>Log in</button>
-          <button>Sign up</button>
+          <button className='log-btn'>Log in</button>
+          <button className='sign-btn'>Sign up</button>
         </div>
       </header>
     </div>
