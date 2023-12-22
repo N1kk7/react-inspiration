@@ -1,6 +1,6 @@
 .thumbWrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 5vh 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
 }

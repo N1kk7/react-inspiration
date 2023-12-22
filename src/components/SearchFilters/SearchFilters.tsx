@@ -10,28 +10,28 @@ const SearchFilters = () => {
     const dispatch = useDispatch();
     const filterPopup = useSelector((state: any) => state.mainState.filterPopup);
     console.log(filterPopup);
-    
 
-   
+
+
 
     // const arrowDown = require('../../assets/images/arrowDown.svg') as string;
- 
+
     return (
-        <div className="container">
+        <>
             <div className="searchFilterWrapper">
                 <div className="search">
                     <input type="text" placeholder="Search" />
                     <div className="arrowBtn"><img src={arrowRight} alt="" /></div>
                 </div>
                 <div className="filter">
-               
+
                     {/* <img src={arrowDown} alt="" /> */}
                     <div className="filterWrapper" onClick={() => {dispatch(popup('toggle-filter')); }}>
                         <span>Filters</span>
                         <img src={arrowDown} alt="" />
 
                     </div>
-                    
+
                 </div>
             </div>
             {filterPopup && <div className="filterPopup">
@@ -131,7 +131,7 @@ const SearchFilters = () => {
                             </div>
                         </div>
 
-                        
+
                     </div>
                     <div className="platforms">
                         <div className="optionTitle">
@@ -154,7 +154,7 @@ const SearchFilters = () => {
                                     <span>123</span>
                                 </div>
                             </div>
-                            
+
                         </div>
 
                     </div>
@@ -162,8 +162,7 @@ const SearchFilters = () => {
             </div>
 
             }
-            
-        </div>
+        </>
     )
 }
 

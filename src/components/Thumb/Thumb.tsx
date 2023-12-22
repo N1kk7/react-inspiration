@@ -3,6 +3,8 @@ import './Thumb.scss'
 // import thumb-1 from '../../assets/images/thumb-1.png'
 
 export default function Thumb({img, avatar, userName} : any) {
+    console.log(img, avatar, userName);
+
   return (
     <div className="thumbItemWrapper">
         <div className="thumbItem">
@@ -18,6 +20,6 @@ export default function Thumb({img, avatar, userName} : any) {
         </div>
 
     </div>
-    
+
   )
 }
