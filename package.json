@@ -15,7 +15,6 @@
     "redux": "^5.0.0",
     "sass": "^1.69.5",
     "scss": "^0.2.4",
-    "typescript": "^5.3.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -42,5 +41,4 @@
       "last 1 safari version"
     ]
   }
- 
 }

@@ -1,6 +1,6 @@
-import Header from './components/Header/Header.tsx';
-import Footer from './components/Footer/Footer.tsx';
-import MainPage from './pages/MainPage/MainPage.tsx'
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import MainPage from './pages/MainPage/MainPage'
 import './style/App.scss';
 import React from 'react';
 import {
