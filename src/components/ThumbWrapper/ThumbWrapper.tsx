@@ -14,21 +14,103 @@ import user4 from '../../assets/images/user4.png';
 
 
 const ThumbWrapper = () => {
-
+    const thumbsArray:any = [
+        {
+            id: 1,
+            img: thumb1,
+            avatar: user1,
+            userName: 'User1'
+        },
+        {
+            id: 2,
+            img: thumb2,
+            avatar: user2,
+            userName: 'User2'
+        },
+        {
+            id: 3,
+            img: thumb3,
+            avatar: user3,
+            userName: 'User3'
+        },
+        {
+            id: 4,
+            img: thumb4,
+            avatar: user4,
+            userName: 'User4'
+        },
+        {
+            id: 5,
+            img: thumb1,
+            avatar: user1,
+            userName: 'User1'
+        },
+        {
+            id: 6,
+            img: thumb2,
+            avatar: user2,
+            userName: 'User2'
+        },
+        {
+            id: 7,
+            img: thumb3,
+            avatar: user3,
+            userName: 'User3'
+        },
+        {
+            id: 8,
+            img: thumb4,
+            avatar: user4,
+            userName: 'User4'
+        },
+        {
+            id: 9,
+            img: thumb1,
+            avatar: user1,
+            userName: 'User1'
+        },
+        {
+            id: 10,
+            img: thumb2,
+            avatar: user2,
+            userName: 'User2'
+        },
+        {
+            id: 11,
+            img: thumb3,
+            avatar: user3,
+            userName: 'User3'
+        },
+        {
+            id: 12,
+            img: thumb4,
+            avatar: user4,
+            userName: 'User4'
+        },
+        {
+            id: 13,
+            img: thumb1,
+            avatar: user1,
+            userName: 'User1'
+        },
+        {
+            id: 14,
+            img: thumb2,
+            avatar: user2,
+            userName: 'User2'
+        },
+    ]
     return (
 
         <div className="thumbWrapper">
-            <Thumb img={thumb1} avatar={user1} userName="User1" />
-            <Thumb img={thumb2} avatar={user2} userName="User2"/>
-            <Thumb img={thumb3} avatar={user3} userName="User3"/>
-            <Thumb img={thumb4} avatar={user4} userName="User4"/>
-
+            {thumbsArray.map((item: any) => {
+                return (
+                    <Thumb img={item.img} avatar={item.avatar} userName="{item.userName}" key={item.id} />
+                )
+            })};
         </div>
-            
 
-        
     )
-    
 }
 
 export default ThumbWrapper;
