@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchFilters from '../../components/SearchFilters/SearchFilters';
+import ThumbWrapper from '../../components/ThumbWrapper/ThumbWrapper';
 import './MainPage.scss';
 
 const MainPage = () => {
@@ -25,6 +26,7 @@ const MainPage = () => {
             </span>
           </div>
           <SearchFilters/>
+          <ThumbWrapper/>
         </div>
       </div>
     </div>

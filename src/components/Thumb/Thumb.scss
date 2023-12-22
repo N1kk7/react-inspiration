@@ -1,0 +1,27 @@
+.thumbItemWrapper{
+    .thumbItem {
+        display: flex;
+        justify-content: center;
+                align-items: center;
+        width: 280px;
+        height: 474px;
+        border-radius: 26px;
+        background: var(--Extra-Background, #F8F7F4);
+        .thumbImg{
+    
+                
+            img{
+                
+    
+            }
+        }
+    }
+    .userBlock{
+        display: flex;
+        justify-content: center;
+        margin: 1vh 0;
+        .userName {
+          padding: 0 1vw ;
+        }
+    }
+}
