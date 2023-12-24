@@ -1,0 +1,60 @@
+.contGoogle{
+    display: flex;
+    padding: 11px 19px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+}
+
+.choiceMethod {
+  margin: 20px 0;
+  position: relative;
+  span{
+    display: flex;
+    position: absolute;
+    top: 0;
+    background-color: white;
+    padding: 0 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.enterEmailPass {
+    margin-bottom: 15px;
+    input{
+        display: flex;
+        width: 401px;
+        padding: 13px 19px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 50px;
+        border: 1px solid var(--border-color);
+        background: var(--thumb-border-color);
+
+    }
+    
+}
+
+.defaultBtn {
+    display: flex;
+    width: 401px;
+    padding: 11px 19px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    background: var(--main-text-color);
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    color: var(--white);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
