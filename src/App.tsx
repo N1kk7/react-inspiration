@@ -8,14 +8,16 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-// import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 // import { decrement, increment } from './redux/rootSlice.tsx';
 // import count from './redux/rootSlice.tsx';
-
+import LogIn from './components/Modals/LogIn/LogIn';
+import SignIn from './components/Modals/SignIn/SignIn';
 
 function App() {
   // const dispatch = useDispatch();
-  // const count = useSelector((state: any) => state.mainState.count);
+  const loginModal = useSelector((state: any) => state.mainState.logIn);
+  const signInModal = useSelector((state: any) => state.mainState.signIn);
 
 
 
@@ -26,6 +28,9 @@ function App() {
       <div className="App">
         <div className="wrapper">
           <Header />
+
+          {loginModal && <LogIn />}
+          {signInModal && <SignIn />}
 
           <Routes>
             <Route path="/" element={<MainPage />} />

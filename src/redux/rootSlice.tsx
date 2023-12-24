@@ -6,6 +6,8 @@ export const rootSlice = createSlice({
     initialState: {
         count: 0,
         filterPopup: false,
+        signIn: false,
+        logIn: false
     },
     reducers: {
 
@@ -15,11 +17,31 @@ export const rootSlice = createSlice({
                 case 'toggle-filter':
                     state.filterPopup = !state.filterPopup;
                 break;
-                // case 'close-filter':
-                //     state.filterPopup = false;
-                // break;
+                case 'open-signIn':
+                    state.signIn = true;
+                    document.body.style.overflow ='hidden';
+                break;
+                case 'close-signIn':
+                    state.signIn = false;
+                    document.body.style.overflow ='unset';
+
+                break;
+                case 'open-logIn':
+
+                    state.logIn = true;
+                    document.body.style.overflow ='hidden';
+                break;
+                case 'close-logIn':
+                    
+                    state.logIn = false;
+                    document.body.style.overflow ='unset';
+
+                break;
             }
 
+            
+        },
+        joinAdinspiration: (state, action) => {
             
         },
 
@@ -31,5 +53,5 @@ export const rootSlice = createSlice({
     }
 })
 
-export const { popup } = rootSlice.actions;
+export const { popup, joinAdinspiration } = rootSlice.actions;
 export default rootSlice.reducer;
