@@ -13,16 +13,22 @@ import { useSelector } from 'react-redux';
 // import count from './redux/rootSlice.tsx';
 import LogIn from './components/Modals/LogIn/LogIn';
 import SignIn from './components/Modals/SignIn/SignIn';
+import CreatePassword from './components/Modals/CreatePassword/CreatePassword';
+import WelcomeModal from './components/Modals/WelcomeModal/WelcomeModal';
+import GetInfo from './components/Modals/GetInfoModal/GetInfoModal'
+import SelectPlan from './components/Modals/SelectPlanModal/SelectPlanModal'
 
 function App() {
   // const dispatch = useDispatch();
   const loginModal = useSelector((state: any) => state.mainState.logIn);
   const signInModal = useSelector((state: any) => state.mainState.signIn);
-
+  const createPasswordModal = useSelector((state: any) => state.mainState.createPasswordModal);
+  const welcomeModal = useSelector((state: any) => state.welcomeModalState.welcomeModal);
+  const getInfoModal = useSelector((state: any) => state.getInfoState.getInfoModal);
+  const selectPlanModal = useSelector((state: any) => state.selectPlanState.selectPlanModal);
 
 
   return (
-
 
     <Router>
       <div className="App">
@@ -31,6 +37,11 @@ function App() {
 
           {loginModal && <LogIn />}
           {signInModal && <SignIn />}
+          {createPasswordModal && <CreatePassword/>}
+          {welcomeModal && <WelcomeModal/>}
+          {getInfoModal && <GetInfo/>}
+          {selectPlanModal && <SelectPlan/>}
+
 
           <Routes>
             <Route path="/" element={<MainPage />} />

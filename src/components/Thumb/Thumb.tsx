@@ -10,7 +10,6 @@ interface ThumbModel {
 }
 
 export default function Thumb({img, avatar, userName} : ThumbModel) {
-    // console.log(img, avatar, userName);
 
   return (
     <div className="thumbItemWrapper">

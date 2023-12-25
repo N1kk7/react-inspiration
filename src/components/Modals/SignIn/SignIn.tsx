@@ -29,7 +29,7 @@ const SignIn = () => {
                     <ContGoogle/>
                     <ChoiceMethod/>
                     <EnterEmail/>
-                    <DefaultBtn textBtn="Continue with email"/>
+                    <DefaultBtn textBtn="Continue with email" methodBtn="SignIn"/>
                     <div className="modalDescription">
                         <span>
                             Don't have an account?

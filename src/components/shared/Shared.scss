@@ -49,6 +49,8 @@
     background: var(--main-text-color);
     margin-bottom: 30px;
     cursor: pointer;
+    position: relative;
+
 
     color: var(--white);
     text-align: center;
@@ -57,4 +59,33 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+.defaultBtn:hover{
+  background: var(--grey-darker);
+}
+
+.disableBtn{
+  animation: disableBtn  0.2s infinite linear;
+
+
+}
+
+
+@keyframes disableBtn {
+  25%{
+    left: 5px;
+  }
+  50%{
+    left: 0;
+    right: 5px;
+  }
+  75%{
+    right: 0;
+    left: 5px;
+  }
+  100%{
+    left: 0;
+  }
+
+  
 }

@@ -1,0 +1,103 @@
+.welcomeModal{
+    .modal-wrapper {
+      .modalTitle{
+        padding: 90px 0 0px;
+
+      }
+      
+      .nameWrapper {
+        display: flex;
+        justify-content: space-between;
+        text-align: start;
+        .nameTitle{
+            h5{
+                color: var(--main-dark);
+                font-family: var(--font-inter);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+        .nameInput {
+          input{
+            display: inline-flex;
+            padding: 13px 30px;
+            align-items: center;
+            gap: 10px;
+            border-radius: 50px;
+            border: 1px solid var(--Button-Stroke, #EBEBED);
+            background: var(--Extra-Background, #F8F7F4);
+          }
+        }   
+      }
+      .companyWrapper{
+        text-align: start;
+        padding-bottom: 30px;
+        position: relative;
+        .companyTitle{
+            h5{
+                color: var(--Main-dark, #141414);
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+
+            }
+        }
+        .companyInput{
+            position: relative;
+            cursor: pointer !important;
+
+            input{
+                display: inline-flex;
+                height: 19px;
+                width: 401px;
+                padding: 11px 19px;
+                align-items: center;
+                gap: 268px;
+                flex-shrink: 0;
+                border-radius: 50px;
+                border: 1px solid var(--Button-Stroke, #EBEBED);
+            }
+            img{
+                position: absolute;
+                right: 5%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .companyType {
+            position: absolute;
+            bottom: 5vh;
+            right: 0vw;
+            background-color: var(--white);
+            // display: inline-flex;
+            padding: 10px 40px;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: flex-start;
+            border-radius: 15px;
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+            ul{
+                padding-left: 0;
+
+                li{
+                    text-align: start !important;
+                    list-style-type: none;
+                    padding: 11px 0;
+                    color: var(--main-text-color);
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    cursor: pointer;
+                }
+            }
+        }
+      }
+    }
+}
