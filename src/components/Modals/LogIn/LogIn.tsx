@@ -30,7 +30,7 @@ const LogIn = () => {
                         <EnterEmail/>
                         <EnterPass/>
                         {/* <SignInBtn/>*/}
-                        <DefaultBtn textBtn="Sign in"/> 
+                        <DefaultBtn textBtn="Sign in" methodBtn={'Login'}/> 
                         <div className="modalDescription">
                             <span>
                                 Don't have an account?

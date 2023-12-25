@@ -1,0 +1,126 @@
+.selectPlan{
+    .modal-wrapper {
+        width: 500px;
+        padding: 0 85px;
+      .modalTitle {
+        padding-bottom: 0;
+
+        h2{
+            margin-bottom: 16px;
+        }
+      }
+      .planWrapper {
+        display: flex;
+        justify-content: space-between;
+        .plan{
+            position: relative;
+            width: 200px;
+            min-height: 259px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            padding: 0 20px;
+            cursor: pointer;
+            .planType {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .type{
+                h2{
+                    color: var(--main-dark);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+                
+              }
+              .coast{
+                color: var(--main-dark);
+                text-align: right;
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                position: relative;
+                span{
+                    position: absolute;
+                    color: var(--grey);
+                    text-align: right;
+                    font-family: Inter;
+                    font-size: 9px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    bottom: -15px;
+                    width: max-content;
+                    right: 0%;
+                }
+              }
+            }
+            .list{
+                text-align: start;
+                margin-bottom: 100px;
+                ul{
+                    padding-left: 15px;
+                    li{
+                        color: var(--grey);
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        padding: 5px 0;
+                    }
+                }
+            }
+            .planBtn {
+                position: absolute;
+                width: inherit;
+                bottom: 0;
+              .defaultBtn{
+                width: unset;
+
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+              }
+            }   
+
+
+        }
+        .activePlan{
+            background-color: var(--main-text-color);
+            .planType{
+                .type{
+                    h2{
+                        color: var(--white);
+                    }
+                }
+                .coast{
+                    color: var(--white);
+
+                }
+            }
+            .list{
+                ::marker{
+                    color: var(--white);
+
+                }
+            }
+            .planBtn{
+                .defaultBtn{
+                    background-color: var(--white);
+                    color: var(--main-dark);
+                }
+                .defaultBtn:hover{
+                    background-color: var(--thumb-background-color);
+                }
+            }
+        }
+      }
+    }
+}

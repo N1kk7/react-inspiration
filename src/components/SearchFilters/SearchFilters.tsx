@@ -9,7 +9,6 @@ const SearchFilters = () => {
 
     const dispatch = useDispatch();
     const filterPopup = useSelector((state: any) => state.mainState.filterPopup);
-    console.log(filterPopup);
 
 
 

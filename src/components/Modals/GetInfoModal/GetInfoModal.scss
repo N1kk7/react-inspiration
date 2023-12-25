@@ -1,0 +1,64 @@
+.getInfo{
+    .modal-wrapper {
+        .questionTop{
+            padding-top: 100px;
+
+        }
+        .modalQuestion {
+            text-align: start;
+        }
+        .textArea {
+            textarea{
+                display: flex;
+                width: 401px;
+                height: 100px;
+                padding: 13px 19px;
+                align-items: flex-start;
+                gap: 10px;
+                flex-shrink: 0;
+                border-radius: 20px;
+                border: 1px solid var(--border-color);
+                background: var(--thumb-border-color);
+        }
+        ::placeholder{
+            color: var(--grey);
+            font-family: Inter;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: normal;
+        }
+      }
+      .answerList {
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+
+            fieldset{
+                border: none;
+            }
+            label{
+                list-style-type: none;
+                display: inline-flex;
+                width: -webkit-fill-available;
+                cursor: pointer;
+                padding: 11px 19px;
+                align-items: center;
+                gap: 30px;
+                flex-shrink: 0;
+                border-radius: 50px;
+                border: 1px solid var(--border-color);
+                margin: 5px 0;
+    
+            }
+            input{
+                display: none;
+            }
+            input:checked + label{
+                background: var(--thumb-border-color);
+                border: 1px solid var(--thumb-border-color);
+            }
+
+      }
+    }
+}
