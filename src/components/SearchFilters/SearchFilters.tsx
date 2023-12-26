@@ -132,24 +132,25 @@ const SearchFilters = () => {
 
 
                     </div>
+                    
                     <div className="platforms">
                         <div className="optionTitle">
                             <span>Platform:</span>
                         </div>
-                        <div className="platformWrapper">
-                            <div className="platform">
-                                <div className="platformName">
+                        <div className="platformsWrapper">
+                            <div className="category">
+                                <div className="categoryName">
                                     <span>Facebook & Instagram</span>
                                 </div>
-                                <div className="platformCount">
+                                <div className="categoryCount">
                                     <span>122</span>
                                 </div>
                             </div>
-                            <div className="platform">
-                                <div className="platformName">
+                            <div className="category">
+                                <div className="categoryName">
                                     <span>TikTok</span>
                                 </div>
-                                <div className="platformCount">
+                                <div className="categoryCount">
                                     <span>123</span>
                                 </div>
                             </div>

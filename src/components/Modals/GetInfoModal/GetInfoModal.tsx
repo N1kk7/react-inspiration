@@ -2,7 +2,7 @@ import React from "react";
 import DefaultBtn from "../../shared/DefaultBtn";
 import backBtn from '../../../assets/images/backBtn.png'
 import closeBtn from '../../../assets/images/closeBtn.svg'
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getInfo, setAnswer, setMessage } from '../../../redux/getInfoSlice'
 import { welcomePopup } from "../../../redux/welcomeModalSlice";
 

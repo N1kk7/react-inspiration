@@ -15,6 +15,7 @@
     text-align: start;
     flex-grow: 1;
     flex-shrink: 1;
+    padding-left: 20px;
     .Page-Name{
 
       color: var(--main-text-color);
@@ -52,13 +53,12 @@
       background-color: transparent;
       cursor: pointer;
       padding: 11px 19px;
-      margin: 0 24px;
 
 
     }
     .vLine{
       margin: 0;
-      height: 30px;
+      height: 25px;
       position: absolute;
       bottom: 5px;
     }
@@ -72,6 +72,8 @@
       // padding: 1px 24px 10px 0;
       padding-left: 0;
       padding-right: 0;
+      margin: 0 25px;
+
 
       text-decoration: none;
       background-image: linear-gradient(currentColor, currentColor);
@@ -93,6 +95,7 @@
       font-style: normal;
       font-weight: 500;
       line-height: normal;
+      margin-left: 26px;
 
     }
     .sign-btn:hover{

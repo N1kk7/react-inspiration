@@ -61,7 +61,7 @@ body {
 
 .container {
   // max-width: 1180px;
-  max-width: clamp(240px, 85vw, 2000px);
+  max-width: clamp(240px, 1180px, 2000px);
   width: 100%;
   margin: 0 auto;
   padding:  0 15px;
