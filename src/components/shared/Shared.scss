@@ -1,16 +1,23 @@
 .contGoogle{
+    margin: 0 10px;
     display: flex;
-    padding: 11px 19px;
+    padding: 7px 19px;
     justify-content: center;
     align-items: center;
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 14px;
     gap: 10px;
     border-radius: 50px;
     border: 1px solid var(--border-color);
 }
 
 .choiceMethod {
-  margin: 20px 0;
+  margin: 20px 15px 30px;
   position: relative;
+  hr{
+    background-color: var(--border-color);
+  }
   span{
     display: flex;
     position: absolute;
@@ -19,37 +26,53 @@
     padding: 0 10px;
     left: 50%;
     transform: translateX(-50%);
+    color: var(--grey);
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
 }
 
 .enterEmailPass {
-    margin-bottom: 15px;
+    margin-bottom: 17px;
     input{
         display: flex;
-        width: 401px;
+        width: 365px;
+        // padding: 13px 0px 13px 35px;
+        margin: 0 auto;
         padding: 13px 19px;
         align-items: center;
         gap: 10px;
         border-radius: 50px;
         border: 1px solid var(--border-color);
         background: var(--thumb-border-color);
+        letter-spacing: 1px;
+          // ::placeholder{
+          //   letter-spacing: 1px;
+          // }
 
     }
+    // ::placeholder{
+    //   letter-spacing: 1px;
+    // }
     
 }
 
 .defaultBtn {
     display: flex;
-    width: 401px;
-    padding: 11px 19px;
+    width: 377px;
+    padding: 11px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     border-radius: 50px;
     background: var(--main-text-color);
-    margin-bottom: 30px;
     cursor: pointer;
     position: relative;
+    margin: 0 15px 29px;
 
 
     color: var(--white);
