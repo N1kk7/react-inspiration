@@ -1,6 +1,6 @@
 .main-page {
   &-banner {
-    padding: 100px 0 33px;
+    padding: 109px 0 37px;
     text-align: start;
     position: relative;
 
@@ -11,8 +11,24 @@
       font-size: max( 2vw, 100.318px );
       font-style: normal;
       font-weight: 500;
-      line-height: 88.87px;
+      line-height: 86.8px;
       text-transform: uppercase;
+
+      &__second-line {
+        margin-left: 11px;
+        font-size: 104.553px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 88.87px;
+      }
+
+      &__third-line {
+        font-size: 104.553px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 88.87px;
+        margin-left: 8px;
+      }
     }
 
     &-socials {
@@ -25,9 +41,8 @@
       line-height: normal;
 
       position: absolute;
-      top: 65px;
-      // left: 520px;
-      left: 50vw;
+      top: 71px;
+      left: 521px;
 
 
       &::before {
@@ -35,8 +50,8 @@
         width: 138px;
         height: 53px;
         position: absolute;
-        left: -25px;
-        top: 53px;
+        left: -24px;
+        top: 50px;
         background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="137" height="52" viewBox="0 0 137 52" fill="none"><path opacity="0.3" d="M136.619 2.15468C136.979 1.85582 137.028 1.32177 136.729 0.961855C136.43 0.601936 135.896 0.552439 135.536 0.8513L136.619 2.15468ZM3.15529 51.338C3.33879 51.7683 3.8364 51.9684 4.26673 51.7849L11.2794 48.7946C11.7098 48.6111 11.9099 48.1135 11.7264 47.6832C11.5429 47.2528 11.0453 47.0527 10.6149 47.2362L4.38142 49.8943L1.72339 43.6607C1.53989 43.2304 1.04228 43.0303 0.611947 43.2138C0.181612 43.3973 -0.0184882 43.8949 0.16501 44.3252L3.15529 51.338ZM135.536 0.8513C112.076 20.3318 84.3344 20.3474 59.6389 21.6157C47.3416 22.2472 35.7567 23.1962 25.9918 27.1406C16.1685 31.1086 8.21333 38.0946 3.14857 50.6897L4.72039 51.3217C9.6087 39.1654 17.2185 32.5116 26.6263 28.7114C36.0925 24.8877 47.4051 23.9403 59.7258 23.3076C84.2663 22.0473 112.643 22.0629 136.619 2.15468L135.536 0.8513Z" fill="%239E9E9E"/></svg>');
         background-position: 50% 50%;
         background-size: 100% 100%;
@@ -55,8 +70,8 @@
       line-height: normal;
 
       position: absolute;
-      top: 140px;
-      left: 868px;
+      top: 147px;
+      left: 867px;
 
       &::before {
         content: "";
@@ -83,7 +98,7 @@
       line-height: normal;
 
       position: absolute;
-      top: 401px;
+      top: 406px;
       left: 809px;
 
       &::before {

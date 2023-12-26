@@ -16,84 +16,84 @@ export const thumbsArray: IThumb[] = [
         id: 1,
         img: thumb1,
         avatar: user1,
-        userName: 'User1'
+        userName: 'User Name'
     },
     {
         id: 2,
         img: thumb2,
         avatar: user2,
-        userName: 'User2'
+        userName: 'User Name'
     },
     {
         id: 3,
         img: thumb3,
         avatar: user3,
-        userName: 'User3'
+        userName: 'User Name'
     },
     {
         id: 4,
         img: thumb4,
         avatar: user4,
-        userName: 'User4'
+        userName: 'User Name'
     },
     {
         id: 5,
         img: thumb1,
         avatar: user1,
-        userName: 'User1'
+        userName: 'User Name'
     },
     {
         id: 6,
         img: thumb2,
         avatar: user2,
-        userName: 'User2'
+        userName: 'User Name'
     },
     {
         id: 7,
         img: thumb3,
         avatar: user3,
-        userName: 'User3'
+        userName: 'User Name'
     },
     {
         id: 8,
         img: thumb4,
         avatar: user4,
-        userName: 'User4'
+        userName: 'User Name'
     },
     {
         id: 9,
         img: thumb1,
         avatar: user1,
-        userName: 'User1'
+        userName: 'User Name'
     },
     {
         id: 10,
         img: thumb2,
         avatar: user2,
-        userName: 'User2'
+        userName: 'User Name'
     },
     {
         id: 11,
         img: thumb3,
         avatar: user3,
-        userName: 'User3'
+        userName: 'User Name'
     },
     {
         id: 12,
         img: thumb4,
         avatar: user4,
-        userName: 'User4'
+        userName: 'User Name'
     },
     {
         id: 13,
         img: thumb1,
         avatar: user1,
-        userName: 'User1'
+        userName: 'User Name'
     },
     {
         id: 14,
         img: thumb2,
         avatar: user2,
-        userName: 'User2'
+        userName: 'User Name'
     },
 ]
