@@ -4,27 +4,38 @@
     margin-bottom: 40px;
     cursor: pointer;
     .search {
-        border: 1px solid var(--border-color);
-        padding: 10px 16px 10px 19px;
-        border-radius: 50px;
-        input{
-            border: none;
+      position: relative;
+      width: 100%;
+      max-width: 313px;
 
-        }
-        ::placeholder{
-            display: inline-block;
-            color: var(--Main-dark);
-            font-family: var(--font-inter);
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-        }
-        .arrowBtn {
-            display: inline-block;
-            cursor: pointer;
-        }
-
+      input{
+          border: 1px solid var(--border-color);
+          padding: 11px 17px 10px 17px;
+          border-radius: 50px;
+          width: 100%;
+          max-width: 273px;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+      }
+      ::placeholder{
+          display: inline-block;
+          color: var(--Main-dark);
+          font-family: var(--font-inter);
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+      }
+      .arrowBtn {
+          display: inline-block;
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 17px;
+      }
     }
     .filter {
         border: 1px solid var(--border-color);
@@ -62,7 +73,7 @@
         grid-template-columns: 2fr 1fr;
         grid-template-rows: repeat(3, 120px);
         grid-column-gap: 30px;
-        
+
 
       width: 65vw;
       background-color: var(--white);
@@ -78,7 +89,7 @@
         font-weight: 500;
         line-height: normal;
       }
-      
+
       .categoryWrapper{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -140,7 +151,7 @@
             }
             .categoryCount {
               color: #000;
-  
+
               text-align: right;
               font-family: var(--font-inter);
               font-size: 12px;

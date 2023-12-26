@@ -11,7 +11,11 @@ const MainPage = () => {
         <div className="main-page-wrapper">
 
           <div className="main-page-banner">
-            <h1 className="main-page-banner-title">The best<br /> ad inspiration<br /> in one place</h1>
+            <h1 className="main-page-banner-title">
+              The best<br />
+              <span className="main-page-banner-title__second-line">ad inspiration</span><br />
+              <span className="main-page-banner-title__third-line">in one place</span>
+            </h1>
 
             <span className="main-page-banner-socials">
               Facebook, Instagram & TikTok

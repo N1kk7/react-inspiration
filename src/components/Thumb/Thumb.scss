@@ -9,20 +9,24 @@
         background: var(--Extra-Background, #F8F7F4);
         margin: 0 auto;
         .thumbImg{
-    
-                
+            border-radius: 16px;
+            overflow: hidden;
+
             img{
-                
-    
+
+
             }
         }
     }
     .userBlock{
         display: flex;
         justify-content: center;
-        margin: 1vh 0;
-        .userName {
-          padding: 0 1vw ;
-        }
+        align-items: center;
+        margin: 8px 0 10px;
+    }
+
+    .userAvatar {
+        border-radius: 50%;
+        margin-right: 6px;
     }
 }
