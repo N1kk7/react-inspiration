@@ -32,9 +32,9 @@ const SignIn = () => {
                     <DefaultBtn textBtn="Continue with email" methodBtn="SignIn"/>
                     <div className="modalDescription">
                         <span>
-                            Don't have an account?
+                            Do have an account?
                         </span>
-                        <a href="/">Sign up</a>
+                        <a href="/">Log In</a>
                     </div>
 
 

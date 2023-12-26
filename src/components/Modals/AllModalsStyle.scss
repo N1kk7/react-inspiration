@@ -23,11 +23,11 @@
       
         .backBtn{
             position: absolute;
-            top: 2vh;
+            top: 1.7vh;
             left: 2vh;
             cursor: pointer;
             span{
-                padding-left: 5px;
+                padding-left: 13px;
                 color: var(--Grey, #9E9E9E);
                 font-family: Inter;
                 font-size: 14px;
@@ -38,12 +38,12 @@
         }
         .closeBtn{
             position: absolute;
-            top: 2vh;
-            right: 2vh;
+            top: 1.5vh;
+            right: 1.7vh;
             cursor: pointer;
         }
         .modalTitle{
-            padding: 90px 0 50px;
+            padding: 56px 0 51px;
             h2{
                 color: var(--Main-dark, #141414);
                 font-family: Inter;
