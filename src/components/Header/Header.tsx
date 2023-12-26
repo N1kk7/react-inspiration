@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './Header.scss';
+import './MediaHeader.scss';
 import { memo } from 'react';
 import { useDispatch } from 'react-redux';
 import { popup } from "../../redux/rootSlice";
@@ -35,6 +36,7 @@ const Header = () => {
 
           <div className="login-menu">
             <button className='log-btn' onClick={() => dispatch(popup('open-logIn'))} >Log in</button>
+            <div className="vLine"></div>
             <button className='sign-btn' onClick={() => dispatch(popup('open-signIn'))}>Sign up</button>
           </div>
         </header>

@@ -1,4 +1,5 @@
 import './Footer.scss';
+import './MediaFooter.scss';
 import React from 'react';
 import { memo } from 'react';
 
@@ -43,7 +44,7 @@ const Footer = () => {
         </div>
         <hr />
         <div className="bottom-footer">
-          <div className="buttonWrapper">
+          <div className="buttonWrapper left-buttonWrapper">
             <button>Adinspiration</button>
             <div className="vLine"></div>
             <button>Copyright 2023</button>

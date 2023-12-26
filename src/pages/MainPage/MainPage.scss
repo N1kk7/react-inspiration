@@ -7,7 +7,8 @@
     &-title {
       color: var(--Main-dark, #141414);
       font-family: inherit;
-      font-size: 100.318px;
+      // font-size: 100.318px;
+      font-size: max( 2vw, 100.318px );
       font-style: normal;
       font-weight: 500;
       line-height: 88.87px;
@@ -25,7 +26,9 @@
 
       position: absolute;
       top: 65px;
-      left: 520px;
+      // left: 520px;
+      left: 50vw;
+
 
       &::before {
         content: "";

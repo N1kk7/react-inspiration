@@ -60,7 +60,8 @@ body {
 }
 
 .container {
-  max-width: 1180px;
+  // max-width: 1180px;
+  max-width: clamp(240px, 85vw, 2000px);
   width: 100%;
   margin: 0 auto;
   padding:  0 15px;
@@ -69,4 +70,13 @@ body {
 footer {
   height: 1px;
   display: table-row;
+}
+
+.vLine {
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: var(--Grey, #9E9E9E);
+  margin: 0 10px;
+
 }
