@@ -43,6 +43,7 @@
   }
   .login-menu {
     text-align: end;
+    position: relative;
     flex-grow: 1;
     flex-shrink: 1;
 
@@ -50,6 +51,16 @@
       border: none;
       background-color: transparent;
       cursor: pointer;
+      padding: 11px 19px;
+      margin: 0 24px;
+
+
+    }
+    .vLine{
+      margin: 0;
+      height: 30px;
+      position: absolute;
+      bottom: 5px;
     }
     .log-btn{
       color: var(--main-text-color);
@@ -58,8 +69,9 @@
       font-style: normal;
       font-weight: 500;
       line-height: normal;
-      border-right: 1px solid #9E9E9E !important;
-      padding: 1px 24px 10px 0;
+      // padding: 1px 24px 10px 0;
+      padding-left: 0;
+      padding-right: 0;
 
       text-decoration: none;
       background-image: linear-gradient(currentColor, currentColor);
@@ -72,10 +84,8 @@
       background-size: 70% 2px;
     }
     .sign-btn{
-      padding: 11px 19px;
       background-color: var(--main-text-color);
       border-radius: 50px;
-      margin: 0 24px;
       color: #FFF;
       text-align: center;
       font-family: inherit;

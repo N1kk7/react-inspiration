@@ -2,7 +2,7 @@ import React from 'react';
 import SearchFilters from '../../components/SearchFilters/SearchFilters';
 import ThumbWrapper from '../../components/ThumbWrapper/ThumbWrapper';
 import './MainPage.scss';
-
+import './MediaMainPage.scss';
 const MainPage = () => {
 
   return (

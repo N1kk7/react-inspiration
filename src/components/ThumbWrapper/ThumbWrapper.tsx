@@ -1,5 +1,6 @@
 import React from "react";
 import './ThumbWrapper.scss'
+import './MediaThumbWrapper.scss'
 import Thumb from "../Thumb/Thumb";
 import {thumbsArray} from '../../data/thumbData'
 import { IThumb }  from '../../model/cardModel'

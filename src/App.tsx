@@ -2,6 +2,8 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import MainPage from './pages/MainPage/MainPage'
 import './style/App.scss';
+import './style/MediaApp.scss';
+
 import React from 'react';
 import {
   BrowserRouter as Router,

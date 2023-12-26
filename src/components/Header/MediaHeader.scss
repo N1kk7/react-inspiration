@@ -1,0 +1,21 @@
+@media screen and (max-width: 768px) {
+    .App-header {
+        display: flex;
+        .pageMenu{
+            display: none;
+            
+        }
+        .Title-Page{
+            // font-size: min( 2vw, 21px);
+            font-size: 4.5vw;
+        }
+        .login-menu {
+            button{
+                margin: 0 2vw;
+            }
+            .vLine {
+                display: none;
+            }
+        }
+    }
+}

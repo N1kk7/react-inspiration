@@ -1,0 +1,30 @@
+.App-footer{
+    .container{
+        .top-footer {
+            justify-content: center;
+            height: 10vh;
+            .logoWrapper {
+              .logo-description {
+                display: none;
+              }
+            }
+          .listWrapper {
+            display: none;
+          }
+        }
+        .bottom-footer {
+          justify-content: center;
+          
+          .buttonWrapper {
+            display: flex;
+            justify-content: space-between;
+            .vLine {
+              display: none;
+            }
+          }
+          .left-buttonWrapper {
+            display: none;
+          }
+        }
+    }
+}

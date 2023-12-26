@@ -1,0 +1,5 @@
+@media screen and (max-width: 768px) {
+    .container{
+        max-width: clamp(240px, 92vw, 2000px);
+    }
+}
