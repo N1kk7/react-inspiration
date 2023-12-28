@@ -50,6 +50,7 @@ function App() {
             {/* <Route path="/gallery" element={<div>My Gallery</div>} /> */}
           </Routes>
 
+          <MainPage />
           {/* <main>Main</main>
 
           <div className="count">{count}</div>
