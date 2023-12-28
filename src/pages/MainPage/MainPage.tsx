@@ -3,14 +3,19 @@ import SearchFilters from '../../components/SearchFilters/SearchFilters';
 import ThumbWrapper from '../../components/ThumbWrapper/ThumbWrapper';
 import './MainPage.scss';
 import './MediaMainPage.scss';
+
+import {useSelector} from "react-redux";
+
 const MainPage = () => {
+
+  const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
 
   return (
     <div className="main-page">
       <div className="container">
         <div className="main-page-wrapper">
 
-          <div className="main-page-banner">
+          {guestStatus && <div className="main-page-banner">
             <h1 className="main-page-banner-title">
               The best<br />
               <span className="main-page-banner-title__second-line">ad inspiration</span><br />
@@ -28,7 +33,7 @@ const MainPage = () => {
             <span className="main-page-banner-brands">
               Discover the top brands and creators<br /> through their creatives
             </span>
-          </div>
+          </div>}
           <SearchFilters/>
           <ThumbWrapper/>
         </div>

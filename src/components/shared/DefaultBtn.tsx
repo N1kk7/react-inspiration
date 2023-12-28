@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { popup } from '../../redux/rootSlice';
+import { userLogIn } from '../../redux/logInSlice';
 import { welcomePopup } from '../../redux/welcomeModalSlice';
 import { getInfo } from '../../redux/getInfoSlice';
 import { selectPlan } from '../../redux/selectPlanSlice'
@@ -100,7 +101,7 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
 
     switch (methodBtn) {
       case 'Login':
-        enterEmail && enterPassword ? dispatch(popup('confirm-logIn')) : showErrorBtn('login', enterEmail, enterPassword);
+        enterEmail && enterPassword ? dispatch(popup('confirm-logIn')) && dispatch( userLogIn('userFree')) : showErrorBtn('login', enterEmail, enterPassword);
       break
       case 'SignIn':
         enterEmail ? dispatch(popup('confirm-signIn')) : showErrorBtn('signIn', enterEmail);
