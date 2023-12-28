@@ -3,14 +3,17 @@ import React from 'react';
 import './Header.scss';
 import './MediaHeader.scss';
 import { memo } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { popup } from "../../redux/rootSlice";
+import userProfileImg from '../../assets/images/user-avatar.png'
 
 
 
 const Header = () => {
 
   const dispatch = useDispatch();
+
+  const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
 
 
 
@@ -35,9 +38,21 @@ const Header = () => {
           </a>
 
           <div className="login-menu">
-            <button className='log-btn' onClick={() => dispatch(popup('open-logIn'))} >Log in</button>
-            <div className="vLine"></div>
-            <button className='sign-btn' onClick={() => dispatch(popup('open-signIn'))}>Sign up</button>
+            {guestStatus && <button className='log-btn' onClick={() => dispatch(popup('open-logIn'))} >Log in</button>}
+            {!guestStatus && <button className='log-btn' >Go pro</button>}
+            {guestStatus && <div className="vLine"></div>}
+            {guestStatus && <button className='sign-btn' onClick={() => dispatch(popup('open-signIn'))}>Sign up</button>}
+            {!guestStatus && 
+              <>
+                {/* <div className="userProfileBtn"> */}
+                  <button className='user-profileBtn'>
+                    First Name
+                    <img src={userProfileImg} alt="user-avatar" />
+
+                  </button>
+                {/* </div> */}
+              </>
+            }
           </div>
         </header>
         

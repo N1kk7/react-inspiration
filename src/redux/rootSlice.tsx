@@ -69,6 +69,7 @@ export const rootSlice = createSlice({
 
                     state.enterEmail = '';
                     state.enterPassword = '';
+                    document.body.style.overflow ='unset';
                     state.logIn = false;
                 break;
                 case 'confirm-password-modal':

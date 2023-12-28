@@ -53,6 +53,24 @@
       background-color: transparent;
       cursor: pointer;
       padding: 11px 19px;
+      img{
+        // position: absolute;
+        // background: var(--main-text-color);
+        // left: 100%;
+        // top: 50%;
+        // transform: translate(-30%, -50%);
+        // padding: 4px 11px 4px 0;
+        // border-radius: 50px;
+
+        // border-bottom-left-radius: 0;
+        // border-top-left-radius: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-25%, 13%);
+
+
+      }
 
 
     }
@@ -85,7 +103,8 @@
     .log-btn:hover{
       background-size: 70% 2px;
     }
-    .sign-btn{
+    .sign-btn,
+    .user-profileBtn{
       background-color: var(--main-text-color);
       border-radius: 50px;
       color: #FFF;
@@ -100,6 +119,15 @@
     }
     .sign-btn:hover{
       background-color: #595959;
+    }
+    .user-profileBtn{
+      // border-top-right-radius: 0;
+      // border-bottom-right-radius: 0;
+      width: 131px;
+      font-size: 12px;
+      padding: 13px 4px 13px 17px;
+      position: relative;
+      text-align: start;
     }
   }
 }

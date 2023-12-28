@@ -1,0 +1,53 @@
+.unlog-footer{
+    
+    // margin-bottom: 15vh;
+    max-height: 55vh;
+    position: relative;
+    .content-wrapper {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+        position: relative;
+        bottom: 40vh;
+        .unlog-title {
+            width: 23vw;
+            color: var(--main-text-color);
+            text-align: center;
+            font-family: var(--font-inter);
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 40px; /* 181.818% */
+        }
+        .choiceMethod{
+            width: 30vw;
+        }
+        .email-title {
+            width: 28vw;
+            text-align: start;
+        }
+        .unlog-description {
+            width: 22vw;
+            color: var(--grey);
+            text-align: center;
+            font-family: var(--font-inter);
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 15px; /* 136.364% */
+            a{
+                color: var(--main-text-color);
+                font-family: var(--font-inter);
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 15px;
+                // border-bottom: none;
+                text-decoration: none;
+            }
+        }
+      
+
+    }
+    
+}
