@@ -1,13 +1,18 @@
 .App-footer {
   background-color: var(--footer-background-color);
+  height: 321px;
+  .footer-wrapper {
+    padding: 70px 0 40px;
+  }
   .top-footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 5vh;
-    height: 15vh;
+    margin-bottom: 36px;
     .logoWrapper{
+      text-align: start;
       .logo{
+        margin-left: 6px;
         .footerTitle{
           color: var(--Main-dark, #141414);
           font-family: var(--font-inter);
@@ -19,6 +24,7 @@
         }
       }
       .logo-description {
+        margin: 10px 6px;
         span{
           color: var(--Grey, #9E9E9E);
           font-family: Inter;
@@ -31,11 +37,14 @@
     }
     .listWrapper {
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
+      padding: 0 82px;
+      width: 278px;
       .list {
-        width: 10vw;
+        text-align: start;
         ul {
           margin: 0;
+          padding-left: 0;
           li{
             color: var(--Grey, #9E9E9E);
             font-family: var(--font-inter);
@@ -45,14 +54,19 @@
             line-height: normal;
             list-style: none;
             text-align: left;
-            padding: 7px 0;
+            margin-bottom: 14px;
             cursor: pointer;
           }
-          .titleList{
-            color: var(--Main-dark, #141414);
-            font-size: 16px;
-            font-weight: 500;
-          }
+        }
+        .titleList{
+          display: inline-block;
+          color: var(--Main-dark, #141414);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          margin: 0;
+          margin-bottom: 20px;
+          text-align: start;
         }
       }
     }
@@ -64,9 +78,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 5vh;
-    margin-bottom: 2vh;
+    margin-top: 20px;
     .buttonWrapper {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px; /* 157.143% */
       display: flex;
       button{
         display: inline-block;
@@ -76,16 +93,19 @@
         color: var(--Main-dark, #141414);
         font-family: var(--font-inter);
         text-decoration: none;
-        padding-bottom: 10px;
+        padding: 0;
         background-image: linear-gradient(currentColor, currentColor);
         background-position: 0% 100%;
         background-repeat: no-repeat;
         background-size: 0% 2px;
         transition: background-size .3s;
 
-      
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 157.143% */
+        letter-spacing: 1px;
 
-      
       }
       button:hover{
         background-size: 95% 2px;
@@ -95,14 +115,9 @@
 
 
 
-      // .vLine {
-      //   display: inline-block;
-      //   width: 1px;
-      //   height: 20px;
-      //   background-color: var(--Grey, #9E9E9E);
-      //   margin: 0 10px;
-
-      // }
+      .vLine {
+        margin: 0 6px;
+      }
     }
   }
 }
