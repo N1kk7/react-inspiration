@@ -1,18 +1,17 @@
 import React from 'react'
 import './Thumb.scss'
-import { IThumb } from '../../model/cardModel';
+import { IBrandThumb } from '../../model/cardBrandModel';
 import { creatorBrand } from '../../redux/rootSlice';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 // import thumb-1 from '../../assets/images/thumb-1.png'
 
-interface ThumbModel {
-    img : IThumb['img'];
-    avatar : IThumb['avatar'];
-    userName : IThumb['userName'];
+interface ThumbBrandModel {
+    img : IBrandThumb['img'];
+
 }
 
-export default function Thumb({img, avatar, userName} : ThumbModel) {
+export default function Thumb({img} : ThumbBrandModel) {
 
     const dispatch = useDispatch();
 
@@ -28,15 +27,7 @@ export default function Thumb({img, avatar, userName} : ThumbModel) {
             </div>
     
         </Link>
-        <Link to='brandPage'>
-            <div className="userBlock" onClick={() => {dispatch(creatorBrand('brand'))}}>
-                <div className="userAvatar">
-                    <img src={avatar} alt="" />
-                </div>
-                <div className="userName">{userName}</div>
-            </div>
 
-        </Link>
         
         
 

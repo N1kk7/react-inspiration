@@ -6,6 +6,7 @@ import { memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { popup } from "../../redux/rootSlice";
 import userProfileImg from '../../assets/images/user-avatar.png'
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,7 +26,10 @@ const Header = () => {
       <div className="container">
         <header className="App-header">
           <div className="pageMenu">
-            <a className="Page-Name" href="/gallery">Gallery</a>
+            <Link to='/'>
+              <div className="Page-Name">Gallery</div>
+
+            </Link>
 
           </div>
 

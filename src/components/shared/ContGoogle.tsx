@@ -1,5 +1,7 @@
 import React from "react";
 import google from '../../assets/images/google.png'
+
+
 import './Shared.scss'
 
 const ContGoogle = () => {

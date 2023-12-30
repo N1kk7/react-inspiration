@@ -1,8 +1,10 @@
 import React from 'react';
 import SearchFilters from '../../components/SearchFilters/SearchFilters';
 import ThumbWrapper from '../../components/ThumbWrapper/ThumbWrapper';
+import HideContent from '../../components/HideContent/HideContent';
 import './MainPage.scss';
 import './MediaMainPage.scss';
+import Footer from '../../components/Footer/Footer';
 
 import {useSelector} from "react-redux";
 
@@ -36,6 +38,8 @@ const MainPage = () => {
           </div>}
           <SearchFilters/>
           <ThumbWrapper/>
+          <HideContent/>
+          <Footer/>
         </div>
       </div>
     </div>

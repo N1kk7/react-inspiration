@@ -1,6 +1,10 @@
 .main-page {
   margin-bottom: 95px;
 
+  &-wrapper{
+    position: relative;
+  }
+
   &-banner {
     padding: 109px 0 37px;
     text-align: start;

@@ -97,6 +97,12 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
   }
   
   const toggleClassBtn = (methodBtn: string) => {
+    window.scrollTo({ 
+      top: 0,  
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour 
+         in place of 'smooth' */
+    }); 
     
 
     switch (methodBtn) {
@@ -117,6 +123,17 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
         
 
       break;
+      case 'openSignUpModal':
+        dispatch(popup('open-signIn'))
+        
+
+      break;
+      case 'openLogInModal':
+        dispatch(popup('open-logIn'))
+        
+
+      break;
+        
         
     }
     
