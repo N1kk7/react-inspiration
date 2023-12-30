@@ -13,6 +13,8 @@ const MainPage = () => {
   const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
 
   return (
+    
+    <>
     <div className="main-page">
       <div className="container">
         <div className="main-page-wrapper">
@@ -38,11 +40,15 @@ const MainPage = () => {
           </div>}
           <SearchFilters/>
           <ThumbWrapper/>
-          <HideContent/>
-          <Footer/>
+          {guestStatus && <HideContent/>}
         </div>
       </div>
+
     </div>
+    <Footer/>
+    
+    </>
+
   );
 };
 
