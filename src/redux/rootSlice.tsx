@@ -20,6 +20,9 @@ export const rootSlice = createSlice({
         emailError: false,
         passwordError: false,
 
+        creatorPage: false,
+        brandPage: false,
+
 
     },
     reducers: {
@@ -118,7 +121,24 @@ export const rootSlice = createSlice({
         confirmPassword: (state, action) => {
             state.confirmPassword = action.payload
 
+        },
+
+        creatorBrand: (state, action) => {
+            switch (action.payload) {
+                case 'creator':
+                    state.creatorPage = true;
+                    console.log(state.creatorPage, 'creator page');
+                    
+                break;
+                case 'brand':
+                    state.brandPage = true;
+                    console.log(state.brandPage, 'brand page')
+                break
+            }
+            
         }
+
+
 
 
 
@@ -128,5 +148,5 @@ export const rootSlice = createSlice({
     }
 })
 
-export const { popup, enterEmail, enterPassword, createPassword, confirmPassword } = rootSlice.actions;
+export const { popup, enterEmail, enterPassword, createPassword, confirmPassword, creatorBrand } = rootSlice.actions;
 export default rootSlice.reducer;

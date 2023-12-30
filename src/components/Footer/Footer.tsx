@@ -8,12 +8,10 @@ import { useSelector } from "react-redux";
 
 const Footer = () => {
 
-    // const dispatch = useDispatch();
 
     const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
 
 
-    console.log('guestStatus', guestStatus);
     
     
 

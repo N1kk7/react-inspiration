@@ -4,7 +4,7 @@ import ContGoogle from "../../shared/ContGoogle";
 import ChoiceMethod from "../../shared/ChoiceMethod";
 import EnterEmail from "../../shared/EnterEmail";
 import DefaultBtn from "../../shared/DefaultBtn";
-import HideContent from "../../HideContent/HideContent";
+// import HideContent from "../../HideContent/HideContent";
 import './UnlogFooter.scss'
 
 
@@ -21,7 +21,7 @@ const UnloggedFooter = () => {
             // <div className="container">
             <>
                 <div className="unlog-footer">
-                <HideContent/>
+                {/* <HideContent/> */}
 
                     <div className="content-wrapper">
                         <div className="unlog-title">

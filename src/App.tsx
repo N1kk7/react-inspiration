@@ -1,5 +1,5 @@
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 import MainPage from './pages/MainPage/MainPage'
 import './style/App.scss';
 import './style/MediaApp.scss';
@@ -19,6 +19,8 @@ import CreatePassword from './components/Modals/CreatePassword/CreatePassword';
 import WelcomeModal from './components/Modals/WelcomeModal/WelcomeModal';
 import GetInfo from './components/Modals/GetInfoModal/GetInfoModal'
 import SelectPlan from './components/Modals/SelectPlanModal/SelectPlanModal'
+import CreatorPage from './pages/CreatorPage/CreatorPage';
+import BrandPage from './pages/BrandPage/BrandPage';
 
 function App() {
   // const dispatch = useDispatch();
@@ -47,6 +49,10 @@ function App() {
 
           <Routes>
             <Route path="/" element={<MainPage />} />
+            <Route path="/creatorPage" element={<CreatorPage />} />
+            <Route path="/brandPage" element={<BrandPage />} />
+
+
             {/* <Route path="/gallery" element={<div>My Gallery</div>} /> */}
           </Routes>
 
@@ -58,7 +64,7 @@ function App() {
           <button onClick={() => dispatch(decrement())}>Decrement</button> */}
 
 
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
 
