@@ -4,7 +4,66 @@
         justify-content: flex-start;
         margin: 5vh 10vh;
         .creatorDescription {
+            text-align: start;
           margin-left: 100px;
+          .creatorName {
+            color: var(--main-text-color);
+            font-family: Inter;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+          }
+          .creatorItems {
+            .item{
+                display: inline-block;
+                span{
+                    padding-left: 12px;
+                    color: var(--grey);
+                    font-family: var(--font-inter);
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+            .location{
+                margin: 0 30px;
+            }
+            
+          }
+          .creatorMessage{
+            color: var(--main-text-color);
+            font-family: var(--font-inter);
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32.091px; /* 160.457% */
+            opacity: 0.6;
+            margin: 30px 0 40px;
+          }
+          .socials {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            img{
+                padding: 20px;
+                margin-right: 20px;
+                background-color: var(--thumb-border-color);
+                border-radius: 50%;
+                min-width: 18px;
+            }
+
+              .defaultBtn{
+                display: inline-block;
+                margin: 0 0 0 40px;
+                padding: 11px 19px;
+                width: fit-content;
+              }
+
+          }
         }
     }
     .swiper {

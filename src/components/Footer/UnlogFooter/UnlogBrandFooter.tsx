@@ -22,8 +22,16 @@ const UnlogBrandFooter = () => {
 
         <div className="unlog-brand-footer">
         {/* <HideContent/> */}
-            <DefaultBtn textBtn="Sign up to continue" methodBtn="openSignUpModal" />
-            <DefaultBtn textBtn="Log in" methodBtn="openLogInModal"/>
+            <div className="signUp">
+                <DefaultBtn  textBtn="Sign up to continue" methodBtn="openSignUpModal" />
+
+
+            </div>
+            <div className="logIn">
+                <DefaultBtn textBtn="Log in" methodBtn="openLogInModal"/>
+
+
+            </div>
 
 
             
