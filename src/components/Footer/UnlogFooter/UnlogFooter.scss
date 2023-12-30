@@ -51,3 +51,24 @@
     }
     
 }
+.unlog-brand-footer {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0;
+    .signUp{
+        .defaultBtn{
+            width: fit-content;
+        }
+    }
+    .logIn{
+        .defaultBtn{
+            width: fit-content;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            background: var(--white);
+            color: var(--main-text-color);
+
+        }
+    }
+  
+}
