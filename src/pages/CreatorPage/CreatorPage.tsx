@@ -100,12 +100,13 @@ const CreatorPage = () => {
                     </Swiper>
                     <ThumbBrandWrapper/>
                     {guestStatus && <UnlogBrandFooter/>}
-                    {!guestStatus && <Footer/>}
 
 
                 </div>
                 
             </div>
+            {!guestStatus && <Footer/>}
+
         </>
     )
 }
