@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './Header.scss';
 import './MediaHeader.scss';
@@ -6,7 +6,9 @@ import { memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { popup } from "../../redux/rootSlice";
 import userProfileImg from '../../assets/images/user-avatar.png'
-import { Link } from 'react-router-dom';
+import { changeCollectionState } from '../../redux/myCollection';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 
 
@@ -14,10 +16,49 @@ const Header = () => {
 
   const dispatch = useDispatch();
 
+  const navigate = useNavigate()
+
   const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
 
+  const collectionState = useSelector((state: any) => state.MyCollectionState.collectionState)
+
+  const checkCollectionState = (e: any) => {
+    // if (collectionState) {
+      dispatch(changeCollectionState());
 
 
+      if (collectionState) {
+        // navigate('/collection-page')
+        console.log('collection-page');
+        
+
+
+    
+      } else {
+        e.preventDefault()
+        console.log('popup');
+        
+      }
+     
+
+
+    // } else {
+    //   <Link to="/collection-page"/>
+    // }
+    
+    // console.log(collectionState, "click collection");
+
+    
+  }
+
+  // useEffect(() => {
+  //   console.log('ololo');
+    
+    
+  // },[])
+ 
+
+  // console.log(collectionState);
   
 
 
@@ -30,6 +71,11 @@ const Header = () => {
               <div className="Page-Name">Gallery</div>
 
             </Link>
+            {/* <Link>
+            
+            </Link> */}
+            {!guestStatus && <div className='Page-Name' onClick={(event) => {checkCollectionState(event)}}>My Collections</div>}
+
 
           </div>
 
