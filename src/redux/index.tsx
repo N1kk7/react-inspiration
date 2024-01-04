@@ -4,6 +4,7 @@ import welcomeModalReducer from './welcomeModalSlice'
 import selectPlanReducer from "./selectPlanSlice";
 import getInfoReducer from "./getInfoSlice";
 import logInSlice from "./logInSlice";
+import CollectionSlice from "./myCollection"
 
 
 
@@ -15,7 +16,8 @@ export default configureStore({
         welcomeModalState: welcomeModalReducer,
         getInfoState: getInfoReducer,
         selectPlanState: selectPlanReducer,
-        logInState: logInSlice
+        logInState: logInSlice,
+        MyCollectionState: CollectionSlice
 
         
     },

@@ -21,6 +21,9 @@ import GetInfo from './components/Modals/GetInfoModal/GetInfoModal'
 import SelectPlan from './components/Modals/SelectPlanModal/SelectPlanModal'
 import CreatorPage from './pages/CreatorPage/CreatorPage';
 import BrandPage from './pages/BrandPage/BrandPage';
+import CollectionPage from './pages/CollectionName/CollectionName'
+import SearchPage from  './pages/SearchQuery/SearchQuery'
+import ProjectPage from './pages/ProjectPage/ProjectPage';
 
 function App() {
   // const dispatch = useDispatch();
@@ -30,6 +33,7 @@ function App() {
   const welcomeModal = useSelector((state: any) => state.welcomeModalState.welcomeModal);
   const getInfoModal = useSelector((state: any) => state.getInfoState.getInfoModal);
   const selectPlanModal = useSelector((state: any) => state.selectPlanState.selectPlanModal);
+
 
 
   return (
@@ -51,6 +55,12 @@ function App() {
             <Route path="/" element={<MainPage />} />
             <Route path="/creatorPage" element={<CreatorPage />} />
             <Route path="/brandPage" element={<BrandPage />} />
+            <Route path="/collection-page" element={<CollectionPage />} />
+            <Route path="/search-page" element={<SearchPage />} />
+            <Route path="/project-page" element={<ProjectPage />} />
+
+
+
 
 
             {/* <Route path="/gallery" element={<div>My Gallery</div>} /> */}

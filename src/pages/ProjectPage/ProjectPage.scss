@@ -1,0 +1,74 @@
+.projectPage{
+    display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 93vh;
+
+    .thumbWrapper{
+        display: flex;
+        flex-direction: column;
+        .thumb{
+            background-color: var(--thumb-border-color);
+             border-radius: 29.817px;;
+            width: 321.111px;
+            height: 543.595px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .thumbItem{
+                background-color: var(--thumb-background-color);
+                width: 284.413px;
+                height: 506.897px;    
+                border-radius: 18.349px;  
+                position: relative;
+                .copyBtn {
+                  background-image: url(../../assets/images/copyLinkBtn.png);
+                  background-color: var(--main-text-color);
+                  background-position: center center;
+                  background-repeat: no-repeat;
+                  border-radius: 50%;
+                  cursor: pointer;
+                  padding: 5px;
+                  height: 24px;
+                  width: 24px;
+
+
+
+                }
+                .notesBtn {
+                    background-image: url(../../assets/images/noteBtn.png);
+                    background-color: var(--main-text-color);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 15%;
+                    top: 0;
+                    cursor: pointer;
+                    padding: 5px;
+                    height: 24px;
+                    width: 24px;
+                  
+                }
+                .playBtn{
+                    background-image: url(../../assets/images/playBtn.png);
+                    background-color: var(--main-text-color);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    opacity: 0.7;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    height: 60px;
+                    width: 60px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+
+        }
+        
+    }
+}

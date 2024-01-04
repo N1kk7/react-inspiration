@@ -1,4 +1,8 @@
 .thumbItemWrapper{
+    a{
+        text-decoration: none;
+        color: var(--main-text-color);
+    }
     .thumbItem {
         display: flex;
         justify-content: center;
