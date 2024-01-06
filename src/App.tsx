@@ -46,6 +46,7 @@ function App() {
     <Router>
       <div className="App">
         <div className="wrapper">
+        {/* <Header /> */}
           {!paymentPage && <Header />}
 
           {loginModal && <LogIn />}

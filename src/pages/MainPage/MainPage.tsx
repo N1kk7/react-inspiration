@@ -13,6 +13,7 @@ import SaveCollection from '../../components/Modals/SaveCollection/SaveCollectio
 import UnlimCollections from '../../components/Modals/SelectPlanModal/UnlimCollections';
 import SupportModal from '../../components/Modals/SupportModal/SupportModal';
 import SuccessSendReq from '../../components/Modals/SuccessSupportReq/SuccessSendReq';
+import GetUnlimAccess from '../../components/Modals/SelectPlanModal/GetUnlimAccess';
 
 import {useSelector} from "react-redux";
 
@@ -26,9 +27,20 @@ const MainPage = () => {
   const unlimCollectionState = useSelector((state: any) => state.MyCollectionState.unlimCollectionModal)
   const supportModal = useSelector((state: any) => state.supportState.supportModal)
   const sendRequestModal = useSelector((state: any) => state.supportState.sendRequestModal)
+  const getUnlimAccessModal = useSelector((state: any) => state.selectPlanState.getUnlimAccessModal)
+
+  const userPro = useSelector((state: any) => state.logInState.userPro);
+  const userFree = useSelector((state: any) => state.logInState.userFree);
 
 
-console.log(sendRequestModal);
+  console.log(userPro, '-user-pro', userFree , '-user-free', guestStatus, '-guest-status'); ;
+  
+
+console.log(getUnlimAccessModal);
+
+
+
+
 
 
   return (
@@ -40,6 +52,7 @@ console.log(sendRequestModal);
             { unlimCollectionState && <UnlimCollections/> }
             { supportModal && <SupportModal/> }
             { sendRequestModal && <SuccessSendReq/> }
+            { getUnlimAccessModal && <GetUnlimAccess/> }
           {/* { paymentModal && <PaymentDetails/> } */}
     <div className="main-page">
       <div className="container">

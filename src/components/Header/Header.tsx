@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import './Header.scss';
 import './MediaHeader.scss';
@@ -6,8 +6,12 @@ import { memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { popup } from "../../redux/rootSlice";
 import userProfileImg from '../../assets/images/user-avatar.png'
-import { popupMethod } from '../../redux/myCollection';
 import { Link } from 'react-router-dom';
+import { getUnlimAccess } from '../../redux/selectPlanSlice';
+import { useNavigate } from 'react-router-dom';
+import { openSupportModal } from '../../redux/supportSlice';
+import { userLogIn } from '../../redux/logInSlice';
+
 
 
 
@@ -16,30 +20,60 @@ const Header = () => {
 
   const dispatch = useDispatch();
 
+  const navigate = useNavigate();
+  const profileRef = useRef(null);
+  useOutsideAlerter(profileRef);
+
 
   const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
 
-  const collectionState = useSelector((state: any) => state.MyCollectionState.collectionState)
+  const profilePopup = useSelector((state: any) => state.mainState.profilePopup)
 
-  const checkCollectionState = (e: any) => {
+  const userFree = useSelector((state: any) => state.logInState.userFree);
 
-      if (collectionState) {
 
-        console.log('collection page');
 
-      } else {
+  function useOutsideAlerter(ref: any) {
 
-        console.log('popup');
-        e.preventDefault()
-        dispatch(popupMethod('yourCollection'))
-        // dispatch(changeCollectionState())
-
+    useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event: any) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          dispatch(popup('close-profile-popup'));
+        }
       }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  }
+
+  // const collectionState = useSelector((state: any) => state.MyCollectionState.collectionState)
+
+  // const checkCollectionState = (e: any) => {
+
+  //     if (collectionState) {
+
+  //       console.log('collection page');
+
+  //     } else {
+
+  //       console.log('popup');
+  //       e.preventDefault()
+  //       dispatch(popupMethod('yourCollection'))
+  //       // dispatch(changeCollectionState())
+
+  //     }
 
 
 
     
-  }
+  // }
 
 
 
@@ -55,7 +89,7 @@ const Header = () => {
             {/* <Link>
             
             </Link> */}
-            {!guestStatus && <Link to='/collection-page' className='Page-Name' onClick={(event) => {checkCollectionState(event)}}>My Collections</Link>}
+            {!guestStatus && <Link to='/creatorPage' className='Page-Name'>My Collections</Link>}
 
 
           </div>
@@ -70,18 +104,43 @@ const Header = () => {
 
           <div className="login-menu">
             {guestStatus && <button className='log-btn' onClick={() => dispatch(popup('open-logIn'))} >Log in</button>}
-            {!guestStatus && <button className='log-btn' >Go pro</button>}
+            {userFree && <button className='log-btn' onClick={() => {dispatch(getUnlimAccess('open-unlim-access'))}}>Go pro</button>}
             {guestStatus && <div className="vLine"></div>}
             {guestStatus && <button className='sign-btn' onClick={() => dispatch(popup('open-signIn'))}>Sign up</button>}
             {!guestStatus && 
               <>
                 {/* <div className="userProfileBtn"> */}
-                  <button className='user-profileBtn'>
+                  <button className='user-profileBtn' onClick={() => dispatch(popup('open-profile-popup'))}>
                     First Name
                     <img src={userProfileImg} alt="user-avatar" />
 
                   </button>
                 {/* </div> */}
+                {profilePopup && 
+                  <div className="profilePopup" ref={profileRef}>
+                    <div className="profileListPopup">
+                      <ul>
+                        <li onClick={() => {dispatch(popup('close-profile-popup')); navigate('/creatorPage')}}>
+                          My profile
+                        </li>
+                        <li onClick={() => {dispatch(popup('close-profile-popup')); dispatch(getUnlimAccess('open-unlim-access'))}}>
+                          My plan
+                        </li>
+                        <li onClick={() => {dispatch(popup('close-profile-popup')); dispatch(openSupportModal())}}>
+                          Support
+                        </li>
+                        <hr />
+                        <li onClick={() => { dispatch(popup('close-profile-popup')); dispatch(userLogIn('guest')); navigate('/'); }}>
+                          Log out
+                        </li>
+                      </ul>
+                      
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  }
               </>
             }
           </div>

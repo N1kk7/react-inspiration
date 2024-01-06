@@ -5,20 +5,25 @@ import HideContent from "../../components/HideContent/HideContent";
 import UnloggedFooter from "../../components/Footer/UnlogFooter/UnlogFooter";
 import SearchFilters from "../../components/SearchFilters/SearchFilters";
 import { useSelector } from "react-redux";
+import GetUnlimAccess from "../../components/Modals/SelectPlanModal/GetUnlimAccess";
+
 
 
 const SearchQuery = () => {
 
     const guestStatus = useSelector((state: any) => state.logInState.guestStatus)
+    const getUnlimAccessModal = useSelector((state: any) => state.selectPlanState.getUnlimAccessModal);
 
 
-    console.log(guestStatus);
+
     
 
 
     return (
 
         <>
+            { getUnlimAccessModal && <GetUnlimAccess/> }
+
             <div className="searchPage">
             
                 <div className="container">

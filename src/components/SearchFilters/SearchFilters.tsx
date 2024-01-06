@@ -4,40 +4,78 @@ import arrowDown from '../../assets/images/arrowDown.svg';
 import "./SearchFilters.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { popup } from "../../redux/rootSlice";
+import { useNavigate } from "react-router-dom";
 
 
 
-/**
- * Hook that alerts clicks outside of the passed ref
- */
-function useOutsideAlerter(ref: any) {
-
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        /**
-         * Alert if clicked on outside of element
-         */
-        function handleClickOutside(event: any) {
-            if (ref.current && !ref.current.contains(event.target)) {
-                dispatch(popup('toggle-filter'));
-            }
-        }
-        // Bind the event listener
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            // Unbind the event listener on clean up
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [ref]);
-}
 
 const SearchFilters = () => {
-    const wrapperRef = useRef(null);
-    useOutsideAlerter(wrapperRef);
+   
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const wrapperRef = useRef(null);
+    useOutsideAlerter(wrapperRef);
     const filterPopup = useSelector((state: any) => state.mainState.filterPopup);
+
+    const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
+
+
+
+
+
+
+    const callModal = (btn: string) => {
+
+        const toggleFilter = () => {
+            
+            filterPopup ? dispatch(popup('close-filter')) : dispatch(popup('open-filter'));
+        }
+
+        // dispatch(popup('open-filter'));
+
+        switch (btn) {
+            case 'filter':
+                // guestStatus ? dispatch(popup('open-signIn')): dispatch(popup('open-filter'));
+                guestStatus ? dispatch(popup('open-signIn')): toggleFilter();
+
+            break;
+            case 'search':
+                guestStatus ? dispatch(popup('open-signIn')): navigate('/search-page');
+
+            break;
+
+        }
+
+
+    }
+    
+
+
+
+
+    function useOutsideAlerter(ref: any) {
+
+        // const dispatch = useDispatch();
+    
+        useEffect(() => {
+            /**
+             * Alert if clicked on outside of element
+             */
+            function handleClickOutside(event: any) {
+                if (ref.current && !ref.current.contains(event.target)) {
+                    dispatch(popup('close-filter'));
+                }
+            }
+            // Bind the event listener
+            document.addEventListener("mousedown", handleClickOutside);
+            return () => {
+                // Unbind the event listener on clean up
+            document.removeEventListener("mousedown", handleClickOutside);
+            };
+        }, [ref]);
+    }
+
 
 
 
@@ -47,14 +85,14 @@ const SearchFilters = () => {
     return (
         <>
             <div className="searchFilterWrapper">
-                <div className="search">
+                <div className="search" onClick={() => {callModal('search')}}>
                     <input type="text" placeholder="Search" />
                     <div className="arrowBtn"><img src={arrowRight} alt="" /></div>
                 </div>
                 <div ref={wrapperRef} className="filter">
 
                     {/* <img src={arrowDown} alt="" /> */}
-                    <div className="filterWrapper" onClick={() => {dispatch(popup('toggle-filter')); }}>
+                    <div className="filterWrapper" onClick={() => {callModal('filter')}}>
                         <span>Filters</span>
                         <img src={arrowDown} alt="" />
 

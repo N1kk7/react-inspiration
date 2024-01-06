@@ -9,6 +9,7 @@ import { popupMethod } from '../../redux/myCollection';
 import { paymentDetails } from '../../redux/selectPlanSlice';
 import { useNavigate } from 'react-router-dom';
 import { sendRequest } from '../../redux/supportSlice';
+import { getUnlimAccess } from '../../redux/selectPlanSlice';
 
 
 const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
@@ -103,6 +104,8 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
   }
   
   const toggleClassBtn = (methodBtn: string) => {
+    console.log(methodBtn);
+    
     window.scrollTo({ 
       top: 0,  
       behavior: 'smooth'
@@ -155,6 +158,7 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
       case 'Go-pro':
         // console.log('go-pro');
         dispatch(paymentDetails('open-payment-details'))
+        dispatch(getUnlimAccess('close-unlim-access'))
         navigate('/payment-page')
       break;
       case 'send-request':
@@ -164,6 +168,14 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
         setTimeout(() => {
           dispatch(sendRequest('hide-success-request'));
         }, 1900)
+      break;
+      case 'Free-plan':
+        dispatch(getUnlimAccess('close-unlim-access'))
+      break;
+      case 'payment-processed':
+        dispatch(userLogIn('userPro'));
+        dispatch(paymentDetails('close-payment-details'))
+        navigate('/')
       break;
   
         
