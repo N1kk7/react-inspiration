@@ -1,0 +1,68 @@
+.createCollection{
+    .modal-wrapper {
+        width: 671px !important;
+        height: 646px !important;
+        .modalTitle {
+            // padding-bottom: 0;
+            h2{
+                margin-bottom: 0;
+            }
+        }
+        .formWrapper{
+            width: inherit;
+            text-align: start;
+            .formTitle {
+
+                color: var(--main-text-color);
+                font-family: var(--font-inter);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+            input{
+                border: 1px solid var(--border-color);
+                background: var(--thumb-border-color);
+                padding: 19px;
+            }
+            .collectionName {
+                input{
+                    width: 317px;
+                    // height: 43px;
+                    border-radius: 50px;
+
+                    
+                }
+            
+            }
+            .describeCollection {
+                margin-top: 15px;
+                input{
+                    width: 642px;
+                    height: 80px;
+                    border-radius: 20px;
+                    padding: 19px;
+                }
+                input::placeholder{
+                    position: absolute;
+                    top: 19px;
+                }
+            }
+        }
+        .buttonWrapper {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 50px;
+          .cancelBtn {
+            .defaultBtn{
+                background-color: transparent;
+                color: var(--grey);
+            }
+          }
+         
+          .defaultBtn{
+            width: 84px;
+          }
+        }
+    }
+}

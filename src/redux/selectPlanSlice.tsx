@@ -7,6 +7,7 @@ export const selectPlanSlice = createSlice({
     name: 'selectPlanSlice',
     initialState: {
         selectPlanModal: false,
+        paymentDetailsPage: false,
         proPlan: false,
         freePlan: false,
 
@@ -49,6 +50,22 @@ export const selectPlanSlice = createSlice({
                 state.proPlan = false;
                 state.selectPlanModal = false;
             }
+        },
+        paymentDetails: (state, action) => {
+            switch (action.payload) {
+                case 'open-payment-details':
+                    state.paymentDetailsPage = true;
+                    console.log('open payment details');
+                    
+                break;
+                case 'close-payment-details':
+                    state.paymentDetailsPage = false;
+                    console.log('close payment details');
+                break;
+                // case 'go-to-select-plan':
+
+            }
+            
         }
 
     }
@@ -58,5 +75,5 @@ export const selectPlanSlice = createSlice({
 
 })
 
-export const { selectPlan, choicePlan } = selectPlanSlice.actions;
+export const { selectPlan, choicePlan, paymentDetails } = selectPlanSlice.actions;
 export default selectPlanSlice.reducer;

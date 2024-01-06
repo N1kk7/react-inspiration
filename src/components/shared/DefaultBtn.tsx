@@ -5,9 +5,15 @@ import { userLogIn } from '../../redux/logInSlice';
 import { welcomePopup } from '../../redux/welcomeModalSlice';
 import { getInfo } from '../../redux/getInfoSlice';
 import { selectPlan } from '../../redux/selectPlanSlice'
+import { popupMethod } from '../../redux/myCollection';
+import { paymentDetails } from '../../redux/selectPlanSlice';
+import { useNavigate } from 'react-router-dom';
+import { sendRequest } from '../../redux/supportSlice';
 
 
 const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
+
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -126,14 +132,40 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
       case 'openSignUpModal':
         dispatch(popup('open-signIn'))
         
-
       break;
       case 'openLogInModal':
         dispatch(popup('open-logIn'))
         
+      break;
+
+      case 'createCollection':
+        dispatch(popupMethod('createCollection'))
 
       break;
-        
+
+      case 'saveCollection':
+        dispatch(popupMethod('saveCollection'))
+      break;
+      case 'cancelBtn' :
+        dispatch(popupMethod('closeAllModal'))
+      break;
+      case 'unlimCollection':
+        dispatch(popupMethod('unlimCollection'))
+      break;
+      case 'Go-pro':
+        // console.log('go-pro');
+        dispatch(paymentDetails('open-payment-details'))
+        navigate('/payment-page')
+      break;
+      case 'send-request':
+        // console.log('go-pro');
+        dispatch(sendRequest('show-success-request'));
+
+        setTimeout(() => {
+          dispatch(sendRequest('hide-success-request'));
+        }, 1900)
+      break;
+  
         
     }
     

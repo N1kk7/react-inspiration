@@ -5,6 +5,7 @@ import selectPlanReducer from "./selectPlanSlice";
 import getInfoReducer from "./getInfoSlice";
 import logInSlice from "./logInSlice";
 import CollectionSlice from "./myCollection"
+import supportSlice from "./supportSlice"
 
 
 
@@ -17,7 +18,8 @@ export default configureStore({
         getInfoState: getInfoReducer,
         selectPlanState: selectPlanReducer,
         logInState: logInSlice,
-        MyCollectionState: CollectionSlice
+        MyCollectionState: CollectionSlice,
+        supportState: supportSlice,
 
         
     },

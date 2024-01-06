@@ -1,0 +1,47 @@
+.deleteCollection{
+    background-color: transparent !important;
+    z-index: 2 !important;
+    opacity: 0.95;
+    .modal-wrapper{
+        width: 386px !important;
+        height: 194px !important;
+        text-align: start;
+        padding: 0 30px !important;
+        .title {
+            color: var(--main-text-color);
+            font-family: var(--font-inter);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        .question {
+            color: var(--grey);
+            font-family: var(--font-inter);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .buttonWrapper {
+            display: flex;
+            justify-content: flex-end;
+            border-top: none;
+            margin-top: 50px;
+            .btn {
+                color: var(--main-text-color);
+                text-align: center;
+                font-family: var(--font-inter);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                margin-left: 40px;
+                cursor: pointer;
+            }
+            .deleteBtn {
+              color: red;
+            }
+        }
+    }
+}

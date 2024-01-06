@@ -1,0 +1,176 @@
+.paymentPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    // background-color: rgba(190, 190, 190, 0.8);
+    z-index: 1;
+    top: 0;
+    // margin: 0 130px;
+
+    .paymentPageWrapper {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 130px;
+      .backBtn {
+        position: absolute;
+            top: 80px;
+            left: 40px;
+            cursor: pointer;
+            span{
+                padding-left: 13px;
+                color: var(--grey);
+                font-family: var(--font-inter);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+      }
+      .modalTitle {
+        padding: 56px 0 51px;
+            h2{
+                color: var(--Main-dark, #141414);
+                font-family: Inter;
+                font-size: 52.148px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 46.176px; /* 88.549% */
+                text-transform: uppercase;
+            }
+        
+      }
+
+      .formWrapper{
+        display: grid;
+        grid-template-columns: 2fr  1fr;
+        grid-column-gap: 30px;
+        // grid-row-gap: 0px;
+
+        text-align: start;
+        width: -webkit-fill-available;
+        input{
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            background: var(--thumb-border-color);
+            padding: 13px 19px;
+            width: -webkit-fill-available;
+            // margin: 0 10px;
+        }
+        input::placeholder{
+            color: var(--grey);
+            text-align: center;
+            font-family: var(--font-inter);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: start;
+        }
+        h4{
+            text-align: start;
+            color: var(--main-text-color);
+            font-family: var(--font-inter);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        .nameDetails{
+            border-right: 1px solid var(--border-color);
+            margin-left: 60px;
+            padding-right: 60px;
+            // margin: 0 60px;
+            .name{
+                display: flex;
+                .nameItem {
+                    width: -webkit-fill-available;
+                    padding: 0 10px;
+                  
+                }
+                // justify-content: space-between;
+            }
+            .cardNumber {
+                padding: 0 10px;
+                position: relative;
+              input{
+                width: -webkit-fill-available;
+              }
+              .description {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(-20%, -20%);
+              }
+              
+            }
+            .date {
+                display: flex;
+                .dateItem {
+                    padding: 0 10px;
+
+                    width: -webkit-fill-available;
+                }
+            }
+            .secureCode {
+                padding: 0 10px;
+              input{
+                width: auto;
+              }
+            }
+
+        }
+        .addressDetails {
+            margin-left: 40px;
+          .country{
+            padding: 0 10px;
+
+            input{
+                background-color: transparent;
+                
+
+            }   
+            input::placeholder{
+                color: var(--main-text-color);
+            }
+          }
+          .address{
+            padding: 0 10px;
+          }
+          .zipCode {
+            display: flex;
+            .code{
+                padding: 0 10px;
+            }
+          }
+        }
+
+      }
+
+      .buttonWrapper {
+        display: flex;
+        width: -webkit-fill-available;
+        justify-content: flex-end;
+        margin-top: 60px;
+        .cancelBtn{
+            .defaultBtn{
+                width: 85px;
+                background-color: transparent;
+                color: var(--grey);
+            }
+        }
+        .paymentBtn {
+            .defaultBtn{
+                width: 175px;
+            }
+        }
+      }
+    }
+}
