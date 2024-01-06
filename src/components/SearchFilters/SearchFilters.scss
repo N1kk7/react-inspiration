@@ -40,6 +40,7 @@
     .filter {
         border: 1px solid var(--border-color);
         border-radius: 50px;
+        position: relative;
         .filterWrapper{
             padding: 11px 19px;
             span{
@@ -62,8 +63,8 @@
     // background-color: #A5A5A5;
     border-radius: 15px;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    top: calc(100% + 10px);
+    right: 0;
 
     .filterPopupContainer {
     //   display: flex;
