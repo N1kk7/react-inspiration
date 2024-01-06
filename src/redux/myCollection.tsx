@@ -11,6 +11,17 @@ const CollectionSlice = createSlice({
     initialState: {
         collectionState: false,
         myCollection: [{id: 1}],
+
+        yourCollectionModal: false,
+        createCollectionModal: false,
+        saveCollectionModal: false,
+        removeCollectionModal: false,
+        unlimCollectionModal: false,
+        unlimAccessModal: false,
+        paymentDetailsModal: false,
+        supportModal: false,
+
+
     },
     reducers: {
         createCollection: (state, action) => {
@@ -23,17 +34,12 @@ const CollectionSlice = createSlice({
 
         },
         openCollectionPage: (state) => {
-            // const navigate = useNavigate()
-            // const openCollection = () => navigate('/collection-page')
+
             if (state.myCollection.length) {
-                // <Link to='/collection-page'></Link>
-                // openCollection()
+  
 
                 state.collectionState = true;
-                // redirect('/collection-page')
-                // <Link to={'/collection-page'}/>
-                // browserHistory.push('/collection-page')
-                // redirect('/collection-page')
+
                 
             } else {
                 state.collectionState = false
@@ -41,7 +47,60 @@ const CollectionSlice = createSlice({
             }
 
             // state.myCollection.length != 0
+        },
+        popupMethod: (state, action) => {
+
+            switch (action.payload) {
+                case 'yourCollection':
+                    state.yourCollectionModal = true;
+                break;
+                case 'createCollection':
+                    state.yourCollectionModal = false;
+                    state.saveCollectionModal = false;
+                    state.createCollectionModal = true;
+                break;
+                case 'saveCollection':
+                    state.createCollectionModal = false;
+                    state.saveCollectionModal = true;
+                break;
+                case 'removeCollection':
+                    // state.saveCollectionModal = false;
+                    state.removeCollectionModal = true;
+                break;
+                case 'closeRemoveCollection':
+                    state.removeCollectionModal = false;
+                break;
+                case 'unlimCollection':
+                    state.removeCollectionModal = false;
+                    state.saveCollectionModal = false;
+                    state.unlimCollectionModal = true;
+                break;
+                case 'unlimAccess':
+                    state.unlimCollectionModal = false;
+                    state.unlimAccessModal = true;
+                break;
+                case 'paymentDetails':
+                    state.unlimAccessModal = false;
+                    state.paymentDetailsModal = true;
+                break;
+                case 'closeAllModal':
+                    state.yourCollectionModal = false;
+                    state.createCollectionModal = false;
+                    state.saveCollectionModal = false;
+                    state.removeCollectionModal = false;
+                    state.unlimCollectionModal = false;
+                    state.unlimAccessModal = false;
+                    state.paymentDetailsModal = false;
+                break;
+
+
+
+
+
+            }
+            
         }
+
 
 
     }
@@ -49,6 +108,6 @@ const CollectionSlice = createSlice({
 
 
 
-export const { createCollection, changeCollectionState } = CollectionSlice.actions;
+export const { createCollection, changeCollectionState, openCollectionPage, popupMethod } = CollectionSlice.actions;
 export default CollectionSlice.reducer
 

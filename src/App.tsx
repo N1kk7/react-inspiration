@@ -24,6 +24,7 @@ import BrandPage from './pages/BrandPage/BrandPage';
 import CollectionPage from './pages/CollectionName/CollectionName'
 import SearchPage from  './pages/SearchQuery/SearchQuery'
 import ProjectPage from './pages/ProjectPage/ProjectPage';
+import PaymentPage from './pages/PaymentPage/PaymentPage';
 
 function App() {
   // const dispatch = useDispatch();
@@ -33,6 +34,10 @@ function App() {
   const welcomeModal = useSelector((state: any) => state.welcomeModalState.welcomeModal);
   const getInfoModal = useSelector((state: any) => state.getInfoState.getInfoModal);
   const selectPlanModal = useSelector((state: any) => state.selectPlanState.selectPlanModal);
+  const paymentPage = useSelector((state: any) => state.selectPlanState.paymentDetailsPage)
+
+
+  console.log(paymentPage);
 
 
 
@@ -41,7 +46,7 @@ function App() {
     <Router>
       <div className="App">
         <div className="wrapper">
-          <Header />
+          {!paymentPage && <Header />}
 
           {loginModal && <LogIn />}
           {signInModal && <SignIn />}
@@ -58,6 +63,8 @@ function App() {
             <Route path="/collection-page" element={<CollectionPage />} />
             <Route path="/search-page" element={<SearchPage />} />
             <Route path="/project-page" element={<ProjectPage />} />
+            <Route path="/payment-page" element={<PaymentPage />} />
+
 
 
 

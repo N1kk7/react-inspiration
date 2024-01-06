@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import './Header.scss';
 import './MediaHeader.scss';
@@ -6,8 +6,8 @@ import { memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { popup } from "../../redux/rootSlice";
 import userProfileImg from '../../assets/images/user-avatar.png'
-import { changeCollectionState } from '../../redux/myCollection';
-import { Link, useNavigate } from 'react-router-dom';
+import { popupMethod } from '../../redux/myCollection';
+import { Link } from 'react-router-dom';
 
 
 
@@ -16,50 +16,31 @@ const Header = () => {
 
   const dispatch = useDispatch();
 
-  const navigate = useNavigate()
 
   const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
 
   const collectionState = useSelector((state: any) => state.MyCollectionState.collectionState)
 
   const checkCollectionState = (e: any) => {
-    // if (collectionState) {
-      dispatch(changeCollectionState());
-
 
       if (collectionState) {
-        // navigate('/collection-page')
-        console.log('collection-page');
-        
 
+        console.log('collection page');
 
-    
       } else {
-        e.preventDefault()
+
         console.log('popup');
-        
+        e.preventDefault()
+        dispatch(popupMethod('yourCollection'))
+        // dispatch(changeCollectionState())
+
       }
-     
 
 
-    // } else {
-    //   <Link to="/collection-page"/>
-    // }
-    
-    // console.log(collectionState, "click collection");
 
     
   }
 
-  // useEffect(() => {
-  //   console.log('ololo');
-    
-    
-  // },[])
- 
-
-  // console.log(collectionState);
-  
 
 
   return (
@@ -74,7 +55,7 @@ const Header = () => {
             {/* <Link>
             
             </Link> */}
-            {!guestStatus && <div className='Page-Name' onClick={(event) => {checkCollectionState(event)}}>My Collections</div>}
+            {!guestStatus && <Link to='/collection-page' className='Page-Name' onClick={(event) => {checkCollectionState(event)}}>My Collections</Link>}
 
 
           </div>

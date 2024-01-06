@@ -2,8 +2,15 @@ import './LogFooter.scss';
 import '../MediaFooter.scss';
 import React from 'react';
 import { memo } from 'react';
+import { openSupportModal } from '../../../redux/supportSlice';
+import { useDispatch } from "react-redux";
 
 const Footer = () => {
+
+
+  const dispatch = useDispatch();
+
+
   return (
     <footer className="App-footer">
       <div className="container">
@@ -29,7 +36,7 @@ const Footer = () => {
                 <span className='titleList'>Menu</span>
                 <ul>
                   <li>Galerry</li>
-                  <li>Support</li>
+                  <li onClick={() => dispatch(openSupportModal())}>Support</li>
                 </ul>
               </div>
               <div className="list">

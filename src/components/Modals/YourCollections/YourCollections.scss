@@ -1,0 +1,18 @@
+.yourCollections{
+
+    .modal-wrapper {
+        width: 671px !important;
+        height: 386px !important;
+        align-items: center;
+        .modalTitle {
+            // padding-bottom: 0;
+            // padding: 56px 0 30px;
+            h2{
+                margin-bottom: 0;
+            }
+        }
+        .defaultBtn {
+            width: 213px;
+        }
+    }
+}

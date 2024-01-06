@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import DefaultBtn from "../../shared/DefaultBtn";
+import React from "react";
 import backBtn from '../../../assets/images/backBtn.png'
 import closeBtn from '../../../assets/images/closeBtn.svg'
 import { useDispatch } from "react-redux";
 import { getInfo } from '../../../redux/getInfoSlice'
-import { selectPlan, choicePlan } from "../../../redux/selectPlanSlice";
+import { selectPlan,  } from "../../../redux/selectPlanSlice";
+import PlanComponent from "./PlanComponent";
 
 import './SelectPlanModal.scss'
 
@@ -12,26 +12,26 @@ const SelectPlanModal = () => {
 
     const dispatch = useDispatch();
 
-    const [freePlan, setFreePlan] = useState<string>('');
-    const [proPlan, setProPlan] = useState<string>('activePlan');
+    // const [freePlan, setFreePlan] = useState<string>('');
+    // const [proPlan, setProPlan] = useState<string>('activePlan');
 
 
 
-    const togglePlan = (type: string) => {
+    // const togglePlan = (type: string) => {
 
-        switch (type) {
-            case 'free':
-                setFreePlan('activePlan');
-                setProPlan('');
-            break;
-            case 'pro':
-                setFreePlan('');
-                setProPlan('activePlan');
-            break;
-        }
+    //     switch (type) {
+    //         case 'free':
+    //             setFreePlan('activePlan');
+    //             setProPlan('');
+    //         break;
+    //         case 'pro':
+    //             setFreePlan('');
+    //             setProPlan('activePlan');
+    //         break;
+    //     }
         
 
-    }
+    // }
 
     const goBack = () => {
         dispatch(selectPlan('go-back'))
@@ -67,91 +67,8 @@ const SelectPlanModal = () => {
                             Change or cancel your plan anytime
                         </span>
                     </div>
-                    <div className="planWrapper">
-                        <div className={`plan ${freePlan}`} onClick={(event) => {togglePlan('free'); dispatch(choicePlan('free'))}}>
-                            <div className="planType">
-                                <div className="type">
-                                    <h2>
-                                        Free
-                                    </h2>
-                                </div>
-                                <div className="coast">
-                                    $0
-                                </div>
-                                
-                            </div>
-                            <div className="list">
-                                <ul>
-                                    <li>
-                                        <span>
-                                            Browse latest 200 ads
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span>
-                                            Limited search
-                                        </span>
-                                        
-                                    </li>
-                                    <li>
-                                        <span>
-                                            1 Collections
-                                        </span>
-                                        
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="planBtn">
-                                    <DefaultBtn textBtn="Start for free" methodBtn="Free-plan"/>
-                            </div>
-                        </div>
-                        <div className={`plan ${proPlan}`} onClick={(event) => {togglePlan('pro'); dispatch(choicePlan('pro'))}}>
-                            <div className="planType">
-                                <div className="type">
-                                    <h2>
-                                        Pro
-                                    </h2>
-                                </div>
-                                <div className="coast">
-                                    $8/mo
-                                    <span>Billed annualy</span>
-                                </div>
-                            </div>
-                            <div className="list">
-                                <ul>
-                                    <li>
-                                        <span>
-                                            Unlimited access to ads
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span>
-                                            Unlimited search
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span>
-                                            Save favourites
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span>
-                                            Unlimited collections
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span>
-                                            Shared collections
-                                        </span>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            <div className="planBtn">
-                                    <DefaultBtn textBtn="Go Pro" methodBtn="Go-pro"/>
-                            </div>
-                        </div>
-                    </div>
+                    <PlanComponent freeTextBtn="Start for free" freeMethodBtn="Free-plan" proTextBtn="Go Pro" proMethodBtn="Go-pro"/>
+                    
                    
                     {/* <DefaultBtn textBtn="Access the gallery" methodBtn="GetInfoModal"/> */}
                  
