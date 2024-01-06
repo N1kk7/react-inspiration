@@ -131,5 +131,32 @@
       position: relative;
       text-align: start;
     }
+    .profilePopup {
+        position: absolute;
+        right: 0;
+        top: 5vh;
+        width: 171px;
+        // height: 206px;
+        border-radius: 15px;
+        background: var(--White, #FFF);
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+        z-index: 3;
+        ul{
+          padding: 0 30px;
+          li{
+            color: var(--main-text-color);
+            text-align: start;
+            font-family: var(--font-inter);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            list-style-type: none;
+            cursor: pointer;
+            padding: 15px 0;
+          }
+        }
+        
+    }
   }
 }

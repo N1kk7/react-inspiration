@@ -6,6 +6,7 @@ import { getInfo } from '../../../redux/getInfoSlice'
 import { selectPlan,  } from "../../../redux/selectPlanSlice";
 import PlanComponent from "./PlanComponent";
 
+
 import './SelectPlanModal.scss'
 
 const SelectPlanModal = () => {

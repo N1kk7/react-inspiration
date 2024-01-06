@@ -8,6 +8,7 @@ export const selectPlanSlice = createSlice({
     initialState: {
         selectPlanModal: false,
         paymentDetailsPage: false,
+        getUnlimAccessModal: false,
         proPlan: false,
         freePlan: false,
 
@@ -66,7 +67,17 @@ export const selectPlanSlice = createSlice({
 
             }
             
-        }
+        },
+        getUnlimAccess: (state, action) => {
+            switch (action.payload) {
+                case 'open-unlim-access':
+                    state.getUnlimAccessModal = true;
+                break;
+                case 'close-unlim-access':
+                    state.getUnlimAccessModal = false;
+                break;
+            }
+        },
 
     }
 
@@ -75,5 +86,5 @@ export const selectPlanSlice = createSlice({
 
 })
 
-export const { selectPlan, choicePlan, paymentDetails } = selectPlanSlice.actions;
+export const { selectPlan, choicePlan, paymentDetails, getUnlimAccess } = selectPlanSlice.actions;
 export default selectPlanSlice.reducer;

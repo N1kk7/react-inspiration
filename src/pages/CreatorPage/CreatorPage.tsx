@@ -17,6 +17,10 @@ import UnlogBrandFooter from "../../components/Footer/UnlogFooter/UnlogBrandFoot
 import Footer from "../../components/Footer/Footer";
 import { useSelector } from "react-redux";
 import DefaultBtn from "../../components/shared/DefaultBtn";
+import GetUnlimAccess from "../../components/Modals/SelectPlanModal/GetUnlimAccess";
+import SupportModal from "../../components/Modals/SupportModal/SupportModal";
+import SuccessSendReq from "../../components/Modals/SuccessSupportReq/SuccessSendReq";
+
 
 
 
@@ -25,10 +29,18 @@ import DefaultBtn from "../../components/shared/DefaultBtn";
 const CreatorPage = () => {
     
     const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
+    const getUnlimAccessModal = useSelector((state: any) => state.selectPlanState.getUnlimAccessModal);
+    const supportModal = useSelector((state: any) => state.supportState.supportModal);
+    const sendRequestModal = useSelector((state: any) => state.supportState.sendRequestModal);
 
 
     return (
         <>
+            { getUnlimAccessModal && <GetUnlimAccess/> }
+            { supportModal && <SupportModal/> }
+            { sendRequestModal && <SuccessSendReq/> }
+
+
             <div className="creatorPage">
                 <div className="container">
                     <div className="creatorContent">
