@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import './SelectPlanModal.scss'
 import DefaultBtn from "../../shared/DefaultBtn";
-import { useDispatch } from "react-redux";
-import {  choicePlan } from "../../../redux/selectPlanSlice";
+// import { useDispatch } from "react-redux";
+// import {  choicePlan } from "../../../redux/selectPlanSlice";
 // import { userLogIn } from "../../../redux/logInSlice";
 
 
 
 const Plan = (props: {freeTextBtn: string, freeMethodBtn: string, proTextBtn: string,  proMethodBtn: string}) => {
 
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
     const [freePlan, setFreePlan] = useState<string>('');
     const [proPlan, setProPlan] = useState<string>('activePlan');
     
@@ -29,13 +29,12 @@ const Plan = (props: {freeTextBtn: string, freeMethodBtn: string, proTextBtn: st
 
     }
 
-    console.log(props.proMethodBtn);
     
     return(
         <>
             <div className="planWrapper">
                         {/* <div className={`plan ${freePlan}`} onClick={(event) => {togglePlan('free'); dispatch(choicePlan('free'))}}> */}
-                        <div className={`plan ${freePlan}`}>
+                        <div className={`plan ${freePlan}`} onClick={(event) => {togglePlan('free');}}>
 
                             <div className="planType">
                                 <div className="type">
@@ -74,7 +73,7 @@ const Plan = (props: {freeTextBtn: string, freeMethodBtn: string, proTextBtn: st
                             </div>
                         </div>
                         {/* <div className={`plan ${proPlan}`} onClick={(event) => {togglePlan('pro'); dispatch(choicePlan('pro'))}}> */}
-                        <div className={`plan ${proPlan}`} >
+                        <div className={`plan ${proPlan}`}  onClick={(event) => {togglePlan('pro');}}>
 
                             <div className="planType">
                                 <div className="type">
