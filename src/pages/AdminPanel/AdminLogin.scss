@@ -1,0 +1,29 @@
+.adminLogin {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
+  background-color: var(--thumb-border-color);
+
+  &Wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background: var(--white);
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.04);
+    padding: 60px;
+    max-width: 100%;
+  }
+
+  &Title {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 46.176px; /* 115.441% */
+    text-transform: uppercase;
+  }
+}

@@ -6,7 +6,7 @@ export const adminSlice = createSlice({
 
     name: 'adminSlice',
     initialState: {
-        auth: true
+        auth: false
     },
     reducers: {
         // getInfo: (state, action) => {
