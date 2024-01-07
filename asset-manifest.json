@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "https://dmitryfrontender.github.io/adinspiration/static/css/main.b37b9c6e.css",
+    "main.js": "https://dmitryfrontender.github.io/adinspiration/static/js/main.4016e735.js",
+    "static/media/thumb-3.png": "https://dmitryfrontender.github.io/adinspiration/static/media/thumb-3.27e500a4830ae81675d2.png",
+    "static/media/thumb-4.png": "https://dmitryfrontender.github.io/adinspiration/static/media/thumb-4.a57fea7558d1efd193b6.png",
+    "static/media/thumb-1.png": "https://dmitryfrontender.github.io/adinspiration/static/media/thumb-1.10d6573a463bb109a362.png",
+    "static/media/thumb-2.png": "https://dmitryfrontender.github.io/adinspiration/static/media/thumb-2.11209592b9056119f78c.png",
+    "static/media/creator-avatar.png": "https://dmitryfrontender.github.io/adinspiration/static/media/creator-avatar.8d47ca05f6c7d2a2c556.png",
+    "index.html": "https://dmitryfrontender.github.io/adinspiration/index.html",
+    "static/media/arrow-right.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/arrow-right.b9e8996494cdbc4608f7cbad2baad062.svg",
+    "static/media/creator.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/creator.49e440eb2ca57a56003caf7526765dc6.svg",
+    "static/media/closeBtn.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/closeBtn.968bc3f1b35a04bf4d01153cbfaed6e4.svg",
+    "static/media/arrowDown.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/arrowDown.5bbcbb0d603fb575f2bb7bcc5d5b8798.svg",
+    "static/media/downBtn.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/downBtn.345aa50319fd30a7b9d338d3be811955.svg",
+    "main.b37b9c6e.css.map": "https://dmitryfrontender.github.io/adinspiration/static/css/main.b37b9c6e.css.map",
+    "main.4016e735.js.map": "https://dmitryfrontender.github.io/adinspiration/static/js/main.4016e735.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b37b9c6e.css",
+    "static/js/main.4016e735.js"
+  ]
+}
