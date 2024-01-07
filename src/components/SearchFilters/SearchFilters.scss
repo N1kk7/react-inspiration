@@ -2,11 +2,13 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
-    cursor: pointer;
+    // cursor: pointer;
     .search {
       position: relative;
       width: 100%;
       max-width: 313px;
+      cursor: pointer;
+
 
       input{
           border: 1px solid var(--border-color);
@@ -18,6 +20,8 @@
           font-style: normal;
           font-weight: 600;
           line-height: normal;
+          cursor: pointer;
+
       }
       ::placeholder{
           display: inline-block;
@@ -41,6 +45,7 @@
         border: 1px solid var(--border-color);
         border-radius: 50px;
         position: relative;
+        cursor: pointer;
         .filterWrapper{
             padding: 11px 19px;
             span{

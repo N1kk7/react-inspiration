@@ -3,6 +3,7 @@ import './SelectPlanModal.scss'
 import DefaultBtn from "../../shared/DefaultBtn";
 import { useDispatch } from "react-redux";
 import {  choicePlan } from "../../../redux/selectPlanSlice";
+// import { userLogIn } from "../../../redux/logInSlice";
 
 
 
@@ -33,7 +34,9 @@ const Plan = (props: {freeTextBtn: string, freeMethodBtn: string, proTextBtn: st
     return(
         <>
             <div className="planWrapper">
-                        <div className={`plan ${freePlan}`} onClick={(event) => {togglePlan('free'); dispatch(choicePlan('free'))}}>
+                        {/* <div className={`plan ${freePlan}`} onClick={(event) => {togglePlan('free'); dispatch(choicePlan('free'))}}> */}
+                        <div className={`plan ${freePlan}`}>
+
                             <div className="planType">
                                 <div className="type">
                                     <h2>
@@ -70,7 +73,9 @@ const Plan = (props: {freeTextBtn: string, freeMethodBtn: string, proTextBtn: st
                                     <DefaultBtn textBtn={props.freeTextBtn} methodBtn={props.freeMethodBtn}/>
                             </div>
                         </div>
-                        <div className={`plan ${proPlan}`} onClick={(event) => {togglePlan('pro'); dispatch(choicePlan('pro'))}}>
+                        {/* <div className={`plan ${proPlan}`} onClick={(event) => {togglePlan('pro'); dispatch(choicePlan('pro'))}}> */}
+                        <div className={`plan ${proPlan}`} >
+
                             <div className="planType">
                                 <div className="type">
                                     <h2>

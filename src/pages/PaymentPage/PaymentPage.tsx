@@ -5,6 +5,7 @@ import { paymentDetails } from "../../redux/selectPlanSlice";
 // import backBtn from '../../../assets/images/backBtn.png'
 import { useDispatch } from "react-redux";
 import backBtn from '../../assets/images/backBtn.png'
+import { userLogIn } from "../../redux/logInSlice";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -100,7 +101,7 @@ const PaymentDetails = () => {
 
                         </div>
                         <div className="btn paymentBtn">
-                            <DefaultBtn textBtn="Processed to payment" methodBtn="paymentBtn"/>
+                            <DefaultBtn textBtn="Processed to payment" methodBtn="payment-processed"/>
                         </div>
                     </div>
                 </div>

@@ -2,8 +2,12 @@ import React from "react";
 import './SelectPlanModal.scss'
 import PlanComponent from "./PlanComponent";
 import closeBtn from '../../../assets/images/closeBtn.svg'
-import { selectPlan } from "../../../redux/selectPlanSlice";
 import { useDispatch } from "react-redux";
+import { getUnlimAccess } from "../../../redux/selectPlanSlice";
+
+
+
+
 
 
 
@@ -12,10 +16,12 @@ const GetUnlimAccess = () => {
     const dispatch = useDispatch();
     
     const closeModal = () => {
-        dispatch(selectPlan('close-select-plan'))
+        dispatch(getUnlimAccess('close-unlim-access'))
 
 
     }
+
+    
 
     return(
         <>

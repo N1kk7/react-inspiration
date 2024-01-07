@@ -17,6 +17,8 @@ export const rootSlice = createSlice({
         createPassword: '',
         confirmPassword: '',
 
+        profilePopup: false,
+
         emailError: false,
         passwordError: false,
 
@@ -30,8 +32,11 @@ export const rootSlice = createSlice({
         popup: (state, action) => {
 
             switch (action.payload) {
-                case 'toggle-filter':
-                    state.filterPopup = !state.filterPopup;
+                case 'open-filter':
+                    state.filterPopup = true;
+                break;
+                case 'close-filter':
+                    state.filterPopup = false;
                 break;
                 case 'open-signIn':
                     state.signIn = true;
@@ -83,9 +88,6 @@ export const rootSlice = createSlice({
                 break;
                 case 'email-error':
                     state.emailError = true
-                    // setTimeout(() => {
-                    //     state.emailError = false
-                    // },200)
                 break;
                 case 'cancel-email-error':
                     state.emailError = false
@@ -100,6 +102,15 @@ export const rootSlice = createSlice({
                     state.passwordError = false
 
                 break;
+                case 'open-profile-popup':
+                    state.profilePopup = true
+
+                break;
+                case 'close-profile-popup':
+                    state.profilePopup = false
+
+                break;
+
 
 
 

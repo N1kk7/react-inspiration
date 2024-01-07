@@ -20,14 +20,14 @@ export default function Thumb({img, avatar, userName} : ThumbModel) {
     
 
     <div className="thumbItemWrapper">
-        <Link to='creatorPage'>
+        {/* <Link to='creatorPage'> */}
             <div className="thumbItem"  onClick={() => {dispatch(creatorBrand('creator'));}}>
                 <div className="thumbImg">
                     <img src={img} alt="thumb" />
                 </div>
             </div>
     
-        </Link>
+        {/* </Link> */}
         <Link to='brandPage'>
             <div className="userBlock" onClick={() => {dispatch(creatorBrand('brand'))}}>
                 <div className="userAvatar">
