@@ -1,29 +1,18 @@
 import React from "react";
-import './PaymentPage.scss'
-import DefaultBtn from "../../components/shared/DefaultBtn";
-import { paymentDetails } from "../../redux/selectPlanSlice";
-// import backBtn from '../../../assets/images/backBtn.png'
-import { useDispatch } from "react-redux";
+import './EditProfile.scss'
 import backBtn from '../../assets/images/backBtn.png'
-// import { userLogIn } from "../../redux/logInSlice";
-import { useNavigate } from 'react-router-dom';
+import DefaultBtn from "../../components/shared/DefaultBtn";
 
 
 
-const PaymentDetails = () => {
 
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-
-
+const EditProfile = () => {
+    
     const goBack = () => {
-        dispatch(paymentDetails('close-payment-details'))
-        navigate(-1)
         
     }
-    
 
-    return(
+    return (
         <>
             <div className="paymentPage">
                 <div className="paymentPageWrapper">
@@ -106,9 +95,12 @@ const PaymentDetails = () => {
                     </div>
                 </div>
             </div>
-        
+
+
+
         </>
     )
 }
 
-export default PaymentDetails
+
+export default EditProfile

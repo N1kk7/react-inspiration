@@ -30,6 +30,7 @@ import ProjectPage from './pages/ProjectPage/ProjectPage';
 import PaymentPage from './pages/PaymentPage/PaymentPage';
 import AdminPanel from './pages/AdminPanel/AdminPanel';
 import AdminLogin from './pages/AdminPanel/AdminLogin';
+import EditProfile from './pages/EditProfile/EditProfile';
 
 type PrivateRouteProps = {
   auth: {
