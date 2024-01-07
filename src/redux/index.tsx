@@ -6,6 +6,7 @@ import getInfoReducer from "./getInfoSlice";
 import logInSlice from "./logInSlice";
 import CollectionSlice from "./myCollection"
 import supportSlice from "./supportSlice"
+import adminSlice from "./adminSlice"
 
 
 
@@ -20,10 +21,11 @@ export default configureStore({
         logInState: logInSlice,
         MyCollectionState: CollectionSlice,
         supportState: supportSlice,
+        adminState: adminSlice,
 
-        
+
     },
-    // middleware: 
+    // middleware:
 
 
 

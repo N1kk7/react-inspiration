@@ -8,7 +8,9 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Routes
+  Routes,
+  Navigate,
+  useLocation
 } from "react-router-dom";
 import { useSelector } from 'react-redux';
 // import { decrement, increment } from './redux/rootSlice.tsx';
@@ -25,6 +27,19 @@ import CollectionPage from './pages/CollectionName/CollectionName'
 import SearchPage from  './pages/SearchQuery/SearchQuery'
 import ProjectPage from './pages/ProjectPage/ProjectPage';
 import PaymentPage from './pages/PaymentPage/PaymentPage';
+import AdminPanel from './pages/AdminPanel/AdminPanel';
+import AdminLogin from './pages/AdminPanel/AdminLogin';
+
+type PrivateRouteProps = {
+  auth: {
+    isAuthenticated: boolean
+  },
+  children: React.JSX.Element
+}
+
+const PrivateRoute = ({ auth: { isAuthenticated }, children }: PrivateRouteProps) => {
+  return isAuthenticated ? children : <Navigate to="/admin/login" />;
+};
 
 function App() {
   // const dispatch = useDispatch();
@@ -34,20 +49,16 @@ function App() {
   const welcomeModal = useSelector((state: any) => state.welcomeModalState.welcomeModal);
   const getInfoModal = useSelector((state: any) => state.getInfoState.getInfoModal);
   const selectPlanModal = useSelector((state: any) => state.selectPlanState.selectPlanModal);
-  const paymentPage = useSelector((state: any) => state.selectPlanState.paymentDetailsPage)
-
-
-  console.log(paymentPage);
-
-
+  const paymentPage = useSelector((state: any) => state.selectPlanState.paymentDetailsPage);
+  const adminPage = window.location.href.indexOf('admin') > -1;
+  const auth = useSelector((state: any) => state.adminState.auth);
 
   return (
 
     <Router>
       <div className="App">
         <div className="wrapper">
-        {/* <Header /> */}
-          {!paymentPage && <Header />}
+          {!paymentPage && !adminPage && <Header />}
 
           {loginModal && <LogIn />}
           {signInModal && <SignIn />}
@@ -55,7 +66,6 @@ function App() {
           {welcomeModal && <WelcomeModal/>}
           {getInfoModal && <GetInfo/>}
           {selectPlanModal && <SelectPlan/>}
-
 
           <Routes>
             <Route path="/" element={<MainPage />} />
@@ -67,22 +77,17 @@ function App() {
             <Route path="/payment-page" element={<PaymentPage />} />
 
 
+            <Route
+              path="/admin"
+              element={
+                <PrivateRoute auth={{ isAuthenticated: auth }}>
+                  <AdminPanel />
+                </PrivateRoute>
+              }
+            />
 
-
-
-
-            {/* <Route path="/gallery" element={<div>My Gallery</div>} /> */}
+            <Route path="/admin/login" element={<AdminLogin />} />
           </Routes>
-
-          {/* <MainPage /> */}
-          {/* <main>Main</main>
-
-          <div className="count">{count}</div>
-          <button onClick={() => dispatch(increment('ololo'))}>Increment</button>
-          <button onClick={() => dispatch(decrement())}>Decrement</button> */}
-
-
-          {/* <Footer /> */}
         </div>
       </div>
 
