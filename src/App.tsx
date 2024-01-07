@@ -8,11 +8,7 @@ import React from 'react';
 import {
   Route,
   Routes,
-  Navigate,
-<<<<<<< Updated upstream
-  useLocation
-=======
->>>>>>> Stashed changes
+  Navigate
 } from "react-router-dom";
 import { useSelector } from 'react-redux';
 
@@ -75,11 +71,7 @@ function App() {
             <Route path="/search-page" element={<SearchPage />} />
             <Route path="/project-page" element={<ProjectPage />} />
             <Route path="/payment-page" element={<PaymentPage />} />
-<<<<<<< Updated upstream
-
-=======
             <Route path="/edit-profile" element={<EditProfile />} />
->>>>>>> Stashed changes
 
             <Route
               path="/admin"
