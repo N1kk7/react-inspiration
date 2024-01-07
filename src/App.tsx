@@ -69,7 +69,7 @@ function App() {
           {selectPlanModal && <SelectPlan/>}
 
           <Routes>
-            <Route path="/react-inspiration" element={<MainPage />} />
+            <Route path="/" element={<MainPage />} />
             <Route path="/creatorPage" element={<CreatorPage />} />
             <Route path="/brandPage" element={<BrandPage />} />
             <Route path="/collection-page" element={<CollectionPage />} />
