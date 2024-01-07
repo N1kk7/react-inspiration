@@ -39,7 +39,7 @@ const CreatorPage = () => {
             { getUnlimAccessModal && <GetUnlimAccess/> }
             { supportModal && <SupportModal/> }
             { sendRequestModal && <SuccessSendReq/> }
-
+                                                  
 
             <div className="creatorPage">
                 <div className="container">
@@ -50,6 +50,7 @@ const CreatorPage = () => {
                         <div className="creatorDescription">
                             <div className="creatorName">
                                 <h2>First and Last Name</h2>
+                                <DefaultBtn textBtn="Edit" methodBtn="open-edit-page" />
                             </div>
                             <div className="creatorItems">
                                 <div className="item creator">

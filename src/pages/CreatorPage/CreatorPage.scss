@@ -2,7 +2,7 @@
     .creatorContent{
         display: flex;
         justify-content: flex-start;
-        margin: 5vh 10vh;
+        margin: 5vh 2vh;
         .creatorDescription {
             text-align: start;
           margin-left: 100px;
@@ -15,6 +15,21 @@
             line-height: normal;
             letter-spacing: 1px;
             text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // h2{
+            //   width: max-content;
+            // }
+            .defaultBtn{
+              width: 65px;
+              height: 42px;
+              background-color: transparent;
+              border: 1px solid var(--border-color);
+              color: var(--main-text-color);
+              margin: 0;
+              padding: 11px 19px;
+            }
           }
           .creatorItems {
             .item{

@@ -7,6 +7,7 @@ import logInSlice from "./logInSlice";
 import CollectionSlice from "./myCollection"
 import supportSlice from "./supportSlice"
 import adminSlice from "./adminSlice"
+import editPageSlice from "./editPageSlice"
 
 
 
@@ -22,6 +23,7 @@ export default configureStore({
         MyCollectionState: CollectionSlice,
         supportState: supportSlice,
         adminState: adminSlice,
+        editPageState: editPageSlice,
 
 
     },

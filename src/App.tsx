@@ -10,7 +10,7 @@ import {
   Route,
   Routes,
   Navigate,
-  useLocation
+  // useLocation
 } from "react-router-dom";
 import { useSelector } from 'react-redux';
 // import { decrement, increment } from './redux/rootSlice.tsx';
@@ -29,6 +29,7 @@ import ProjectPage from './pages/ProjectPage/ProjectPage';
 import PaymentPage from './pages/PaymentPage/PaymentPage';
 import AdminPanel from './pages/AdminPanel/AdminPanel';
 import AdminLogin from './pages/AdminPanel/AdminLogin';
+import EditProfile from './pages/EditProfile/EditProfile';
 
 type PrivateRouteProps = {
   auth: {
@@ -75,6 +76,8 @@ function App() {
             <Route path="/search-page" element={<SearchPage />} />
             <Route path="/project-page" element={<ProjectPage />} />
             <Route path="/payment-page" element={<PaymentPage />} />
+            <Route path="/edit-profile" element={<EditProfile />} />
+
 
 
             <Route

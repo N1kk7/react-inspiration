@@ -10,6 +10,7 @@ import { paymentDetails } from '../../redux/selectPlanSlice';
 import { useNavigate } from 'react-router-dom';
 import { sendRequest } from '../../redux/supportSlice';
 import { getUnlimAccess } from '../../redux/selectPlanSlice';
+import { editPage } from '../../redux/editPageSlice';
 
 
 const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
@@ -176,6 +177,10 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
         dispatch(userLogIn('userPro'));
         dispatch(paymentDetails('close-payment-details'))
         navigate('/')
+      break;
+      case 'open-edit-page':
+        dispatch(editPage('open-edit-page'))
+        navigate('/edit-page')
       break;
   
         
