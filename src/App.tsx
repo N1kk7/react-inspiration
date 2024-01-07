@@ -6,15 +6,16 @@ import './style/MediaApp.scss';
 
 import React from 'react';
 import {
-  BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
-  // useLocation
+<<<<<<< Updated upstream
+  useLocation
+=======
+>>>>>>> Stashed changes
 } from "react-router-dom";
 import { useSelector } from 'react-redux';
-// import { decrement, increment } from './redux/rootSlice.tsx';
-// import count from './redux/rootSlice.tsx';
+
 import LogIn from './components/Modals/LogIn/LogIn';
 import SignIn from './components/Modals/SignIn/SignIn';
 import CreatePassword from './components/Modals/CreatePassword/CreatePassword';
@@ -55,8 +56,6 @@ function App() {
   const auth = useSelector((state: any) => state.adminState.auth);
 
   return (
-
-    <Router>
       <div className="App">
         <div className="wrapper">
           {!paymentPage && !adminPage && <Header />}
@@ -69,16 +68,18 @@ function App() {
           {selectPlanModal && <SelectPlan/>}
 
           <Routes>
-            <Route path="/" element={<MainPage />} />
+            <Route index path="/" element={<MainPage />} />
             <Route path="/creatorPage" element={<CreatorPage />} />
             <Route path="/brandPage" element={<BrandPage />} />
             <Route path="/collection-page" element={<CollectionPage />} />
             <Route path="/search-page" element={<SearchPage />} />
             <Route path="/project-page" element={<ProjectPage />} />
             <Route path="/payment-page" element={<PaymentPage />} />
+<<<<<<< Updated upstream
+
+=======
             <Route path="/edit-profile" element={<EditProfile />} />
-
-
+>>>>>>> Stashed changes
 
             <Route
               path="/admin"
@@ -93,9 +94,6 @@ function App() {
           </Routes>
         </div>
       </div>
-
-    </Router>
-
   );
 }
 

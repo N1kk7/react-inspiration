@@ -72,7 +72,7 @@ const Header = () => {
 
 
 
-    
+
   // }
 
 
@@ -87,7 +87,7 @@ const Header = () => {
 
             </Link>
             {/* <Link>
-            
+
             </Link> */}
             {!guestStatus && <Link to='/creatorPage' className='Page-Name'>My Collections</Link>}
 
@@ -107,7 +107,7 @@ const Header = () => {
             {userFree && <button className='log-btn' onClick={() => {dispatch(getUnlimAccess('open-unlim-access'))}}>Go pro</button>}
             {guestStatus && <div className="vLine"></div>}
             {guestStatus && <button className='sign-btn' onClick={() => dispatch(popup('open-signIn'))}>Sign up</button>}
-            {!guestStatus && 
+            {!guestStatus &&
               <>
                 {/* <div className="userProfileBtn"> */}
                   <button className='user-profileBtn' onClick={() => dispatch(popup('open-profile-popup'))}>
@@ -116,7 +116,7 @@ const Header = () => {
 
                   </button>
                 {/* </div> */}
-                {profilePopup && 
+                {profilePopup &&
                   <div className="profilePopup" ref={profileRef}>
                     <div className="profileListPopup">
                       <ul>
@@ -134,20 +134,20 @@ const Header = () => {
                           Log out
                         </li>
                       </ul>
-                      
+
                     </div>
                   </div>
-                  
-                  
-                  
+
+
+
                   }
               </>
             }
           </div>
         </header>
-        
+
     </div>
-    
+
   );
 };
 
