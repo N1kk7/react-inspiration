@@ -34,28 +34,28 @@ const UnloggedFooter = () => {
                         </div>
                         <EnterEmail/>
                         {/* <SignInBtn/>*/}
-                        <DefaultBtn textBtn="Sign in" methodBtn={'Login'}/> 
+                        <DefaultBtn textBtn="Sign in" methodBtn={'Login'}/>
                         <div className="unlog-description">
                             <span>
                                 By creating an account you agree with our <a href="/">Terms of Service</a> and <a href="/">Privacy Policy.</a>
                             </span>
                         </div>
-                        
+
                     </div>
-                    
+
 
 
                 </div>
-            
+
             </>
-            
-            
-            
-        
-        
-        
+
+
+
+
+
+
     )
-    
+
 }
 
 
