@@ -45,7 +45,7 @@ const GetInfoModal = () => {
                     <div className="textArea">
                         <textarea name="answer-text" id="1" placeholder="Example: I heard about Adinspiration from the Adbox podcast" onChange={(event) => {dispatch(setMessage(event.target.value))}}></textarea>
                     </div>
-                    <div className="modalQuestion">
+                    <div className="modalQuestion listQuestion">
                         <h5>Are you here to hire UGC creators?</h5>
                     </div>
                     <div className="answerList">

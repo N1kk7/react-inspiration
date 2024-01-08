@@ -1,7 +1,7 @@
 .contGoogle{
-    margin: 0 10px;
+    margin: 0 15px;
     display: flex;
-    padding: 7px 19px;
+    padding: 8px 19px;
     justify-content: center;
     align-items: center;
     font-family: var(--font-inter);
@@ -13,17 +13,18 @@
 }
 
 .choiceMethod {
-  margin: 20px 15px 30px;
+  margin: 20px 15px 28px;
   position: relative;
   hr{
     background-color: var(--border-color);
+    opacity: 0.2;
   }
   span{
     display: flex;
     position: absolute;
     top: 0;
     background-color: white;
-    padding: 0 10px;
+    padding: 0 20px;
     left: 50%;
     transform: translateX(-50%);
     color: var(--grey);
@@ -37,7 +38,7 @@
 }
 
 .enterEmailPass {
-    margin-bottom: 17px;
+    margin-bottom: 14px;
     input{
         display: flex;
         width: 365px;
@@ -49,15 +50,20 @@
         border-radius: 50px;
         border: 1px solid var(--border-color);
         background: var(--thumb-border-color);
-        letter-spacing: 1px;
+        font-size: 14px;
+        letter-spacing: 0px;
           // ::placeholder{
           //   letter-spacing: 1px;
           // }
 
     }
-    // ::placeholder{
-    //   letter-spacing: 1px;
-    // }
+    input::placeholder{
+      color: var(--grey);
+      font-family: var(--font-inter);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
     
 }
 
@@ -72,7 +78,7 @@
     background: var(--main-text-color);
     cursor: pointer;
     position: relative;
-    margin: 0 15px 29px;
+    margin: 4px 15px 30px;
 
 
     color: var(--white);

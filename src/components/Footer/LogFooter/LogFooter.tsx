@@ -35,7 +35,7 @@ const Footer = () => {
               <div className="list">
                 <span className='titleList'>Menu</span>
                 <ul>
-                  <li>Galerry</li>
+                  <li>Gallery</li>
                   <li onClick={() => dispatch(openSupportModal())}>Support</li>
                 </ul>
               </div>
@@ -43,7 +43,7 @@ const Footer = () => {
                 <span className='titleList'>Social</span>
                 <ul>
                   <li>Facebook</li>
-                  <li>Instagramm</li>
+                  <li>Instagram</li>
                   <li>Linkedin</li>
                 </ul>
               </div>
@@ -58,7 +58,7 @@ const Footer = () => {
               <button>Copyright 2023</button>
             </div>
             <div className="buttonWrapper">
-              <button>Privacy Policy</button>
+              <button className="privacy">Privacy Policy</button>
               <div className="vLine"></div>
 
               <button>Terms of Service</button>

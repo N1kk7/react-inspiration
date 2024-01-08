@@ -47,7 +47,7 @@ const CreatePassword = () => {
                         </div>
                         <div className="password">
                             <div className="passwordTitle">
-                                <h5>
+                                <h5 className="confirmPass">
                                     Confirm password
                                 </h5>
                             </div>

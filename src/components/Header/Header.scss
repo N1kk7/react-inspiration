@@ -2,9 +2,11 @@
   height: 40vmin;
   pointer-events: none;
 }
+.headerMargin{
+  margin-bottom: 34px;
+}
 
 .App-header {
-  // display: flex;
   display: grid;
   grid-template-columns: 1fr 160px 1fr;
   align-items: center;
@@ -31,7 +33,6 @@
     }
   }
   .Title-Page{
-
     flex-grow: 0;
     flex-shrink: 0;
     color: var(--main-text-color);
@@ -56,25 +57,11 @@
       cursor: pointer;
       padding: 11px 19px;
       img{
-        // position: absolute;
-        // background: var(--main-text-color);
-        // left: 100%;
-        // top: 50%;
-        // transform: translate(-30%, -50%);
-        // padding: 4px 11px 4px 0;
-        // border-radius: 50px;
-
-        // border-bottom-left-radius: 0;
-        // border-top-left-radius: 0;
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-25%, 13%);
-
-
+        transform: translate(-15%, 13%);
       }
-
-
     }
     .vLine{
       margin: 0;
@@ -89,18 +76,20 @@
       font-style: normal;
       font-weight: 500;
       line-height: normal;
-      // padding: 1px 24px 10px 0;
       padding-left: 0;
       padding-right: 0;
       margin: 0 25px;
-
-
       text-decoration: none;
       background-image: linear-gradient(currentColor, currentColor);
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 0% 2px;
       transition: background-size .3s;
+      position: relative;
+      top: 1px;
+    }
+    .go-pro{
+      margin: 0 8px;
     }
     .log-btn:hover{
       background-size: 70% 2px;
@@ -123,8 +112,6 @@
       background-color: #595959;
     }
     .user-profileBtn{
-      // border-top-right-radius: 0;
-      // border-bottom-right-radius: 0;
       width: 131px;
       font-size: 12px;
       padding: 13px 4px 13px 17px;
@@ -136,7 +123,6 @@
         right: 0;
         top: 5vh;
         width: 171px;
-        // height: 206px;
         border-radius: 15px;
         background: var(--White, #FFF);
         box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);

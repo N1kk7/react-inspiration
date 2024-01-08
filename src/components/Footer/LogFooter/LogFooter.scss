@@ -38,8 +38,8 @@
     .listWrapper {
       display: flex;
       justify-content: space-between;
-      padding: 0 82px;
-      width: 278px;
+      padding: 0 94px;
+      width: 266px;
       .list {
         text-align: start;
         ul {
@@ -83,14 +83,17 @@
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
-      line-height: 22px; /* 157.143% */
+      line-height: 22px;
       display: flex;
+      position: relative;
+      bottom: 2px;
+      left: 5px;
       button{
         display: inline-block;
         border: none;
         background-color: transparent;
         cursor: pointer;
-        color: var(--Main-dark, #141414);
+        color: var(--main-text-color);
         font-family: var(--font-inter);
         text-decoration: none;
         padding: 0;
@@ -104,8 +107,11 @@
         font-style: normal;
         font-weight: 400;
         line-height: 22px; /* 157.143% */
-        letter-spacing: 1px;
 
+
+      }
+      .privacy{
+        padding-right: 6px;
       }
       button:hover{
         background-size: 95% 2px;
@@ -116,6 +122,11 @@
 
 
       .vLine {
+        margin: 0 10px;
+      }
+    }
+    .left-buttonWrapper {
+      .vLine{
         margin: 0 6px;
       }
     }

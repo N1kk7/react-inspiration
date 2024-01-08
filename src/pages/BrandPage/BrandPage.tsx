@@ -15,8 +15,8 @@ const BrandPage = () => {
 
 
     const defaultBrandImg = {
-        width: "15vw",
-        height: "15vw",
+        width: "14.5vw",
+        height: "14.9vw",
         backgroundColor: 'var(--grey)',
         borderRadius: '50%',
       }
