@@ -19,8 +19,7 @@ const AdminLogin = () => {
                             <EnterEmail />
                             <EnterPass />
 
-                            {/* <DefaultBtn textBtn="Log in" methodBtn={'AdminLogin'}></DefaultBtn> */}
-                            <DefaultBtn textBtn="Log in" methodBtn={'Login'}></DefaultBtn>
+                            <DefaultBtn textBtn="Log in" methodBtn={'AdminLogin'}></DefaultBtn>
                         </form>
                     </div>
                 </div>
