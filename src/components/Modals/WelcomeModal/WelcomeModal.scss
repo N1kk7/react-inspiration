@@ -1,15 +1,20 @@
 .welcomeModal{
     .modal-wrapper {
+      height: 624px;
       .modalTitle{
-        padding: 90px 0 0px;
+        padding: 56px 0 0px;
+        h2{
+          margin-bottom: 31px;
+        }
 
       }
       
       .nameWrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         text-align: start;
         .nameTitle{
+          // padding-left: px;
             h5{
                 color: var(--main-dark);
                 font-family: var(--font-inter);
@@ -17,25 +22,43 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
+                margin-bottom: 10px;
+                
             }
+
         }
+        
         .nameInput {
           input{
             display: inline-flex;
-            padding: 13px 30px;
+            padding: 13px 19px;
             align-items: center;
             gap: 10px;
             border-radius: 50px;
             border: 1px solid var(--Button-Stroke, #EBEBED);
             background: var(--Extra-Background, #F8F7F4);
           }
+          input::placeholder{
+            color: var(--grey);
+            font-family: var(--font-inter);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
         }   
+        .last{
+          // padding-left: 6px;
+          position: relative;
+          right: 5px;
+        }
       }
       .companyWrapper{
         text-align: start;
-        padding-bottom: 30px;
+        padding-bottom: 27px;
         position: relative;
         .companyTitle{
+          padding-left: 14px;
             h5{
                 color: var(--Main-dark, #141414);
                 font-family: Inter;
@@ -43,17 +66,19 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
+                margin: 20px 0 10px;
 
             }
         }
         .companyInput{
             position: relative;
             cursor: pointer !important;
+            text-align: center;
 
             input{
                 display: inline-flex;
                 height: 19px;
-                width: 401px;
+                width: 364px;
                 padding: 11px 19px;
                 align-items: center;
                 gap: 268px;
@@ -63,9 +88,17 @@
             }
             img{
                 position: absolute;
-                right: 5%;
-                top: 50%;
+                right: 7%;
+                top: 56%;
                 transform: translate(-50%, -50%);
+            }
+            input::placeholder{
+              color: var(--main-text-color);
+              font-family: var(--font-inter);
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
             }
         }
         .companyType {

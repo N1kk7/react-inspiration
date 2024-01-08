@@ -1,9 +1,19 @@
+.selectPlan{
+    .modal-wrapper{
+        height: 605px ;
+        width: 474px;
+
+    }
+}
+
 .selectPlan, .unlimCollections, .getUnlimAccess {
     .modal-wrapper {
-        width: 500px;
         padding: 0 85px;
+        .modalTitleDescription {
+          padding-bottom: 47px;
+        }
       .modalTitle {
-        padding-bottom: 0;
+        padding: 56px 0 2px;
 
         h2{
             margin-bottom: 16px;
@@ -12,14 +22,15 @@
       .planWrapper {
         display: flex;
         justify-content: space-between;
+        margin: 0 5px;
         .plan{
             position: relative;
-            width: 200px;
+            width: 180px;
             min-height: 259px;
             flex-shrink: 0;
             border-radius: 10px;
             border: 1px solid var(--border-color);
-            padding: 0 20px;
+            padding: 0 21px;
             cursor: pointer;
             .planType {
               display: flex;
@@ -33,6 +44,8 @@
                     font-style: normal;
                     font-weight: 600;
                     line-height: normal;
+                    margin: 19px 0 11px;
+                    padding-left: 4px;
                 }
                 
               }
@@ -45,18 +58,21 @@
                 font-weight: 500;
                 line-height: normal;
                 position: relative;
+                right: 4px;
+                top: 4px;
                 span{
                     position: absolute;
                     color: var(--grey);
                     text-align: right;
-                    font-family: Inter;
+                    font-family: var(--font-inter);
                     font-size: 9px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
-                    bottom: -15px;
+                    bottom: -13px;
                     width: max-content;
-                    right: 0%;
+                    right: -1px;
+
                 }
               }
             }
@@ -64,10 +80,10 @@
                 text-align: start;
                 margin-bottom: 100px;
                 ul{
-                    padding-left: 15px;
+                    padding-left: 18.5px;
                     li{
                         color: var(--grey);
-                        font-family: Inter;
+                        font-family: var(--font-inter);
                         font-size: 14px;
                         font-style: normal;
                         font-weight: 400;
@@ -79,10 +95,11 @@
             .planBtn {
                 position: absolute;
                 width: inherit;
-                bottom: 0;
+                bottom: -10px;
               .defaultBtn{
                 width: unset;
-
+                margin: 4px 4px 30px;
+                padding: 7px;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -91,6 +108,12 @@
             }   
 
 
+        }
+        .free{
+            height: 200px;
+        }
+        .pro{
+            height: 275px;
         }
         .activePlan{
             background-color: var(--main-text-color);

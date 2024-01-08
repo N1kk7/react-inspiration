@@ -18,11 +18,11 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 0 130px;
+        margin: 0 15vw;
       .backBtn {
         position: absolute;
-            top: 80px;
-            left: 40px;
+        top: 12vh;
+        left: 5vw;
             cursor: pointer;
             span{
                 padding-left: 13px;
@@ -37,30 +37,32 @@
       .modalTitle {
         padding: 56px 0 51px;
             h2{
-                color: var(--Main-dark, #141414);
-                font-family: Inter;
-                font-size: 52.148px;
+                color: var(--main-text-color);
+                font-family: var(--font-inter);
+                font-size: 58px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 46.176px; /* 88.549% */
                 text-transform: uppercase;
+                margin: 0;
+
             }
         
       }
 
       .formWrapper{
         display: grid;
-        grid-template-columns: 2fr  1fr;
+        grid-template-columns: 1fr 1fr;
         grid-column-gap: 30px;
-        // grid-row-gap: 0px;
-
         text-align: start;
         width: -webkit-fill-available;
+        position: relative;
+        top: 3px;
         input{
             border-radius: 50px;
             border: 1px solid var(--border-color);
             background: var(--thumb-border-color);
-            padding: 13px 19px;
+            padding: 13px 19px 13px 23px;
             width: -webkit-fill-available;
             // margin: 0 10px;
         }
@@ -87,12 +89,19 @@
             border-right: 1px solid var(--border-color);
             margin-left: 60px;
             padding-right: 60px;
+            max-width: 31vw;
             // margin: 0 60px;
             .name{
                 display: flex;
                 .nameItem {
                     width: -webkit-fill-available;
-                    padding: 0 10px;
+                    padding: 0 0 0 17px;
+                    h4{
+                      padding-left: 5px;
+                      margin-bottom: 10px;
+
+                    }
+                    
                   
                 }
                 // justify-content: space-between;
@@ -100,40 +109,74 @@
             .cardNumber {
                 padding: 0 10px;
                 position: relative;
+                top: 2px;
+                h4{
+                  padding-left: 10px;
+                }
               input{
+                position: relative;
+                bottom: 9px;
+                // padding-left: 10px;
+                left: 10px;
                 width: -webkit-fill-available;
+                padding-left: 18px;
               }
               .description {
                 position: absolute;
                 top: 50%;
                 right: 0;
-                transform: translate(-20%, -20%);
+                transform: translate(-12%, -33%);
+              
               }
               
             }
             .date {
                 display: flex;
+                padding-left: 5px;
                 .dateItem {
                     padding: 0 10px;
-
                     width: -webkit-fill-available;
+                    h4{
+                      margin-top: 13px;
+                      margin-bottom: 11px;
+                      padding-left: 5px;
+                    }
+                    input{
+                      min-width: 12vw;
+
+                    }
+                }
+                .year{
+                    padding-left: 16px;
+                    h4{
+                      padding-left: 5px;
+                    }
                 }
             }
             .secureCode {
-                padding: 0 10px;
+                padding: 0 20px;
+                h4{
+                  margin-bottom: 11px;
+                }
               input{
                 width: auto;
+                padding: 13px 19px;
               }
             }
 
         }
         .addressDetails {
-            margin-left: 40px;
+            margin-left: 24px;
+            max-width: 26vw;
           .country{
             padding: 0 10px;
+            
 
             input{
                 background-color: transparent;
+                position: relative;
+                bottom: 9px;
+                padding-left: 18px;
                 
 
             }   
@@ -143,11 +186,54 @@
           }
           .address{
             padding: 0 10px;
+            
+            h4{
+              position: relative;
+            bottom: 7px;
+            }
+
+            input{
+              position: relative;
+              // bottom: 10px;
+              bottom: 16px;
+              padding: 13px 19px;
+            }
+          }
+          .address2{
+            h4{
+              position: relative;
+            bottom: 14px;
+            }
+
+            input{
+              position: relative;
+              bottom: 24px;
+            }
           }
           .zipCode {
             display: flex;
+            position: relative;
+            bottom: 21px;
+           
             .code{
                 padding: 0 10px;
+                width: -webkit-fill-available;
+                h4{
+                  color: var(--main-text-color);
+                  font-family: var(--font-inter);
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: normal;
+                }
+                input{
+                  position: relative;
+                  bottom: 9px;
+                  padding-left: 18px;
+                }
+            }
+            .postCode{
+
             }
           }
         }
@@ -159,16 +245,19 @@
         width: -webkit-fill-available;
         justify-content: flex-end;
         margin-top: 60px;
+        margin-right: 85px;
         .cancelBtn{
             .defaultBtn{
                 width: 85px;
                 background-color: transparent;
                 color: var(--grey);
+                margin: 4px 0 30px;
             }
         }
         .paymentBtn {
             .defaultBtn{
-                width: 175px;
+                width: 152px;
+                margin: 4px 0 30px 0;
             }
         }
       }

@@ -62,14 +62,14 @@ const WelcomeModal = () => {
                                 <input type="text" placeholder="First name" onChange={(event) => {dispatch(getFirstName(event.target.value))}}/>
                             </div>
                         </div>
-                        <div className="name">
+                        <div className="name last">
                             <div className="nameTitle">
                                 <h5>
-                                    Last Name
+                                    Last name
                                 </h5>
                             </div>
                             <div className="nameInput">
-                                <input type="text" placeholder="First name" onChange={(event) => {dispatch(getLastName(event.target.value))}}/>
+                                <input type="text" placeholder="Last name" onChange={(event) => {dispatch(getLastName(event.target.value))}}/>
 
                             </div>
                         </div>

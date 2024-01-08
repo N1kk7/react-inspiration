@@ -23,11 +23,12 @@
       
         .backBtn{
             position: absolute;
-            top: 1.7vh;
-            left: 2vh;
+            
+            top: 2vh;
+            left: 3vh;
             cursor: pointer;
             span{
-                padding-left: 13px;
+                padding-left: 10px;
                 color: var(--Grey, #9E9E9E);
                 font-family: Inter;
                 font-size: 14px;
@@ -38,15 +39,15 @@
         }
         .closeBtn{
             position: absolute;
-            top: 1.5vh;
-            right: 1.7vh;
+            top: 1.9vh;
+            right: 2.3vh;
             cursor: pointer;
         }
         .modalTitle{
-            padding: 56px 0 51px;
+            padding: 56px 0 49px;
             h2{
-                color: var(--Main-dark, #141414);
-                font-family: Inter;
+                color: var(--main-text-color);
+                font-family: var(--font-inter);
                 font-size: 52.148px;
                 font-style: normal;
                 font-weight: 500;
@@ -69,3 +70,7 @@
 
     }
 }
+
+
+@import './SelectPlanModal/SelectPlanModal.scss';
+@import './SupportModal/SupportModal.scss';

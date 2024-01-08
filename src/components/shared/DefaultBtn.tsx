@@ -158,6 +158,7 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
       break;
       case 'Go-pro':
         // console.log('go-pro');
+        dispatch(selectPlan('close-select-plan'))
         dispatch(paymentDetails('open-payment-details'))
         dispatch(getUnlimAccess('close-unlim-access'))
         navigate('/payment-page')
@@ -172,6 +173,11 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
       break;
       case 'Free-plan':
         dispatch(getUnlimAccess('close-unlim-access'))
+      break;
+      case 'cancel-payment-btn':
+        // dispatch(userLogIn('userPro'));
+        dispatch(paymentDetails('close-payment-details'))
+        navigate(-1)
       break;
       case 'payment-processed':
         dispatch(userLogIn('userPro'));

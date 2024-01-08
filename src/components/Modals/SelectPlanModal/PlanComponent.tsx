@@ -34,7 +34,7 @@ const Plan = (props: {freeTextBtn: string, freeMethodBtn: string, proTextBtn: st
         <>
             <div className="planWrapper">
                         {/* <div className={`plan ${freePlan}`} onClick={(event) => {togglePlan('free'); dispatch(choicePlan('free'))}}> */}
-                        <div className={`plan ${freePlan}`} onClick={(event) => {togglePlan('free');}}>
+                        <div className={`plan free ${freePlan}`} onClick={(event) => {togglePlan('free');}}>
 
                             <div className="planType">
                                 <div className="type">
@@ -73,7 +73,7 @@ const Plan = (props: {freeTextBtn: string, freeMethodBtn: string, proTextBtn: st
                             </div>
                         </div>
                         {/* <div className={`plan ${proPlan}`} onClick={(event) => {togglePlan('pro'); dispatch(choicePlan('pro'))}}> */}
-                        <div className={`plan ${proPlan}`}  onClick={(event) => {togglePlan('pro');}}>
+                        <div className={`plan pro ${proPlan}`}  onClick={(event) => {togglePlan('pro');}}>
 
                             <div className="planType">
                                 <div className="type">
@@ -83,7 +83,7 @@ const Plan = (props: {freeTextBtn: string, freeMethodBtn: string, proTextBtn: st
                                 </div>
                                 <div className="coast">
                                     $8/mo
-                                    <span>Billed annualy</span>
+                                    <span>Billed annually</span>
                                 </div>
                             </div>
                             <div className="list">
@@ -100,7 +100,7 @@ const Plan = (props: {freeTextBtn: string, freeMethodBtn: string, proTextBtn: st
                                     </li>
                                     <li>
                                         <span>
-                                            Save favorites
+                                            Save favourites
                                         </span>
                                     </li>
                                     <li>

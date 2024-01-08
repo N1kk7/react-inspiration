@@ -1,17 +1,35 @@
 .getInfo{
     .modal-wrapper {
+        height: 589px;
         .questionTop{
-            padding-top: 100px;
+            padding-top: 76px;
+            padding-left: 15px;
 
         }
         .modalQuestion {
             text-align: start;
+            h5{
+                color: var(--main-text-color);
+                font-family: var(--font-inter);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 10px;
+            }
+        }
+        .listQuestion{
+            h5{
+                padding-left: 15px;
+                margin: 20px 0 1px;
+            }
         }
         .textArea {
             textarea{
+                margin: 0 auto;
                 display: flex;
-                width: 401px;
-                height: 100px;
+                width: 360px;
+                height: 72px;
                 padding: 13px 19px;
                 align-items: flex-start;
                 gap: 10px;
@@ -36,19 +54,20 @@
 
             fieldset{
                 border: none;
+                padding-bottom: 1px;
             }
             label{
                 list-style-type: none;
                 display: inline-flex;
                 width: -webkit-fill-available;
                 cursor: pointer;
-                padding: 11px 19px;
+                padding: 11px 20px;
                 align-items: center;
                 gap: 30px;
                 flex-shrink: 0;
                 border-radius: 50px;
                 border: 1px solid var(--border-color);
-                margin: 5px 0;
+                margin: 5px 0 0;
     
             }
             input{
@@ -58,7 +77,11 @@
                 background: var(--thumb-border-color);
                 border: 1px solid var(--thumb-border-color);
             }
+            
 
       }
+      .defaultBtn{
+        margin: 30px 15px;
+    }
     }
 }

@@ -33,6 +33,8 @@ const Header = () => {
 
 
 
+
+
   function useOutsideAlerter(ref: any) {
 
     useEffect(() => {
@@ -52,6 +54,8 @@ const Header = () => {
       };
     }, [ref]);
   }
+
+
 
   // const collectionState = useSelector((state: any) => state.MyCollectionState.collectionState)
 
@@ -80,7 +84,7 @@ const Header = () => {
   return (
 
       <div className="container">
-        <header className="App-header">
+        <header className={`App-header ${guestStatus ? '' : 'headerMargin'}`}>
           <div className="pageMenu">
             <Link to='/'>
               <div className="Page-Name">Gallery</div>
@@ -104,14 +108,14 @@ const Header = () => {
 
           <div className="login-menu">
             {guestStatus && <button className='log-btn' onClick={() => dispatch(popup('open-logIn'))} >Log in</button>}
-            {userFree && <button className='log-btn' onClick={() => {dispatch(getUnlimAccess('open-unlim-access'))}}>Go pro</button>}
+            {userFree && <button className='log-btn go-pro' onClick={() => {dispatch(getUnlimAccess('open-unlim-access'))}}>Go Pro</button>}
             {guestStatus && <div className="vLine"></div>}
             {guestStatus && <button className='sign-btn' onClick={() => dispatch(popup('open-signIn'))}>Sign up</button>}
             {!guestStatus &&
               <>
                 {/* <div className="userProfileBtn"> */}
                   <button className='user-profileBtn' onClick={() => dispatch(popup('open-profile-popup'))}>
-                    First Name
+                    First name
                     <img src={userProfileImg} alt="user-avatar" />
 
                   </button>

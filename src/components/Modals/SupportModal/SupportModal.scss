@@ -1,7 +1,12 @@
 .supportModal{
     .supportWrapper{
-        height: 726px !important;
-        width: 666px !important;
+        height: 726px ;
+        width: 641px ;
+        padding: 0 118px;
+        .closeBtn {
+          right: 1vw;
+          top: 1.1vw;
+        }
         h4{
             color: var(--main-text-color);
             font-family: var(--font-inter);
@@ -11,22 +16,28 @@
             line-height: normal;
         }
         .modalTitle {
+          padding: 56px 0 45px;
+
           h2{
             margin-bottom: 0;
+            font-size: 58px;
           }
         }
         .typeRequest {
           text-align: start;
+          h4{
+            margin-bottom: 10px;
+          }
           .inputWrapper{
             position: relative;
             width: min-content;
             input{
-                width: 190px;
-                height: 43px;
-                border-radius: 50px;
-                border: 1px solid var(--border-color);
-                padding: 0 19px;
-                cursor: pointer;
+              width: 145px;
+              height: 41px;
+              border-radius: 50px;
+              border: 1px solid var(--border-color);
+              padding: 0 25px 0 17px;
+              cursor: pointer;
               }
               input::placeholder{
                 color: var(--main-text-color);
@@ -40,7 +51,7 @@
               .downBtn {
                 position: absolute;
                 top: 50%;
-                right: 10%;
+                right: 6%;
                 transform: translate(-50%, -50%);
               }
           }
@@ -75,25 +86,37 @@
         }
         .describeRequest {
             text-align: start;
+            h4{
+              margin-bottom: 12px;
+            }
             input, textarea{
                 display: block;
                 width: -webkit-fill-available;
-                padding: 13px 19px;
+                padding: 13px 18px;
                 border-radius: 50px;
                 background: var(--thumb-border-color);
                 border: 1px solid var(--border-color);
                 margin-bottom: 15px;
+                color: var(--grey);
+                font-family: var(--font-inter);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
 
             }
+            #title{
+              height: 13px;
+            }
             #description{
-                height: 180px;
+                height: 153px;
                 border-radius: 15px;
                 margin-bottom: 0;
 
             }
             #description::placeholder{
                 position: absolute;
-                top: 15px;
+                top: 13px;
                 color: var(--grey);
                 text-align: center;
                 font-family: var(--font-inter);
@@ -115,7 +138,7 @@
             display: flex;
             justify-content: flex-end;
           .defaultBtn{
-              width: 213px;
+              width: 191px;
               margin: 0 0 29px;
           }
         }
