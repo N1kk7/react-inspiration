@@ -7,7 +7,6 @@ import store from './redux/index';
 import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-console.log('process.env.PUBLIC_URL', process.env.PUBLIC_URL);
 
 root.render(
   <StrictMode>

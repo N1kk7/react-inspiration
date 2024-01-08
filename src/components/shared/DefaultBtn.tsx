@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { popup } from '../../redux/rootSlice';
 import { userLogIn } from '../../redux/logInSlice';
+import { adminLogIn } from '../../redux/adminSlice';
 import { welcomePopup } from '../../redux/welcomeModalSlice';
 import { getInfo } from '../../redux/getInfoSlice';
 import { selectPlan } from '../../redux/selectPlanSlice'
@@ -38,10 +39,10 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
   const [styleBtn, setStyleBtn] = useState<string>('');
 
   function showErrorBtn (modal: string, err1?: string, err2?:string) {
-    
+
     if (!stateDefaultBtn) {
       setStyleBtn('disableBtn');
-      setTimeout(() => { 
+      setTimeout(() => {
         setStyleBtn('');
         markError(modal, err1, err2)
       },200)
@@ -54,7 +55,7 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
 
         if (err1 === '') {
           dispatch(popup('email-error'))
-          
+
         }
         if (err2 === '') {
           dispatch(popup('password-error'))
@@ -77,7 +78,7 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
         setTimeout(() => {
 
             dispatch(popup('cancel-email-error'))
- 
+
         }, 2500)
 
 
@@ -101,19 +102,19 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
   const changeInfoModal = () => {
     dispatch(getInfo('close-getInfo'))
     dispatch(selectPlan('open-select-plan'))
-    
+
   }
-  
+
   const toggleClassBtn = (methodBtn: string) => {
     console.log(methodBtn);
-    
-    window.scrollTo({ 
-      top: 0,  
+
+    window.scrollTo({
+      top: 0,
       behavior: 'smooth'
-      /* you can also use 'auto' behaviour 
+      /* you can also use 'auto' behaviour
          in place of 'smooth' */
-    }); 
-    
+    });
+
 
     switch (methodBtn) {
       case 'Login':
@@ -130,16 +131,16 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
       break;
       case 'GetInfoModal':
         disableGetInfoBtn ? changeInfoModal() : showErrorBtn('GetInfoModal');
-        
+
 
       break;
       case 'openSignUpModal':
         dispatch(popup('open-signIn'))
-        
+
       break;
       case 'openLogInModal':
         dispatch(popup('open-logIn'))
-        
+
       break;
 
       case 'createCollection':
@@ -188,10 +189,12 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
         dispatch(editPage('open-edit-page'))
         navigate('/edit-page')
       break;
-  
-        
+
+      case 'AdminLogin':
+        dispatch(adminLogIn(true));
+        navigate('/admin')
     }
-    
+
   }
 
 
@@ -201,7 +204,7 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
       <div className={`defaultBtn ${styleBtn}`} onClick={() => toggleClassBtn(props.methodBtn)}>
         {props.textBtn}
       </div>
-    
+
     </>
   )
 }
