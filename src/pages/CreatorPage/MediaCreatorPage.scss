@@ -1,7 +1,7 @@
 @media screen and (max-width: 768px) {
     .creatorPage {
-        .modal-wrapper {
-            .creatorContent {
+        // .modal-wrapper {
+        .creatorContent {
             flex-direction: column;
             margin: 3vh 2vh;
             .creatorAvatar {
@@ -23,10 +23,10 @@
                     }
                 }
                 .creatorItems {
-                  text-align: center;
-                  border-bottom: 1px solid var(--border-color);
-                  padding-bottom: 2vh;
-                  .item {
+                    text-align: center;
+                    border-bottom: 1px solid var(--border-color);
+                    padding-bottom: 2vh;
+                    .item {
                     padding: 0.8vh 0;
 
                     // margin: 0 2px;
@@ -38,43 +38,43 @@
                         padding-left: 10px;
                         font-size: 14px;
                     }
-                  }
-                  .location {
+                    }
+                    .location {
                     margin: 0 10px 0 0;
-                  }
-                  .media{
+                    }
+                    .media{
                     margin: 0 5px 0 0px;
-                  }
+                    }
                 }
                 .creatorMessage {
                     text-align: center;
                     line-height: 29px;
                     margin: 38px 0 20px;
 
-                  p{
+                    p{
                     font-size: 16px;
-                  }
+                    }
                 }
                 .socials {
                     justify-content: center;
                     margin-bottom: 20px;
-                  .defaultBtn{
+                    .defaultBtn{
                     display: none;
-                  }
+                    }
                 }
                 .mobileBtn {
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  position: relative;
-                  .uploadBtn {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    .uploadBtn {
                     width: 55vw;
                     .defaultBtn{
                         margin: 0;
                         width: 80%;
                     }
-                  }
-                  .editBtn {
+                    }
+                    .editBtn {
                     .defaultBtn{
                         width: 60%;
                         margin: 0;
@@ -82,13 +82,17 @@
                         color: var(--main-text-color);
                         border: 1px solid var(--border-color);
                     }
-                  }
+                    }
                 }
-              
+                
 
             }
-        }
+        
+        // }.
             
+        }
+        .swiper{
+            display: none;
         }
         
     }

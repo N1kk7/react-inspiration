@@ -97,11 +97,15 @@
         font-weight: 500;
         line-height: normal;
       }
+      .closeBtn {
+        display: none;
+      }
 
       .categoryWrapper{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 10px;
+        
 
         .category {
           display: flex;

@@ -5,6 +5,7 @@ import "./SearchFilters.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { popup } from "../../redux/rootSlice";
 import { useNavigate } from "react-router-dom";
+import closeBtn from '../../assets/images/closeBtn.svg'
 // import searchMobileBtn from '../../assets/images/searchMobileBtn.png'
 
 
@@ -106,6 +107,9 @@ const SearchFilters = () => {
 
                     {filterPopup && <div className="filterPopup">
                         <div className="filterPopupContainer">
+                            <div className="closeBtn">
+                                <img src={closeBtn} alt="close-btn" onClick={() => dispatch(popup('close-filter'))} />
+                            </div>
                             <div className="categories">
                                 <div className="optionTitle">
                                     <span>Categories:</span>

@@ -1,0 +1,57 @@
+
+@media screen and (max-width: 768px) {
+
+    .brandPage{
+        .container {
+          .brandContent {
+            margin: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .brandAvatar {
+              .brandImg {
+                width: 40vw !important;
+                height: 40vw !important;
+              }
+            }
+            .brandDescription {
+                margin: 0;
+                text-align: center;
+                text-align: center;
+                margin-bottom: 60px;
+                border-bottom: 1px solid var(--border-color);
+              .brand {
+                  display: none;
+              }
+              .brandName {
+                text-align: center;
+                padding-bottom: 20px;
+                border-bottom: 1px solid var(--border-color);
+                h2{
+                    font-size: 20px;
+
+                }
+              }
+              .brandMessage {
+                text-align: center;
+                p{
+                    font-size: 16px;
+                }
+              }
+              .defaultBtn{
+                // margin: 0 auto;
+                // margin: 20px 15px 40px;
+                margin: 5px 15px 30px;
+                // border-bottom: 1px solid var(--border-color);
+
+              }
+            }
+          }
+        }
+    }
+    
+}
+
+
+
+
