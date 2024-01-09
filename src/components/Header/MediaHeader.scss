@@ -1,6 +1,14 @@
+@media screen and (max-width: 1200px) {
+    .App-header{
+        margin: 0 3vw;
+    }
+}
+
+
 @media screen and (max-width: 768px) {
     .App-header {
         display: flex;
+        padding-top: 2vh;
         .pageMenu{
             display: none;
             
@@ -11,7 +19,7 @@
         }
         .login-menu {
             button{
-                margin: 0 2vw;
+                margin: 0 2vw !important;
             }
             .vLine {
                 display: none;

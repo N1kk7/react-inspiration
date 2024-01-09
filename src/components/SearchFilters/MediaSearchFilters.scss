@@ -1,0 +1,29 @@
+@media screen and (max-width: 1200px) {
+    .searchFilterWrapper {
+        margin: 0 5vw 40px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .searchFilterWrapper {
+        margin: 0 5vw 40px 0;
+        .search {
+            text-align: start;
+            flex-shrink: 0;
+            width: fit-content;
+          input{
+            width: 35%;
+          }
+          .arrowBtn {
+            display: inline-block;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            right: 55%;
+          } 
+        }
+        .filter {
+          flex-shrink: 0;
+        }
+    }
+}

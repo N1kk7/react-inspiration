@@ -1,0 +1,15 @@
+@media screen and (max-width: 768px) {
+
+    .enterEmailPass {
+        input{
+            width: clamp(280px, 70vw, 365px);
+
+        }
+    }
+    .defaultBtn{
+        width: clamp(295px, 70vw, 365px);
+
+    }
+
+    
+}

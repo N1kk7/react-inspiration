@@ -1,0 +1,74 @@
+@media screen and (max-width: 768px) {
+   
+    .selectPlan {
+        height: auto;
+        .modal-wrapper {
+            height: auto;
+            padding: 0;
+            overflow: scroll;
+            .backBtn{
+                left: 6vw !important;
+            }
+            .closeBtn {
+              right: 6vw !important;
+            }
+            .modalTitle {
+              padding: 0 !important;
+              position: relative;
+            //   top: 1.5vh;
+              top: 17.5vh;
+              h2{
+                text-transform: capitalize;
+                font-size: clamp(19px, 5vw, 25px) !important;
+              }
+            }
+            .modalTitleDescription {
+                display: none;
+            }
+            .planWrapper{
+                flex-direction: column-reverse;
+                align-items: center;
+                position: relative;
+                top: 9vh;
+                padding: 7vh 0;
+                .plan{
+                    width: 80vw;
+                    padding: 0 16px;
+                    height: auto;
+                    margin: 2vh;
+                    .planType{
+                        height: 5vh;
+                        position: relative;
+                        padding: 0 2vw;
+                        top: 10px;
+                    
+                    }
+                    .list{
+                        ul{
+                            margin-top: 28px;
+                            margin-left: 5px;
+                            position: relative;
+                            top: 12px;
+                            li{
+                                padding: 8px 0;
+                                span{
+                                    letter-spacing: 1px;
+                                }
+
+                            }
+                        }
+                    }
+                    .planBtn{
+                        bottom: -7px;
+                        // .defaultBtn{
+                        //     position: relative;
+                        //     top: 36px;
+                        // }
+
+                    }
+                }
+            }
+        }
+        
+    }
+}
