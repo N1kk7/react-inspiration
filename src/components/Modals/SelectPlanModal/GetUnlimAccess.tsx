@@ -1,5 +1,6 @@
 import React from "react";
 import './SelectPlanModal.scss'
+// import './MediaSelectPlanMOdal.scss'
 import PlanComponent from "./PlanComponent";
 import closeBtn from '../../../assets/images/closeBtn.svg'
 import { useDispatch } from "react-redux";

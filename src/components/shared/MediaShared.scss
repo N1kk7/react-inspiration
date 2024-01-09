@@ -1,18 +1,21 @@
 @media screen and (max-width: 768px) {
 
     .contGoogle {
-        width: clamp(280px, 70vw, 365px);
+        // width: clamp(280px, 70vw, 365px);
+        width: -webkit-fill-available;
         margin: 0 auto;
     }
 
     .enterEmailPass {
         input{
-            width: clamp(280px, 70vw, 365px);
+            // width: clamp(280px, 70vw, 365px);
+            width: -webkit-fill-available;
 
         }
     }
     .defaultBtn{
-        width: clamp(295px, 70vw, 365px);
+        // width: clamp(295px, 70vw, 365px);
+        width: -webkit-fill-available;
 
     }
 
