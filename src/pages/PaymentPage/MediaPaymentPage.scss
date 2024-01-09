@@ -1,0 +1,39 @@
+@media screen and (max-width: 1024px) {
+  .paymentPage {
+    .paymentPageWrapper {
+      .formWrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .paymentPage {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    .paymentPageWrapper {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+
+      .modalTitle {
+        h2 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 40px;
+        }
+      }
+
+      .formWrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .buttonWrapper {
+        margin: 0;
+      }
+    }
+  }
+}

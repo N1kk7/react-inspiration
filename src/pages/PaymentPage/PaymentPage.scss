@@ -2,13 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    // background-color: rgba(190, 190, 190, 0.8);
     z-index: 1;
     top: 0;
-    // margin: 0 130px;
 
     .paymentPageWrapper {
         position: relative;
@@ -18,7 +13,6 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 0 15vw;
       .backBtn {
         position: absolute;
         top: 12vh;
@@ -47,23 +41,30 @@
                 margin: 0;
 
             }
-        
+
       }
 
       .formWrapper{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 30px;
+        grid-column-gap: 54px;
         text-align: start;
         width: -webkit-fill-available;
         position: relative;
         top: 3px;
+        width: 100%;
+
+        .form-group {
+          margin-bottom: 15px;
+        }
+
         input{
             border-radius: 50px;
             border: 1px solid var(--border-color);
             background: var(--thumb-border-color);
             padding: 13px 19px 13px 23px;
-            width: -webkit-fill-available;
+            width: calc(100% - 42px);
+            // width: -webkit-fill-available;
             // margin: 0 10px;
         }
         input::placeholder{
@@ -84,66 +85,55 @@
             font-style: normal;
             font-weight: 600;
             line-height: normal;
+            margin-top: 0;
+            margin-bottom: 15px;
         }
         .nameDetails{
             border-right: 1px solid var(--border-color);
-            margin-left: 60px;
             padding-right: 60px;
-            max-width: 31vw;
-            // margin: 0 60px;
+
             .name{
                 display: flex;
+                margin-bottom: 15px;
+
                 .nameItem {
                     width: -webkit-fill-available;
-                    padding: 0 0 0 17px;
-                    h4{
-                      padding-left: 5px;
-                      margin-bottom: 10px;
 
+                    & + .nameItem {
+                      margin-left: 15px;
                     }
-                    
-                  
+
+                    h4 {
+                      margin-bottom: 10px;
+                    }
                 }
-                // justify-content: space-between;
             }
+
             .cardNumber {
-                padding: 0 10px;
                 position: relative;
-                top: 2px;
-                h4{
-                  padding-left: 10px;
+                margin-bottom: 15px;
+
+                input{
+                  padding-left: 18px;
                 }
-              input{
-                position: relative;
-                bottom: 9px;
-                // padding-left: 10px;
-                left: 10px;
-                width: -webkit-fill-available;
-                padding-left: 18px;
-              }
-              .description {
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translate(-12%, -33%);
-              
-              }
-              
+
+                .description {
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  transform: translate(-12%, -6%);
+
+                }
+
             }
             .date {
                 display: flex;
-                padding-left: 5px;
-                .dateItem {
-                    padding: 0 10px;
-                    width: -webkit-fill-available;
-                    h4{
-                      margin-top: 13px;
-                      margin-bottom: 11px;
-                      padding-left: 5px;
-                    }
-                    input{
-                      min-width: 12vw;
 
+                .dateItem {
+                    width: -webkit-fill-available;
+
+                    h4{
+                      margin-bottom: 11px;
                     }
                 }
                 .year{
@@ -154,7 +144,6 @@
                 }
             }
             .secureCode {
-                padding: 0 20px;
                 h4{
                   margin-bottom: 11px;
                 }
@@ -166,27 +155,27 @@
 
         }
         .addressDetails {
-            margin-left: 24px;
-            max-width: 26vw;
+            // margin-left: 24px;
+            // max-width: 26vw;
           .country{
             padding: 0 10px;
-            
+
 
             input{
                 background-color: transparent;
                 position: relative;
                 bottom: 9px;
                 padding-left: 18px;
-                
 
-            }   
+
+            }
             input::placeholder{
                 color: var(--main-text-color);
             }
           }
           .address{
             padding: 0 10px;
-            
+
             h4{
               position: relative;
             bottom: 7px;
@@ -214,7 +203,7 @@
             display: flex;
             position: relative;
             bottom: 21px;
-           
+
             .code{
                 padding: 0 10px;
                 width: -webkit-fill-available;
