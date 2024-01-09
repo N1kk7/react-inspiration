@@ -62,6 +62,13 @@
           .filterPopupContainer {
             width: 100%;
             grid-template-columns: 1fr;
+            padding: 60px 35px 35px 35px;
+            .closeBtn {
+              display: block;
+              position: absolute;
+              top: 30px;
+              right: 30px;
+            }
 
             .categoryWrapper {
               grid-template-columns: 1fr;

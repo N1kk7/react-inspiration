@@ -16,10 +16,13 @@
         grid-column-gap: 2vw;
         .thumbItemWrapper{
             .thumbItem{
-                width: clamp(100px, 100%, 280px);
+                // width: clamp(100px, 100%, 280px);
+                // width: clamp(100px, 95%, 280px);
+                width: fit-content;
+                padding: 0 10px;
                 height: auto;
                 .thumbImg{
-                    padding: 4vw 0;
+                    padding: 10px 0;
                     img{
                         // width: clamp(80px, 100%, 280px);
                         width: clamp(55px, 40vw, 250px);

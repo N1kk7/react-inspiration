@@ -28,7 +28,7 @@ const BrandPage = () => {
             <div className="container">
                 <div className="brandContent">
                     <div className="brandAvatar">
-                        <div style={defaultBrandImg} />
+                        <div className="brandImg" style={defaultBrandImg} />
                     </div>
                     <div className="brandDescription">
                         <div className="brand">
