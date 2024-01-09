@@ -59,7 +59,7 @@ const CreatorPage = () => {
                                 </div>
                                 <div className="item location">
                                     <img src={location} alt="location" />
-                                    <span>Kiev, Ukraine</span>
+                                    <span>Ukraine, Kyiv</span>
                                 </div>
                                 <div className="item media">
                                     <img src={clapperboard} alt="clapperboard" />
@@ -83,6 +83,16 @@ const CreatorPage = () => {
                                     <DefaultBtn textBtn="Work with me" methodBtn="work-with-me"/>
                                 {/* </div> */}
 
+
+                            </div>
+                            <div className="mobileBtn">
+                                <div className="uploadBtn">
+                                    <DefaultBtn textBtn="Upload ad +" methodBtn="upload-video" />
+                                </div>
+                                <div className="editBtn">
+                                    <DefaultBtn textBtn="Edit" methodBtn="open-edit-page" />
+
+                                </div>
 
                             </div>
                         </div>

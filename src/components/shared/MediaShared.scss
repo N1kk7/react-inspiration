@@ -1,5 +1,10 @@
 @media screen and (max-width: 768px) {
 
+    .contGoogle {
+        width: clamp(280px, 70vw, 365px);
+        margin: 0 auto;
+    }
+
     .enterEmailPass {
         input{
             width: clamp(280px, 70vw, 365px);

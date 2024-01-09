@@ -5,6 +5,7 @@ import "./SearchFilters.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { popup } from "../../redux/rootSlice";
 import { useNavigate } from "react-router-dom";
+// import searchMobileBtn from '../../assets/images/searchMobileBtn.png'
 
 
 
@@ -86,8 +87,13 @@ const SearchFilters = () => {
         <>
             <div className="searchFilterWrapper">
                 <div className="search" onClick={() => {callModal('search')}}>
-                    <input type="text" placeholder="Search" />
-                    <div className="arrowBtn"><img src={arrowRight} alt="" /></div>
+                    <div className="searchDesktop">
+                        <input type="text" placeholder="Search" />
+                        <div className="arrowBtn"><img src={arrowRight} alt="" /></div>
+                    </div>
+                    <div className="searchMobile">
+                        {/* <img src={searchMobileBtn} alt="search-mobile" /> */}
+                    </div>
                 </div>
                 <div ref={wrapperRef} className="filter">
 
