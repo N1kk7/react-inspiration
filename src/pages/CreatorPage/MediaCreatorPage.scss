@@ -1,6 +1,7 @@
 @media screen and (max-width: 768px) {
     .creatorPage {
-        .creatorContent {
+        .modal-wrapper {
+            .creatorContent {
             flex-direction: column;
             margin: 3vh 2vh;
             .creatorAvatar {
@@ -87,5 +88,8 @@
 
             }
         }
+            
+        }
+        
     }
 }
