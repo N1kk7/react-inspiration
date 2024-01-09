@@ -8,14 +8,15 @@
 @media screen and (max-width: 768px) {
     .App-header {
         display: flex;
-        padding-top: 2vh;
+        padding: 20px 0;
+        margin: 0;
+        height: auto;
         .pageMenu{
             display: none;
-            
+
         }
         .Title-Page{
-            // font-size: min( 2vw, 21px);
-            font-size: 4.5vw;
+            font-size: clamp(16px, 3vw, 18px);
         }
         .login-menu {
             button{

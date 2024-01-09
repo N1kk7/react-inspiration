@@ -5,7 +5,7 @@
 }
 @media screen and (max-width: 768px) {
     .searchFilterWrapper {
-        margin: 0 5vw 40px 0;
+        margin: 0 0 20px 0;
         .search {
             text-align: start;
             flex-shrink: 0;
@@ -20,7 +20,7 @@
             top: 50%;
             transform: translate(-50%, -50%);
             right: 55%;
-          } 
+          }
         }
         .filter {
           flex-shrink: 0;
