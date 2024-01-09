@@ -31,6 +31,9 @@ const CreatePassword = () => {
                     <div className="closeBtn" onClick={() => dispatch(popup('close-signIn'))}>
                         <img src={closeBtn} alt="close-btn" />
                     </div>
+                    <div className="modalTitle">
+                            <h2>Create your password</h2>
+                        </div>
                     <div className="passwordWrapper">
                         <div className="password">
                             <div className="passwordTitle">

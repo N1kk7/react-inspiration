@@ -1,0 +1,60 @@
+.welcomeModal{
+    .modal-wrapper{
+        .modalTitle {
+          position: relative;
+          padding: 29px 0 0px;
+          bottom: 21px;
+          h2{
+            margin-bottom: 0;
+
+          }
+        }
+        .modalTitleDescription{
+            position: relative;
+            bottom: 12px;
+            span{
+                font-size: clamp(16px,4vw,25px);
+            }
+
+        }
+        .nameWrapper {
+            flex-direction: column;
+            position: relative;
+            bottom: 18px;
+            padding: 0 4vw;
+            .name{
+                .nameInput {
+                  input{
+                    width: -webkit-fill-available;
+                  }
+                }
+            }
+            .last{
+                bottom: 7px;
+                right: 0px;
+            }
+        }
+        .companyWrapper {
+            position: relative;
+            padding-bottom: 0;
+            bottom: 30px;
+
+            .companyTitle{
+               
+            }
+            .companyInput {
+                input{
+                    // width: clamp(270px , 80vw, 650px);
+                    width: -webkit-fill-available;
+                    margin: 0 2vw;
+                }
+            }
+                
+        }
+        .defaultBtn{
+            position: relative;
+            top: 7px;
+        
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@media screen and (max-width: 768px) {
+    .getInfo{
+        .modal-wrapper {
+            .questionTop {
+                padding-top: 5px;
+                padding-left: 0;
+                padding-right: 10px;
+                text-align: center;
+
+            //   padding: 0;
+            }
+            .textArea {
+              textarea{
+                width: clamp(250px, 80vw, 680px);
+              }
+            }
+            .listQuestion {
+                position: relative;
+                bottom: 4px;
+              h5{
+                padding-left: 12px;
+              }
+            }
+            .answerList {
+                position: relative;
+                bottom: 6px;
+                fieldset{
+                    position: relative;
+                    right: 2px;
+                }
+            }    
+            .defaultBtn{
+                position: relative;
+                margin: 30px auto;
+                top: 2px;
+            
+            }   
+        }
+    }
+}

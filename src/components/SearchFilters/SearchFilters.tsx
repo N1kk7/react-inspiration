@@ -91,7 +91,7 @@ const SearchFilters = () => {
                 </div>
                 <div ref={wrapperRef} className="filter">
 
-                    {/* <img src={arrowDown} alt="" /> */}
+                    {/* <img src={arrowDo4wn} alt="" /> */}
                     <div className="filterWrapper" onClick={() => {callModal('filter')}}>
                         <span>Filters</span>
                         <img src={arrowDown} alt="" />

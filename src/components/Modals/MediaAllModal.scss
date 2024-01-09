@@ -1,0 +1,39 @@
+@media screen and (max-width: 768px) {
+
+    .modal{
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+        .modal-wrapper {
+            justify-content: center;
+            // width: 100vw !important;
+            height: -webkit-fill-available !important;
+            // padding: 0;
+            .backBtn{
+                top: 3.5vh;
+                left: 28.5vw;
+                span{
+                    display: none;
+                }
+            }
+            .closeBtn{
+                top: 3.5vh;
+                right: 28.5vw;
+                
+                
+            }
+            .modalTitle{
+                // padding: 56px 0 49px;
+                padding: 9vh 0 4vh;
+                h2{
+                    font-size: clamp(24px, 2.5vw, 52px);
+                    font-weight: 700;
+                    line-height: 40px; /* 88.549% */
+                    text-transform: initial;
+                }
+            }
+            
+            
+        }
+    }
+    
+}
