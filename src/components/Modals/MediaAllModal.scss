@@ -7,17 +7,18 @@
             justify-content: center;
             // width: 100vw !important;
             height: -webkit-fill-available !important;
-            // padding: 0;
+            width: -webkit-fill-available !important;
+            padding: 0 3vw;
             .backBtn{
                 top: 3.5vh;
-                left: 28.5vw;
+                left: 11.5vw;
                 span{
                     display: none;
                 }
             }
             .closeBtn{
                 top: 3.5vh;
-                right: 28.5vw;
+                right: 11.5vw;
                 
                 
             }

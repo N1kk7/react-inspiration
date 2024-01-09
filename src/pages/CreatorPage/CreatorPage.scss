@@ -79,6 +79,9 @@
               }
 
           }
+          .mobileBtn {
+            display: none;
+          }
         }
     }
     .swiper {
@@ -152,4 +155,4 @@
     
     
 }
-
+@import './MediaCreatorPage.scss'

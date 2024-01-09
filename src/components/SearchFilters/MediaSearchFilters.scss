@@ -19,9 +19,26 @@
             text-align: start;
             flex-shrink: 0;
             width: fit-content;
-          input{
-            width: 35%;
-          }
+            .searchDesktop {
+                display: none;
+                input{
+                    width: 35%;
+                  }
+              
+            }
+            .searchMobile {
+                display: block;
+                background-image: url('../../assets/images/searchMobileBtn.png');
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                padding: 8px;
+                background-position: center center;
+                border: 1px solid var(--border-color);
+                border-radius: 50%;
+                
+            }
+          
           .arrowBtn {
             display: inline-block;
             cursor: pointer;

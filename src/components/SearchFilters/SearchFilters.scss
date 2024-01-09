@@ -11,7 +11,8 @@
       cursor: pointer;
 
 
-      input{
+      .searchDesktop {
+        input{
           border: 1px solid var(--border-color);
           padding: 11px 17px 10px 17px;
           border-radius: 50px;
@@ -40,6 +41,10 @@
           top: 51%;
           transform: translateY(-50%);
           right: 17px;
+      }
+      }
+      .searchMobile {
+        display: none;
       }
     }
     .filter {
