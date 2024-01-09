@@ -1,35 +1,13 @@
-@media screen and (max-width: 1200px) {
-    
-
-    .unlog-footer{
-
-        .content-wrapper{
-
-            .unlog-title {
-
-                width: 40vw;
-            }
-
-        }
-    }  
-}
-
 @media screen and (max-width: 768px) {
-    
-
     .unlog-footer{
         margin-bottom: 10vh;
         .content-wrapper{
-
+            padding: 0 15px;
             .unlog-title {
-
-                width: 90vw;
                 h3{
                     font-size: 22px;
                     padding: 0 clamp(28px, 7vw, 90px);
                 }
-                
-
             }
             .contGoogle{
                 position: relative;
@@ -38,25 +16,15 @@
             .choiceMethod{
                 top: 20px;
             }
-            .email-title {
-              width: -webkit-fill-available;
-              position: relative;
-              bottom: 4px;
-              padding-left: 5vw;
-              h3{
-                font-size: clamp(15px, 3vw, 30px);
-              }
-            }
             .enterEmailPass{
                 position: relative;
                 bottom: 9px;
                 margin-bottom: 5px;
             }
             .unlog-description{
-                width: 90vw;
                 top: 5px;
             }
 
         }
-    }  
+    }
 }
