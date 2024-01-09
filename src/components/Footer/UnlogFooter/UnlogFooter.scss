@@ -1,17 +1,19 @@
 .unlog-footer{
-    
+
     // margin-bottom: 15vh;
     max-height: 55vh;
     margin-bottom: 5vh;
     position: relative;
     .content-wrapper {
         display: flex;
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
         position: relative;
         bottom: 0;
+        max-width: 360px;
+        margin: 0 auto;
         .unlog-title {
-            width: 23vw;
+            width: 100%;
             color: var(--main-text-color);
             text-align: center;
             font-family: var(--font-inter);
@@ -20,15 +22,32 @@
             font-weight: 700;
             line-height: 40px; /* 181.818% */
         }
+        .contGoogle {
+            width: 100%;
+            max-width: calc(100% - 38px);
+        }
         .choiceMethod{
-            width: 30vw;
+            width: 100%;
+            margin: 20px 0 28px;
+        }
+        .enterEmailPass {
+            width: 100%;
+            input {
+                width: 100%;
+                max-width: calc(100% - 38px);
+            }
+        }
+        .defaultBtn {
+            width: 100%;
+            max-width: calc(100% - 22px);
+            margin: 4px 0 30px;
         }
         .email-title {
-            width: 28vw;
+            width: 100%;
             text-align: start;
         }
         .unlog-description {
-            width: 22vw;
+            width: 100%;
             color: var(--grey);
             text-align: center;
             font-family: var(--font-inter);
@@ -47,10 +66,10 @@
                 text-decoration: none;
             }
         }
-      
+
 
     }
-    
+
 }
 .unlog-brand-footer {
     display: flex;
@@ -71,7 +90,7 @@
 
         }
     }
-  
+
 }
 
 @import './MediaUnlogFooter.scss'

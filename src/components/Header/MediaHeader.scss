@@ -19,8 +19,22 @@
             font-size: clamp(16px, 3vw, 18px);
         }
         .login-menu {
+            .user-profileBtn {
+                width: 39px;
+                height: 39px;
+                font-size: 0;
+                border-radius: 50%;
+            }
+
             button{
                 margin: 0 2vw !important;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
             .vLine {
                 display: none;

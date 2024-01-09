@@ -1,6 +1,15 @@
 @media screen and (max-width: 1200px) {
     .searchFilterWrapper {
         margin: 0 5vw 40px;
+
+        .filter {
+          .filterPopupContainer {
+            grid-row-gap: 30px;
+            grid-template-columns: 1fr;
+            grid-auto-rows: min-content;
+            align-items: flex-start;
+          }
+        }
     }
 }
 @media screen and (max-width: 768px) {
@@ -24,6 +33,28 @@
         }
         .filter {
           flex-shrink: 0;
+        }
+
+        .filterPopup {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+
+          .filterPopupContainer {
+            width: 100%;
+            grid-template-columns: 1fr;
+
+            .categoryWrapper {
+              grid-template-columns: 1fr;
+            }
+
+            .category {
+              width: calc(100% - 38px);
+              gap: 0;
+            }
+          }
         }
     }
 }
