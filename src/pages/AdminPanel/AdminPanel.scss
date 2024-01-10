@@ -41,8 +41,8 @@
 
     li {
       display: flex;
-      justify-content: start;
-      text-align: start;
+      justify-content: flex-start;
+      text-align: flex-start;
       margin-bottom: 10px;
 
       a {
@@ -68,7 +68,7 @@
   .profile {
     display: flex;
     width: 100%;
-    justify-content: start;
+    justify-content: flex-start;
     text-align: start;
     margin-bottom: 20px;
     padding: 11px 19px 11px 50px;
