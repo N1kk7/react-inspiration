@@ -2,8 +2,8 @@ import React from "react";
 import './PaymentPage.scss'
 import './MediaPaymentPage.scss'
 import DefaultBtn from "../../components/shared/DefaultBtn";
+import closeBtn from '../../assets/images/closeBtn.svg'
 import { paymentDetails } from "../../redux/selectPlanSlice";
-// import backBtn from '../../../assets/images/backBtn.png'
 import { useDispatch, useSelector } from "react-redux";
 import backBtn from '../../assets/images/backBtn.png'
 // import { userLogIn } from "../../redux/logInSlice";
@@ -38,6 +38,9 @@ const PaymentDetails = () => {
                             <img src={backBtn} alt="back-btn" />
                             <span>Back</span>
                         </div>
+                        <div className="closeBtn" onClick={() => goBack()}>
+                            <img src={closeBtn} alt="close-btn" />
+                        </div>
                         <div className="modalTitle">
                             <h2>ADD PAYMENT DETAILS</h2>
                         </div>
@@ -55,9 +58,11 @@ const PaymentDetails = () => {
                                 </div>
                                 <div className="form-group cardNumber">
                                     <h4>Add card number</h4>
-                                    <input type="text" placeholder="1234 5678 9012 3456"/>
-                                    <div className="description">
-                                        <span>Securely stored</span>
+                                    <div className="form-group-wrapper">
+                                        <input type="text" placeholder="1234 5678 9012 3456"/>
+                                        <div className="description">
+                                            <span>Securely stored</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="form-group date">

@@ -6,7 +6,6 @@
     top: 0;
 
     .paymentPageWrapper {
-        position: relative;
         width: 100vw;
         height: 100vh;
         display: flex;
@@ -27,6 +26,9 @@
                 font-weight: 500;
                 line-height: normal;
             }
+      }
+      .closeBtn {
+        display: none;
       }
       .modalTitle {
         padding: 56px 0 51px;
@@ -56,16 +58,18 @@
 
         .form-group {
           margin-bottom: 15px;
+
+          &-wrapper {
+            position: relative;
+          }
         }
 
         input{
             border-radius: 50px;
             border: 1px solid var(--border-color);
             background: var(--thumb-border-color);
-            padding: 13px 19px 13px 23px;
-            width: calc(100% - 42px);
-            // width: -webkit-fill-available;
-            // margin: 0 10px;
+            padding: 13px 19px;
+            width: calc(100% - 40px);
         }
         input::placeholder{
             color: var(--grey);
@@ -86,7 +90,7 @@
             font-weight: 600;
             line-height: normal;
             margin-top: 0;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         .nameDetails{
             border-right: 1px solid var(--border-color);
@@ -94,17 +98,12 @@
 
             .name{
                 display: flex;
-                margin-bottom: 15px;
 
                 .nameItem {
                     width: -webkit-fill-available;
 
                     & + .nameItem {
                       margin-left: 15px;
-                    }
-
-                    h4 {
-                      margin-bottom: 10px;
                     }
                 }
             }
@@ -113,15 +112,11 @@
                 position: relative;
                 margin-bottom: 15px;
 
-                input{
-                  padding-left: 18px;
-                }
-
                 .description {
                   position: absolute;
                   top: 50%;
-                  right: 0;
-                  transform: translate(-12%, -6%);
+                  right: 12px;
+                  transform: translate(0, -50%);
 
                 }
 
@@ -132,81 +127,31 @@
                 .dateItem {
                     width: -webkit-fill-available;
 
-                    h4{
-                      margin-bottom: 11px;
-                    }
-                }
-                .year{
-                    padding-left: 16px;
-                    h4{
-                      padding-left: 5px;
+                    & + .dateItem {
+                        margin-left: 15px;
                     }
                 }
             }
-            .secureCode {
-                h4{
-                  margin-bottom: 11px;
-                }
-              input{
-                width: auto;
-                padding: 13px 19px;
-              }
-            }
-
         }
         .addressDetails {
-            // margin-left: 24px;
-            // max-width: 26vw;
           .country{
-            padding: 0 10px;
-
-
             input{
-                background-color: transparent;
-                position: relative;
-                bottom: 9px;
-                padding-left: 18px;
-
-
+                background-color: var(--white);
             }
             input::placeholder{
                 color: var(--main-text-color);
             }
           }
-          .address{
-            padding: 0 10px;
-
-            h4{
-              position: relative;
-            bottom: 7px;
-            }
-
-            input{
-              position: relative;
-              // bottom: 10px;
-              bottom: 16px;
-              padding: 13px 19px;
-            }
-          }
-          .address2{
-            h4{
-              position: relative;
-            bottom: 14px;
-            }
-
-            input{
-              position: relative;
-              bottom: 24px;
-            }
-          }
           .zipCode {
             display: flex;
-            position: relative;
-            bottom: 21px;
 
             .code{
-                padding: 0 10px;
                 width: -webkit-fill-available;
+
+                & + .code {
+                  margin-left: 15px;
+                }
+
                 h4{
                   color: var(--main-text-color);
                   font-family: var(--font-inter);
@@ -215,14 +160,6 @@
                   font-weight: 600;
                   line-height: normal;
                 }
-                input{
-                  position: relative;
-                  bottom: 9px;
-                  padding-left: 18px;
-                }
-            }
-            .postCode{
-
             }
           }
         }
@@ -234,7 +171,6 @@
         width: -webkit-fill-available;
         justify-content: flex-end;
         margin-top: 60px;
-        margin-right: 85px;
         .cancelBtn{
             .defaultBtn{
                 width: 85px;
