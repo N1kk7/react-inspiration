@@ -1,6 +1,9 @@
 @media screen and (max-width: 768px) {
     .App-footer {
+        height: auto;
         .top-footer {
+            margin-bottom: 0;
+            height: auto;
           .logoWrapper {
             .logo {
                 .footerTitle{
@@ -10,9 +13,18 @@
           }
         }
         .container {
-            .bottom-footer {
-                justify-content: space-between;
-              }
+            .footer-wrapper {
+                hr{
+                    display: none;
+                }
+                .bottom-footer {
+                    justify-content: space-between;
+                    .buttonWrapper {
+                        width: -webkit-fill-available;
+                    }
+                }
+            }
+            
         }
         
        

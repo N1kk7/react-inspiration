@@ -36,17 +36,17 @@
         }
         .companyWrapper {
             position: relative;
-            padding-bottom: 0;
+            padding: 0 4vw;
             bottom: 30px;
 
             .companyTitle{
-               
+               padding-left: 0;
             }
             .companyInput {
                 input{
                     // width: clamp(270px , 80vw, 650px);
                     width: -webkit-fill-available;
-                    margin: 0 2vw;
+                    // margin: 0 2vw;
                 }
             }
                 
