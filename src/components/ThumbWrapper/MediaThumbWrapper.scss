@@ -12,26 +12,15 @@
 }
 @media screen and (max-width: 768px) {
     .thumbWrapper {
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 2vw;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+
         .thumbItemWrapper{
-            .thumbItem{
-                // width: clamp(100px, 100%, 280px);
-                // width: clamp(100px, 95%, 280px);
-                width: fit-content;
-                padding: 0 10px;
-                height: auto;
-                .thumbImg{
-                    padding: 10px 0;
-                    img{
-                        // width: clamp(80px, 100%, 280px);
-                        width: clamp(55px, 40vw, 250px);
-                        // width: 40vw;
-
-
-                    }
-                }
-            }
+            width: calc(50% - 20px);
+            margin: 0 10px 15px;
         }
 
     }

@@ -1,7 +1,6 @@
 import React from "react";
 import './CollectionName.scss'
 import ThumbWrapper from "../../components/ThumbWrapper/ThumbWrapper";
-import HideContent from "../../components/HideContent/HideContent";
 import UnloggedFooter from "../../components/Footer/UnlogFooter/UnlogFooter";
 import SearchFilters from "../../components/SearchFilters/SearchFilters";
 import { useSelector } from "react-redux";
@@ -17,7 +16,7 @@ const CollectionName = () => {
         <>
 
 <div className="collectionPage">
-            
+
             <div className="container">
                 <div className="collection-page-wrapper">
                     <div className="collectionTitle">
@@ -61,22 +60,10 @@ const CollectionName = () => {
                 </div>
                     <SearchFilters/>
                     <ThumbWrapper/>
-                    {guestStatus && <HideContent/>}
-                    
-
                 </div>
                 <UnloggedFooter/>
-
-
-                
-            
-                
-
             </div>
-
-               
         </div>
-        
         </>
     )
 

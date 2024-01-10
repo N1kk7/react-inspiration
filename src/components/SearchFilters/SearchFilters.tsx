@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import arrowRight from '../../assets/images/arrow-right.svg';
-import arrowDown from '../../assets/images/arrowDown.svg';
+import arrowDown from '../../assets/images/arrow-down.svg';
 import "./SearchFilters.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { popup } from "../../redux/rootSlice";
@@ -12,7 +12,7 @@ import closeBtn from '../../assets/images/closeBtn.svg'
 
 
 const SearchFilters = () => {
-   
+
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -30,7 +30,7 @@ const SearchFilters = () => {
     const callModal = (btn: string) => {
 
         const toggleFilter = () => {
-            
+
             filterPopup ? dispatch(popup('close-filter')) : dispatch(popup('open-filter'));
         }
 
@@ -51,7 +51,7 @@ const SearchFilters = () => {
 
 
     }
-    
+
 
 
 
@@ -59,7 +59,7 @@ const SearchFilters = () => {
     function useOutsideAlerter(ref: any) {
 
         // const dispatch = useDispatch();
-    
+
         useEffect(() => {
             /**
              * Alert if clicked on outside of element

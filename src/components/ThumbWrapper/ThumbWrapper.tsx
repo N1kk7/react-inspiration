@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 const ThumbWrapper = () => {
 
     const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
-    
+
 
 
     return (
@@ -18,7 +18,7 @@ const ThumbWrapper = () => {
         <div className="thumbWrapper">
             {thumbsArray.map((item: IThumb) => {
 
-                if (guestStatus && item.id <= 8) {
+                if (guestStatus && item.id <= 24) {
                     return (
                         <Thumb img={item.img} avatar={item.avatar} userName={item.userName} key={item.id} />
                     )
@@ -30,7 +30,7 @@ const ThumbWrapper = () => {
                     )
                 }
                 return false;
-                
+
             })}
         </div>
 
