@@ -7,18 +7,26 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 280px;
-        height: 474px;
-        border-radius: 26px;
-        background: var(--Extra-Background, #F8F7F4);
         margin: 0 auto;
         .thumbImg{
-            border-radius: 16px;
+            border-radius: 26px;
             overflow: hidden;
+            border: 10px solid #F8F7F4;
+            font-size: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding-top: 178.23%;
+            width: 100%;
 
-            img{
-
-
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                min-width: 100%;
+                min-height: 100%;
             }
         }
     }
