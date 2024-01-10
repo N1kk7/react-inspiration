@@ -1,0 +1,114 @@
+@media screen and (max-width: 1024px) {
+  .paymentPage {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    .backBtn {
+      display: none;
+    }
+
+    .paymentPageWrapper {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+
+      .closeBtn {
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      .modalTitle {
+        h2 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 40px;
+        }
+      }
+
+      .formWrapper {
+        grid-template-columns: 1fr;
+        grid-row-gap: 40px;
+
+        .nameDetails {
+          padding-right: 0;
+          border-right: none;
+          border-bottom: 1px solid var(--border-color);
+          padding-right: 0;
+          padding-bottom: 40px;
+
+          .date,
+          .name {
+            flex-direction: column;
+
+            .nameItem {
+              margin-bottom: 15px;
+              & + .nameItem {
+                margin-left: 0;
+                margin-bottom: 0;
+              }
+            }
+
+            .dateItem {
+              margin-bottom: 15px;
+              & + .dateItem {
+                margin-left: 0;
+                margin-bottom: 0;
+              }
+            }
+
+            .code {
+              margin-bottom: 15px;
+              & + code {
+                margin-left: 0;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+
+        .addressDetails {
+          .zipCode {
+            flex-direction: column;
+
+            .code {
+              margin-bottom: 15px;
+              & + .code {
+                margin-left: 0;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .buttonWrapper {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .paymentPage {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    .paymentPageWrapper {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+
+      .formWrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .buttonWrapper {
+        justify-content: space-between;
+      }
+    }
+  }
+}
