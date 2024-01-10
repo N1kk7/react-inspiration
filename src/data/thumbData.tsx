@@ -96,4 +96,64 @@ export const thumbsArray: IThumb[] = [
         avatar: user2,
         userName: 'User Name'
     },
+    {
+        id: 15,
+        img: thumb3,
+        avatar: user3,
+        userName: 'User Name'
+    },
+    {
+        id: 16,
+        img: thumb4,
+        avatar: user4,
+        userName: 'User Name'
+    },
+    {
+        id: 17,
+        img: thumb1,
+        avatar: user1,
+        userName: 'User Name'
+    },
+    {
+        id: 18,
+        img: thumb2,
+        avatar: user2,
+        userName: 'User Name'
+    },
+    {
+        id: 19,
+        img: thumb3,
+        avatar: user3,
+        userName: 'User Name'
+    },
+    {
+        id: 20,
+        img: thumb4,
+        avatar: user4,
+        userName: 'User Name'
+    },
+    {
+        id: 21,
+        img: thumb1,
+        avatar: user1,
+        userName: 'User Name'
+    },
+    {
+        id: 22,
+        img: thumb2,
+        avatar: user2,
+        userName: 'User Name'
+    },
+    {
+        id: 23,
+        img: thumb3,
+        avatar: user3,
+        userName: 'User Name'
+    },
+    {
+        id: 24,
+        img: thumb4,
+        avatar: user4,
+        userName: 'User Name'
+    },
 ]

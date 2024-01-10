@@ -1,7 +1,6 @@
 import React from "react";
 // import { useDispatch } from "react-redux";
 import DefaultBtn from "../../shared/DefaultBtn";
-// import HideContent from "../../HideContent/HideContent";
 
 import './UnlogFooter.scss'
 
@@ -10,7 +9,7 @@ const UnlogBrandFooter = () => {
 
     // const dispatch = useDispatch();
 
- 
+
 
 
 
@@ -21,7 +20,6 @@ const UnlogBrandFooter = () => {
             // <div className="container">
 
         <div className="unlog-brand-footer">
-        {/* <HideContent/> */}
             <div className="signUp">
                 <DefaultBtn  textBtn="Sign up to continue" methodBtn="openSignUpModal" />
 
@@ -34,22 +32,22 @@ const UnlogBrandFooter = () => {
             </div>
 
 
-            
 
-            
+
+
 
 
         </div>
-            
 
-            
-            
-            
-        
-        
-        
+
+
+
+
+
+
+
     )
-    
+
 }
 
 

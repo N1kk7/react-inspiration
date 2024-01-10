@@ -1,5 +1,5 @@
 import React from "react";
-import google from '../../assets/images/google.png'
+import google from '../../assets/images/google.svg'
 
 
 import './Shared.scss'
@@ -22,7 +22,7 @@ const ContGoogle = () => {
             </div>
         </>
     )
-    
+
 }
 
 export default ContGoogle
