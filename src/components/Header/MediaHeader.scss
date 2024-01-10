@@ -4,6 +4,16 @@
     }
 }
 
+@media screen and (max-width: 855px) {
+    .App-header{
+        .pageMenu{
+            .Page-Name{
+                padding-right: 25px;
+            }
+        }
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     .App-header {
