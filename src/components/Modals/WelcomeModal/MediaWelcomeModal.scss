@@ -1,4 +1,5 @@
-.welcomeModal{
+@media screen and (max-width: 768px) {
+    .welcomeModal{
     .modal-wrapper{
         .modalTitle {
           position: relative;
@@ -43,7 +44,7 @@
                padding-left: 0;
             }
             .companyInput {
-                input{
+                .companyTypeInput{
                     // width: clamp(270px , 80vw, 650px);
                     width: -webkit-fill-available;
                     // margin: 0 2vw;
@@ -51,10 +52,14 @@
             }
                 
         }
+        .errorMessage {
+          text-align: center;
+        }
         .defaultBtn{
             position: relative;
             top: 7px;
         
         }
     }
+}
 }

@@ -12,6 +12,9 @@ import { useNavigate } from 'react-router-dom';
 import { sendRequest } from '../../redux/supportSlice';
 import { getUnlimAccess } from '../../redux/selectPlanSlice';
 import { editPage } from '../../redux/editPageSlice';
+import { checkPasswordError } from '../../redux/rootSlice';
+import { setError } from '../../redux/welcomeModalSlice';
+import { setInfoSliceError } from '../../redux/getInfoSlice';
 
 
 const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
@@ -32,24 +35,31 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
 
   const disableGetInfoBtn = useSelector((state: any) => state.getInfoState.disableGetInfoBtn)
 
+  const chooseType = useSelector((state: any) => state.welcomeModalState.inputPlaceholder)
+
+  const answerMessage = useSelector((state: any) => state.getInfoState.answerMessage);
+  const answer = useSelector((state: any) => state.getInfoState.answer);
+
 
 
 
 
   const [styleBtn, setStyleBtn] = useState<string>('');
 
-  function showErrorBtn (modal: string, err1?: string, err2?:string) {
+  function showErrorBtn (modal: string, err1?: string, err2?:string, err3?:string) {
 
     if (!stateDefaultBtn) {
       setStyleBtn('disableBtn');
       setTimeout(() => {
         setStyleBtn('');
-        markError(modal, err1, err2)
+        markError(modal, err1, err2, err3)
       },200)
     }
   }
 
-  const markError = (modal: string, err1?: string, err2?: string) => {
+  const markError = (modal: string, err1?: string, err2?: string, err3?:string) => {
+    
+    
     switch (modal) {
       case 'login':
 
@@ -62,26 +72,54 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
 
         }
 
-        setTimeout(() => {
-          // if (err1 === '') {
-            dispatch(popup('cancel-email-error'))
-          // }
-          // if (err2 === '') {
-            dispatch(popup('cancel-password-error'))
-          // }
-          // dispatch(popup('cancel-email-error'))
-        }, 2500)
-
       break;
       case 'signIn':
         dispatch(popup('email-error'))
-        setTimeout(() => {
 
-            dispatch(popup('cancel-email-error'))
+      break;
+      case 'createPassword':
+        
+        if (err1 === '') {
+          dispatch(checkPasswordError('create-password-error'))
 
-        }, 2500)
+        }
+        if (err2 === '') {
+          dispatch(checkPasswordError('confirm-password-error'))
 
+        }
+      break;
+      case 'welcomeModal':
 
+        if (err1 === '') {
+          dispatch(setError('set-firstName-error'))
+
+        }
+        if (err2 === '') {
+          dispatch(setError('set-lastName-error'))
+
+        }
+        
+        if (err3 === 'Choose type') {
+          dispatch(setError('set-chooseType-error'))
+
+        }
+      break;
+      case 'GetInfoModal':
+        if (err1 === '') {
+
+          dispatch( setInfoSliceError('set-message-error'))
+          
+         
+
+        }
+        if (err2 === '') {
+
+          dispatch( setInfoSliceError('set-answer-error'))
+         
+        }
+        
+        
+        
       break;
     }
 
@@ -89,11 +127,13 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
 
   const changePasswordModal = () => {
     dispatch(popup('confirm-password-modal'));
+    dispatch(setError('reset-all-errors'));
     dispatch(welcomePopup('open-welcome-popup'));
   }
 
   const changeWelcomeModal = () => {
     dispatch(welcomePopup('confirm-welcome-popup'));
+    dispatch(setInfoSliceError('reset-all-errors'))
     dispatch(getInfo('open-getInfo'))
 
 
@@ -106,13 +146,11 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
   }
 
   const toggleClassBtn = (methodBtn: string) => {
-    console.log(methodBtn);
 
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
-      /* you can also use 'auto' behaviour
-         in place of 'smooth' */
+ 
     });
 
 
@@ -126,11 +164,12 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
       case 'CreatePassword':
         createPassword && confirmPassword ?  changePasswordModal() : showErrorBtn('createPassword', createPassword, confirmPassword);
       break;
-      case 'WelcomeModal':
-        firstName && lastName && disableWelcomeBtn ? changeWelcomeModal() : showErrorBtn('WelcomeModal', firstName, lastName);
+      case 'welcomeModal':
+        firstName && lastName && disableWelcomeBtn ? changeWelcomeModal() : showErrorBtn('welcomeModal', firstName, lastName, chooseType);
+        
       break;
       case 'GetInfoModal':
-        disableGetInfoBtn ? changeInfoModal() : showErrorBtn('GetInfoModal');
+        disableGetInfoBtn ? changeInfoModal() : showErrorBtn('GetInfoModal', answerMessage, answer);
 
 
       break;
@@ -158,14 +197,12 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
         dispatch(popupMethod('unlimCollection'))
       break;
       case 'Go-pro':
-        // console.log('go-pro');
         dispatch(selectPlan('close-select-plan'))
         dispatch(paymentDetails('open-payment-details'))
         dispatch(getUnlimAccess('close-unlim-access'))
         navigate('/payment-page')
       break;
       case 'send-request':
-        // console.log('go-pro');
         dispatch(sendRequest('show-success-request'));
 
         setTimeout(() => {
@@ -176,7 +213,6 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
         dispatch(getUnlimAccess('close-unlim-access'))
       break;
       case 'cancel-payment-btn':
-        // dispatch(userLogIn('userPro'));
         dispatch(paymentDetails('close-payment-details'))
         navigate(-1)
       break;

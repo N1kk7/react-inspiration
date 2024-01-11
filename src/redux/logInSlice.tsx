@@ -25,7 +25,6 @@ export const logInSlice = createSlice({
                     state.userFree = false;
                 break;
                 case 'userFree':
-                    console.log('from slice');
                     
                     state.guestStatus = false;
                     state.userPro = false;

@@ -56,12 +56,10 @@ export const selectPlanSlice = createSlice({
             switch (action.payload) {
                 case 'open-payment-details':
                     state.paymentDetailsPage = true;
-                    console.log('open payment details');
                     
                 break;
                 case 'close-payment-details':
                     state.paymentDetailsPage = false;
-                    console.log('close payment details');
                 break;
                 // case 'go-to-select-plan':
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { popup } from "../../../redux/rootSlice";
 import closeBtn from '../../../assets/images/closeBtn.svg';
 import ContGoogle from "../../shared/ContGoogle";
@@ -16,6 +16,10 @@ const SignIn = () => {
 
     const dispatch = useDispatch();
 
+    const emailError = useSelector((state: any) => state.mainState.emailError)
+
+
+
 
     return(
         <div className="modal signIn">
@@ -29,12 +33,20 @@ const SignIn = () => {
                     <ContGoogle/>
                     <ChoiceMethod/>
                     <EnterEmail/>
+                    {emailError && <div className="errorMessage">
+                            <span>
+                            Email registered already. Please log in or sign up with another email
+                            </span>
+                         </div>}
                     <DefaultBtn textBtn="Continue with email" methodBtn="SignIn"/>
                     <div className="modalDescription">
                         <span>
                             Do have an account?
                         </span>
-                        <a href="/">Log In</a>
+
+                            <span className="descriptionLink" onClick={() => dispatch(popup('goToLogInModal'))}>Log In</span>
+
+
                     </div>
 
 

@@ -5,6 +5,9 @@ import { useDispatch } from "react-redux";
 import { getInfo } from '../../../redux/getInfoSlice'
 import { selectPlan,  } from "../../../redux/selectPlanSlice";
 import PlanComponent from "./PlanComponent";
+import { setError } from "../../../redux/welcomeModalSlice";
+import { setInfoSliceError } from "../../../redux/getInfoSlice";
+import { popup } from "../../../redux/rootSlice";
 
 
 import './SelectPlanModal.scss'
@@ -36,15 +39,18 @@ const SelectPlanModal = () => {
 
     const goBack = () => {
         dispatch(selectPlan('go-back'))
+        dispatch(setInfoSliceError('reset-all-errors'))
         dispatch(getInfo('open-getInfo'))
 
 
     }
 
     const closeModal = () => {
-        dispatch(selectPlan('close-select-plan'))
-
-
+        dispatch(selectPlan('close-select-plan'));
+        dispatch(setInfoSliceError('reset-all-errors'));
+        dispatch(setError('reset-all-errors'))
+        dispatch(popup('confirm-password-modal'));
+        dispatch(popup('clear-signIn'))
     }
 
 

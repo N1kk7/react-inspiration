@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { popup } from "../../../redux/rootSlice";
 import closeBtn from '../../../assets/images/closeBtn.svg';
 import ContGoogle from "../../shared/ContGoogle";
@@ -15,6 +15,15 @@ const LogIn = () => {
 
     const dispatch = useDispatch();
 
+    // const enterEmail = useSelector((state: any) => state.mainState.enterEmail);
+
+    // const enterPassword = useSelector((state: any) => state.mainState.enterPassword);
+
+
+
+    const emailError = useSelector((state: any) => state.mainState.emailError);
+    const passwordError = useSelector((state: any) => state.mainState.passwordError);
+
     return (
         <>
             <div className="modal login">
@@ -28,15 +37,28 @@ const LogIn = () => {
                         <ContGoogle/>
                         <ChoiceMethod/>
                         <EnterEmail/>
+                        {emailError && <div className="errorMessage">
+                            <span>
+                            Email registered already. Please log in or sign up with another email
+                            </span>
+                         </div>}
                         <EnterPass/>
-                        {/* <SignInBtn/>*/}
+                        {passwordError && <div className="errorMessage">
+                            <span>
+                            Email registered already. Please log in or sign up with another email
+                            </span>
+                         </div>}
                         <DefaultBtn textBtn="Sign in" methodBtn={'Login'}/> 
                         <div className="modalDescription">
                             <span>
-                                Don't have an account?
+                                Do have an account?
                             </span>
-                            <a href="/">Sign up</a>
+
+                            <span className="descriptionLink" onClick={() => dispatch(popup('goToSignInModal'))}>Sign Up</span>
+
+
                         </div>
+                       
 
 
 

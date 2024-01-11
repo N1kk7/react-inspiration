@@ -29,7 +29,7 @@
             cursor: pointer;
             span{
                 padding-left: 10px;
-                color: var(--Grey, #9E9E9E);
+                color: var(--grey);
                 font-family: var(--font-inter);
                 font-size: 14px;
                 font-style: normal;
@@ -60,13 +60,38 @@
             span{
                 color: var(--grey);
                 text-align: center;
-                font-family: Inter;
+                font-family: var(--font-inter);
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 15px; /* 107.143% */
             }
-          }
+            
+        }
+        .modalDescription{
+            span{
+                color: var(--grey);
+                text-align: center;
+                font-family: var(--font-inter);
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 15px; /* 107.143% */
+            }
+            .descriptionLink{
+                display: inline-block;
+                color: var(--main-text-color);
+                text-align: center;
+                font-family: var(--font-inter);
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 15px;
+                margin-left: 5px;
+                border-bottom: 1px solid var(--main-text-color);
+                cursor: pointer
+            }
+        }
 
     }
 }

@@ -1,6 +1,7 @@
 .welcomeModal{
     .modal-wrapper {
-      height: 624px;
+      // height: 624px;
+      height: auto;
       .modalTitle{
         padding: 56px 0 0px;
         h2{
@@ -13,6 +14,16 @@
         display: flex;
         justify-content: space-around;
         text-align: start;
+        .name{
+          .errorMessage {
+            position: relative;
+            padding: 10px 10px 0 0;
+            top: 5px;
+            // span{
+
+            // }
+          }
+        }
         .nameTitle{
           // padding-left: px;
             h5{
@@ -75,7 +86,7 @@
             cursor: pointer !important;
             text-align: center;
 
-            input{
+            .companyTypeInput{
                 display: inline-flex;
                 height: 19px;
                 width: 364px;
@@ -101,16 +112,17 @@
               line-height: normal;
             }
         }
+        .errorMessage{
+          text-align: center;
+          position: relative;
+          top: 15px;
+        }
         .companyType {
             position: absolute;
             bottom: 5vh;
             right: 0vw;
             background-color: var(--white);
-            // display: inline-flex;
             padding: 10px 40px;
-            // flex-direction: column;
-            // justify-content: center;
-            // align-items: flex-start;
             border-radius: 15px;
             box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
             ul{

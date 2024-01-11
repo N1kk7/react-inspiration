@@ -1,99 +1,205 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './EditProfile.scss'
 import backBtn from '../../assets/images/backBtn.png'
 import DefaultBtn from "../../components/shared/DefaultBtn";
-
+import closeBtn from '../../assets/images/closeBtn.svg'
+import { editPage } from "../../redux/editPageSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import downloadBtn from '../../assets/images/downloadBtn.png'
+import userAvatar from '../../assets/images/userAvatar.png'
 
 
 
 const EditProfile = () => {
+
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
     
     const goBack = () => {
+        dispatch(editPage('close-edit-page'));
+        navigate(-1);
         
     }
 
+    useEffect(() => {
+        dispatch(editPage('open-edit-page'));
+    }, [])
+
     return (
         <>
-            <div className="paymentPage">
-                <div className="paymentPageWrapper">
-                    <div className="backBtn" onClick={() => goBack()}>
-                        <img src={backBtn} alt="back-btn" />
-                        <span>Back</span>
-                    </div>
-                    <div className="modalTitle">
-                        <h2>ADD PAYMENTS DETAILS</h2>
-                    </div>
-                    <div className="formWrapper">
-                        <div className="nameDetails">
-                            <div className="name">
-                                <div className="nameItem">
-                                    <h4>First Name</h4>
-                                    <input type="text" placeholder="Your first name" />
-                                </div>
-                                <div className="nameItem">
-                                    <h4>Last Name</h4>
-                                    <input type="text" placeholder="Your last name" />
-                                </div>
-                            </div>
-                            <div className="cardNumber">
-                                <h4>Add card number</h4>
-                                <input type="text" placeholder="0000 0000 0000 0000"/>
-                                <div className="description">
-                                    <h4>Securely stored</h4>
-                                </div>
-                            </div>
-                            <div className="date">
-                                <div className="dateItem">
-                                    <h4>Expiration month</h4>
-                                    <input type="text" placeholder="MM"/>
-                                </div>
-                                <div className="dateItem">
-                                    <h4>Expiration year</h4>
-                                    <input type="text" placeholder="YY"/>
-                                </div>
-                            </div>
-                            <div className="secureCode">
-                                <h4>Security code</h4>
-                                <input type="text" placeholder="3 digits"/>
-                            </div>
+            <div className="editProfile">
+                <div className="container">
+                    <div className="editPageWrapper">
+                        <div className="backBtn" onClick={() => goBack()}>
+                            <img src={backBtn} alt="back-btn" />
+                            <span>Back</span>
                         </div>
-                        <div className="addressDetails">
-                            <div className="country">
-                                <h4>Country</h4>
-                                <input type="text" placeholder="Choose country"/>
-                            </div>
-                            <div className="address">
-                                <h4>Address line 1</h4>
-                                <input type="text" placeholder="Billing address 1"/>
-                            </div>
-                            <div className="address">
-                                <h4>Address line 2</h4>
-                                <input type="text" placeholder="Billing address 2"/>
-                            </div>
-                            <div className="zipCode">
-                                <div className="code">
-                                    <h4>City</h4>
-                                    <input type="text" placeholder="Billing city"/>
+                        <div className="closeBtn" onClick={() => {}}>
+                            <img src={closeBtn} alt="close-btn" />
+                        </div>
+                        <div className="modalTitle">
+                            <h2>Edit profile</h2>
+                        </div>
+                        <div className="formWrapper">
+                            <div className="rowWrapper leftWrapper">
+                                <div className="userAvatar">
+                                    <img src={userAvatar} alt="user-avatar" />
+                                    <div className="avatarBtn">
+
+                                        <img src={downloadBtn} alt="download-btn" />
+                                        <span>
+                                            Replace photo
+                                        </span>
+                                    </div>
+
                                 </div>
-                                <div className="code">
-                                    <h4>Post code</h4>
-                                    <input type="text" placeholder="(Optional)"/>
+                                <div className="inputItem">
+                                    <div className="inputWrapper">
+                                        <h4>
+                                            Username
+                                        </h4>
+                                        <input type="text" placeholder="BMYXA"/>
+                                    </div>
+                                    <div className="inputWrapper">
+                                        <h4>
+                                            First name
+                                        </h4>
+                                        <input type="text" placeholder="Bohdan"/>
+                                    </div>
                                 </div>
+                                <div className="inputItem">
+                                    <div className="inputWrapper">
+                                        <div className="titleWrapper">
+                                            <h4>
+                                                Email
+                                            </h4>
+                                            <div className="hoverBtn">i</div>
+
+                                        </div>
+                                        
+                                        <input type="text" placeholder="user.email@gmail.com"/>
+                                    </div>
+                                    <div className="inputWrapper">
+                                        <h4>
+                                            Last name
+                                        </h4>
+                                        <input type="text" placeholder="Mukha"/>
+                                    </div>
+
+                                </div>
+                                <div className="userDescription">
+                                    <div className="inputWrapper">
+                                        <h4>
+                                            Description
+                                        </h4>
+                                        <textarea name="description" placeholder="From the initial meeting to the final delivery, 
+                                                                                    Ethan has created a feeling of trust and delivered 
+                                                                                    everything we asked of him."/>
+                                    </div>
+                                    
+
+                                </div>
+                                <div className="passwordWrapper">
+                                    <div className="inputWrapper">
+                                        <h4>
+                                            Old Password
+                                        </h4>
+                                        <input type="password" placeholder="********"/>
+                                    </div>
+                                    <div className="inputWrapper">
+                                        <h4>
+                                            New Password
+                                        </h4>
+                                        <input type="password" placeholder="********"/>
+                                    </div>
+                                    <DefaultBtn textBtn="Change" methodBtn="change-btn"/>
+
+                                </div>
+
                             </div>
+                            <div className="rowWrapper rightWrapper">
+                                <div className="inputItem">
+                                    <div className="inputWrapper">
+                                        <h4>
+                                            Username
+                                        </h4>
+                                        <input type="text" placeholder="$300+"/>
+                                    </div>
+                                </div>
+                                <div className="inputItem">
+                                    <div className="inputWrapper">
+                                        <h4>
+                                            Username
+                                        </h4>
+                                        <input type="text" placeholder="City, Country"/>
+                                    </div>
+                                </div>
+                                <div className="separateLine">
+                                    <hr />
+                                </div>
+                                <div className="inputItem">
+                                    <div className="inputWrapper">
+                                        <h4>
+                                            Website
+                                        </h4>
+                                        <input type="text" placeholder="Link"/>
+                                    </div>
+                                </div>
+                                <div className="inputItem">
+                                    <div className="inputWrapper">
+                                        <h4>
+                                            Tiktok
+                                        </h4>
+                                        <input type="text" placeholder="Link"/>
+                                    </div>
+                                </div>
+                                <div className="inputItem">
+                                    <div className="inputWrapper">
+                                        <h4>
+                                            Twitter
+                                        </h4>
+                                        <input type="text" placeholder="Link"/>
+                                    </div>
+                                </div>
+                                <div className="inputItem">
+                                    <div className="inputWrapper">
+                                        <h4>
+                                            Instagram
+                                        </h4>
+                                        <input type="text" placeholder="Link"/>
+                                    </div>
+                                </div>
+                                
+
+
+                                
+
+
+
+
+
+                                <div className="buttonWrapper">
+
+                                        <div className="btn cancelBtn">
+                                            <DefaultBtn textBtn="Cancel" methodBtn="cancel-progress"/>
+
+                                        </div>
+                                        <div className="btn saveBtn">
+                                            <DefaultBtn textBtn="Save" methodBtn="save-progress"/>
+                                        </div>
+                                </div>
+
+                            </div>
+
+                            
+
                         </div>
                         
-
-                    </div>
-                    <div className="buttonWrapper">
-                        <div className="btn cancelBtn">
-                            <DefaultBtn textBtn="Cancel" methodBtn="cancelBtn"/>
-
-                        </div>
-                        <div className="btn paymentBtn">
-                            <DefaultBtn textBtn="Processed to payment" methodBtn="payment-processed"/>
-                        </div>
                     </div>
                 </div>
+
+                
             </div>
 
 
