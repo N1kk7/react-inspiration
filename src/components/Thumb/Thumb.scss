@@ -84,6 +84,24 @@
             justify-content: center;
             border: 0;
 		}
+		.editBtn {
+			background-image: url(../../assets/images/pencil.svg);
+			background-color: var(--main-text-color);
+			background-position: center center;
+			background-repeat: no-repeat;
+            background-size: 14px 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            height: 36px;
+            width: 36px;
+            position: absolute;
+            top: 16px;
+            left: 108px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+		}
 
 		.pauseBtn,
 		.playBtn {
