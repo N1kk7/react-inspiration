@@ -15,17 +15,13 @@ const supportSlice = createSlice({
 
         openSupportModal: (state) => {
             state.supportModal = true
-            console.log('open support');
             
         },
         closeSupportModal: (state) => {
             state.supportModal = false
         },
         sendRequest: (state, action) => {
-            // state.supportModal = false;
-            // state.sendRequestModal = true
-            // setTimeout(() => {
-            // }, 3000)
+
             switch (action.payload) {
                 case 'show-success-request':
                     state.supportModal = false;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './SelectPlanModal.scss'
 import DefaultBtn from "../../shared/DefaultBtn";
 // import { useDispatch } from "react-redux";
@@ -9,32 +9,34 @@ import DefaultBtn from "../../shared/DefaultBtn";
 
 const Plan = (props: {freeTextBtn: string, freeMethodBtn: string, proTextBtn: string,  proMethodBtn: string}) => {
 
-    // const dispatch = useDispatch()
-    const [freePlan, setFreePlan] = useState<string>('');
-    const [proPlan, setProPlan] = useState<string>('activePlan');
+    // FOR TOGGLE PLAN 
+
+    // const [freePlan, setFreePlan] = useState<string>('');
+    // const [proPlan, setProPlan] = useState<string>('activePlan');
     
-    const togglePlan = (type: string) => {
+    // const togglePlan = (type: string) => {
 
-        switch (type) {
-            case 'free':
-                setFreePlan('activePlan');
-                setProPlan('');
-            break;
-            case 'pro':
-                setFreePlan('');
-                setProPlan('activePlan');
-            break;
-        }
-        
-
-    }
+    //     switch (type) {
+    //         case 'free':
+    //             setFreePlan('activePlan');
+    //             setProPlan('');
+    //         break;
+    //         case 'pro':
+    //             setFreePlan('');
+    //             setProPlan('activePlan');
+    //         break;
+    //     }
+    
+    // }
 
     
     return(
         <>
             <div className="planWrapper">
-                        {/* <div className={`plan ${freePlan}`} onClick={(event) => {togglePlan('free'); dispatch(choicePlan('free'))}}> */}
-                        <div className={`plan free ${freePlan}`} onClick={(event) => {togglePlan('free');}}>
+
+                        {/* <div className={`plan free ${freePlan}`} onClick={(event) => {togglePlan('free');}}> */}
+                        <div className={`plan free`}>
+
 
                             <div className="planType">
                                 <div className="type">
@@ -73,7 +75,9 @@ const Plan = (props: {freeTextBtn: string, freeMethodBtn: string, proTextBtn: st
                             </div>
                         </div>
                         {/* <div className={`plan ${proPlan}`} onClick={(event) => {togglePlan('pro'); dispatch(choicePlan('pro'))}}> */}
-                        <div className={`plan pro ${proPlan}`}  onClick={(event) => {togglePlan('pro');}}>
+                        {/* <div className={`plan pro activePlan`}  onClick={(event) => {togglePlan('pro');}}> */}
+                        <div className={`plan pro activePlan`} >
+
 
                             <div className="planType">
                                 <div className="type">

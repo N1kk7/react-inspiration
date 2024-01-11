@@ -80,3 +80,16 @@ footer {
   margin: 0 10px;
 
 }
+
+.errorMessage{
+  margin-bottom: 8px;
+  span{
+    font-family: var(--font-inter);
+    color: red;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import './Shared.scss'
 import { useDispatch, useSelector } from "react-redux";
+import { popup } from "../../redux/rootSlice";
 import { enterPassword } from "../../redux/rootSlice";
 
 const EnterPass = () => {
@@ -9,14 +10,30 @@ const EnterPass = () => {
 
     const errorPassword = useSelector((state: any) => state.mainState.passwordError)
 
+    const setInput = (event: any) => {
+
+        function cancelError() {
+            dispatch(popup('cancel-password-error'));
+            dispatch(enterPassword(event.target.value))
+
+        }
+
+        errorPassword ? cancelError() :  dispatch(enterPassword(event.target.value));
+
+    }
+
+    const errorStyle = {
+        border: "1px solid red",
+    }
+    const defaultStyle = {
+        border: " ",
+      }
 
 
     return(
         <>
             <div className="enterEmailPass">
-                {!errorPassword && <input type="password" placeholder="Your password" onChange={(event) => {dispatch(enterPassword(event.target.value))}}/>}
-                {errorPassword && <input type="password" placeholder="Your password" style={{border: '1px solid red'}} onChange={(event) => {dispatch(enterPassword(event.target.value))}}/>}
-
+                <input type="password" placeholder="Your password" style={errorPassword ?  errorStyle : defaultStyle} onChange={(event) => {setInput(event)}}/>
             </div>
         </>
 

@@ -63,11 +63,9 @@ const Header = () => {
 
   //     if (collectionState) {
 
-  //       console.log('collection page');
 
   //     } else {
 
-  //       console.log('popup');
   //       e.preventDefault()
   //       dispatch(popupMethod('yourCollection'))
   //       // dispatch(changeCollectionState())

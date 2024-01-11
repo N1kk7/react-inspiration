@@ -17,6 +17,9 @@ export const rootSlice = createSlice({
         createPassword: '',
         confirmPassword: '',
 
+        createPasswordError: false,
+        confirmPasswordError: false,
+
         profilePopup: false,
 
         emailError: false,
@@ -44,11 +47,15 @@ export const rootSlice = createSlice({
                 break;
                 case 'close-signIn':
                     state.signIn = false;
+                    state.emailError = false;
                     state.enterEmail = '';
                     state.createPassword = '';
                     state.confirmPassword = '';
                     document.body.style.overflow ='unset';
 
+                break;
+                case 'clear-signIn':
+                    state.enterEmail = '';
                 break;
                 case 'confirm-signIn':
                     state.enterEmail = '';
@@ -71,6 +78,8 @@ export const rootSlice = createSlice({
                     state.logIn = false;
                     state.enterEmail = '';
                     state.enterPassword = '';
+                    state.emailError = false;
+                    state.passwordError = false;
                     document.body.style.overflow ='unset';
                 break;
                 case 'confirm-logIn':
@@ -108,8 +117,30 @@ export const rootSlice = createSlice({
                 break;
                 case 'close-profile-popup':
                     state.profilePopup = false
+                break;
+                case 'goToLogInModal':
+                    state.signIn = false;
+                    state.emailError = false;
+                    state.enterEmail = '';
+                    state.createPassword = '';
+                    state.confirmPassword = '';
+                    state.logIn = true;
+                break;
+                case 'goToSignInModal':
+                    state.logIn = false;
+                    state.emailError = false;
+                    state.passwordError = false;
+                    state.enterEmail = '';
+                    state.createPassword = '';
+                    state.confirmPassword = '';
+                    state.signIn = true;
 
                 break;
+                // case 'create-password-error':
+
+                // break;
+                // case 'confirm-password-error':
+                // break;
 
 
 
@@ -118,6 +149,36 @@ export const rootSlice = createSlice({
             }
 
 
+        },
+        checkPasswordError: (state, action) => {
+            switch (action.payload) {
+                case 'create-password-error':
+                    state.createPasswordError = true;
+
+                break;
+                case 'confirm-password-error':
+                    state.confirmPasswordError = true;
+
+                break;
+                case 'clear-createPass-error':
+                    state.createPasswordError = false;
+
+                break;
+                case 'clear-confirmPass-error':
+                    state.confirmPasswordError = false;
+
+                break;
+
+                case 'clear-password-error':
+                    state.createPasswordError = false;
+                    state.confirmPasswordError = false;
+                    state.createPassword = '';
+                    state.confirmPassword = '';
+
+                break;
+                
+                
+            }
         },
         enterEmail: (state, action) => {
             state.enterEmail = action.payload;
@@ -138,26 +199,18 @@ export const rootSlice = createSlice({
             switch (action.payload) {
                 case 'creator':
                     state.creatorPage = true;
-                    // console.log(state.creatorPage, 'creator page');
-
+                    
                 break;
                 case 'brand':
                     state.brandPage = true;
-                    console.log(state.brandPage, 'brand page')
                 break
             }
 
         }
 
 
-
-
-
-
-
-
     }
 })
 
-export const { popup, enterEmail, enterPassword, createPassword, confirmPassword, creatorBrand } = rootSlice.actions;
+export const { popup, enterEmail, enterPassword, createPassword, confirmPassword, creatorBrand, checkPasswordError } = rootSlice.actions;
 export default rootSlice.reducer;

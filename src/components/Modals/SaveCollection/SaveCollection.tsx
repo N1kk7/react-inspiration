@@ -15,7 +15,6 @@ const SaveCollection = () => {
 
     const deleteModal = useSelector((state: any) => state.MyCollectionState.removeCollectionModal)
 
-    console.log(deleteModal);
     
 
 

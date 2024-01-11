@@ -29,7 +29,6 @@ const CollectionSlice = createSlice({
         },
         changeCollectionState: (state) => {
             state.collectionState = !state.collectionState
-            console.log(state.myCollection.length !== 0);
             
 
         },

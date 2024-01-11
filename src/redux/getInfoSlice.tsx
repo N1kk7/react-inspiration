@@ -9,7 +9,9 @@ export const getInfoSlice = createSlice({
         getInfoModal: false,
         answerMessage: '',
         answer: '',
-        disableGetInfoBtn: false
+        disableGetInfoBtn: false,
+        answerMessageError: false,
+        answerError: false,
 
 
     },
@@ -60,7 +62,41 @@ export const getInfoSlice = createSlice({
                 state.disableGetInfoBtn = false;
             }
 
+        },
+        setInfoSliceError: (state, action) => {
+
+
+            switch (action.payload) {
+                case 'set-message-error':
+                    state.answerMessageError = true;
+                    
+                break;
+                case 'reset-message-error':
+                    state.answerMessageError = false;
+                break;
+                case 'set-answer-error':
+                    
+                    state.answerError = true;
+                break;
+                case 'reset-answer-error':
+                    state.answerError = false;
+                break;
+                case 'reset-all-errors':
+                    
+                    state.answerMessageError = false;
+                    state.disableGetInfoBtn = false;
+
+                    state.answerError = false;
+                    state.answerMessage = '';
+                    state.answer = '';
+
+                break;
+
+            }
+
+            
         }
+
        
 
     }
@@ -70,7 +106,7 @@ export const getInfoSlice = createSlice({
 
 })
 
-export const { getInfo, setAnswer, setMessage } = getInfoSlice.actions;
+export const { getInfo, setAnswer, setMessage, setInfoSliceError } = getInfoSlice.actions;
 export default getInfoSlice.reducer;
 
 

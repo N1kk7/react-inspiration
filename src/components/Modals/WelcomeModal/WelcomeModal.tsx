@@ -4,6 +4,7 @@ import closeBtn from '../../../assets/images/closeBtn.svg'
 import { useDispatch, useSelector } from "react-redux";
 import { popup } from "../../../redux/rootSlice";
 import { welcomePopup, getFirstName, getLastName, setInputPlaceholder } from "../../../redux/welcomeModalSlice";
+import { setError } from "../../../redux/welcomeModalSlice";
 import DefaultBtn from "../../shared/DefaultBtn";
 import downBtn from "../../../assets/images/downBtn.svg"
 import '../AllModalsStyle.scss';
@@ -12,8 +13,12 @@ const WelcomeModal = () => {
 
     const dispatch = useDispatch();
 
-    const chooseTypeModal = useSelector((state: any) => state.welcomeModalState.chooseTypeModal)
-    const inputPlaceholder = useSelector((state: any) => state.welcomeModalState.inputPlaceholder)
+    const chooseTypeModal = useSelector((state: any) => state.welcomeModalState.chooseTypeModal);
+    const inputPlaceholder = useSelector((state: any) => state.welcomeModalState.inputPlaceholder);
+
+    const firstNameError = useSelector((state: any) => state.welcomeModalState.firstNameError);
+    const lastNameError = useSelector((state: any) => state.welcomeModalState.lastNameError);
+    const chooseTypeError = useSelector((state: any) => state.welcomeModalState.chooseTypeError);
 
     
 
@@ -28,13 +33,26 @@ const WelcomeModal = () => {
     }
     const closeModal = () => {
         dispatch(welcomePopup('close-welcome-popup'));
-        dispatch(popup('close-signIn'));
+        dispatch(setError('reset-all-errors'));
+        dispatch(popup('confirm-password-modal'));
+        dispatch(popup('clear-signIn'))
+        // dispatch(popup('close-signIn'));
 
+    }
+
+    const errorStyle = {
+        border: "1px solid red",
+    }
+    const defaultStyle = {
+        border: " ",
     }
 
     return(
         <>
-            <div className="modal welcomeModal" onClick={() => {dispatch(welcomePopup('close-chooseType'))}}>
+            <div className="modal welcomeModal" 
+                onClick={() => {
+                    dispatch(welcomePopup('close-chooseType'))
+                }}>
                 <div className="modal-wrapper">
                     <div className="backBtn" onClick={() => goBack()}>
                         <img src={backBtn} alt="back-btn" />
@@ -59,9 +77,22 @@ const WelcomeModal = () => {
                                 </h5>
                             </div>
                             <div className="nameInput">
-                                <input type="text" placeholder="First name" onChange={(event) => {dispatch(getFirstName(event.target.value))}}/>
+                                <input type="text" 
+                                        placeholder="First name" 
+                                        style={firstNameError ? errorStyle : defaultStyle}
+                                        onChange={(event) => {
+                                            dispatch(getFirstName(event.target.value));
+                                            dispatch(setError('reset-firstName-error'));
+                                        }}
+                                />
                             </div>
+                            {firstNameError && <div className="errorMessage">
+                                <span>
+                                    First name Error
+                                </span>
+                            </div>}
                         </div>
+                        
                         <div className="name last">
                             <div className="nameTitle">
                                 <h5>
@@ -69,10 +100,24 @@ const WelcomeModal = () => {
                                 </h5>
                             </div>
                             <div className="nameInput">
-                                <input type="text" placeholder="Last name" onChange={(event) => {dispatch(getLastName(event.target.value))}}/>
+                                <input type="text" 
+                                        placeholder="Last name" 
+                                        style={lastNameError ? errorStyle : defaultStyle}
+                                        onChange={(event) => {
+                                            dispatch(getLastName(event.target.value))
+                                            dispatch(setError('reset-lastName-error'));
+
+                                        }}
+                                />
 
                             </div>
+                            {lastNameError && <div className="errorMessage">
+                                <span>
+                                    Last name Error
+                                </span>
+                            </div>}
                         </div>
+                        
                     </div>
                     <div className="companyWrapper">
                         <div className="companyTitle">
@@ -80,10 +125,25 @@ const WelcomeModal = () => {
                                 Company type
                             </h5>
                         </div>
-                        <div className="companyInput" onClick={(event) => {event.stopPropagation(); dispatch(welcomePopup('open-chooseType'))}}>
-                            <input type="select" placeholder={inputPlaceholder}/>
+                        <div className="companyInput" onClick={(event) => {
+                                event.stopPropagation(); 
+                                dispatch(welcomePopup('open-chooseType'));
+                                dispatch(setError('reset-chooseType-error'))
+                            }}>
+                            <div 
+                                // type="select" 
+                                className="companyTypeInput"
+                                style={chooseTypeError ? errorStyle : defaultStyle}
+                                // placeholder={inputPlaceholder}
+                            >{inputPlaceholder}</div>
                             <img src={downBtn} alt="down-btn" />
                         </div>
+                        {chooseTypeError && <div className="errorMessage">
+                                <span>
+                                    Please choose company type
+                                </span>
+                        </div>}
+
                         {chooseTypeModal && <div className="companyType">
                             <div className="companyTypeList">
                                 <ul>
@@ -117,7 +177,7 @@ const WelcomeModal = () => {
                             </div>
                         </div>}
                     </div>
-                    <DefaultBtn textBtn="Next" methodBtn="WelcomeModal"/>
+                    <DefaultBtn textBtn="Next" methodBtn="welcomeModal"/>
                 </div>
 
 

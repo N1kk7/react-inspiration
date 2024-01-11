@@ -49,12 +49,17 @@ function App() {
   const selectPlanModal = useSelector((state: any) => state.selectPlanState.selectPlanModal);
   const paymentPage = useSelector((state: any) => state.selectPlanState.paymentDetailsPage);
   const adminPage = window.location.href.indexOf('admin') > -1;
+  // const editProfilePage = window.location.href.indexOf('/edit-page') > -1;
   const auth = useSelector((state: any) => state.adminState.auth);
+  const editPage = useSelector((state: any) => state.editPageState.editPage);
+
+
+  
 
   return (
       <div className="App">
         <div className="wrapper">
-          {!paymentPage && !adminPage && <Header />}
+          {!paymentPage && !adminPage && !editPage && <Header />}
 
           {loginModal && <LogIn />}
           {signInModal && <SignIn />}
@@ -71,7 +76,7 @@ function App() {
             <Route path="/search-page" element={<SearchPage />} />
             <Route path="/project-page" element={<ProjectPage />} />
             <Route path="/payment-page" element={<PaymentPage />} />
-            <Route path="/edit-profile" element={<EditProfile />} />
+            <Route path="/edit-page" element={<EditProfile />} />
 
             <Route
               path="/admin"

@@ -32,16 +32,6 @@ const MainPage = () => {
   const userFree = useSelector((state: any) => state.logInState.userFree);
 
 
-  console.log(userPro, '-user-pro', userFree , '-user-free', guestStatus, '-guest-status'); ;
-
-
-console.log(getUnlimAccessModal);
-
-
-
-
-
-
   return (
 
     <>
