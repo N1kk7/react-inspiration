@@ -24,9 +24,12 @@ import CollectionPage from './pages/CollectionName/CollectionName'
 import SearchPage from  './pages/SearchQuery/SearchQuery'
 import ProjectPage from './pages/ProjectPage/ProjectPage';
 import PaymentPage from './pages/PaymentPage/PaymentPage';
-import AdminPanel from './pages/AdminPanel/AdminPanel';
-import AdminLogin from './pages/AdminPanel/AdminLogin';
+import AdminPanel from './admin/AdminPanel/AdminPanel';
+import AdminLogin from './admin/AdminPanel/AdminLogin';
 import EditProfile from './pages/EditProfile/EditProfile';
+import VideoModeration from './admin/AdminPanel/adminPages/VideoModeration/VideoModeration';
+import UserManagement from './admin/AdminPanel/adminPages/UserManagement/UserManagement'
+import AnalyticsPage from './admin/AdminPanel/adminPages/AnalyticsPage/AnalyticsPage';
 
 type PrivateRouteProps = {
   auth: {
@@ -54,7 +57,7 @@ function App() {
   const editPage = useSelector((state: any) => state.editPageState.editPage);
 
 
-  
+
 
   return (
       <div className="App">
@@ -79,13 +82,17 @@ function App() {
             <Route path="/edit-page" element={<EditProfile />} />
 
             <Route
-              path="/admin"
+              path="/admin/*"
               element={
                 <PrivateRoute auth={{ isAuthenticated: auth }}>
                   <AdminPanel />
                 </PrivateRoute>
               }
-            />
+            >
+              <Route path="video" element={<VideoModeration />} />
+              <Route path="user" element={<UserManagement />} />
+              <Route path="analytics" element={<AnalyticsPage />} />
+            </Route>
 
             <Route path="/admin/login" element={<AdminLogin />} />
           </Routes>

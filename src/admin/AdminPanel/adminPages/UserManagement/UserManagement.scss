@@ -1,0 +1,50 @@
+.userManagement {
+  text-align: left;
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.48px;
+    margin-bottom: 30px;
+  }
+
+	.search {
+		position: relative;
+		top: 0px;
+		width: 100%;
+		max-width: 313px;
+		cursor: pointer;
+
+		.searchDesktop {
+			input {
+				border: 1px solid var(--border-color);
+				padding: 11px 17px 10px 17px;
+				border-radius: 50px;
+				width: 100%;
+				max-width: 273px;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: normal;
+				cursor: pointer;
+			}
+			::placeholder {
+				display: inline-block;
+				color: var(--Main-dark);
+				font-family: var(--font-inter);
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: normal;
+			}
+			.arrowBtn {
+				display: inline-block;
+				cursor: pointer;
+				position: absolute;
+				top: 51%;
+				transform: translateY(-50%);
+				right: 17px;
+			}
+		}
+	}
+}

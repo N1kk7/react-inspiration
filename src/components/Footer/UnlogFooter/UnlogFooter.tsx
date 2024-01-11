@@ -30,7 +30,6 @@ const UnloggedFooter = () => {
                             <span>Email</span>
                         </div>
                         <EnterEmail/>
-                        {/* <SignInBtn/>*/}
                         <DefaultBtn textBtn="Continue with email" methodBtn={'Login'}/>
                         <div className="unlog-description">
                             <span>

@@ -15,16 +15,16 @@ const EditProfile = () => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    
+
     const goBack = () => {
         dispatch(editPage('close-edit-page'));
         navigate(-1);
-        
+
     }
 
     useEffect(() => {
         dispatch(editPage('open-edit-page'));
-    }, [])
+    }, [dispatch])
 
     return (
         <>
@@ -77,7 +77,7 @@ const EditProfile = () => {
                                             <div className="hoverBtn">i</div>
 
                                         </div>
-                                        
+
                                         <input type="text" placeholder="user.email@gmail.com"/>
                                     </div>
                                     <div className="inputWrapper">
@@ -93,11 +93,11 @@ const EditProfile = () => {
                                         <h4>
                                             Description
                                         </h4>
-                                        <textarea name="description" placeholder="From the initial meeting to the final delivery, 
-                                                                                    Ethan has created a feeling of trust and delivered 
+                                        <textarea name="description" placeholder="From the initial meeting to the final delivery,
+                                                                                    Ethan has created a feeling of trust and delivered
                                                                                     everything we asked of him."/>
                                     </div>
-                                    
+
 
                                 </div>
                                 <div className="passwordWrapper">
@@ -170,10 +170,10 @@ const EditProfile = () => {
                                         <input type="text" placeholder="Link"/>
                                     </div>
                                 </div>
-                                
 
 
-                                
+
+
 
 
 
@@ -192,14 +192,14 @@ const EditProfile = () => {
 
                             </div>
 
-                            
+
 
                         </div>
-                        
+
                     </div>
                 </div>
 
-                
+
             </div>
 
 
