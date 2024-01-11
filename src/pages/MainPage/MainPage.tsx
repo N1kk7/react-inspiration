@@ -1,7 +1,6 @@
 import React from 'react';
 import SearchFilters from '../../components/SearchFilters/SearchFilters';
 import ThumbWrapper from '../../components/ThumbWrapper/ThumbWrapper';
-import HideContent from '../../components/HideContent/HideContent';
 import './MainPage.scss';
 import './MediaMainPage.scss';
 import Footer from '../../components/Footer/Footer';
@@ -34,7 +33,7 @@ const MainPage = () => {
 
 
   return (
-    
+
     <>
       { yourCollectionState && <YourCollections/> }
       { createCollectionState && <CreateCollection/> }
@@ -53,7 +52,7 @@ const MainPage = () => {
               The best<br />
               <span className="main-page-banner-title__second-line">ad inspiration</span><br />
               <span className="main-page-banner-title__third-line">in one place</span>
-         
+
             </h1>
 
             <span className="main-page-banner-socials">
@@ -69,17 +68,16 @@ const MainPage = () => {
             </span>
           </div>}
 
-        
+
 
           <SearchFilters/>
           <ThumbWrapper/>
-          {guestStatus && <HideContent/>}
         </div>
       </div>
 
     </div>
     <Footer/>
-    
+
     </>
 
   );

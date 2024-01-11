@@ -1,7 +1,6 @@
 import React from "react";
 import './SearchQuery.scss'
 import ThumbWrapper from "../../components/ThumbWrapper/ThumbWrapper";
-import HideContent from "../../components/HideContent/HideContent";
 import UnloggedFooter from "../../components/Footer/UnlogFooter/UnlogFooter";
 import SearchFilters from "../../components/SearchFilters/SearchFilters";
 import { useSelector } from "react-redux";
@@ -16,7 +15,7 @@ const SearchQuery = () => {
 
 
 
-    
+
 
 
     return (
@@ -25,7 +24,7 @@ const SearchQuery = () => {
             { getUnlimAccessModal && <GetUnlimAccess/> }
 
             <div className="searchPage">
-            
+
                 <div className="container">
                     <div className="search-page-wrapper">
                         <div className="searchTitle">
@@ -45,24 +44,23 @@ const SearchQuery = () => {
                         </div>
                         <SearchFilters/>
                         <ThumbWrapper/>
-                        {guestStatus && <HideContent/>}
-                        
+
 
                     </div>
                     <UnloggedFooter/>
 
 
-                    
-                
-                    
+
+
+
 
                 </div>
 
-                   
+
             </div>
-            
-            
-        
+
+
+
         </>
     )
 

@@ -1,9 +1,18 @@
 .unlog-footer{
-
-    // margin-bottom: 15vh;
-    max-height: 55vh;
-    margin-bottom: 5vh;
+    padding: 22px 0 150px;
     position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        width: 100%;
+        height: 456px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+        filter: blur(17px);
+        left: 0;
+    }
+
     .content-wrapper {
         display: flex;
         flex-direction: column;
@@ -20,7 +29,8 @@
             font-size: 22px;
             font-style: normal;
             font-weight: 700;
-            line-height: 40px; /* 181.818% */
+            line-height: 40px;
+            margin-bottom: 40px;
         }
         .contGoogle {
             width: 100%;
@@ -28,7 +38,7 @@
         }
         .choiceMethod{
             width: 100%;
-            margin: 20px 0 28px;
+            margin: 20px 0 20px;
         }
         .enterEmailPass {
             width: 100%;
@@ -40,21 +50,22 @@
         .defaultBtn {
             width: 100%;
             max-width: calc(100% - 22px);
-            margin: 4px 0 30px;
+            margin: 4px 0 35px;
         }
         .email-title {
             width: 100%;
             text-align: start;
+            margin-bottom: 9px;
         }
         .unlog-description {
             width: 100%;
             color: var(--grey);
             text-align: center;
-            font-family: var(--font-inter);
             font-size: 11px;
             font-style: normal;
             font-weight: 400;
-            line-height: 15px; /* 136.364% */
+            line-height: 15px;
+            max-width: 317px;
             a{
                 color: var(--main-text-color);
                 font-family: var(--font-inter);

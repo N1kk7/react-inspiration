@@ -1,7 +1,7 @@
 .contGoogle{
     margin: 0 15px;
     display: flex;
-    padding: 8px 19px;
+    padding: 11px 19px;
     justify-content: center;
     align-items: center;
     font-family: var(--font-inter);
@@ -10,6 +10,14 @@
     gap: 10px;
     border-radius: 50px;
     border: 1px solid var(--border-color);
+
+    .googleImg {
+      font-size: 0;
+
+      img {
+        width: 20px;
+      }
+    }
 }
 
 .choiceMethod {
@@ -64,7 +72,7 @@
       font-weight: 400;
       line-height: normal;
     }
-    
+
 }
 
 .defaultBtn {
@@ -116,7 +124,7 @@
     left: 0;
   }
 
-  
+
 }
 
 

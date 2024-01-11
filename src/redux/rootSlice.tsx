@@ -74,7 +74,7 @@ export const rootSlice = createSlice({
                     document.body.style.overflow ='hidden';
                 break;
                 case 'close-logIn':
-                    
+
                     state.logIn = false;
                     state.enterEmail = '';
                     state.enterPassword = '';
@@ -103,9 +103,9 @@ export const rootSlice = createSlice({
 
                 break;
                 case 'password-error':
-                    
+
                     state.passwordError = true
-                    
+
                 break;
                 case 'cancel-password-error':
                     state.passwordError = false
@@ -148,7 +148,7 @@ export const rootSlice = createSlice({
 
             }
 
-            
+
         },
         checkPasswordError: (state, action) => {
             switch (action.payload) {
@@ -188,7 +188,7 @@ export const rootSlice = createSlice({
         },
         createPassword: (state, action) => {
             state.createPassword = action.payload
-            
+
         },
         confirmPassword: (state, action) => {
             state.confirmPassword = action.payload
@@ -205,16 +205,10 @@ export const rootSlice = createSlice({
                     state.brandPage = true;
                 break
             }
-            
+
         }
 
 
-
-
-
-
-
-       
     }
 })
 
