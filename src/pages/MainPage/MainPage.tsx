@@ -28,8 +28,8 @@ const MainPage = () => {
   const sendRequestModal = useSelector((state: any) => state.supportState.sendRequestModal)
   const getUnlimAccessModal = useSelector((state: any) => state.selectPlanState.getUnlimAccessModal)
 
-  const userPro = useSelector((state: any) => state.logInState.userPro);
-  const userFree = useSelector((state: any) => state.logInState.userFree);
+  // const userPro = useSelector((state: any) => state.logInState.userPro);
+  // const userFree = useSelector((state: any) => state.logInState.userFree);
 
 
   return (

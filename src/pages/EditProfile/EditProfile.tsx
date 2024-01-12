@@ -22,9 +22,16 @@ const EditProfile = () => {
 
     }
 
-    useEffect(() => {
+    const update = () => {
         dispatch(editPage('open-edit-page'));
+
+
+    }
+
+    useEffect(() => {
+        update();
     }, [dispatch])
+
 
     return (
         <>
