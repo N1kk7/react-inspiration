@@ -1,0 +1,261 @@
+.submitWorkPage {
+
+    .container {
+        .submitPageWrapper{
+            margin-top: 100px;
+            .backBtn {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 50px;
+                span{
+                    padding-left: 10px;
+                    color: var(--grey);
+                    font-family: var(--font-inter);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+            .closeBtn {
+              display: none;
+            }
+            .submitTitle {
+              h2{
+                color: var(--main-text-color);
+                text-align: center;
+                font-family: var(--font-inter);
+                font-size: 58px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 51.358px; /* 88.549% */
+                text-transform: uppercase;
+              }
+            }
+            .contentWrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 590px;
+                margin: 0 auto;
+                .contentTitle {
+                    color: var(--main-text-color);
+                    font-family: var(--font-inter);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin: 10px 0;
+                }
+                .videoContent {
+                    width: -webkit-fill-available;
+                  text-align: start;
+                  .itemWrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 35px 40px;
+                    height: 33px;
+                    background-color: #DADADA;
+                    border-radius: 15px;
+                    border: 1px dashed #DADADA;
+                    background: #F8F7F4;
+                    
+
+                    .btn {
+                        width: 77px;
+                        height: 17px;
+                        padding: 10px 17px;
+                        border-radius: 50px;
+                        background: var(--grey);
+                        display: flex;
+                        align-items: center;
+                        img{
+                            width: 14px;
+                        }
+                        span{
+                            padding-left: 15px;
+                            color: var(--white);
+                            text-align: center;
+                            font-family: var(--font-inter);
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                        }
+                      
+
+                    }
+                    .text {
+                        color: var(--grey);
+                        font-family: var(--font-inter);
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 16px; /* 133.333% */
+                    }
+                  }
+                }
+                .brandCategory {
+                  display: flex;
+                  justify-content: space-between;
+                  max-width: -webkit-fill-available;
+                //   text-align: flex-start;
+                    .brand{
+                        text-align: start;
+                        .itemWrapper {
+                            input{
+                                width: 338px;
+                                padding: 13px 19px;
+                                border-radius: 50px;
+                                border: 1px solid var(--border-color);
+                                background: var(--thumb-border-color);
+                            }
+                        }
+                    }
+                    .category{
+                        padding-left: 20px;
+                        text-align: start;
+
+                        .itemWrapper{
+                            width: 171px;
+                            padding: 13px 19px;
+                            display: flex;
+                            justify-content: space-between;
+                            border-radius: 50px;
+                            cursor: pointer;
+                            border: 1px solid  var(--thumb-border-color);
+                        }
+                    }
+
+                
+                }
+                .descriptionContent {
+                    text-align: start;
+                    width: 100%;
+                  .itemWrapper{
+                    textarea{
+                        width: -webkit-fill-available;
+                        height: 84px;
+                        padding: 13px 19px;
+                        border-radius: 15px;
+                        border: 1px solid var(--border-color);
+                        background: var(--thumb-border-color);
+                        resize: none;
+                    }
+                    
+                  }
+                }
+                .keywordsField {
+                    width: 100%;
+                    text-align: start;
+                  .optionField {
+                    width: 100%;
+                    height: 43px;
+                    border-radius: 50px;
+                    border: 1px solid var(--border-color);
+                    background: var(--thumb-border-color);
+                    padding: 0 7px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    .option{
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        width: auto;
+                        height: 17px;
+                        padding: 6px 10px;
+                        border-radius: 50px;
+                        background: var(--white);
+                        span{
+                            color: var(--main-text-color);
+                            font-family: var(--font-inter);
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                        }
+                        img{
+                            padding-left: 10px;
+                            width: 10px;
+                        }
+                    }
+                  }
+                }
+                .keywordsContent {
+                    width: 100%;
+                    text-align: start;
+                  .title{
+                    text-align: start;
+                    h5{
+                        color: var(--grey);
+                    font-family: var(--font-inter);
+                    font-size: 14px;
+                    font-style: italic;
+                    font-weight: 400;
+                    line-height: normal;
+                    }
+                    
+                  }
+                  .optionWrapper{
+                        .option {
+                          display: inline-block;
+                          margin-right: 11px;
+                          width: auto;
+                          padding: 6px 10px;
+                          border-radius: 50px;
+                            background: var(--thumb-border-color);
+                          span{
+                            color: var(--main-text-color);
+                            font-family: var(--font-inter);
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                          }
+                        }
+                  }
+                }
+            }
+            .buttonWrapper {
+              display: flex;
+              justify-content: flex-end;
+              width: -webkit-fill-available;
+              margin-top: 25px;
+
+              .cancelBtn {
+                .defaultBtn{
+                    width: 85px;
+                    background: transparent;
+                    color: var(--grey);
+                }
+              }
+              .adNew{
+                .defaultBtn{
+                    width: 118px;
+                }
+              }
+            }
+
+            
+        }
+      }
+}
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+@import './MediaSubmitWorkPage.scss'

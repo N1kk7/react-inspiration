@@ -27,6 +27,9 @@ import PaymentPage from './pages/PaymentPage/PaymentPage';
 import AdminPanel from './pages/AdminPanel/AdminPanel';
 import AdminLogin from './pages/AdminPanel/AdminLogin';
 import EditProfile from './pages/EditProfile/EditProfile';
+import SubmitWorkPage from './pages/SubmitWorkPage/SubmitWorkPage/SubmitWorkPage';
+import EditWorkPage from './pages/SubmitWorkPage/EditWorkPage/EditWorkPage';
+import MySubscription from './pages/MySubscription/MySubscription';
 
 type PrivateRouteProps = {
   auth: {
@@ -52,6 +55,8 @@ function App() {
   // const editProfilePage = window.location.href.indexOf('/edit-page') > -1;
   const auth = useSelector((state: any) => state.adminState.auth);
   const editPage = useSelector((state: any) => state.editPageState.editPage);
+  const submitPage = useSelector((state: any) => state.submitPageState.submitPage);
+  const editAdPage = useSelector((state: any) => state.submitPageState.editPage);
 
 
   
@@ -59,7 +64,7 @@ function App() {
   return (
       <div className="App">
         <div className="wrapper">
-          {!paymentPage && !adminPage && !editPage && <Header />}
+          {!paymentPage && !adminPage && !editPage && !submitPage && !editAdPage && <Header />}
 
           {loginModal && <LogIn />}
           {signInModal && <SignIn />}
@@ -77,6 +82,13 @@ function App() {
             <Route path="/project-page" element={<ProjectPage />} />
             <Route path="/payment-page" element={<PaymentPage />} />
             <Route path="/edit-page" element={<EditProfile />} />
+            <Route path="/submit-work" element={<SubmitWorkPage />} />
+            <Route path="/edit-work" element={<EditWorkPage />} />
+            <Route path="/my-subscription" element={<MySubscription />} />
+
+
+
+
 
             <Route
               path="/admin"

@@ -10,7 +10,7 @@ import GetUnlimAccess from "../../components/Modals/SelectPlanModal/GetUnlimAcce
 
 const SearchQuery = () => {
 
-    const guestStatus = useSelector((state: any) => state.logInState.guestStatus)
+    // const guestStatus = useSelector((state: any) => state.logInState.guestStatus)
     const getUnlimAccessModal = useSelector((state: any) => state.selectPlanState.getUnlimAccessModal);
 
 

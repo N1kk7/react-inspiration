@@ -8,6 +8,8 @@ import CollectionSlice from "./myCollection"
 import supportSlice from "./supportSlice"
 import adminSlice from "./adminSlice"
 import editPageSlice from "./editPageSlice"
+import submitWorkSlice from "./submitWorkSlice";
+import subscriptionSlice from "./subscriptionSlice"
 
 
 
@@ -24,6 +26,8 @@ export default configureStore({
         supportState: supportSlice,
         adminState: adminSlice,
         editPageState: editPageSlice,
+        submitPageState: submitWorkSlice,
+        subscriptionState: subscriptionSlice
 
 
     },

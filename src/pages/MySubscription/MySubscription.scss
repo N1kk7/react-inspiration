@@ -1,0 +1,212 @@
+.mySubscription{
+    .container{
+        .closeBtn{
+            display: none;
+        }
+        .backBtn {
+          position: absolute;
+          top: 80px;
+        }
+        .title{
+            margin-top: 151px;
+            h1{
+                color: var(--main-text-color);
+                text-align: center;
+                font-family: var(--font-inter);
+                font-size: 58px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 51.358px;
+                text-transform: uppercase;
+            }
+        }
+        .subscriptionWrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          width: 1180px;
+          .currentCard {
+            border-radius: 20px;
+            background: #F8F7F4;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 40px 0;
+            .topCard {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+              border-bottom: 1px solid #EBEBED;
+              padding-bottom: 20px;
+              .cardTitle{
+                h3{
+                    color: var(--main-text-color);
+                    font-family: var(--font-inter);
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 15px; /* 83.333% */
+                }
+              }
+              .cardBtn {
+                button{
+                    color: var(--main-text-color);
+                    text-align: right;
+                    font-family: var(--font-inter);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    padding: 11px 19px;
+                    border-radius: 50px;
+                    border: none;
+                    background: var(--white);
+                    cursor: pointer;
+                }
+              }
+              
+            }
+            .bottomCard {
+                text-align: start;
+                margin-top: 25px;
+                h3{
+                    margin-top: 0;
+                }
+                span{
+                    color: var(--grey);
+                    font-family: var(--font-inter);
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 15px; /* 83.333% */
+                }
+            }
+          } 
+          .paymentMethod {
+            border-radius: 20px;
+            background: #F8F7F4;
+            padding: 30px 40px 0;
+
+            .payment {
+                border-bottom: 1px solid #EBEBED;
+                text-align: start;
+
+              h3{
+                color: var(--main-text-color);
+                font-family: var(--font-inter);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 15px; /* 83.333% */
+                padding-bottom: 20px;
+                
+              }
+            }   
+            .cardInfo{
+                .card {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin: 29px 0 38px;
+                    .cardDescription {
+                      align-items: center;
+                      .cardCurrency {
+                        text-align: start;
+                        padding-left: 20px;
+                        h5{
+                            color: var(--main-text-color);
+                            font-family: var(--font-inter);
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                            margin: 0 0 6px;
+
+                        }
+                        span{
+                            color: var(--grey);
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+
+                        }
+                      }
+                    }
+                    .buttonWrapper {
+                      button{
+                        border: none;
+                        background: transparent;
+                        color: var(--main-text-color);
+                        text-align: right;
+                        font-family: var(--font-inter);
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        cursor: pointer;
+                      }
+                      .delete{
+                        color: red;
+                      }
+                    }
+                }
+
+            }
+          }
+          .billingHistory {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            border-radius: 20px;
+            background: #F8F7F4;
+            padding: 40px;
+
+            .billingTitle {
+                text-align: start;
+                margin-bottom: 50px;
+              h3{
+                color: var(--main-text-color);
+                font-family: var(--font-inter);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 15px; /* 83.333% */
+              }
+            }   
+            .billingData {
+              display: flex;
+              justify-content: space-between;
+              border-bottom: 1px solid #EBEBED;
+                padding-bottom: 10px;
+              span{
+                color: var(--grey);
+                font-family: var(--font-inter);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 15px; /* 107.143% */
+              }
+              .amount{
+                padding-right: 30px;
+              }
+            }   
+            .billingInfo {
+                display: flex;
+                justify-content: space-between;
+              h5{
+                color: var(--main-text-color);
+                font-family: var(--font-inter);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 15px; /* 93.75% */
+              }
+              .price{
+                padding-right: 60px;
+              }
+            }   
+        
+          }
+        }
+    }
+}

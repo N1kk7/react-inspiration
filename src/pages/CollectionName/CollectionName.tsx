@@ -3,12 +3,12 @@ import './CollectionName.scss'
 import ThumbWrapper from "../../components/ThumbWrapper/ThumbWrapper";
 import UnloggedFooter from "../../components/Footer/UnlogFooter/UnlogFooter";
 import SearchFilters from "../../components/SearchFilters/SearchFilters";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 
 const CollectionName = () => {
 
-    const guestStatus = useSelector((state: any) => state.logInState.guestStatus)
+    // const guestStatus = useSelector((state: any) => state.logInState.guestStatus)
 
 
 
