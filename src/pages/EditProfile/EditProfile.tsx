@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import './EditProfile.scss'
-import backBtn from '../../assets/images/backBtn.png'
+import backBtn from '../../assets/images/backBtn.svg'
 import DefaultBtn from "../../components/shared/DefaultBtn";
 import closeBtn from '../../assets/images/closeBtn.svg'
 import { editPage } from "../../redux/editPageSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import downloadBtn from '../../assets/images/downloadBtn.png'
+import downloadBtn from '../../assets/images/downloadBtn.svg'
 import userAvatar from '../../assets/images/userAvatar.png'
 
 

@@ -1,0 +1,16 @@
+@media screen and (max-width: 768px) {
+  .thumbItemWrapper {
+    .thumbItem {
+      border-radius: 10px;
+
+      .thumbImg {
+        border-radius: 10px;
+        border: 10px solid #f8f7f4;
+        padding-top: 169.23%;
+      }
+    }
+    .userBlock {
+      justify-content: flex-start;
+    }
+  }
+}

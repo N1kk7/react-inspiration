@@ -1,5 +1,5 @@
 import React from "react";
-import backBtn from '../../../assets/images/backBtn.png'
+import backBtn from '../../../assets/images/backBtn.svg'
 import closeBtn from '../../../assets/images/closeBtn.svg'
 import { useDispatch } from "react-redux";
 import { getInfo } from '../../../redux/getInfoSlice'
@@ -33,7 +33,7 @@ const SelectPlanModal = () => {
     //             setProPlan('activePlan');
     //         break;
     //     }
-        
+
 
     // }
 
@@ -75,13 +75,13 @@ const SelectPlanModal = () => {
                         </span>
                     </div>
                     <PlanComponent freeTextBtn="Start for free" freeMethodBtn="Free-plan" proTextBtn="Go Pro" proMethodBtn="Go-pro"/>
-                    
-                   
+
+
                     {/* <DefaultBtn textBtn="Access the gallery" methodBtn="GetInfoModal"/> */}
-                 
+
                 </div>
             </div>
-        
+
         </>
     )
 }

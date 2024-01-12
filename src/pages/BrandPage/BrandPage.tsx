@@ -15,11 +15,11 @@ const BrandPage = () => {
 
 
     const defaultBrandImg = {
-        width: "14.5vw",
-        height: "14.9vw",
+        width: '278px',
+        height: '278px',
         backgroundColor: 'var(--grey)',
         borderRadius: '50%',
-      }
+    }
 
 
     return (
@@ -39,15 +39,15 @@ const BrandPage = () => {
                         </div>
                         <div className="brandMessage">
                             <p>
-                                From the initial meeting to the final delivery, 
-                                Ethan has created a feeling of trust and delivered 
-                                everything we asked of him. 
+                                From the initial meeting to the final delivery,
+                                Ethan has created a feeling of trust and delivered
+                                everything we asked of him.
                             </p>
 
                         </div>
                         <DefaultBtn textBtn="Our website" methodBtn="our-website"/>
 
-                        
+
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@ const BrandPage = () => {
 
 
             </div>
-            
+
         </div>
         {!guestStatus && <Footer/>}
 
