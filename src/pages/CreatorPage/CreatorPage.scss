@@ -4,7 +4,7 @@
         justify-content: flex-start;
         margin: 5vh 2vh;
         .creatorDescription {
-            text-align: start;
+          text-align: start;
           margin-left: 100px;
           .creatorName {
             color: var(--main-text-color);
@@ -47,7 +47,7 @@
             .location{
                 margin: 0 30px;
             }
-            
+
           }
           .creatorMessage{
             color: var(--main-text-color);
@@ -92,13 +92,13 @@
 
 
       }
-      
+
       .swiper-slide {
         text-align: center;
         font-size: 18px;
         background: #fff;
         width: auto !important;
-      
+
         /* Center slide text vertically */
         // display: flex;
         // justify-content: center;
@@ -111,7 +111,7 @@
         border-radius: 50px;
         border: 1px solid var(--Button-Stroke, #EBEBED);
       }
-      
+
       .swiper-slide img {
         display: block;
         width: 100%;
@@ -137,7 +137,7 @@
         background-repeat: no-repeat;
 
         left: 0;
-        
+
       }
 
       .swiper-button-next{
@@ -151,8 +151,8 @@
       .swiper-button-disabled{
         display: none;
       }
-      
-    
-    
+
+
+
 }
 @import './MediaCreatorPage.scss'
