@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import closeBtn from '../../../assets/images/closeBtn.svg';
-import backBtn from '../../../assets/images/backBtn.png'
+import backBtn from '../../../assets/images/backBtn.svg'
 import { popup } from "../../../redux/rootSlice";
 import DefaultBtn from "../../shared/DefaultBtn";
 import { createPassword, confirmPassword, checkPasswordError } from "../../../redux/rootSlice";
@@ -20,7 +20,7 @@ const CreatePassword = () => {
     const stateConfirmPassword  = useSelector((state: any) => state.mainState.confirmPasswordError)
 
 
-    
+
 
     const setCreatePassword = (event: any) => {
 
@@ -45,7 +45,7 @@ const CreatePassword = () => {
         }
 
         stateConfirmPassword ? cancelError() : dispatch(confirmPassword(event.target.value));
-        
+
     }
 
 
@@ -68,7 +68,7 @@ const CreatePassword = () => {
     return(
         <>
             <div className="modal createPassword">
-                
+
                 <div className="modal-wrapper">
 
                     <div className="backBtn" onClick={() => {dispatch(popup('back-to-signIn')); dispatch(checkPasswordError('clear-password-error'))}}>
@@ -89,9 +89,9 @@ const CreatePassword = () => {
                                 </h5>
                             </div>
                             <div className="enterPassword">
-                                <input 
-                                    type="password" 
-                                    placeholder="Create password" 
+                                <input
+                                    type="password"
+                                    placeholder="Create password"
                                     style={stateCreatePassword ?  errorStyle : defaultStyle}
                                     onChange={(event) => { setCreatePassword(event)}}
                                 />
@@ -103,7 +103,7 @@ const CreatePassword = () => {
                                     </span>
                                 </div>
                             }
-                            
+
 
 
                         </div>
@@ -114,9 +114,9 @@ const CreatePassword = () => {
                                 </h5>
                             </div>
                             <div className="enterPassword">
-                                <input 
-                                    type="password" 
-                                    placeholder="Confirm password" 
+                                <input
+                                    type="password"
+                                    placeholder="Confirm password"
                                     style={stateConfirmPassword ?  errorStyle : defaultStyle}
                                     onChange={(event) => { setConfirmPassword(event)}}
                                 />
@@ -132,14 +132,14 @@ const CreatePassword = () => {
 
                         </div>
                     </div>
-                    
+
                     <DefaultBtn textBtn="Next" methodBtn="CreatePassword"/>
 
-                    
+
                 </div>
 
             </div>
-        
+
         </>
     )
 

@@ -1,5 +1,8 @@
 @media screen and (max-width: 768px) {
     .container{
-        // max-width: clamp(240px, 92vw, 2000px);
+        max-width: 1180px;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        padding: 0 20px;
     }
 }

@@ -1,29 +1,39 @@
 import React from 'react'
 import './Thumb.scss'
-import { IBrandThumb } from '../../model/cardBrandModel';
+import { ICollectionThumb } from '../../model/cardCollectionModel';
 import { creatorBrand } from '../../redux/rootSlice';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 // import thumb-1 from '../../assets/images/thumb-1.png'
 
-interface ThumbBrandModel {
-    img : IBrandThumb['img'];
+interface ThumbCollectionModel {
+    img : ICollectionThumb['img'];
 
 }
 
-export default function Thumb({img} : ThumbBrandModel) {
+export default function Thumb({img} : ThumbCollectionModel) {
 
     const dispatch = useDispatch();
 
   return (
+
+
     <div className="thumbItemWrapper">
-        <Link to='/brandPage'>
+        <Link to='creatorPage'>
             <div className="thumbItem"  onClick={() => {dispatch(creatorBrand('creator'));}}>
                 <div className="thumbImg">
-                    <img src={img} alt="thumb" />
+                    {img.map((imgItem) => {
+                      return <img src={imgItem} alt="thumb" />
+                    })}
                 </div>
             </div>
+
         </Link>
+
+
+
+
     </div>
+
   )
 }

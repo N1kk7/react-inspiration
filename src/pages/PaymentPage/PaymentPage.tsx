@@ -5,7 +5,7 @@ import DefaultBtn from "../../components/shared/DefaultBtn";
 import closeBtn from '../../assets/images/closeBtn.svg'
 import { paymentDetails } from "../../redux/selectPlanSlice";
 import { useDispatch, useSelector } from "react-redux";
-import backBtn from '../../assets/images/backBtn.png'
+import backBtn from '../../assets/images/backBtn.svg'
 // import { userLogIn } from "../../redux/logInSlice";
 import { useNavigate } from 'react-router-dom';
 // import GetUnlimAccess from "../../components/Modals/SelectPlanModal/GetUnlimAccess";

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Thumb.scss';
+import './MediaThumb.scss';
 import { IThumb } from '../../model/cardModel';
 import { creatorBrand } from '../../redux/rootSlice';
 import { useDispatch } from 'react-redux';

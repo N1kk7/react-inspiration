@@ -3,20 +3,25 @@
         // .modal-wrapper {
         .creatorContent {
             flex-direction: column;
-            margin: 3vh 2vh;
+            padding: 20px 0;
+            align-items: center;
             .creatorAvatar {
+                // margin-bottom: 10px;
                 img{
-                    width: clamp(140px, 40vw, 450px); //60vw;
+                    width: 150px; //60vw;
 
                 }
             }
             .creatorDescription {
                 margin: 0;
+                padding-bottom: 29px;
+                border-bottom: 1px solid #EBEBED;
                 .creatorName{
                     justify-content: center;
+                    margin-bottom: 10px;
                     h2{
                         font-size: 20px;
-                        margin: 3.5vh 0px 1.8vh;
+                        margin: 25px 0 0;
                     }
                     .defaultBtn{
                         display: none;
@@ -25,12 +30,18 @@
                 .creatorItems {
                     text-align: center;
                     border-bottom: 1px solid var(--border-color);
-                    padding-bottom: 2vh;
-                    .item {
-                    padding: 0.8vh 0;
+                    padding-bottom: 12px;
+                    margin-bottom: 0;
 
-                    // margin: 0 2px;
-                    margin-right: 15px;
+                    .item {
+                    padding: 10px 0;
+                    width: fit-content;
+                    display: inline-flex;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: baseline;
+                    margin: 0 11px;
+
                     img{
                         width: 14px;
                     }
@@ -49,15 +60,21 @@
                 .creatorMessage {
                     text-align: center;
                     line-height: 29px;
-                    margin: 38px 0 20px;
+                    margin: 30px 0 31px;
+                    letter-spacing: 0.32px;
 
                     p{
                     font-size: 16px;
                     }
                 }
                 .socials {
-                    justify-content: center;
-                    margin-bottom: 20px;
+                    justify-content: space-between;
+                    margin-bottom: 30px;
+
+                    .imgWrapper {
+                        margin: 0 17px;
+                    }
+
                     .defaultBtn{
                     display: none;
                     }
@@ -68,15 +85,12 @@
                     align-items: center;
                     position: relative;
                     .uploadBtn {
-                    width: 55vw;
-                    .defaultBtn{
-                        margin: 0;
-                        width: 80%;
-                    }
+                        .defaultBtn{
+                            margin: 0;
+                        }
                     }
                     .editBtn {
                     .defaultBtn{
-                        width: 60%;
                         margin: 0;
                         background-color: transparent;
                         color: var(--main-text-color);
@@ -84,16 +98,16 @@
                     }
                     }
                 }
-                
+
 
             }
-        
+
         // }.
-            
+
         }
         .swiper{
             display: none;
         }
-        
+
     }
 }

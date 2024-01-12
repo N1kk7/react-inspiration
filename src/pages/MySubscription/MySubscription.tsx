@@ -1,5 +1,5 @@
 import React from "react";
-import backBtn from '../../assets/images/backBtn.png'
+import backBtn from '../../assets/images/backBtn.svg'
 import closeBtn from '../../assets/images/closeBtn.svg'
 import cardSymbol from '../../assets/images/cardSymbol.svg'
 
@@ -39,8 +39,8 @@ const MySubscription = () => {
                                     Subscription
                                 </button>
                             </div>
-                            
-                            
+
+
                         </div>
                         <div className="bottomCard">
                             <h3>
@@ -51,7 +51,7 @@ const MySubscription = () => {
                             </span>
                         </div>
                     </div>
-                    
+
                     <div className="paymentMethod">
                         <div className="payment">
                             <h3>
@@ -63,11 +63,11 @@ const MySubscription = () => {
                                 <div className="cardDescription">
                                     <div className="symbol">
                                         <img src={cardSymbol} alt="card-symbol" />
-                                        
+
 
                                     </div>
 
-                                   
+
                                     <div className="cardCurrency">
                                         <h5>
                                             Master Card in 0468
@@ -113,12 +113,12 @@ const MySubscription = () => {
                         </div>
 
                     </div>
-                </div> 
+                </div>
 
             </div>
         </div>
     )
-    
+
 }
 
 

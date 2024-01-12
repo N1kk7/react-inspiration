@@ -1,7 +1,6 @@
 import './LogFooter.scss';
 import '../MediaFooter.scss';
 import React from 'react';
-import { memo } from 'react';
 import { openSupportModal } from '../../../redux/supportSlice';
 import { useDispatch } from "react-redux";
 
@@ -75,4 +74,4 @@ const Footer = () => {
   );
 };
 
-export default memo(Footer);
+export default Footer;

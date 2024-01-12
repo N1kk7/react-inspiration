@@ -2,13 +2,13 @@ import React from "react";
 import './CreatorPage.scss'
 import 'swiper/css';
 import creator from '../../assets/images/creator.svg'
-import location from '../../assets/images/location.png'
-import clapperboard from '../../assets/images/clapperboard.png'
+import location from '../../assets/images/location.svg'
+import clapperboard from '../../assets/images/clapperboard.svg'
 import creatorData from '../../data/creatorData'
 import tikTok from '../../assets/images/tiktok.png'
-import inst from '../../assets/images/instagram.png'
+import inst from '../../assets/images/instagram.svg'
 import xSocial from '../../assets/images/x.png'
-import globe from '../../assets/images/globe.png'
+import globe from '../../assets/images/globe.svg'
 
 import ThumbBrandWrapper from '../../components/ThumbWrapper/ThumbBrandWrapper'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -27,7 +27,7 @@ import SuccessSendReq from "../../components/Modals/SuccessSupportReq/SuccessSen
 
 
 const CreatorPage = () => {
-    
+
     const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
     const getUnlimAccessModal = useSelector((state: any) => state.selectPlanState.getUnlimAccessModal);
     const supportModal = useSelector((state: any) => state.supportState.supportModal);
@@ -39,7 +39,7 @@ const CreatorPage = () => {
             { getUnlimAccessModal && <GetUnlimAccess/> }
             { supportModal && <SupportModal/> }
             { sendRequestModal && <SuccessSendReq/> }
-                                                  
+
 
             <div className="creatorPage">
                 <div className="container">
@@ -68,17 +68,25 @@ const CreatorPage = () => {
                             </div>
                             <div className="creatorMessage">
                                 <p>
-                                    From the initial meeting to the final delivery, 
-                                    Ethan has created a feeling of trust and delivered 
-                                    everything we asked of him. 
+                                    From the initial meeting to the final delivery,
+                                    Ethan has created a feeling of trust and delivered
+                                    everything we asked of him.
                                 </p>
 
                             </div>
                             <div className="socials">
-                                <img src={tikTok} alt="tik-tok" />
-                                <img src={inst} alt="inst" />
-                                <img src={xSocial} alt="x-social" />
-                                <img src={globe} alt="world" />
+                                <div className="imgWrapper">
+                                    <img src={tikTok} alt="tik-tok" />
+                                </div>
+                                <div className="imgWrapper">
+                                    <img src={inst} alt="inst" />
+                                </div>
+                                    <div className="imgWrapper">
+                                    <img src={xSocial} alt="x-social" />
+                                </div>
+                                    <div className="imgWrapper">
+                                    <img src={globe} alt="world" />
+                                </div>
                                 {/* <div className="workBtn"> */}
                                     <DefaultBtn textBtn="Work with me" methodBtn="work-with-me"/>
                                 {/* </div> */}
@@ -98,15 +106,11 @@ const CreatorPage = () => {
                         </div>
                     </div>
                     <Swiper
-                        slidesPerView={3}
-                        spaceBetween={30}
-                        // pagination={{
-                        // clickable: true,
-                        // }}
+                        slidesPerView={7}
+                        spaceBetween={10}
                         navigation={true}
                         modules={[Navigation]}
                         className="mySwiper"
-                        // slidesPerView ='auto'
                     >
                         <SwiperSlide>App / Digital</SwiperSlide>
                         <SwiperSlide>Apparel / Fashion</SwiperSlide>
@@ -126,7 +130,7 @@ const CreatorPage = () => {
 
 
                 </div>
-                
+
             </div>
             {!guestStatus && <Footer/>}
 

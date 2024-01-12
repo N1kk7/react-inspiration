@@ -81,8 +81,8 @@ function App() {
 
           <Routes>
             <Route index path="/" element={<MainPage />} />
-            <Route path="/creatorPage" element={<CreatorPage />} />
-            <Route path="/brandPage" element={<BrandPage />} />
+            <Route path="/creator-page" element={<CreatorPage />} />
+            <Route path="/brand-page" element={<BrandPage />} />
             <Route path="/collection-page" element={<CollectionPage />} />
             <Route path="/search-page" element={<SearchPage />} />
             <Route path="/project-page" element={<ProjectPage />} />

@@ -85,10 +85,11 @@
 .unlog-brand-footer {
     display: flex;
     justify-content: center;
-    margin: 5vh 0;
+    margin: 80px 0;
     .signUp{
         .defaultBtn{
             width: fit-content;
+            margin: 0 20px 0 0;
         }
     }
     .logIn{
@@ -98,7 +99,7 @@
             border: 1px solid var(--border-color);
             background: var(--white);
             color: var(--main-text-color);
-
+            margin: 0;
         }
     }
 

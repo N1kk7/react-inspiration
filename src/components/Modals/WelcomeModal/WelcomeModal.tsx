@@ -1,5 +1,5 @@
 import React from "react";
-import backBtn from '../../../assets/images/backBtn.png'
+import backBtn from '../../../assets/images/backBtn.svg'
 import closeBtn from '../../../assets/images/closeBtn.svg'
 import { useDispatch, useSelector } from "react-redux";
 import { popup } from "../../../redux/rootSlice";
@@ -20,7 +20,7 @@ const WelcomeModal = () => {
     const lastNameError = useSelector((state: any) => state.welcomeModalState.lastNameError);
     const chooseTypeError = useSelector((state: any) => state.welcomeModalState.chooseTypeError);
 
-    
+
 
 
 
@@ -49,7 +49,7 @@ const WelcomeModal = () => {
 
     return(
         <>
-            <div className="modal welcomeModal" 
+            <div className="modal welcomeModal"
                 onClick={() => {
                     dispatch(welcomePopup('close-chooseType'))
                 }}>
@@ -77,8 +77,8 @@ const WelcomeModal = () => {
                                 </h5>
                             </div>
                             <div className="nameInput">
-                                <input type="text" 
-                                        placeholder="First name" 
+                                <input type="text"
+                                        placeholder="First name"
                                         style={firstNameError ? errorStyle : defaultStyle}
                                         onChange={(event) => {
                                             dispatch(getFirstName(event.target.value));
@@ -92,7 +92,7 @@ const WelcomeModal = () => {
                                 </span>
                             </div>}
                         </div>
-                        
+
                         <div className="name last">
                             <div className="nameTitle">
                                 <h5>
@@ -100,8 +100,8 @@ const WelcomeModal = () => {
                                 </h5>
                             </div>
                             <div className="nameInput">
-                                <input type="text" 
-                                        placeholder="Last name" 
+                                <input type="text"
+                                        placeholder="Last name"
                                         style={lastNameError ? errorStyle : defaultStyle}
                                         onChange={(event) => {
                                             dispatch(getLastName(event.target.value))
@@ -117,7 +117,7 @@ const WelcomeModal = () => {
                                 </span>
                             </div>}
                         </div>
-                        
+
                     </div>
                     <div className="companyWrapper">
                         <div className="companyTitle">
@@ -126,12 +126,12 @@ const WelcomeModal = () => {
                             </h5>
                         </div>
                         <div className="companyInput" onClick={(event) => {
-                                event.stopPropagation(); 
+                                event.stopPropagation();
                                 dispatch(welcomePopup('open-chooseType'));
                                 dispatch(setError('reset-chooseType-error'))
                             }}>
-                            <div 
-                                // type="select" 
+                            <div
+                                // type="select"
                                 className="companyTypeInput"
                                 style={chooseTypeError ? errorStyle : defaultStyle}
                                 // placeholder={inputPlaceholder}
@@ -183,9 +183,9 @@ const WelcomeModal = () => {
 
 
             </div>
-        
-        
-        
+
+
+
         </>
     )
 
