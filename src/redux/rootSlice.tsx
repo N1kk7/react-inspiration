@@ -28,6 +28,8 @@ export const rootSlice = createSlice({
         creatorPage: false,
         brandPage: false,
 
+        deleteModal: false,
+
 
     },
     reducers: {
@@ -206,11 +208,26 @@ export const rootSlice = createSlice({
                 break
             }
 
+        },
+
+        deleteModalState: (state, action) => {
+
+            switch (action.payload) {
+                case 'open-delete-modal':
+                    state.deleteModal = true
+                break;
+                case 'close-delete-modal':
+                    state.deleteModal = false
+                break;
+            }
+            
         }
+
+
 
 
     }
 })
 
-export const { popup, enterEmail, enterPassword, createPassword, confirmPassword, creatorBrand, checkPasswordError } = rootSlice.actions;
+export const { popup, enterEmail, enterPassword, createPassword, confirmPassword, creatorBrand, checkPasswordError, deleteModalState } = rootSlice.actions;
 export default rootSlice.reducer;

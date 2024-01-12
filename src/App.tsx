@@ -30,6 +30,7 @@ import EditProfile from './pages/EditProfile/EditProfile';
 import SubmitWorkPage from './pages/SubmitWorkPage/SubmitWorkPage/SubmitWorkPage';
 import EditWorkPage from './pages/SubmitWorkPage/EditWorkPage/EditWorkPage';
 import MySubscription from './pages/MySubscription/MySubscription';
+import BillingPage from './pages/PaymentPage/BillingPage';
 
 type PrivateRouteProps = {
   auth: {
@@ -52,11 +53,14 @@ function App() {
   const selectPlanModal = useSelector((state: any) => state.selectPlanState.selectPlanModal);
   const paymentPage = useSelector((state: any) => state.selectPlanState.paymentDetailsPage);
   const adminPage = window.location.href.indexOf('admin') > -1;
-  // const editProfilePage = window.location.href.indexOf('/edit-page') > -1;
   const auth = useSelector((state: any) => state.adminState.auth);
   const editPage = useSelector((state: any) => state.editPageState.editPage);
   const submitPage = useSelector((state: any) => state.submitPageState.submitPage);
   const editAdPage = useSelector((state: any) => state.submitPageState.editPage);
+  const subscriptionPage = useSelector((state: any) => state.subscriptionState.subscriptionPage);
+
+
+
 
 
   
@@ -64,8 +68,11 @@ function App() {
   return (
       <div className="App">
         <div className="wrapper">
-          {!paymentPage && !adminPage && !editPage && !submitPage && !editAdPage && <Header />}
+          {!paymentPage && !adminPage && !editPage && !submitPage && !editAdPage && !subscriptionPage && <Header />}
 
+
+
+          
           {loginModal && <LogIn />}
           {signInModal && <SignIn />}
           {createPasswordModal && <CreatePassword/>}
@@ -84,7 +91,8 @@ function App() {
             <Route path="/edit-page" element={<EditProfile />} />
             <Route path="/submit-work" element={<SubmitWorkPage />} />
             <Route path="/edit-work" element={<EditWorkPage />} />
-            <Route path="/my-subscription" element={<MySubscription />} />
+            <Route path="/my-subscription" element={<MySubscription />}/>
+            <Route path='/my-subscription/billing' element={<BillingPage />}/>
 
 
 
