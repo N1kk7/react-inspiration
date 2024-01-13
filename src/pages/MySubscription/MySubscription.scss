@@ -85,22 +85,40 @@
             border-radius: 20px;
             background: #F8F7F4;
             padding: 30px 40px 0;
-
-            .payment {
-                border-bottom: 1px solid #EBEBED;
-                text-align: start;
-
-              h3{
-                color: var(--main-text-color);
-                font-family: var(--font-inter);
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 15px; /* 83.333% */
-                padding-bottom: 20px;
-                
+            .topCard {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+              border-bottom: 1px solid #EBEBED;
+              padding-bottom: 20px;
+              .cardTitle{
+                h3{
+                    color: var(--main-text-color);
+                    font-family: var(--font-inter);
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 15px; /* 83.333% */
+                }
               }
-            }   
+              .cardBtn {
+                button{
+                    color: var(--main-text-color);
+                    text-align: right;
+                    font-family: var(--font-inter);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    padding: 11px 19px;
+                    border-radius: 50px;
+                    border: none;
+                    background: var(--white);
+                    cursor: pointer;
+                }
+              }
+              
+            } 
             .cardInfo{
                 .card {
                   display: flex;
@@ -108,6 +126,7 @@
                   align-items: center;
                   margin: 29px 0 38px;
                     .cardDescription {
+                        display: flex;
                       align-items: center;
                       .cardCurrency {
                         text-align: start;
@@ -150,6 +169,31 @@
                         color: red;
                       }
                     }
+                }
+                .noPayment {
+                    margin: 32px 0;
+                  .noPaymentTitle{
+                    h3{
+                        color: var(--main-text-color);
+                        text-align: center;
+                        font-family: var(--font-inter);
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 15px; /* 83.333% */
+                    }
+                  }
+                  .description{
+                      span{
+                        color: var(--grey);
+                        text-align: center;
+                        font-family: var(--font-inter);
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 15px; /* 107.143% */
+                      }
+                  }
                 }
 
             }

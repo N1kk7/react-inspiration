@@ -125,9 +125,18 @@ const Header = () => {
                         <li onClick={() => {dispatch(popup('close-profile-popup')); navigate('/creatorPage')}}>
                           My profile
                         </li>
-                        <li onClick={() => {dispatch(popup('close-profile-popup')); dispatch(getUnlimAccess('open-unlim-access'))}}>
-                          My plan
-                        </li>
+                        {userFree ? 
+                          <li onClick={() => {dispatch(popup('close-profile-popup')); dispatch(getUnlimAccess('open-unlim-access'))}}>
+                            My plan
+                          </li> : 
+                          <li onClick={() => {dispatch(popup('close-profile-popup')); navigate('/my-subscription')}}>
+                          My subscription
+                          </li>
+                        
+                      
+                      
+                        }
+                        
                         <li onClick={() => {dispatch(popup('close-profile-popup')); dispatch(openSupportModal())}}>
                           Support
                         </li>

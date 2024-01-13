@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import backBtn from '../../assets/images/backBtn.svg'
 import closeBtn from '../../assets/images/closeBtn.svg'
 import cardSymbol from '../../assets/images/cardSymbol.svg'
+import { useDispatch, useSelector } from "react-redux";
+import { subscriptionPage } from "../../redux/subscriptionSlice";
+import DefaultBtn from "../../components/shared/DefaultBtn";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -11,11 +15,29 @@ import './MySubscription.scss'
 
 const MySubscription = () => {
 
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const addBilling = useSelector((state: any) => state.subscriptionState.addBillingMethod);
+    const lastCardDigit = useSelector((state: any) => state.subscriptionState.lastCardDigit)
+
+
+    const goBack = () => {
+        dispatch(subscriptionPage('close-subscription'))
+        navigate('/')
+    }
+
+
+    useEffect(() => {
+        dispatch(subscriptionPage('open-subscription'))
+    }, [dispatch])
+    
+
 
     return (
         <div className="mySubscription">
             <div className="container">
-                <div className="backBtn" onClick={() => {}}>
+                <div className="backBtn" onClick={() => {goBack()}}>
                     <img src={backBtn} alt="back-btn" />
                     <span>Back</span>
                 </div>
@@ -35,9 +57,9 @@ const MySubscription = () => {
                                 </h3>
                             </div>
                             <div className="cardBtn">
-                                <button>
-                                    Subscription
-                                </button>
+                                {
+                                    addBilling ? <button>Subscription</button> : <button>Cancel membership</button>
+                                }
                             </div>
 
 
@@ -53,39 +75,61 @@ const MySubscription = () => {
                     </div>
 
                     <div className="paymentMethod">
-                        <div className="payment">
-                            <h3>
-                                Your payment method:
-                            </h3>
-                        </div>
-                        <div className="cardInfo">
-                            <div className="card">
-                                <div className="cardDescription">
-                                    <div className="symbol">
-                                        <img src={cardSymbol} alt="card-symbol" />
-
-
-                                    </div>
-
-
-                                    <div className="cardCurrency">
-                                        <h5>
-                                            Master Card in 0468
-                                        </h5>
-                                        <span>
-                                            UAN
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="buttonWrapper">
-                                    <button>
-                                        Edit
-                                    </button>
-                                    <button className="delete">
-                                        Delete
-                                    </button>
-                                </div>
+                        <div className="topCard">
+                            <div className="cardTitle">
+                                <h3>
+                                    Your payment method:
+                                </h3>
                             </div>
+                            <div className="cardBtn">
+                                {
+                                    !addBilling && <button onClick={() => navigate('/my-subscription/billing')}>Add new method</button>
+
+                                }
+                            </div>
+                            
+                            
+                        </div>
+                        <div className="cardInfo">{
+                                addBilling ?
+                                    <div className="card">
+                                        <div className="cardDescription">
+                                            <div className="symbol">
+                                                <img src={cardSymbol} alt="card-symbol" />
+
+                                            </div>
+                                            <div className="cardCurrency">
+                                                <h5>
+                                                    Master Card in {lastCardDigit}
+                                                </h5>
+                                                <span>
+                                                    UAN
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="buttonWrapper">
+                                            <button>
+                                                Edit
+                                            </button>
+                                            <button className="delete">
+                                                Delete
+                                            </button>
+                                        </div>
+                                    </div> :
+                                    <div className="noPayment">
+                                        <div className="noPaymentTitle">
+                                            <h3>
+                                                No payment method
+                                            </h3>
+                                        </div>
+                                        <div className="description">
+                                            <span>
+                                                Payment method is not set up
+                                            </span>
+                                        </div>
+                                    </div>
+                            }
+
                         </div>
 
                     </div>

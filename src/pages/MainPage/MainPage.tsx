@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SearchFilters from '../../components/SearchFilters/SearchFilters';
 import ThumbWrapper from '../../components/ThumbWrapper/ThumbWrapper';
 import './MainPage.scss';
@@ -14,7 +14,8 @@ import SupportModal from '../../components/Modals/SupportModal/SupportModal';
 import SuccessSendReq from '../../components/Modals/SuccessSupportReq/SuccessSendReq';
 import GetUnlimAccess from '../../components/Modals/SelectPlanModal/GetUnlimAccess';
 
-import {useSelector} from "react-redux";
+import {useSelector, useDispatch} from "react-redux";
+import { paymentDetails } from '../../redux/selectPlanSlice';
 
 const MainPage = () => {
 
@@ -30,6 +31,13 @@ const MainPage = () => {
 
   // const userPro = useSelector((state: any) => state.logInState.userPro);
   // const userFree = useSelector((state: any) => state.logInState.userFree);
+  const dispatch = useDispatch();
+
+useEffect(() => {
+  dispatch(paymentDetails('close-payment-details'))
+  
+}, [dispatch])
+
 
 
   return (

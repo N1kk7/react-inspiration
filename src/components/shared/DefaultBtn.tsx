@@ -15,6 +15,8 @@ import { editPage } from '../../redux/editPageSlice';
 import { checkPasswordError } from '../../redux/rootSlice';
 import { setError } from '../../redux/welcomeModalSlice';
 import { setInfoSliceError } from '../../redux/getInfoSlice';
+import { deleteModalState } from '../../redux/rootSlice';
+import { setBillingError } from '../../redux/subscriptionSlice';
 
 
 const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
@@ -40,7 +42,7 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
   const answerMessage = useSelector((state: any) => state.getInfoState.answerMessage);
   const answer = useSelector((state: any) => state.getInfoState.answer);
 
-
+  const fillCardInfo = useSelector((state: any) => state.subscriptionState.fillCardInfo);
 
 
 
@@ -229,6 +231,20 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
       case 'AdminLogin':
         dispatch(adminLogIn(true));
         navigate('/admin')
+      break;
+      case 'confirm-delete':
+        dispatch(deleteModalState('close-delete-modal'));
+      break;
+      case 'cancel-delete':
+        dispatch(deleteModalState('close-delete-modal'));
+      break;
+      case 'cancel-billing-btn':
+        navigate(-1)
+      break;
+      case 'save-billing':
+        fillCardInfo ?  navigate(-1) :  dispatch(setBillingError("set-enterCard-error")) 
+
+
     }
 
   }
