@@ -1,6 +1,6 @@
 import React from "react";
 import DefaultBtn from "../../shared/DefaultBtn";
-import backBtn from '../../../assets/images/backBtn.png'
+import backBtn from '../../../assets/images/backBtn.svg'
 import closeBtn from '../../../assets/images/closeBtn.svg'
 import { useSelector, useDispatch  } from "react-redux";
 import { getInfo, setAnswer, setMessage } from '../../../redux/getInfoSlice'
@@ -20,7 +20,7 @@ const GetInfoModal = () => {
     const answerMessageError = useSelector((state: any) => state.getInfoState.answerMessageError);
 
 
-    
+
     const goBack = () => {
         dispatch(getInfo('go-back'))
         dispatch(setError('reset-all-errors'))
@@ -60,11 +60,11 @@ const GetInfoModal = () => {
                         <h5>Where did you learn about Adinspiration.com?</h5>
                     </div>
                     <div className="textArea">
-                        <textarea 
-                            name="answer-text" 
-                            id="1" 
+                        <textarea
+                            name="answer-text"
+                            id="1"
                             style={answerMessageError ? errorStyle : defaultStyle}
-                            placeholder="Example: I heard about Adinspiration from the Adbox podcast" 
+                            placeholder="Example: I heard about Adinspiration from the Adbox podcast"
                             onChange={(event) => {
                                 dispatch(setMessage(event.target.value));
                                 dispatch(setInfoSliceError('reset-message-error'));
@@ -106,22 +106,22 @@ const GetInfoModal = () => {
                                     Sharing my own ad creatives
                                 </label>
                             </fieldset>
-                            
-                            
-                            
-                         
+
+
+
+
                     </div>
                     {answerError && <div className="errorMessage">
                         <span>
                             Please answer the question
                         </span>
                     </div>}
-                   
+
                     <DefaultBtn textBtn="Access the gallery" methodBtn="GetInfoModal"/>
-                 
+
                 </div>
             </div>
-        
+
         </>
     )
 }

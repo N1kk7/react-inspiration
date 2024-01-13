@@ -82,7 +82,7 @@ const Header = () => {
   return (
 
       <div className="container">
-        <header className={`App-header ${guestStatus ? '' : 'headerMargin'}`}>
+        <header className="App-header">
           <div className="pageMenu">
             <Link to='/'>
               <div className="Page-Name">Gallery</div>

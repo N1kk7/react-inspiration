@@ -8,24 +8,28 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 20px 0 0;
             .brandAvatar {
+              margin-bottom: 26px;
               .brandImg {
-                width: 40vw !important;
-                height: 40vw !important;
+                width: 150px !important;
+                height: 150px !important;
               }
             }
             .brandDescription {
                 margin: 0;
+                padding: 0;
                 text-align: center;
                 text-align: center;
-                margin-bottom: 60px;
+                padding-bottom: 32px;
+                margin-bottom: 50px;
                 border-bottom: 1px solid var(--border-color);
               .brand {
                   display: none;
               }
               .brandName {
                 text-align: center;
-                padding-bottom: 20px;
+                padding-bottom: 30px;
                 border-bottom: 1px solid var(--border-color);
                 h2{
                     font-size: 20px;
@@ -34,24 +38,21 @@
               }
               .brandMessage {
                 text-align: center;
+                margin: 32px 0 43px;
+                line-height: 29px;
+                letter-spacing: 0.32px;
                 p{
                     font-size: 16px;
                 }
               }
               .defaultBtn{
-                // margin: 0 auto;
-                // margin: 20px 15px 40px;
-                margin: 5px 15px 30px;
-                // border-bottom: 1px solid var(--border-color);
-
+                margin: 0;
+                width: 248px;
+                text-align: center;
               }
             }
           }
         }
     }
-    
+
 }
-
-
-
-

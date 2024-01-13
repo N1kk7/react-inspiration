@@ -32,6 +32,11 @@
             border: 1px solid var(--border-color);
             padding: 0 21px;
             cursor: pointer;
+
+            & + .plan {
+                margin-left: 15px;
+            }
+
             .planType {
               display: flex;
               justify-content: space-between;
@@ -47,7 +52,7 @@
                     margin: 19px 0 11px;
                     padding-left: 4px;
                 }
-                
+
               }
               .coast{
                 color: var(--main-dark);
@@ -105,7 +110,7 @@
                 font-weight: 500;
                 line-height: normal;
               }
-            }   
+            }
 
 
         }

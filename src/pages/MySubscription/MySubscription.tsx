@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import backBtn from '../../assets/images/backBtn.png'
+import backBtn from '../../assets/images/backBtn.svg'
 import closeBtn from '../../assets/images/closeBtn.svg'
 import cardSymbol from '../../assets/images/cardSymbol.svg'
 import { useDispatch, useSelector } from "react-redux";
@@ -61,8 +61,8 @@ const MySubscription = () => {
                                     addBilling ? <button>Subscription</button> : <button>Cancel membership</button>
                                 }
                             </div>
-                            
-                            
+
+
                         </div>
                         <div className="bottomCard">
                             <h3>
@@ -73,7 +73,7 @@ const MySubscription = () => {
                             </span>
                         </div>
                     </div>
-                    
+
                     <div className="paymentMethod">
                         <div className="topCard">
                             <div className="cardTitle">
@@ -90,18 +90,14 @@ const MySubscription = () => {
                             
                             
                         </div>
-                        <div className="cardInfo">
-                            {
+                        <div className="cardInfo">{
                                 addBilling ?
                                     <div className="card">
                                         <div className="cardDescription">
                                             <div className="symbol">
                                                 <img src={cardSymbol} alt="card-symbol" />
-                                                
 
                                             </div>
-
-                                        
                                             <div className="cardCurrency">
                                                 <h5>
                                                     Master Card in {lastCardDigit}
@@ -161,12 +157,12 @@ const MySubscription = () => {
                         </div>
 
                     </div>
-                </div> 
+                </div>
 
             </div>
         </div>
     )
-    
+
 }
 
 

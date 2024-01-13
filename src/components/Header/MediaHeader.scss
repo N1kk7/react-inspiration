@@ -26,7 +26,7 @@
 
         }
         .Title-Page{
-            font-size: clamp(16px, 3vw, 18px);
+            font-size: 18px;
         }
         .login-menu {
             .user-profileBtn {
@@ -36,8 +36,14 @@
                 border-radius: 50%;
             }
 
+            .sign-btn,
+            .log-btn,
+            .user-profileBtn {
+                margin: 0 0 0 5px;
+            }
+
             button{
-                margin: 0 2vw !important;
+                // margin: 0 2vw !important;
 
                 img {
                     position: absolute;

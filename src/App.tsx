@@ -24,13 +24,19 @@ import CollectionPage from './pages/CollectionName/CollectionName'
 import SearchPage from  './pages/SearchQuery/SearchQuery'
 import ProjectPage from './pages/ProjectPage/ProjectPage';
 import PaymentPage from './pages/PaymentPage/PaymentPage';
-import AdminPanel from './pages/AdminPanel/AdminPanel';
-import AdminLogin from './pages/AdminPanel/AdminLogin';
+import AdminPanel from './admin/AdminPanel/AdminPanel';
+import AdminLogin from './admin/AdminPanel/AdminLogin';
 import EditProfile from './pages/EditProfile/EditProfile';
+
 import SubmitWorkPage from './pages/SubmitWorkPage/SubmitWorkPage/SubmitWorkPage';
 import EditWorkPage from './pages/SubmitWorkPage/EditWorkPage/EditWorkPage';
 import MySubscription from './pages/MySubscription/MySubscription';
 import BillingPage from './pages/PaymentPage/BillingPage';
+
+import VideoModeration from './admin/AdminPanel/adminPages/VideoModeration/VideoModeration';
+import UserManagement from './admin/AdminPanel/adminPages/UserManagement/UserManagement'
+import AnalyticsPage from './admin/AdminPanel/adminPages/AnalyticsPage/AnalyticsPage';
+
 
 type PrivateRouteProps = {
   auth: {
@@ -63,7 +69,7 @@ function App() {
 
 
 
-  
+
 
   return (
       <div className="App">
@@ -82,8 +88,8 @@ function App() {
 
           <Routes>
             <Route index path="/" element={<MainPage />} />
-            <Route path="/creatorPage" element={<CreatorPage />} />
-            <Route path="/brandPage" element={<BrandPage />} />
+            <Route path="/creator-page" element={<CreatorPage />} />
+            <Route path="/brand-page" element={<BrandPage />} />
             <Route path="/collection-page" element={<CollectionPage />} />
             <Route path="/search-page" element={<SearchPage />} />
             <Route path="/project-page" element={<ProjectPage />} />
@@ -99,13 +105,17 @@ function App() {
 
 
             <Route
-              path="/admin"
+              path="/admin/*"
               element={
                 <PrivateRoute auth={{ isAuthenticated: auth }}>
                   <AdminPanel />
                 </PrivateRoute>
               }
-            />
+            >
+              <Route path="video" element={<VideoModeration />} />
+              <Route path="user" element={<UserManagement />} />
+              <Route path="analytics" element={<AnalyticsPage />} />
+            </Route>
 
             <Route path="/admin/login" element={<AdminLogin />} />
           </Routes>

@@ -1,13 +1,13 @@
 .brandPage{
+    margin-bottom: 70px;
     .brandContent{
         display: flex;
         justify-content: flex-start;
-        margin: 8vh 10vh 10vh;
+        padding: 70px 100px 97px;
         .brandDescription {
           text-align: start;
           margin-left: 100px;
-          position: relative;
-          top: 3vh;
+          padding-top: 25px;
           .brand{
             color: var(--grey);
             font-family: var(--font-inter);
@@ -53,7 +53,7 @@
             .location{
                 margin: 0 30px;
             }
-            
+
           }
           .brandMessage{
             color: var(--main-text-color);
@@ -65,28 +65,25 @@
             opacity: 0.6;
             margin: 24px 0;
             padding-left: 2px;
-        
           }
-          
+
 
             .defaultBtn{
-                background-image: url('../../assets/images/globeWhite.png');
+                background-image: url('../../assets/images/globeWhite.svg');
                 background-repeat: no-repeat;
                 background-position: 12% 50%;
                 display: inline-block;
                 margin-left: 0;
-                margin-top: 2vh;
-                padding: 11px 15px 11px 43px;
-                width: 90px;
+                margin-top: 41px;
+                width: 146px;
             }
 
-          
+
         }
     }
-  
-    
-    
+
+
+
 }
 
 @import './MediaBrandPage.scss'
-

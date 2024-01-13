@@ -42,7 +42,7 @@
     li {
       display: flex;
       justify-content: flex-start;
-      text-align: flex-start;
+      text-align: left;
       margin-bottom: 10px;
 
       a {
@@ -67,9 +67,8 @@
 
   .profile {
     display: flex;
-    width: 100%;
     justify-content: flex-start;
-    text-align: start;
+    text-align: left;
     margin-bottom: 20px;
     padding: 11px 19px 11px 50px;
 
@@ -89,6 +88,6 @@
   }
 
   .main {
-
+    padding: 41px 50px 30px;
   }
 }

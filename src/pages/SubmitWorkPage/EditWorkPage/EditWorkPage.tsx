@@ -3,9 +3,9 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { editPage } from "../../../redux/submitWorkSlice";
 import closeBtn from '../../../assets/images/closeBtn.svg'
-import backBtn from '../../../assets/images/backBtn.png'
+import backBtn from '../../../assets/images/backBtn.svg'
 import DefaultBtn from "../../../components/shared/DefaultBtn";
-import uploadBtn from '../../../assets/images/downloadBtn.png'
+import uploadBtn from '../../../assets/images/downloadBtn.svg'
 import downBtn from '../../../assets/images/downBtn.svg'
 
 import '../SubmitWorkPage.scss'
@@ -30,7 +30,7 @@ const SubmitWorkPage = () => {
 
     useEffect(() => {
         dispatch(editPage('open-edit-page'));
-        
+
     }, [dispatch])
 
     return (
@@ -49,7 +49,7 @@ const SubmitWorkPage = () => {
                             Add new ad creative
                         </h2>
 
-                    </div> 
+                    </div>
                     <div className="contentWrapper">
                         <div className="videoContent">
                             <div className="contentTitle">
@@ -80,7 +80,7 @@ const SubmitWorkPage = () => {
                                 <div className="itemWrapper">
                                     <input type="text" placeholder="Brand name" />
                                 </div>
-                                
+
                             </div>
                             <div className="category">
                                 <div className="contentTitle">
@@ -92,11 +92,11 @@ const SubmitWorkPage = () => {
                                     <div className="text">Choose type</div>
                                     <img src={downBtn} alt="down-btn" />
                                 </div>
-                                
+
                             </div>
 
                         </div>
-                        
+
                         <div className="descriptionContent">
                             <div className="contentTitle">
                                 <h5>
@@ -106,7 +106,7 @@ const SubmitWorkPage = () => {
                             <div className="itemWrapper">
                                 <textarea name="description" id="1" placeholder="Add a short description about the work behind this ad"/>
                             </div>
-                            
+
                         </div>
                         <div className="keywordsField">
                             <div className="contentTitle">
@@ -162,7 +162,7 @@ const SubmitWorkPage = () => {
                                 <DefaultBtn textBtn="Cancel" methodBtn="cancel-submit" />
 
                             </div>
-                            <div className="adNew"> 
+                            <div className="adNew">
                                 <DefaultBtn textBtn="Ad new ad" methodBtn="ad-new-ad" />
 
                             </div>
