@@ -14,10 +14,9 @@ const AdminPanel = () => {
 			<div className='adminPanel'>
 				<aside id='aside'>
                     <div className="logo">
-                        {/* <Link to='/admin'>
+                        <Link to='/admin'>
                             <span>Ad inspiration</span>
-                        </Link> */}
-                        <span>Ad inspiration</span>
+                        </Link>
                     </div>
 					<div className='aside-menu'>
 						<ul>
@@ -39,7 +38,7 @@ const AdminPanel = () => {
 						</ul>
 					</div>
                     <div className="profile">
-                        <Link to='/creatorPage'>
+                        <Link to='/creator-page'>
                             <span>Profile</span>
                         </Link>
                     </div>
