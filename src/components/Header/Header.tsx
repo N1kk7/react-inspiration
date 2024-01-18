@@ -91,7 +91,7 @@ const Header = () => {
             {/* <Link>
 
             </Link> */}
-            {!guestStatus && <Link to='/creatorPage' className='Page-Name'>My Collections</Link>}
+            {!guestStatus && <Link to='/creator-page' className='Page-Name'>My Collections</Link>}
 
 
           </div>
@@ -122,21 +122,21 @@ const Header = () => {
                   <div className="profilePopup" ref={profileRef}>
                     <div className="profileListPopup">
                       <ul>
-                        <li onClick={() => {dispatch(popup('close-profile-popup')); navigate('/creatorPage')}}>
+                        <li onClick={() => {dispatch(popup('close-profile-popup')); navigate('/creator-page')}}>
                           My profile
                         </li>
-                        {userFree ? 
+                        {userFree ?
                           <li onClick={() => {dispatch(popup('close-profile-popup')); dispatch(getUnlimAccess('open-unlim-access'))}}>
                             My plan
-                          </li> : 
+                          </li> :
                           <li onClick={() => {dispatch(popup('close-profile-popup')); navigate('/my-subscription')}}>
                           My subscription
                           </li>
-                        
-                      
-                      
+
+
+
                         }
-                        
+
                         <li onClick={() => {dispatch(popup('close-profile-popup')); dispatch(openSupportModal())}}>
                           Support
                         </li>

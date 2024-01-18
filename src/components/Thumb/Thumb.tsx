@@ -44,7 +44,7 @@ export default function Thumb({ img, avatar, userName }: ThumbModel) {
 				</div>
 			</div>
 
-			<Link to='brandPage'>
+			<Link to='/brand-page'>
 				<div
 					className='userBlock'
 					onClick={() => {

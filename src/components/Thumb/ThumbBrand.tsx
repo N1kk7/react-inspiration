@@ -17,7 +17,7 @@ export default function Thumb({img} : ThumbBrandModel) {
 
   return (
     <div className="thumbItemWrapper">
-        <Link to='/brandPage'>
+        <Link to='/brand-page'>
             <div className="thumbItem"  onClick={() => {dispatch(creatorBrand('creator'));}}>
                 <div className="thumbImg">
                     <img src={img} alt="thumb" />

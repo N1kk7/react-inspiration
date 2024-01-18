@@ -5,12 +5,12 @@ import UnloggedFooter from "../../components/Footer/UnlogFooter/UnlogFooter";
 import SearchFilters from "../../components/SearchFilters/SearchFilters";
 import { useSelector } from "react-redux";
 import GetUnlimAccess from "../../components/Modals/SelectPlanModal/GetUnlimAccess";
+import Footer from "../../components/Footer/Footer";
 
 
 
 const SearchQuery = () => {
-
-    // const guestStatus = useSelector((state: any) => state.logInState.guestStatus)
+	const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
     const getUnlimAccessModal = useSelector((state: any) => state.selectPlanState.getUnlimAccessModal);
 
 
@@ -47,7 +47,8 @@ const SearchQuery = () => {
 
 
                     </div>
-                    <UnloggedFooter/>
+
+                    {guestStatus && <UnloggedFooter />}
 
 
 
@@ -59,6 +60,7 @@ const SearchQuery = () => {
 
             </div>
 
+			{!guestStatus && <Footer />}
 
 
         </>

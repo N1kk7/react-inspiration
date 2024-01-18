@@ -5,7 +5,7 @@ import DefaultBtn from "../../components/shared/DefaultBtn";
 import closeBtn from '../../assets/images/closeBtn.svg'
 import { paymentDetails } from "../../redux/selectPlanSlice";
 import { useDispatch, useSelector } from "react-redux";
-import backBtn from '../../assets/images/backBtn.png'
+import backBtn from '../../assets/images/backBtn.svg'
 // import { userLogIn } from "../../redux/logInSlice";
 import { useNavigate } from 'react-router-dom';
 // import GetUnlimAccess from "../../components/Modals/SelectPlanModal/GetUnlimAccess";
@@ -35,7 +35,7 @@ const BillingDetails = () => {
 
 
     //     }
-        
+
 
     // }
 
@@ -56,16 +56,16 @@ const BillingDetails = () => {
         // if (event ) {
         //     // event.target.value = event.target.value.slice(0, 19)
         //     console.log('ne number');
-            
+
         // }
         // if( event.inputType === "insertText" && !event.test(event.data) || cardNumber.length > 19){
         //     .value = input.value.slice(0, input.value.length - 1)
         //     return
         // }
         dispatch(setBillingError('cancel-enterCard-error'))
-            
+
         dispatch(enterCardNumber(event))
-        
+
     }
 
 
@@ -87,7 +87,7 @@ const BillingDetails = () => {
                         </div>
                         <form className="formWrapper">
                             <div className="nameDetails">
-                                
+
                                 <div className="form-group cardNumber">
                                     <h4>Add card number</h4>
                                     <div className="form-group-wrapper">
