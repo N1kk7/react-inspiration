@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './CreatorPage.scss'
 import 'swiper/css';
 import creator from '../../assets/images/creator.svg'
@@ -20,6 +20,7 @@ import DefaultBtn from "../../components/shared/DefaultBtn";
 import GetUnlimAccess from "../../components/Modals/SelectPlanModal/GetUnlimAccess";
 import SupportModal from "../../components/Modals/SupportModal/SupportModal";
 import SuccessSendReq from "../../components/Modals/SuccessSupportReq/SuccessSendReq";
+import { Link, Outlet } from "react-router-dom";
 
 
 
@@ -29,9 +30,13 @@ import SuccessSendReq from "../../components/Modals/SuccessSupportReq/SuccessSen
 const CreatorPage = () => {
 
     const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
+    const userPro = useSelector((state: any) => state.logInState.userPro);
     const getUnlimAccessModal = useSelector((state: any) => state.selectPlanState.getUnlimAccessModal);
     const supportModal = useSelector((state: any) => state.supportState.supportModal);
     const sendRequestModal = useSelector((state: any) => state.supportState.sendRequestModal);
+
+
+    const [activeClass, setActiveClass] = useState<string>('active');
 
 
     return (
@@ -105,27 +110,48 @@ const CreatorPage = () => {
                             </div>
                         </div>
                     </div>
-                    <Swiper
-                        slidesPerView={7}
-                        spaceBetween={10}
-                        navigation={true}
-                        modules={[Navigation]}
-                        className="mySwiper"
-                    >
-                        <SwiperSlide>App / Digital</SwiperSlide>
-                        <SwiperSlide>Apparel / Fashion</SwiperSlide>
-                        <SwiperSlide>Beauty / Personal Care</SwiperSlide>
-                        <SwiperSlide>Business Services</SwiperSlide>
-                        <SwiperSlide>Electronics / Tech</SwiperSlide>
-                        <SwiperSlide>Financial Services</SwiperSlide>
-                        <SwiperSlide>Food / Beverage</SwiperSlide>
-                        <SwiperSlide>App / Digital</SwiperSlide>
-                        <SwiperSlide>Apparel / Fashion</SwiperSlide>
-                        <SwiperSlide>Beauty / Personal Care</SwiperSlide>
-                        <SwiperSlide>Business Services</SwiperSlide>
-                        <SwiperSlide>Electronics / Tech</SwiperSlide>
-                    </Swiper>
-                    <ThumbBrandWrapper/>
+                    <div className="creator-tags-block">
+                        {userPro &&
+                            <div className='creator-menu'>
+                                <ul>
+                                    <li className={activeClass === 'ads' ? 'active' : ''}>
+                                        <Link to='/creator-page/ads' onClick={() => {setActiveClass('ads')}}>
+                                            <span>Ads</span>
+                                        </Link>
+                                    </li>
+                                    <li className={activeClass === 'collections' ? 'active' : ''}>
+                                        <Link to='/creator-page/collections' onClick={() => {setActiveClass('collections')}}>
+                                            <span>Collections</span>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                        <Swiper
+                            slidesPerView={7}
+                            spaceBetween={10}
+                            navigation={true}
+                            modules={[Navigation]}
+                            className="mySwiper"
+                        >
+                            <SwiperSlide>App / Digital</SwiperSlide>
+                            <SwiperSlide>Apparel / Fashion</SwiperSlide>
+                            <SwiperSlide>Beauty / Personal Care</SwiperSlide>
+                            <SwiperSlide>Business Services</SwiperSlide>
+                            <SwiperSlide>Electronics / Tech</SwiperSlide>
+                            <SwiperSlide>Financial Services</SwiperSlide>
+                            <SwiperSlide>Food / Beverage</SwiperSlide>
+                            <SwiperSlide>App / Digital</SwiperSlide>
+                            <SwiperSlide>Apparel / Fashion</SwiperSlide>
+                            <SwiperSlide>Beauty / Personal Care</SwiperSlide>
+                            <SwiperSlide>Business Services</SwiperSlide>
+                            <SwiperSlide>Electronics / Tech</SwiperSlide>
+                        </Swiper>
+                    </div>
+
+                    {userPro && <Outlet />}
+                    {!userPro && <ThumbBrandWrapper/>}
+
                     {guestStatus && <UnlogBrandFooter/>}
 
 

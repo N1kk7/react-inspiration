@@ -1,17 +1,17 @@
 import React from 'react'
 import './Thumb.scss'
-import { ICollectionThumb } from '../../model/cardCollectionModel';
+import { IAdsThumb } from '../../model/cardAdsModel';
 import { creatorBrand } from '../../redux/rootSlice';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 // import thumb-1 from '../../assets/images/thumb-1.png'
 
-interface ThumbCollectionModel {
-    img : ICollectionThumb['img'];
+interface ThumbAdsModel {
+    img : IAdsThumb['img'];
 
 }
 
-export default function ThumbCollection({img} : ThumbCollectionModel) {
+export default function ThumbAds({img} : ThumbAdsModel) {
 
     const dispatch = useDispatch();
 
@@ -22,9 +22,7 @@ export default function ThumbCollection({img} : ThumbCollectionModel) {
         <Link to='creator-page'>
             <div className="thumbItem"  onClick={() => {dispatch(creatorBrand('creator'));}}>
                 <div className="thumbImg">
-                    {img.map((imgItem) => {
-                      return <img src={imgItem} alt="thumb" />
-                    })}
+                  <img src={img} alt='thumb' />
                 </div>
             </div>
 
