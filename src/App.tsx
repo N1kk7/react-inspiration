@@ -36,6 +36,8 @@ import BillingPage from './pages/PaymentPage/BillingPage';
 import VideoModeration from './admin/AdminPanel/adminPages/VideoModeration/VideoModeration';
 import UserManagement from './admin/AdminPanel/adminPages/UserManagement/UserManagement'
 import AnalyticsPage from './admin/AdminPanel/adminPages/AnalyticsPage/AnalyticsPage';
+import ThumbCollectionWrapper from './components/ThumbWrapper/ThumbCollectionWrapper';
+import ThumbAdsWrapper from './components/ThumbWrapper/ThumbAdsWrapper';
 
 
 type PrivateRouteProps = {
@@ -68,6 +70,7 @@ function App() {
 
 
 
+  const userPro = useSelector((state: any) => state.logInState.userPro);
 
 
 
@@ -78,7 +81,7 @@ function App() {
 
 
 
-          
+
           {loginModal && <LogIn />}
           {signInModal && <SignIn />}
           {createPasswordModal && <CreatePassword/>}
@@ -88,7 +91,17 @@ function App() {
 
           <Routes>
             <Route index path="/" element={<MainPage />} />
-            <Route path="/creator-page" element={<CreatorPage />} />
+            {userPro && <Route
+              path="/creator-page/*"
+              element={
+                <CreatorPage />
+              }
+            >
+              <Route path="ads" element={<ThumbAdsWrapper />} />
+              <Route path="collections" element={<ThumbCollectionWrapper />} />
+            </Route>}
+            {!userPro && <Route path="/creator-page" element={<CreatorPage />} />}
+
             <Route path="/brand-page" element={<BrandPage />} />
             <Route path="/collection-page" element={<CollectionPage />} />
             <Route path="/search-page" element={<SearchPage />} />

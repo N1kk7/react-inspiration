@@ -105,11 +105,29 @@
           }
         }
     }
+
+    .creator-tags-block {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 25px 0 40px;
+
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+
     .swiper {
         width: 100%;
         height: 100%;
         position: relative;
-        margin: 25px 0 40px;
 
 
       }
