@@ -6,6 +6,7 @@ import arrowDown from '../../../../assets/images/arrow-down.svg';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { popup } from '../../../../redux/rootSlice';
+import ThumbWrapper from '../../adminComponents/ThumbWrapper';
 
 const VideoModeration = () => {
 	const dispatch = useDispatch();
@@ -185,6 +186,10 @@ const VideoModeration = () => {
 							</div>
 						)}
 					</div>
+				</div>
+
+				<div className='videoThumbsWrapper'>
+					<ThumbWrapper />
 				</div>
 			</div>
 		</>

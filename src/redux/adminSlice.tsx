@@ -6,6 +6,7 @@ export const adminSlice = createSlice({
 
     name: 'adminSlice',
     initialState: {
+        admin: false,
         auth: true
     },
     reducers: {
@@ -15,8 +16,19 @@ export const adminSlice = createSlice({
         adminLogOut: (state, action) => {
             if (!action.payload) state.auth = false;
         },
+        adminPage: (state, action) => {
+            switch (action.payload) {
+                case 'open':
+                    state.admin = true;
+
+                break;
+                case 'close':
+                    state.admin = false;
+                break;
+            }
+        },
     }
 })
 
-export const { adminLogIn, adminLogOut } = adminSlice.actions;
+export const { adminLogIn, adminLogOut, adminPage } = adminSlice.actions;
 export default adminSlice.reducer;

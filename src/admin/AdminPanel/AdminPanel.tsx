@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     Link,
     Outlet
   } from "react-router-dom";
 
 import './AdminPanel.scss';
+import { useDispatch } from 'react-redux';
+import { adminPage } from "../../redux/adminSlice";
 
 const AdminPanel = () => {
-    const [activeClass, setActiveClass] = useState<string>('active');
+    const dispatch = useDispatch();
+    const [activeClass, setActiveClass] = useState<string>('video');
+
+    useEffect(() => {
+        dispatch(adminPage('open'))
+    })
 
 	return (
 		<>

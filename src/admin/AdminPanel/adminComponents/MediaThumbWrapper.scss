@@ -1,0 +1,27 @@
+@media screen and (max-width: 1370px) {
+    .thumbWrapper {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+@media screen and (max-width: 1012px) {
+    .thumbWrapper {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+@media screen and (max-width: 768px) {
+    .thumbWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+
+        .thumbItemWrapper{
+            width: calc(50% - 20px);
+            margin: 0 10px 15px;
+        }
+
+    }
+}
