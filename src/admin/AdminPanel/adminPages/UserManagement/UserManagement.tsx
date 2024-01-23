@@ -5,6 +5,9 @@ import arrowRight from '../../../../assets/images/arrow-right.svg';
 
 import { useDispatch } from 'react-redux';
 import { popup } from '../../../../redux/rootSlice';
+import DataTable from 'react-data-table-component';
+import columns from '../../../../model/dataRow';
+import rowsArray from '../../../../data/dataTablesData';
 
 const UserManagement = () => {
 	const dispatch = useDispatch();
@@ -44,7 +47,16 @@ const UserManagement = () => {
 				</div>
 
 				<div className='userManagementWrapper'>
-
+					<div className="userManagementTable">
+						<DataTable
+							columns={columns}
+							data={rowsArray}
+							pagination
+						/>
+					</div>
+					<div className="userManagementInfo">
+						userManagementInfo
+					</div>
 				</div>
 			</div>
 		</>

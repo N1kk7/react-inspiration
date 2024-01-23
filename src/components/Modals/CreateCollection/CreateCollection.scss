@@ -22,7 +22,7 @@
             }
             input{
                 border: 1px solid var(--border-color);
-                background: var(--thumb-border-color);
+                background: #fff;
                 padding: 19px;
             }
             .collectionName {
@@ -31,9 +31,9 @@
                     // height: 43px;
                     border-radius: 50px;
 
-                    
+
                 }
-            
+
             }
             .describeCollection {
                 margin-top: 15px;
@@ -59,7 +59,7 @@
                 color: var(--grey);
             }
           }
-         
+
           .defaultBtn{
             width: 84px;
           }

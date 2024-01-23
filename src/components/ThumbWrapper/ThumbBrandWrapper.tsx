@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 const ThumbWrapper = () => {
 
     const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
-    
+
 
 
     return (
@@ -29,7 +29,9 @@ const ThumbWrapper = () => {
                         <ThumbBrand img={item.img}  key={item.id} />
                     )
                 }
-                
+
+                return false;
+
             })}
         </div>
 

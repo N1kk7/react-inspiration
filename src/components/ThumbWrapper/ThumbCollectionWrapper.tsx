@@ -30,6 +30,8 @@ const ThumbCollectionWrapper = () => {
                     )
                 }
 
+                return false;
+
             })}
         </div>
 

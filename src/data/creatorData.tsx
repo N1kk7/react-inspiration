@@ -1,8 +1,8 @@
 // import creatorAvatar from '../assets/images/creatorAvatar.png';
 import creatorAvatar from '../assets/images/creator-avatar.png';
-import tiktok from '../assets/images/tiktok.png';
+import tiktok from '../assets/images/tiktok.svg';
 import inst from '../assets/images/instagram.svg'
-import xSocial from '../assets/images/x.png'
+import xSocial from '../assets/images/x.svg'
 import globeSocial from '../assets/images/globe.svg'
 import { ICreator } from '../model/creatorModel';
 

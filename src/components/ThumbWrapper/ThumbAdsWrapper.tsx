@@ -30,6 +30,8 @@ const ThumbAdsWrapper = () => {
                     )
                 }
 
+                return false;
+
             })}
         </div>
 

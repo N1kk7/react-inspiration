@@ -4,7 +4,6 @@ import './MediaThumbAdmin.scss';
 import { IThumb } from '../../../model/cardModelAdmin';
 import { creatorBrand } from '../../../redux/rootSlice';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 interface ThumbModel {
 	id: IThumb['id'];

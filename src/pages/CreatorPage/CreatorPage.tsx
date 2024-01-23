@@ -5,9 +5,9 @@ import creator from '../../assets/images/creator.svg'
 import location from '../../assets/images/location.svg'
 import clapperboard from '../../assets/images/clapperboard.svg'
 import creatorData from '../../data/creatorData'
-import tikTok from '../../assets/images/tiktok.png'
+import tikTok from '../../assets/images/tiktok.svg'
 import inst from '../../assets/images/instagram.svg'
-import xSocial from '../../assets/images/x.png'
+import xSocial from '../../assets/images/x.svg'
 import globe from '../../assets/images/globe.svg'
 
 import ThumbBrandWrapper from '../../components/ThumbWrapper/ThumbBrandWrapper'
@@ -128,7 +128,7 @@ const CreatorPage = () => {
                             </div>
                         }
                         <Swiper
-                            slidesPerView={7}
+                            slidesPerView="auto"
                             spaceBetween={10}
                             navigation={true}
                             modules={[Navigation]}

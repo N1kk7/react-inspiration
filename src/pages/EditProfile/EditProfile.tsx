@@ -24,13 +24,9 @@ const EditProfile = () => {
 
     const update = () => {
         dispatch(editPage('open-edit-page'));
-
-
     }
 
-    useEffect(() => {
-        update();
-    }, [dispatch])
+    useEffect(update, [dispatch])
 
 
     return (

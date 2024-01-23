@@ -60,8 +60,8 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
   }
 
   const markError = (modal: string, err1?: string, err2?: string, err3?:string) => {
-    
-    
+
+
     switch (modal) {
       case 'login':
 
@@ -80,7 +80,7 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
 
       break;
       case 'createPassword':
-        
+
         if (err1 === '') {
           dispatch(checkPasswordError('create-password-error'))
 
@@ -100,7 +100,7 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
           dispatch(setError('set-lastName-error'))
 
         }
-        
+
         if (err3 === 'Choose type') {
           dispatch(setError('set-chooseType-error'))
 
@@ -110,18 +110,18 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
         if (err1 === '') {
 
           dispatch( setInfoSliceError('set-message-error'))
-          
-         
+
+
 
         }
         if (err2 === '') {
 
           dispatch( setInfoSliceError('set-answer-error'))
-         
+
         }
-        
-        
-        
+
+
+
       break;
     }
 
@@ -152,7 +152,7 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
- 
+
     });
 
 
@@ -168,7 +168,7 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
       break;
       case 'welcomeModal':
         firstName && lastName && disableWelcomeBtn ? changeWelcomeModal() : showErrorBtn('welcomeModal', firstName, lastName, chooseType);
-        
+
       break;
       case 'GetInfoModal':
         disableGetInfoBtn ? changeInfoModal() : showErrorBtn('GetInfoModal', answerMessage, answer);
@@ -212,7 +212,9 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
         }, 1900)
       break;
       case 'Free-plan':
-        dispatch(getUnlimAccess('close-unlim-access'))
+        dispatch(selectPlan('close-select-plan'))
+        dispatch(getUnlimAccess('close-unlim-access'));
+        dispatch(popup('confirm-logIn')) && dispatch( userLogIn('userFree'));
       break;
       case 'cancel-payment-btn':
         dispatch(paymentDetails('close-payment-details'))
@@ -242,7 +244,7 @@ const DefaultBtn = (props: {textBtn: string, methodBtn: string}) => {
         navigate(-1)
       break;
       case 'save-billing':
-        fillCardInfo ?  navigate(-1) :  dispatch(setBillingError("set-enterCard-error")) 
+        fillCardInfo ?  navigate(-1) :  dispatch(setBillingError("set-enterCard-error"))
 
 
     }
