@@ -1,6 +1,10 @@
 @media screen and (max-width: 768px) {
     .getInfo{
         .modal-wrapper {
+          height: -webkit-fill-available;
+          width: -webkit-fill-available;
+          padding: 113px 8px;
+
             .questionTop {
                 padding-top: 5px;
                 padding-left: 0;
@@ -28,14 +32,11 @@
                     position: relative;
                     right: 2px;
                 }
-            }    
+            }
             .defaultBtn{
-                position: relative;
-                // margin: 30px auto;
-                margin: 30px 3vw;
-                top: 2px;
-            
-            }   
+              margin: 32px 3vw;
+              width: -webkit-fill-available;
+            }
         }
     }
 }

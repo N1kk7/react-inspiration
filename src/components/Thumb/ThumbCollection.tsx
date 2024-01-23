@@ -19,7 +19,7 @@ export default function ThumbCollection({img} : ThumbCollectionModel) {
 
 
     <div className="thumbItemWrapper">
-        <Link to='creator-page'>
+        <Link to='/creator-page'>
             <div className="thumbCollectionItem"  onClick={() => {dispatch(creatorBrand('creator'));}}>
                 <div className="thumbCollectionImg">
                     {img.map((imgItem, index) => {

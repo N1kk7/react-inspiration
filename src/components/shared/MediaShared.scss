@@ -1,23 +1,25 @@
 @media screen and (max-width: 768px) {
 
+    .choiceMethod {
+        margin: 28px 15px 34px;
+    }
+
     .contGoogle {
-        // width: clamp(280px, 70vw, 365px);
         width: -webkit-fill-available;
         margin: 0 auto;
     }
 
     .enterEmailPass {
-        input{
-            // width: clamp(280px, 70vw, 365px);
-            width: -webkit-fill-available;
+        margin-bottom: 16px;
 
+        input{
+            width: -webkit-fill-available;
         }
     }
     .defaultBtn{
-        // width: clamp(295px, 70vw, 365px);
         width: -webkit-fill-available;
 
     }
 
-    
+
 }

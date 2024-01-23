@@ -52,7 +52,6 @@ const PrivateRoute = ({ auth: { isAuthenticated }, children }: PrivateRouteProps
 };
 
 function App() {
-  // const dispatch = useDispatch();
   const loginModal = useSelector((state: any) => state.mainState.logIn);
   const signInModal = useSelector((state: any) => state.mainState.signIn);
   const createPasswordModal = useSelector((state: any) => state.mainState.createPasswordModal);

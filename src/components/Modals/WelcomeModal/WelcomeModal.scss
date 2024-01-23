@@ -1,6 +1,5 @@
 .welcomeModal{
     .modal-wrapper {
-      // height: 624px;
       height: auto;
       .modalTitle{
         padding: 56px 0 0px;
@@ -9,7 +8,7 @@
         }
 
       }
-      
+
       .nameWrapper {
         display: flex;
         justify-content: space-around;
@@ -34,11 +33,11 @@
                 font-weight: 600;
                 line-height: normal;
                 margin-bottom: 10px;
-                
+
             }
 
         }
-        
+
         .nameInput {
           input{
             display: inline-flex;
@@ -57,7 +56,7 @@
             font-weight: 400;
             line-height: normal;
           }
-        }   
+        }
         .last{
           // padding-left: 6px;
           position: relative;

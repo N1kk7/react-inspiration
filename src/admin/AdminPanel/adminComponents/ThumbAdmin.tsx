@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './Thumb.scss';
-import './MediaThumb.scss';
+import './ThumbAdmin.scss';
+import './MediaThumbAdmin.scss';
 import { IThumb } from '../../../model/cardModelAdmin';
 import { creatorBrand } from '../../../redux/rootSlice';
 import { useDispatch } from 'react-redux';
@@ -23,7 +23,7 @@ export default function Thumb({ img, avatar, userName, id }: ThumbModel) {
 	};
 
 	return (
-		<div className='thumbItemWrapper'>
+		<div className='thumbItemWrapperAdmin'>
 			<label htmlFor={`checkbox${id}`}>
 				<div
 					className='thumbItem'

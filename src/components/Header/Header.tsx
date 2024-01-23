@@ -91,7 +91,7 @@ const Header = () => {
             {/* <Link>
 
             </Link> */}
-            {!guestStatus && <Link to='/creator-page' className='Page-Name'>My Collections</Link>}
+            {!guestStatus && <Link to='/creator-page/collections' className='Page-Name'>My Collections</Link>}
 
 
           </div>

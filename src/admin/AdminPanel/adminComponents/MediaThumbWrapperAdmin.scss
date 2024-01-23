@@ -1,17 +1,17 @@
 @media screen and (max-width: 1370px) {
-    .thumbWrapper {
+    .thumbWrapperAdmin {
         grid-template-columns: repeat(3, 1fr);
 
     }
 }
 @media screen and (max-width: 1012px) {
-    .thumbWrapper {
+    .thumbWrapperAdmin {
         grid-template-columns: repeat(2, 1fr);
 
     }
 }
 @media screen and (max-width: 768px) {
-    .thumbWrapper {
+    .thumbWrapperAdmin {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -10px;

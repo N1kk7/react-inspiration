@@ -52,7 +52,9 @@ const AdminPanel = () => {
 				</aside>
 
                 <main className='main'>
-                    <Outlet/>
+                    <div className="main-wrapper">
+                        <Outlet/>
+                    </div>
                 </main>
 			</div>
 		</>

@@ -1,28 +1,24 @@
 @media screen and (max-width: 768px) {
-    .welcomeModal{
+    .modal.welcomeModal{
     .modal-wrapper{
+        height: -webkit-fill-available;
         .modalTitle {
-          position: relative;
-          padding: 29px 0 0px;
-          bottom: 21px;
+          padding: 40px 0 0px;
           h2{
-            margin-bottom: 0;
+            margin-bottom: 8px;
 
           }
         }
         .modalTitleDescription{
-            position: relative;
-            bottom: 12px;
+            padding-bottom: 25px;
+
             span{
-                font-size: clamp(16px,4vw,25px);
+                font-size: 16px;
             }
 
         }
         .nameWrapper {
             flex-direction: column;
-            position: relative;
-            bottom: 18px;
-            padding: 0 4vw;
             .name{
                 .nameInput {
                   input{
@@ -36,12 +32,14 @@
             }
         }
         .companyWrapper {
-            position: relative;
-            padding: 0 4vw;
-            bottom: 30px;
+            padding-bottom: 40px;
 
             .companyTitle{
-               padding-left: 0;
+                padding-left: 0;
+
+                h5{
+                    margin-top: 7px;
+                }
             }
             .companyInput {
                 .companyTypeInput{
@@ -50,15 +48,13 @@
                     // margin: 0 2vw;
                 }
             }
-                
+
         }
         .errorMessage {
           text-align: center;
         }
         .defaultBtn{
-            position: relative;
-            top: 7px;
-        
+            margin: 0;
         }
     }
 }

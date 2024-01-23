@@ -1,7 +1,7 @@
 import React from "react";
-import './ThumbWrapper.scss'
-import './MediaThumbWrapper.scss'
-import Thumb from "./Thumb";
+import './ThumbWrapperAdmin.scss'
+import './MediaThumbWrapperAdmin.scss'
+import Thumb from "./ThumbAdmin";
 import {thumbsArray} from '../../../data/thumbData'
 import { IThumb }  from '../../../model/cardModel'
 import { useSelector } from "react-redux";
@@ -15,7 +15,7 @@ const ThumbWrapper = () => {
 
     return (
 
-        <div className="thumbWrapper">
+        <div className="thumbWrapperAdmin">
             {thumbsArray.map((item: IThumb) => {
 
                 if (guestStatus && item.id <= 24) {

@@ -4,34 +4,33 @@
     align-items: center;
     z-index: 1;
     top: 0;
+    padding: 119px 0;
 
     .paymentPageWrapper {
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
       .backBtn {
-        position: absolute;
-        top: 12vh;
-        left: 5vw;
-            cursor: pointer;
-            span{
-                padding-left: 13px;
-                color: var(--grey);
-                font-family: var(--font-inter);
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-            }
+        align-self: flex-start;
+        padding: 11px 19px;
+          span{
+            padding-left: 10px;
+            color: var(--grey);
+            font-family: var(--font-inter);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
       }
       .closeBtn {
         display: none;
       }
       .modalTitle {
-        padding: 56px 0 51px;
+        padding: 66px 0 71px;
             h2{
                 color: var(--main-text-color);
                 font-family: var(--font-inter);
@@ -48,8 +47,8 @@
 
       .formWrapper{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 54px;
+        grid-template-columns: 1fr 481px;
+        grid-column-gap: 58px;
         text-align: start;
         width: -webkit-fill-available;
         position: relative;
@@ -57,7 +56,7 @@
         width: 100%;
 
         .form-group {
-          margin-bottom: 15px;
+          margin-bottom: 20px;
 
           &-wrapper {
             position: relative;
@@ -110,7 +109,7 @@
 
             .cardNumber {
                 position: relative;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
 
                 .description {
                   position: absolute;
@@ -131,6 +130,12 @@
                         margin-left: 15px;
                     }
                 }
+            }
+
+            .secureCode {
+              input {
+                max-width: 140px;
+              }
             }
         }
         .addressDetails {
@@ -170,19 +175,20 @@
         display: flex;
         width: -webkit-fill-available;
         justify-content: flex-end;
-        margin-top: 60px;
+        margin-top: 33px;
         .cancelBtn{
             .defaultBtn{
                 width: 85px;
                 background-color: transparent;
                 color: var(--grey);
-                margin: 4px 0 30px;
+                margin: 0;
             }
         }
         .paymentBtn {
             .defaultBtn{
-                width: 152px;
-                margin: 4px 0 30px 0;
+                width: 135px;
+                white-space: nowrap;
+                margin: 0;
             }
         }
       }

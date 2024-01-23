@@ -32,7 +32,7 @@ const LogIn = () => {
                             <img src={closeBtn} alt="close-btn" />
                         </div>
                         <div className="modalTitle">
-                            <h2>Welcome back</h2>
+                            <h2>Welcome back!</h2>
                         </div>
                         <ContGoogle/>
                         <ChoiceMethod/>
@@ -48,7 +48,7 @@ const LogIn = () => {
                             Email registered already. Please log in or sign up with another email
                             </span>
                          </div>}
-                        <DefaultBtn textBtn="Sign in" methodBtn={'Login'}/> 
+                        <DefaultBtn textBtn="Sign in" methodBtn={'Login'}/>
                         <div className="modalDescription">
                             <span>
                                 Do have an account?
@@ -58,7 +58,7 @@ const LogIn = () => {
 
 
                         </div>
-                       
+
 
 
 
@@ -66,7 +66,7 @@ const LogIn = () => {
             </div>
         </>
     )
-    
+
 }
 
 

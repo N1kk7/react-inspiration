@@ -1,5 +1,16 @@
 .videoModeration {
+	padding: 41px 50px 30px;
 	text-align: left;
+	height: calc(100vh - 71px);
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: 78px 80px 1fr;
+
+	.videoThumbsWrapper {
+		height: 100%;
+    overflow: auto;
+	}
+
 	h1 {
 		font-size: 24px;
 		font-weight: 700;
