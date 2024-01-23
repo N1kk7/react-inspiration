@@ -13,25 +13,28 @@ interface ThumbCollectionModel {
 
 export default function ThumbCollection({img} : ThumbCollectionModel) {
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   return (
 
 
     <div className="thumbItemWrapper">
-        <Link to='creator-page'>
-            <div className="thumbItem"  onClick={() => {dispatch(creatorBrand('creator'));}}>
-                <div className="thumbImg">
-                    {img.map((imgItem) => {
-                      return <img src={imgItem} alt="thumb" />
+        <Link to='/creator-page'>
+            <div className="thumbCollectionItem"  onClick={() => {dispatch(creatorBrand('creator'));}}>
+                <div className="thumbCollectionImg">
+                    {img.map((imgItem, index) => {
+                      return <img src={imgItem} key={index} alt="thumb" />
                     })}
+                </div>
+
+                <div
+                  className='collectionNameBlock'
+                >
+                  <div className='collectionName'>Collection name</div>
                 </div>
             </div>
 
         </Link>
-
-
-
 
     </div>
 

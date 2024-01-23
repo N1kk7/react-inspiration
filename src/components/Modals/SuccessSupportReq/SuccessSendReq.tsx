@@ -1,10 +1,10 @@
 import React from "react";
 import './SuccessSendReq.scss'
-import sendSuccess from '../../../assets/images/send-success.png'
+import sendSuccess from '../../../assets/images/send-success.svg'
 
 
 const SuccessSendReq = () => {
-    
+
 
     return(
         <>
@@ -22,7 +22,7 @@ const SuccessSendReq = () => {
                 </div>
 
             </div>
-        
+
         </>
     )
 }

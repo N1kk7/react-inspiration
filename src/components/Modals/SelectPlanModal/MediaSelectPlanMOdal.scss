@@ -1,25 +1,18 @@
 @media screen and (max-width: 768px) {
-   
-    .selectPlan, .getUnlimAccess {
+
+    .modal.selectPlan, .modal.getUnlimAccess {
         height: auto;
         .modal-wrapper {
             height: auto;
             padding: 0;
             overflow: scroll;
-            .backBtn{
-                left: 6vw !important;
-            }
-            .closeBtn {
-              right: 6vw !important;
-            }
             .modalTitle {
-              padding: 0 !important;
+              padding: 0;
               position: relative;
-            //   top: 1.5vh;
-              top: 17.5vh;
               h2{
-                text-transform: capitalize;
-                font-size: clamp(19px, 5vw, 25px) !important;
+                font-size: 24px;
+                margin-top: 40px;
+                margin-bottom: 21px;
               }
             }
             .modalTitleDescription {
@@ -29,19 +22,19 @@
                 flex-direction: column-reverse;
                 align-items: center;
                 position: relative;
-                top: 9vh;
-                padding: 7vh 0;
+                margin: 0;
+                padding: 0 20px;
                 .plan{
-                    width: 80vw;
+                    width: calc(100% - 32px);
                     padding: 0 16px;
                     height: auto;
-                    margin: 2vh;
+                    margin: 0 0 20px 0;
                     .planType{
                         height: 5vh;
                         position: relative;
                         padding: 0 2vw;
                         top: 10px;
-                    
+
                     }
                     .list{
                         ul{
@@ -69,6 +62,6 @@
                 }
             }
         }
-        
+
     }
 }

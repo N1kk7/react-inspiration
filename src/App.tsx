@@ -52,7 +52,6 @@ const PrivateRoute = ({ auth: { isAuthenticated }, children }: PrivateRouteProps
 };
 
 function App() {
-  // const dispatch = useDispatch();
   const loginModal = useSelector((state: any) => state.mainState.logIn);
   const signInModal = useSelector((state: any) => state.mainState.signIn);
   const createPasswordModal = useSelector((state: any) => state.mainState.createPasswordModal);
@@ -60,7 +59,7 @@ function App() {
   const getInfoModal = useSelector((state: any) => state.getInfoState.getInfoModal);
   const selectPlanModal = useSelector((state: any) => state.selectPlanState.selectPlanModal);
   const paymentPage = useSelector((state: any) => state.selectPlanState.paymentDetailsPage);
-  const adminPage = window.location.href.indexOf('admin') > -1;
+  const adminPage = useSelector((state: any) => state.adminState.admin);
   const auth = useSelector((state: any) => state.adminState.auth);
   const editPage = useSelector((state: any) => state.editPageState.editPage);
   const submitPage = useSelector((state: any) => state.submitPageState.submitPage);
@@ -69,8 +68,7 @@ function App() {
 
 
 
-
-  const userPro = useSelector((state: any) => state.logInState.userPro);
+  const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
 
 
 
@@ -91,16 +89,17 @@ function App() {
 
           <Routes>
             <Route index path="/" element={<MainPage />} />
-            {userPro && <Route
+            {!guestStatus && <Route
               path="/creator-page/*"
               element={
                 <CreatorPage />
               }
             >
+              <Route path="" element={<Navigate to="/creator-page/ads" />} />
               <Route path="ads" element={<ThumbAdsWrapper />} />
               <Route path="collections" element={<ThumbCollectionWrapper />} />
             </Route>}
-            {!userPro && <Route path="/creator-page" element={<CreatorPage />} />}
+            {guestStatus && <Route path="/creator-page" element={<CreatorPage />} />}
 
             <Route path="/brand-page" element={<BrandPage />} />
             <Route path="/collection-page" element={<CollectionPage />} />
@@ -125,6 +124,7 @@ function App() {
                 </PrivateRoute>
               }
             >
+              <Route path="" element={<Navigate to="/admin/video" />} />
               <Route path="video" element={<VideoModeration />} />
               <Route path="user" element={<UserManagement />} />
               <Route path="analytics" element={<AnalyticsPage />} />

@@ -1,9 +1,22 @@
 @media screen and (max-width: 768px) {
     .App-footer{
         .container{
+          .footer-wrapper {
+            position: relative;
+            &:before {
+              content: '';
+              position: absolute;
+              width: 100vw;
+              height: 1px;
+              left: 50%;
+              transform: translateX(-50%);
+              top: 0;
+              background-color: #EBEBED;
+            }
+          }
+
             .top-footer {
                 justify-content: center;
-                height: 10vh;
                 .logoWrapper {
                   .logo-description {
                     display: none;
@@ -15,7 +28,8 @@
             }
             .bottom-footer {
               justify-content: center;
-              
+              margin-top: 0;
+
               .buttonWrapper {
                 display: flex;
                 justify-content: space-between;
@@ -29,9 +43,5 @@
             }
         }
     }
-    
+
 }
-
-
-
-

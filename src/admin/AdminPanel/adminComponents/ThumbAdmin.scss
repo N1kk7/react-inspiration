@@ -1,0 +1,149 @@
+.thumbItemWrapperAdmin {
+	border: 16px solid #fff;
+	border-radius: 26px;
+	background-color: #fff;
+	a {
+		text-decoration: none;
+		color: var(--main-text-color);
+	}
+	.thumbItem {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		position: relative;
+
+        &:hover {
+            .thumbHover {
+                opacity: 1;
+            }
+        }
+
+		.thumbImg {
+			border-radius: 26px;
+			overflow: hidden;
+			border: none;
+			font-size: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			padding-top: 158.23%;
+			width: 100%;
+
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				min-width: 100%;
+				min-height: 100%;
+			}
+		}
+
+		.thumbHover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+            opacity: 0;
+            transition: opacity 1s ease;
+		}
+
+		.copyBtn {
+			background-image: url(../../../assets/images/copyLinkBtn.svg);
+			background-color: var(--main-text-color);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: 20px 20px;
+			border-radius: 50px;
+			cursor: pointer;
+			height: 36px;
+			width: 36px;
+			position: absolute;
+			top: 16px;
+			left: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 0;
+		}
+		.notesBtn {
+			background-image: url(../../../assets/images/noteBtn.svg);
+			background-color: var(--main-text-color);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: 14px 16px;
+			border-radius: 50px;
+			cursor: pointer;
+			height: 36px;
+			width: 36px;
+			position: absolute;
+			top: 16px;
+			left: 62px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 0;
+		}
+		.editBtn {
+			background-image: url(../../../assets/images/pencil.svg);
+			background-color: var(--main-text-color);
+			background-position: center center;
+			background-repeat: no-repeat;
+            background-size: 14px 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            height: 36px;
+            width: 36px;
+            position: absolute;
+            top: 16px;
+            left: 108px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+		}
+
+		.pauseBtn,
+		.playBtn {
+			background-image: url(../../../assets/images/playBtn.svg);
+			background-color: var(--main-text-color);
+			background-position: center center;
+			background-repeat: no-repeat;
+			opacity: 0.7;
+			border-radius: 50%;
+			cursor: pointer;
+			height: 60px;
+			width: 60px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+            border: 0;
+		}
+
+		.pauseBtn {
+			background-image: url(../../../assets/images/pauseBtn.svg);
+		}
+	}
+
+	.userBlock {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 15px;
+
+		&Left {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.userAvatar {
+		border-radius: 50%;
+		margin-right: 6px;
+	}
+}

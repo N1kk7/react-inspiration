@@ -4,7 +4,6 @@ import closeBtn from '../../assets/images/closeBtn.svg'
 import cardSymbol from '../../assets/images/cardSymbol.svg'
 import { useDispatch, useSelector } from "react-redux";
 import { subscriptionPage } from "../../redux/subscriptionSlice";
-import DefaultBtn from "../../components/shared/DefaultBtn";
 import { useNavigate } from "react-router-dom";
 
 
@@ -31,7 +30,7 @@ const MySubscription = () => {
     useEffect(() => {
         dispatch(subscriptionPage('open-subscription'))
     }, [dispatch])
-    
+
 
 
     return (
@@ -87,8 +86,8 @@ const MySubscription = () => {
 
                                 }
                             </div>
-                            
-                            
+
+
                         </div>
                         <div className="cardInfo">{
                                 addBilling ?

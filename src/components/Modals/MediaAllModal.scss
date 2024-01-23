@@ -1,40 +1,38 @@
 @media screen and (max-width: 768px) {
 
     .modal{
-        width: -webkit-fill-available;
-        height: -webkit-fill-available;
         .modal-wrapper {
             justify-content: center;
-            // width: 100vw !important;
-            height: -webkit-fill-available !important;
-            width: -webkit-fill-available !important;
-            padding: 0 3vw;
+            padding: 68px 20px;
+            height: -webkit-fill-available;
+            width: 100%;
+            display: block;
+
             .backBtn{
-                top: 3.5vh;
-                left: 11.5vw;
+                top: 22px;
+                left: 20px;
+                width: 20px;
+
                 span{
                     display: none;
                 }
             }
             .closeBtn{
-                top: 3.5vh;
-                right: 11.5vw;
-                
-                
+                top: 21px;
+                right: 22px;
             }
             .modalTitle{
-                // padding: 56px 0 49px;
-                padding: 9vh 0 4vh;
+                padding: 56px 0 29px;
                 h2{
-                    font-size: clamp(24px, 2.5vw, 52px);
+                    font-size: 24px;
                     font-weight: 700;
-                    line-height: 40px; /* 88.549% */
+                    line-height: 40px;
                     text-transform: initial;
                 }
             }
-            
-            
+
+
         }
     }
-    
+
 }

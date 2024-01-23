@@ -5,9 +5,9 @@ import creator from '../../assets/images/creator.svg'
 import location from '../../assets/images/location.svg'
 import clapperboard from '../../assets/images/clapperboard.svg'
 import creatorData from '../../data/creatorData'
-import tikTok from '../../assets/images/tiktok.png'
+import tikTok from '../../assets/images/tiktok.svg'
 import inst from '../../assets/images/instagram.svg'
-import xSocial from '../../assets/images/x.png'
+import xSocial from '../../assets/images/x.svg'
 import globe from '../../assets/images/globe.svg'
 
 import ThumbBrandWrapper from '../../components/ThumbWrapper/ThumbBrandWrapper'
@@ -30,13 +30,13 @@ import { Link, Outlet } from "react-router-dom";
 const CreatorPage = () => {
 
     const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
-    const userPro = useSelector((state: any) => state.logInState.userPro);
     const getUnlimAccessModal = useSelector((state: any) => state.selectPlanState.getUnlimAccessModal);
     const supportModal = useSelector((state: any) => state.supportState.supportModal);
     const sendRequestModal = useSelector((state: any) => state.supportState.sendRequestModal);
 
 
-    const [activeClass, setActiveClass] = useState<string>('active');
+    const [activeClass, setActiveClass] = useState<string>('ads');
+
 
 
     return (
@@ -111,7 +111,7 @@ const CreatorPage = () => {
                         </div>
                     </div>
                     <div className="creator-tags-block">
-                        {userPro &&
+                        {!guestStatus &&
                             <div className='creator-menu'>
                                 <ul>
                                     <li className={activeClass === 'ads' ? 'active' : ''}>
@@ -128,7 +128,7 @@ const CreatorPage = () => {
                             </div>
                         }
                         <Swiper
-                            slidesPerView={7}
+                            slidesPerView="auto"
                             spaceBetween={10}
                             navigation={true}
                             modules={[Navigation]}
@@ -149,8 +149,8 @@ const CreatorPage = () => {
                         </Swiper>
                     </div>
 
-                    {userPro && <Outlet />}
-                    {!userPro && <ThumbBrandWrapper/>}
+                    {!guestStatus && <Outlet />}
+                    {guestStatus && <ThumbBrandWrapper/>}
 
                     {guestStatus && <UnlogBrandFooter/>}
 

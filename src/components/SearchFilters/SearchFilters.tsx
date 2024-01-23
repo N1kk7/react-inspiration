@@ -6,7 +6,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { popup } from "../../redux/rootSlice";
 import { useNavigate } from "react-router-dom";
 import closeBtn from '../../assets/images/closeBtn.svg'
-// import searchMobileBtn from '../../assets/images/searchMobileBtn.png'
 
 
 
