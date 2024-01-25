@@ -1,6 +1,6 @@
-import { DataRow } from '../model/dataRow';
+// import { DataRow } from '../model/dataRow';
 
-const rowsArray: DataRow[] = [
+const rowsArray: any[] = [
     {
         id: 1,
         name: 'User name #1',
@@ -91,6 +91,48 @@ const rowsArray: DataRow[] = [
         email: 'useremail@gmail.com',
         type: 'Text',
         videos: 55,
+    },
+    {
+        id: 14,
+        name: 'User name #14',
+        email: 'useremail@gmail.com',
+        type: 'Text',
+        videos: 60,
+    },
+    {
+        id: 15,
+        name: 'User name #15',
+        email: 'useremail@gmail.com',
+        type: 'Text',
+        videos: 65,
+    },
+    {
+        id: 16,
+        name: 'User name #16',
+        email: 'useremail@gmail.com',
+        type: 'Text',
+        videos: 70,
+    },
+    {
+        id: 17,
+        name: 'User name #17',
+        email: 'useremail@gmail.com',
+        type: 'Text',
+        videos: 75,
+    },
+    {
+        id: 18,
+        name: 'User name #18',
+        email: 'useremail@gmail.com',
+        type: 'Text',
+        videos: 80,
+    },
+    {
+        id: 19,
+        name: 'User name #19',
+        email: 'useremail@gmail.com',
+        type: 'Text',
+        videos: 85,
     }
 ]
 
