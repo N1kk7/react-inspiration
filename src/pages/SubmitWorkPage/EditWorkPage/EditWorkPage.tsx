@@ -46,7 +46,7 @@ const SubmitWorkPage = () => {
                         </div>
                     <div className="submitTitle">
                         <h2>
-                            Add new ad creative
+                            Edit ad creative
                         </h2>
 
                     </div>

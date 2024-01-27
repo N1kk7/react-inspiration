@@ -68,3 +68,125 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+///////////////////////// MODALS CONTROL /////////////////////////
+
+---------- CREATE-COLLECTION ----------
+
+PATH: modal > CreateCollection
+
+    state: redux > myCollection > initialState > createCollectionModal
+
+    open createCollection : methodBtn: 'createCollection',
+    close createCollection : methodBtn: 'closeAllModal',
+
+
+----------  CREATE-PASSWORD  ----------
+PATH: modal > CreatePassword
+
+        state: redux > rootSlice > initialState > createPasswordModal
+
+
+---------- DELETE-COLLECTION ----------
+
+PATH: modal > DeleteCollection
+
+        state: redux > myCollection > initialState > removeCollectionModal
+
+
+----------   DELETE-MODAL    ----------
+
+PATH: modal > DeleteModal
+
+        state: redux > rootSlice > initialState > deleteModal
+
+
+----------  GET-INFO-MODAL   ----------
+
+PATH: modal > GetInfoModal
+
+        state: redux > rootSlice > initialState > getInfoModal
+
+
+----------   LOG-IN-MODAL    ----------
+
+PATH: modal > LogIn
+
+        state: redux > rootSlice > initialState > logIn
+
+
+----------  SAVE-COLLECTION  ----------
+
+    PATH: modal > SaveCollection
+
+    state: redux > myCollection > initialState > SaveCollectionModal
+
+    save - collection: methodBtn: 'saveCollection'
+    close - collection: methodBtn: 'closeAllModal'
+
+
+---------- SELECT-PLAN-MODAL ----------
+PATH: modal > SelectPlanModal
+
+        state: redux > selectPlanSlice > initialState > selectPlanModal
+
+----------     SIGN-IN       ----------
+
+PATH: modal > SignIn
+
+        state: redux > rootSlice > initialState > signIn
+
+
+--------- SUCCESS-SUPPORT-REQ  --------
+
+PATH: modal > SuccessSupportReq
+
+        state: redux > supportSlice > initialState > sendRequestModal
+
+
+----------   SUPPORT-MODAL   ----------
+
+PATH: modal > WelcomeModal
+
+        state: redux > supportSlice > initialState > supportModal
+
+
+----------   UNLIM-ACCESS    ----------
+?????
+
+
+----------   WELCOME-MODAL   ----------
+
+    PATH: modal > WelcomeModal
+
+        state: redux > welcomeModalSlice > initialState > welcomeModal
+
+
+
+----------  YOUR-COLLECTION  ----------
+
+    PATH: modal > YourCollection
+
+        state: redux > myCollection > initialState > yourCollectionModal
+
+
+
+///////////////////////// PAGES CONTROL /////////////////////////
+
+
+
+----------  PAYMENT-PAGE  ----------
+
+PATH: pages > PaymentPage
+
+    state: redux > selectPlanSlice > initialState > paymentDetailsPage
+
+    open-payment-page : methodBtn: 'open-payment-details',
+    close-payment-page : methodBtn: 'cancel-payment-btn',
+
+
+
