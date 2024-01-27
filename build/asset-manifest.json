@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "https://dmitryfrontender.github.io/adinspiration/static/css/main.fc69c9fc.css",
-    "main.js": "https://dmitryfrontender.github.io/adinspiration/static/js/main.4aff0495.js",
+    "main.css": "https://dmitryfrontender.github.io/adinspiration/static/css/main.8a725cac.css",
+    "main.js": "https://dmitryfrontender.github.io/adinspiration/static/js/main.e01b841d.js",
     "static/media/thumb-3.png": "https://dmitryfrontender.github.io/adinspiration/static/media/thumb-3.27e500a4830ae81675d2.png",
     "static/media/thumb-4.png": "https://dmitryfrontender.github.io/adinspiration/static/media/thumb-4.a57fea7558d1efd193b6.png",
     "static/media/thumb-1.png": "https://dmitryfrontender.github.io/adinspiration/static/media/thumb-1.10d6573a463bb109a362.png",
@@ -10,6 +10,7 @@
     "static/media/userAvatar.png": "https://dmitryfrontender.github.io/adinspiration/static/media/userAvatar.52d44c5f261f4c6e6d18.png",
     "static/media/globe.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/globe.da434b65c83188420c811edee873a56e.svg",
     "static/media/globeWhite.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/globeWhite.e5ff9cdd42dd04df9651.svg",
+    "static/media/project.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/project.5d94c5743aced130b7aece2a7e7f5568.svg",
     "static/media/pencil.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/pencil.c5e54f15f312a50bf664.svg",
     "static/media/cardSymbol.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/cardSymbol.7e54e77d5b5c09a404f86ca4a15e80ad.svg",
     "index.html": "https://dmitryfrontender.github.io/adinspiration/index.html",
@@ -21,10 +22,11 @@
     "static/media/clapperboard.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/clapperboard.6f95a9a975eee3d1f70b24cfa01c76bf.svg",
     "static/media/arrow-right.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/arrow-right.0fae8bd57ae6b5c2d65f0399c67070b9.svg",
     "static/media/backBtn.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/backBtn.91a102ee63ddc6d24fc41ccce3b11a57.svg",
-    "static/media/tiktok.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/tiktok.f9f6faa02baf2ea61695f34368375658.svg",
+    "static/media/arrow-left.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/arrow-left.eca0bbbd65346dbd905c.svg",
     "static/media/location.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/location.079f63bf4e57b7cf293e3c0e9e452a37.svg",
     "static/media/creator.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/creator.49e440eb2ca57a56003caf7526765dc6.svg",
     "static/media/send-success.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/send-success.f3c3931b7b1643c5a54e520a5d5f3ab7.svg",
+    "static/media/tiktok.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/tiktok.ed28ca04d230ffb0b2ef80638e81ef95.svg",
     "static/media/noteBtn.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/noteBtn.4731933836c426170e6c.svg",
     "static/media/closeBtn.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/closeBtn.968bc3f1b35a04bf4d01153cbfaed6e4.svg",
     "static/media/x.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/x.488c2357bfb4b1dcfe2fefeeca59c9a6.svg",
@@ -34,11 +36,11 @@
     "static/media/pauseBtn.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/pauseBtn.de663de2749322ff73a8.svg",
     "static/media/left.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/left.3f05d6d84e9071657943.svg",
     "static/media/right.svg": "https://dmitryfrontender.github.io/adinspiration/static/media/right.eb191093e7148b51d8bf.svg",
-    "main.fc69c9fc.css.map": "https://dmitryfrontender.github.io/adinspiration/static/css/main.fc69c9fc.css.map",
-    "main.4aff0495.js.map": "https://dmitryfrontender.github.io/adinspiration/static/js/main.4aff0495.js.map"
+    "main.8a725cac.css.map": "https://dmitryfrontender.github.io/adinspiration/static/css/main.8a725cac.css.map",
+    "main.e01b841d.js.map": "https://dmitryfrontender.github.io/adinspiration/static/js/main.e01b841d.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc69c9fc.css",
-    "static/js/main.4aff0495.js"
+    "static/css/main.8a725cac.css",
+    "static/js/main.e01b841d.js"
   ]
 }
