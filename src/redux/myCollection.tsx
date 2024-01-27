@@ -12,7 +12,7 @@ const CollectionSlice = createSlice({
         collectionState: false,
         myCollection: [{id: 1}],
 
-        yourCollectionModal: false,
+        yourCollectionModal: true,
         createCollectionModal: false,
         saveCollectionModal: false,
         removeCollectionModal: false,
@@ -24,9 +24,6 @@ const CollectionSlice = createSlice({
 
     },
     reducers: {
-        createCollection: (state, action) => {
-
-        },
         changeCollectionState: (state) => {
             state.collectionState = !state.collectionState
             
@@ -107,6 +104,6 @@ const CollectionSlice = createSlice({
 
 
 
-export const { createCollection, changeCollectionState, openCollectionPage, popupMethod } = CollectionSlice.actions;
+export const { changeCollectionState, openCollectionPage, popupMethod } = CollectionSlice.actions;
 export default CollectionSlice.reducer
 
