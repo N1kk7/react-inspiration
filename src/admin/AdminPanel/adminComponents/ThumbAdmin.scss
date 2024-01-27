@@ -140,6 +140,58 @@
 			justify-content: center;
 			align-items: center;
 		}
+
+		&Right {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			[type="checkbox"] {
+				display: none;
+
+				&:checked {
+					background: #000;
+					border-color:#000;
+				}
+			}
+
+			label {
+				cursor: pointer;
+				height: 24px;
+				width: 24px;
+				min-height: 24px;
+				border-radius: 3px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 2px solid #D9D9D9;
+				position: relative;
+
+				&:before {
+					content: "";
+					display: block;
+					height: 14px;
+					width: 7px;
+					position: absolute;
+					border-width: 0 2px 2px 0;
+					border-style: solid;
+					border-color: transparent transparent transparent transparent;
+					top: 42%;
+					left: 50%;
+					border-radius: 2px;
+					transform: translate(-50%, -50%) rotate(45deg);
+				}
+			}
+
+			[type="checkbox"]:checked + label {
+				background: #000;
+				border-color:#000;
+
+				&:before {
+					border-color: #fff;
+				}
+			}
+		}
 	}
 
 	.userAvatar {

@@ -58,7 +58,8 @@ export default function Thumb({ img, avatar, userName, id }: ThumbModel) {
 						<div className='userName'>{userName}</div>
 					</div>
 					<div className="userBlockRight">
-						<input type="checkbox" name={`checkbox${id}`} id={`checkbox${id}`} />
+					<input type="checkbox" name={`checkbox${id}`} id={`checkbox${id}`} />
+						<label htmlFor={`checkbox${id}`}></label>
 					</div>
 				</div>
 			</label>
