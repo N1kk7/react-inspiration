@@ -1,8 +1,8 @@
-#///////////////////////// MODALS CONTROL /////////////////////////
+# ///////////////////////// MODALS CONTROL /////////////////////////
 
-##---------- CREATE-COLLECTION ----------
+## ---------- CREATE-COLLECTION ----------
 
-###PATH: modal > CreateCollection
+### PATH: modal > CreateCollection
 
     state: redux > myCollection > initialState > createCollectionModal
 
@@ -10,44 +10,44 @@
     close createCollection : methodBtn: 'closeAllModal',
 
 
-##----------  CREATE-PASSWORD  ----------
+## ----------  CREATE-PASSWORD  ----------
 
-###PATH: modal > CreatePassword
+### PATH: modal > CreatePassword
 
     state: redux > rootSlice > initialState > createPasswordModal
 
 
-##---------- DELETE-COLLECTION ----------
+## ---------- DELETE-COLLECTION ----------
 
-###PATH: modal > DeleteCollection
+### PATH: modal > DeleteCollection
 
     state: redux > myCollection > initialState > removeCollectionModal
 
 
-##----------   DELETE-MODAL    ----------
+## ----------   DELETE-MODAL    ----------
 
-###PATH: modal > DeleteModal
+### PATH: modal > DeleteModal
 
     state: redux > rootSlice > initialState > deleteModal
 
 
-##----------  GET-INFO-MODAL   ----------
+## ----------  GET-INFO-MODAL   ----------
 
-###PATH: modal > GetInfoModal
+### PATH: modal > GetInfoModal
 
     state: redux > rootSlice > initialState > getInfoModal
 
 
-##----------   LOG-IN-MODAL    ----------
+## ----------   LOG-IN-MODAL    ----------
 
-###PATH: modal > LogIn
+### PATH: modal > LogIn
 
         state: redux > rootSlice > initialState > logIn
 
 
-##----------  SAVE-COLLECTION  ----------
+## ----------  SAVE-COLLECTION  ----------
 
-###PATH: modal > SaveCollection
+### PATH: modal > SaveCollection
 
     state: redux > myCollection > initialState > SaveCollectionModal
 
@@ -55,60 +55,60 @@
     close - collection: methodBtn: 'closeAllModal'
 
 
-##---------- SELECT-PLAN-MODAL ----------
+## ---------- SELECT-PLAN-MODAL ----------
 
-###PATH: modal > SelectPlanModal
+### PATH: modal > SelectPlanModal
 
     state: redux > selectPlanSlice > initialState > selectPlanModal
 
-##----------     SIGN-IN       ----------
+## ----------     SIGN-IN       ----------
 
-###PATH: modal > SignIn
+### PATH: modal > SignIn
 
     state: redux > rootSlice > initialState > signIn
 
 
---------- SUCCESS-SUPPORT-REQ  --------
+## --------- SUCCESS-SUPPORT-REQ  --------
 
-###PATH: modal > SuccessSupportReq
+### PATH: modal > SuccessSupportReq
 
     state: redux > supportSlice > initialState > sendRequestModal
 
 
-##----------   SUPPORT-MODAL   ----------
+## ----------   SUPPORT-MODAL   ----------
 
-###PATH: modal > WelcomeModal
+### PATH: modal > WelcomeModal
 
     state: redux > supportSlice > initialState > supportModal
 
 
-##----------   UNLIM-ACCESS    ----------
+## ----------   UNLIM-ACCESS    ----------
 ?????
 
 
-##----------   WELCOME-MODAL   ----------
+## ----------   WELCOME-MODAL   ----------
 
-###PATH: modal > WelcomeModal
+### PATH: modal > WelcomeModal
 
     state: redux > welcomeModalSlice > initialState > welcomeModal
 
 
 
-##----------  YOUR-COLLECTION  ----------
+## ----------  YOUR-COLLECTION  ----------
 
-###PATH: modal > YourCollection
+### PATH: modal > YourCollection
 
     state: redux > myCollection > initialState > yourCollectionModal
 
 
 
-#///////////////////////// PAGES CONTROL /////////////////////////
+# ///////////////////////// PAGES CONTROL /////////////////////////
 
 
 
-##----------  PAYMENT-PAGE  ----------
+## ----------  PAYMENT-PAGE  ----------
 
-###PATH: pages > PaymentPage
+### PATH: pages > PaymentPage
 
     state: redux > selectPlanSlice > initialState > paymentDetailsPage
 
