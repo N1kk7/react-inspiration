@@ -1,13 +1,13 @@
-.supportModal{
-    .supportWrapper{
-        height: 726px ;
-        width: 641px ;
+.supportModal {
+    .supportWrapper {
+        height: 726px;
+        width: 641px;
         padding: 0 118px;
         .closeBtn {
-          right: 1vw;
-          top: 1.1vw;
+            right: 1vw;
+            top: 1.1vw;
         }
-        h4{
+        h4 {
             color: var(--main-text-color);
             font-family: var(--font-inter);
             font-size: 14px;
@@ -16,47 +16,47 @@
             line-height: normal;
         }
         .modalTitle {
-          padding: 56px 0 45px;
+            padding: 56px 0 45px;
 
-          h2{
-            margin-bottom: 0;
-            font-size: 58px;
-          }
+            h2 {
+                margin-bottom: 0;
+                font-size: 58px;
+            }
         }
         .typeRequest {
-          text-align: start;
-          h4{
-            margin-bottom: 10px;
-          }
-          .inputWrapper{
-            position: relative;
-            width: min-content;
-            input{
-              width: 145px;
-              height: 41px;
-              border-radius: 50px;
-              border: 1px solid var(--border-color);
-              padding: 0 25px 0 17px;
-              cursor: pointer;
-              }
-              input::placeholder{
-                color: var(--main-text-color);
-                // text-align: center;
-                font-family: var(--font-inter);
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-              }
-              .downBtn {
-                position: absolute;
-                top: 50%;
-                right: 6%;
-                transform: translate(-50%, -50%);
-              }
-          }
+            text-align: start;
+            h4 {
+                margin-bottom: 10px;
+            }
+            .inputWrapper {
+                position: relative;
+                width: min-content;
+                input {
+                    width: 145px;
+                    height: 41px;
+                    border-radius: 50px;
+                    border: 1px solid var(--border-color);
+                    padding: 0 25px 0 17px;
+                    cursor: pointer;
+                }
+                input::placeholder {
+                    color: var(--main-text-color);
+                    // text-align: center;
+                    font-family: var(--font-inter);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+                .downBtn {
+                    position: absolute;
+                    top: 50%;
+                    right: 6%;
+                    transform: translate(-50%, -50%);
+                }
+            }
         }
-        .typePopup{
+        .typePopup {
             position: relative;
             .requestTypeList {
                 position: absolute;
@@ -71,9 +71,9 @@
                 top: calc(100% + 10px);
                 left: 0;
                 z-index: 3;
-                ul{
+                ul {
                     padding: 0;
-                    li{
+                    li {
                         list-style-type: none;
                         text-align: start;
                         padding: 11px 0;
@@ -81,15 +81,15 @@
                         // margin: 0;
                     }
                 }
-
             }
         }
         .describeRequest {
             text-align: start;
-            h4{
-              margin-bottom: 12px;
+            h4 {
+                margin-bottom: 12px;
             }
-            input, textarea{
+            input,
+            textarea {
                 display: block;
                 width: -webkit-fill-available;
                 padding: 13px 18px;
@@ -103,18 +103,16 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
-
             }
-            #title{
-              height: 13px;
+            #title {
+                height: 13px;
             }
-            #description{
+            #description {
                 height: 153px;
                 border-radius: 15px;
                 margin-bottom: 0;
-
             }
-            #description::placeholder{
+            #description::placeholder {
                 position: absolute;
                 top: 13px;
                 color: var(--grey);
@@ -126,22 +124,20 @@
                 line-height: normal;
             }
             .modalTitle {
-              h2{
-                margin-bottom: 0;
-              }
+                h2 {
+                    margin-bottom: 0;
+                }
             }
-
-
         }
         .buttonWrapper {
-          margin-top: 20px;
+            margin-top: 20px;
             display: flex;
             justify-content: flex-end;
-          .defaultBtn{
-              width: 191px;
-              margin: 0 0 29px;
-          }
+            .defaultBtn {
+                width: 191px;
+                margin: 0 0 29px;
+            }
         }
     }
 }
-@import './MediaSupportModal.scss'
+@import './MediaSupportModal.scss';

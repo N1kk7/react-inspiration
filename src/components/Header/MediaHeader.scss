@@ -1,76 +1,75 @@
 @media screen and (max-width: 1200px) {
-	.App-header {
-		margin: 0 3vw;
-	}
+    .App-header {
+        margin: 0 3vw;
+    }
 }
 
 @media screen and (max-width: 855px) {
-	.App-header {
-		.pageMenu {
-			.Page-Name {
-				padding-right: 25px;
-			}
-		}
-	}
+    .App-header {
+        .pageMenu {
+            .Page-Name {
+                padding-right: 25px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
-	.App-header {
-		display: flex;
-		padding: 20px 0;
-		margin: 0;
-		height: auto;
-		.pageMenu {
-			display: none;
-		}
-		.Title-Page {
-			font-size: 18px;
-		}
-		.login-menu {
-			.user-profileBtn {
-				width: 39px;
-				height: 39px;
-				font-size: 0;
-				border-radius: 50%;
-			}
+    .App-header {
+        display: flex;
+        padding: 20px 0;
+        margin: 0;
+        height: auto;
+        .pageMenu {
+            display: none;
+        }
+        .Title-Page {
+            font-size: 18px;
+        }
+        .login-menu {
+            .user-profileBtn {
+                width: 39px;
+                height: 39px;
+                font-size: 0;
+                border-radius: 50%;
+            }
 
-			.sign-btn,
-			.log-btn,
-			.user-profileBtn {
-				margin: 0 0 0 5px;
-			}
+            .sign-btn,
+            .log-btn,
+            .user-profileBtn {
+                margin: 0 0 0 5px;
+            }
 
-			button {
-				// margin: 0 2vw !important;
+            button {
+                // margin: 0 2vw !important;
 
-				img {
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-				}
-			}
-			.vLine {
-				display: none;
-			}
-		}
-	}
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .vLine {
+                display: none;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 359px) {
-	.App-header {
-    .login-menu {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+    .App-header {
+        .login-menu {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
 
-      .sign-btn,
-      .log-btn,
-      .user-profileBtn {
-        margin: 0;
-        padding: 11px;
-      }
+            .sign-btn,
+            .log-btn,
+            .user-profileBtn {
+                margin: 0;
+                padding: 11px;
+            }
+        }
     }
-
-	}
 }

@@ -1,4 +1,5 @@
-.paymentPage, .billingPage {
+.paymentPage,
+.billingPage {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,25 +14,25 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-      .backBtn {
-        align-self: flex-start;
-        padding: 11px 19px;
-          span{
-            padding-left: 10px;
-            color: var(--grey);
-            font-family: var(--font-inter);
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
-      }
-      .closeBtn {
-        display: none;
-      }
-      .modalTitle {
-        padding: 66px 0 71px;
-            h2{
+        .backBtn {
+            align-self: flex-start;
+            padding: 11px 19px;
+            span {
+                padding-left: 10px;
+                color: var(--grey);
+                font-family: var(--font-inter);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+        .closeBtn {
+            display: none;
+        }
+        .modalTitle {
+            padding: 66px 0 71px;
+            h2 {
                 color: var(--main-text-color);
                 font-family: var(--font-inter);
                 font-size: 58px;
@@ -40,157 +41,154 @@
                 line-height: 46.176px; /* 88.549% */
                 text-transform: uppercase;
                 margin: 0;
-
             }
+        }
 
-      }
-
-      .formWrapper{
-        display: grid;
-        grid-template-columns: 1fr 481px;
-        grid-column-gap: 58px;
-        text-align: start;
-        width: -webkit-fill-available;
-        position: relative;
-        top: 3px;
-        width: 100%;
-
-        .form-group {
-          margin-bottom: 20px;
-
-          &-wrapper {
+        .formWrapper {
+            display: grid;
+            grid-template-columns: 1fr 481px;
+            grid-column-gap: 58px;
+            text-align: start;
+            width: -webkit-fill-available;
             position: relative;
-          }
-        }
+            top: 3px;
+            width: 100%;
 
-        input{
-            border-radius: 50px;
-            border: 1px solid var(--border-color);
-            background: #ffffff;
-            padding: 13px 19px;
-            width: calc(100% - 40px);
-        }
-        input::placeholder{
-            color: var(--grey);
-            text-align: center;
-            font-family: var(--font-inter);
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            text-align: start;
-        }
-        h4{
-            text-align: start;
-            color: var(--main-text-color);
-            font-family: var(--font-inter);
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        .nameDetails{
-            border-right: 1px solid var(--border-color);
-            padding-right: 60px;
-
-            .name{
-                display: flex;
-
-                .nameItem {
-                    width: -webkit-fill-available;
-
-                    & + .nameItem {
-                      margin-left: 15px;
-                    }
-                }
-            }
-
-            .cardNumber {
-                position: relative;
+            .form-group {
                 margin-bottom: 20px;
 
-                .description {
-                  position: absolute;
-                  top: 50%;
-                  right: 12px;
-                  transform: translate(0, -50%);
+                &-wrapper {
+                    position: relative;
+                }
+            }
 
+            input {
+                border-radius: 50px;
+                border: 1px solid var(--border-color);
+                background: #ffffff;
+                padding: 13px 19px;
+                width: calc(100% - 40px);
+            }
+            input::placeholder {
+                color: var(--grey);
+                text-align: center;
+                font-family: var(--font-inter);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-align: start;
+            }
+            h4 {
+                text-align: start;
+                color: var(--main-text-color);
+                font-family: var(--font-inter);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+            .nameDetails {
+                border-right: 1px solid var(--border-color);
+                padding-right: 60px;
+
+                .name {
+                    display: flex;
+
+                    .nameItem {
+                        width: -webkit-fill-available;
+
+                        & + .nameItem {
+                            margin-left: 15px;
+                        }
+                    }
                 }
 
-            }
-            .date {
-                display: flex;
+                .cardNumber {
+                    position: relative;
+                    margin-bottom: 20px;
 
-                .dateItem {
-                    width: -webkit-fill-available;
+                    .description {
+                        position: absolute;
+                        top: 50%;
+                        right: 12px;
+                        transform: translate(0, -50%);
+                    }
+                }
+                .date {
+                    display: flex;
 
-                    & + .dateItem {
-                        margin-left: 15px;
+                    .dateItem {
+                        width: -webkit-fill-available;
+
+                        & + .dateItem {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+
+                .secureCode {
+                    input {
+                        max-width: 140px;
+                        box-shadow: 2px 2px 5px var(--border-color);
                     }
                 }
             }
+            .addressDetails {
+                .country {
+                    input {
+                        background: #ffffff;
+                    }
+                    input::placeholder {
+                        color: var(--main-text-color);
+                    }
+                }
+                .zipCode {
+                    display: flex;
 
-            .secureCode {
-              input {
-                max-width: 140px;
-              }
+                    .code {
+                        width: -webkit-fill-available;
+
+                        & + .code {
+                            margin-left: 15px;
+                        }
+
+                        h4 {
+                            color: var(--main-text-color);
+                            font-family: var(--font-inter);
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                        }
+                    }
+                }
             }
         }
-        .addressDetails {
-          .country{
-            input{
-              background: #ffffff;
-            }
-            input::placeholder{
-                color: var(--main-text-color);
-            }
-          }
-          .zipCode {
+
+        .buttonWrapper {
             display: flex;
-
-            .code{
-                width: -webkit-fill-available;
-
-                & + .code {
-                  margin-left: 15px;
-                }
-
-                h4{
-                  color: var(--main-text-color);
-                  font-family: var(--font-inter);
-                  font-size: 14px;
-                  font-style: normal;
-                  font-weight: 600;
-                  line-height: normal;
+            width: -webkit-fill-available;
+            justify-content: flex-end;
+            margin-top: 33px;
+            .cancelBtn {
+                .defaultBtn {
+                    width: 85px;
+                    background-color: transparent;
+                    color: var(--grey);
+                    margin: 0;
                 }
             }
-          }
-        }
-
-      }
-
-      .buttonWrapper {
-        display: flex;
-        width: -webkit-fill-available;
-        justify-content: flex-end;
-        margin-top: 33px;
-        .cancelBtn{
-            .defaultBtn{
-                width: 85px;
-                background-color: transparent;
-                color: var(--grey);
-                margin: 0;
+            .paymentBtn {
+                .defaultBtn {
+                    width: 235px;
+                    white-space: nowrap;
+                    margin: 0;
+                    margin-left: 10px;
+                }
             }
         }
-        .paymentBtn {
-            .defaultBtn{
-                width: 135px;
-                white-space: nowrap;
-                margin: 0;
-            }
-        }
-      }
     }
 }

@@ -3,16 +3,15 @@
     height: -webkit-fill-available;
 
     .container {
-
-        .editPageWrapper{
+        .editPageWrapper {
             padding: 40px 0;
             .closeBtn {
-              display: none;
+                display: none;
             }
             .backBtn {
                 text-align: left;
                 padding: 11px 19px;
-                span{
+                span {
                     padding-left: 10px;
                     color: var(--grey);
                     font-family: var(--font-inter);
@@ -22,9 +21,8 @@
                     line-height: normal;
                 }
             }
-            .modalTitle{
-                // padding: 56px 0 49px;
-                h2{
+            .modalTitle {
+                h2 {
                     color: var(--main-text-color);
                     font-family: var(--font-inter);
                     font-size: 58.148px;
@@ -35,27 +33,26 @@
                     margin-bottom: 70px;
                 }
             }
-            .formWrapper{
+            .formWrapper {
                 display: grid;
                 grid-template-columns: 55% 35%;
                 grid-auto-rows: auto;
                 gap: 63px;
                 position: relative;
 
-                .rowWrapper{
-
+                .rowWrapper {
                     display: grid;
 
                     grid-auto-rows: auto;
                     gap: 10px;
 
-                    .userAvatar{
+                    .userAvatar {
                         position: relative;
-                        img{
+                        img {
                             width: 100%;
                             height: 100%;
                         }
-                        .avatarBtn{
+                        .avatarBtn {
                             position: absolute;
                             bottom: 0;
                             left: 0;
@@ -64,10 +61,10 @@
                             background-color: rgba(0, 0, 0, 0.4);
                             border-radius: 0 0 5px 5px;
                             width: 100%;
-                            img{
+                            img {
                                 width: auto;
                             }
-                            span{
+                            span {
                                 color: var(--white);
                                 font-family: var(--font-inter);
                                 font-size: 14px;
@@ -79,17 +76,17 @@
                         }
                     }
 
-                    .inputItem{
+                    .inputItem {
                         height: fit-content;
-                        .inputWrapper{
+                        .inputWrapper {
                             text-align: start;
                             padding: 0 10px;
                             .titleWrapper {
                                 position: relative;
-                                .hoverBtn{
+                                .hoverBtn {
                                     width: 17px;
                                     height: 17px;
-                                    background: #EBEBED;
+                                    background: #ebebed;
                                     border-radius: 50%;
                                     display: inline-block;
                                     margin-left: 5px;
@@ -99,7 +96,7 @@
                                     bottom: 10px;
                                 }
                             }
-                            h4{
+                            h4 {
                                 color: var(--main-text-color);
                                 font-family: var(--font-inter);
                                 margin-bottom: 10px;
@@ -109,29 +106,28 @@
                                 line-height: normal;
                                 width: fit-content;
                                 display: inline-block;
-
                             }
 
-                            input{
+                            input {
                                 padding: 13px 19px;
                                 border-radius: 50px;
                                 width: -webkit-fill-available;
-                                border: 1px solid var(--Button-Stroke, #EBEBED);
+                                border: 1px solid var(--Button-Stroke, #ebebed);
                                 background: #ffffff;
                             }
                         }
                     }
-                    .userDescription{
+                    .userDescription {
                         grid-column-start: 1;
                         grid-column-end: 4;
                         padding-bottom: 40px;
                         border-bottom: 1px solid var(--border-color);
-                        .inputWrapper{
+                        .inputWrapper {
                             text-align: start;
                             padding: 0 10px;
                             .titleWrapper {
                                 position: relative;
-                                .hoverBtn{
+                                .hoverBtn {
                                     width: 17px;
                                     height: 17px;
                                     background: var(--thumb-background-color);
@@ -144,7 +140,7 @@
                                     bottom: 10px;
                                 }
                             }
-                            h4{
+                            h4 {
                                 color: var(--main-text-color);
                                 font-family: var(--font-inter);
                                 margin-bottom: 10px;
@@ -154,14 +150,13 @@
                                 line-height: normal;
                                 width: fit-content;
                                 display: inline-block;
-
                             }
-                            textarea{
+                            textarea {
                                 padding: 13px 19px;
                                 border-radius: 15px;
                                 height: 133px;
                                 width: -webkit-fill-available;
-                                border: 1px solid var(--Button-Stroke, #EBEBED);
+                                border: 1px solid var(--Button-Stroke, #ebebed);
                                 background: var(--white);
                             }
                         }
@@ -172,10 +167,10 @@
                         grid-column-end: 4;
                         align-items: flex-end;
                         position: relative;
-                        .inputWrapper{
+                        .inputWrapper {
                             text-align: start;
                             padding: 0 10px;
-                            h4{
+                            h4 {
                                 color: var(--main-text-color);
                                 font-family: var(--font-inter);
                                 margin-bottom: 10px;
@@ -185,29 +180,24 @@
                                 line-height: normal;
                                 width: fit-content;
                                 display: inline-block;
-
                             }
-                            input{
+                            input {
                                 padding: 13px 19px;
                                 border-radius: 50px;
                                 width: -webkit-fill-available;
-                                border: 1px solid var(--Button-Stroke, #EBEBED);
+                                border: 1px solid var(--Button-Stroke, #ebebed);
                                 background: #ffffff;
                             }
                         }
-                        .defaultBtn{
+                        .defaultBtn {
                             margin: 0;
-                            width: 44px;
-                            height: 15px;
+                            width: 144px;
+                            height: 45px;
                             background-color: transparent;
                             color: var(--grey);
                             padding: 14px 11px;
-
                         }
                     }
-
-
-
                 }
                 .leftWrapper {
                     grid-template-columns: 26% 1fr 1fr;
@@ -216,18 +206,14 @@
                     grid-template-columns: 50% 50%;
                     grid-auto-rows: max-content;
                     .separateLine {
-                      height: fit-content;
-                      grid-column-start: 1;
-                      grid-column-end: 3;
-                      margin: 40px 0 21px;
-                    //   height: 1px;
-                    //   border-top: 1px solid var(--border-color);
-                        // margin: 0;
-                        hr{
+                        height: fit-content;
+                        grid-column-start: 1;
+                        grid-column-end: 3;
+                        margin: 40px 0 21px;
+                        hr {
                             border-width: 1px;
                             border-color: var(--border-color);
                         }
-
                     }
                     .buttonWrapper {
                         display: flex;
@@ -237,48 +223,31 @@
                         grid-column-end: 3;
                         position: absolute;
                         bottom: 0;
-                        .btn{
+                        .btn {
                             margin-right: 20px;
-
                         }
                         .cancelBtn {
-                            .defaultBtn{
-                                width: 47px;
-                                height: 17px;
+                            .defaultBtn {
+                                width: 144px;
+                                height: 45px;
                                 background-color: transparent;
                                 color: var(--grey);
                                 margin: 0;
                             }
-
                         }
-                        .saveBtn{
-                            .defaultBtn{
-                                width: 33px;
-                                height: 17px;
+                        .saveBtn {
+                            .defaultBtn {
+                                width: 144px;
+                                height: 45px;
                                 padding: 11px 19px;
                                 margin: 0;
                             }
-
                         }
-
                     }
-
-
                 }
-
-
             }
         }
     }
 }
 
-
-
-
-
-
-
-
-
-
-@import './MediaEditProfile.scss'
+@import './MediaEditProfile.scss';

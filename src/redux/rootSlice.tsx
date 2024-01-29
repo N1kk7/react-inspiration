@@ -1,5 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
-
+import { createSlice } from '@reduxjs/toolkit';
 
 export const rootSlice = createSlice({
     name: 'rootSLice',
@@ -28,98 +27,90 @@ export const rootSlice = createSlice({
         creatorPage: false,
         brandPage: false,
 
-        deleteModal: false,
-
-
+        deleteModal: false
     },
     reducers: {
-
         popup: (state, action) => {
-
             switch (action.payload) {
                 case 'open-filter':
                     state.filterPopup = true;
-                break;
+                    break;
                 case 'close-filter':
                     state.filterPopup = false;
-                break;
+                    break;
                 case 'open-signIn':
                     state.signIn = true;
-                    document.body.style.overflow ='hidden';
-                break;
+                    document.body.style.overflow = 'hidden';
+                    break;
                 case 'close-signIn':
                     state.signIn = false;
                     state.emailError = false;
                     state.enterEmail = '';
                     state.createPassword = '';
                     state.confirmPassword = '';
-                    document.body.style.overflow ='unset';
+                    document.body.style.overflow = 'unset';
 
-                break;
+                    break;
                 case 'clear-signIn':
                     state.enterEmail = '';
-                break;
+                    break;
                 case 'confirm-signIn':
                     state.enterEmail = '';
                     state.signIn = false;
                     state.createPasswordModal = true;
 
-                break;
+                    break;
                 case 'back-to-signIn':
                     state.createPasswordModal = false;
                     state.signIn = true;
 
-                break;
+                    break;
                 case 'open-logIn':
-
                     state.logIn = true;
-                    document.body.style.overflow ='hidden';
-                break;
+                    document.body.style.overflow = 'hidden';
+                    break;
                 case 'close-logIn':
-
                     state.logIn = false;
                     state.enterEmail = '';
                     state.enterPassword = '';
                     state.emailError = false;
                     state.passwordError = false;
-                    document.body.style.overflow ='unset';
-                break;
+                    document.body.style.overflow = 'unset';
+                    break;
                 case 'confirm-logIn':
-
                     state.enterEmail = '';
                     state.enterPassword = '';
-                    document.body.style.overflow ='unset';
+                    document.body.style.overflow = 'unset';
                     state.logIn = false;
-                break;
+                    break;
                 case 'confirm-password-modal':
                     state.createPassword = '';
                     state.confirmPassword = '';
                     state.createPasswordModal = false;
 
-                break;
+                    break;
                 case 'email-error':
-                    state.emailError = true
-                break;
+                    state.emailError = true;
+                    break;
                 case 'cancel-email-error':
-                    state.emailError = false
+                    state.emailError = false;
 
-                break;
+                    break;
                 case 'password-error':
+                    state.passwordError = true;
 
-                    state.passwordError = true
-
-                break;
+                    break;
                 case 'cancel-password-error':
-                    state.passwordError = false
+                    state.passwordError = false;
 
-                break;
+                    break;
                 case 'open-profile-popup':
-                    state.profilePopup = true
+                    state.profilePopup = true;
 
-                break;
+                    break;
                 case 'close-profile-popup':
-                    state.profilePopup = false
-                break;
+                    state.profilePopup = false;
+                    break;
                 case 'goToLogInModal':
                     state.signIn = false;
                     state.emailError = false;
@@ -127,7 +118,7 @@ export const rootSlice = createSlice({
                     state.createPassword = '';
                     state.confirmPassword = '';
                     state.logIn = true;
-                break;
+                    break;
                 case 'goToSignInModal':
                     state.logIn = false;
                     state.emailError = false;
@@ -137,39 +128,32 @@ export const rootSlice = createSlice({
                     state.confirmPassword = '';
                     state.signIn = true;
 
-                break;
+                    break;
                 // case 'create-password-error':
 
                 // break;
                 // case 'confirm-password-error':
                 // break;
-
-
-
-
-
             }
-
-
         },
         checkPasswordError: (state, action) => {
             switch (action.payload) {
                 case 'create-password-error':
                     state.createPasswordError = true;
 
-                break;
+                    break;
                 case 'confirm-password-error':
                     state.confirmPasswordError = true;
 
-                break;
+                    break;
                 case 'clear-createPass-error':
                     state.createPasswordError = false;
 
-                break;
+                    break;
                 case 'clear-confirmPass-error':
                     state.confirmPasswordError = false;
 
-                break;
+                    break;
 
                 case 'clear-password-error':
                     state.createPasswordError = false;
@@ -177,57 +161,46 @@ export const rootSlice = createSlice({
                     state.createPassword = '';
                     state.confirmPassword = '';
 
-                break;
-                
-                
+                    break;
             }
         },
         enterEmail: (state, action) => {
             state.enterEmail = action.payload;
         },
         enterPassword: (state, action) => {
-            state.enterPassword = action.payload
+            state.enterPassword = action.payload;
         },
         createPassword: (state, action) => {
-            state.createPassword = action.payload
-
+            state.createPassword = action.payload;
         },
         confirmPassword: (state, action) => {
-            state.confirmPassword = action.payload
-
+            state.confirmPassword = action.payload;
         },
 
         creatorBrand: (state, action) => {
             switch (action.payload) {
                 case 'creator':
                     state.creatorPage = true;
-                    
-                break;
+
+                    break;
                 case 'brand':
                     state.brandPage = true;
-                break
+                    break;
             }
-
         },
 
         deleteModalState: (state, action) => {
-
             switch (action.payload) {
                 case 'open-delete-modal':
-                    state.deleteModal = true
-                break;
+                    state.deleteModal = true;
+                    break;
                 case 'close-delete-modal':
-                    state.deleteModal = false
-                break;
+                    state.deleteModal = false;
+                    break;
             }
-            
         }
-
-
-
-
     }
-})
+});
 
 export const { popup, enterEmail, enterPassword, createPassword, confirmPassword, creatorBrand, checkPasswordError, deleteModalState } = rootSlice.actions;
 export default rootSlice.reducer;

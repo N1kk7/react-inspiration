@@ -1,9 +1,9 @@
 @media screen and (max-width: 768px) {
-    .getInfo{
+    .getInfo {
         .modal-wrapper {
-          height: -webkit-fill-available;
-          width: -webkit-fill-available;
-          padding: 113px 8px;
+            height: -webkit-fill-available;
+            width: -webkit-fill-available;
+            padding: 113px 8px;
 
             .questionTop {
                 padding-top: 5px;
@@ -11,31 +11,32 @@
                 padding-right: 10px;
                 text-align: center;
 
-            //   padding: 0;
+                //   padding: 0;
             }
             .textArea {
-              textarea{
-                width: clamp(250px, 80vw, 680px);
-              }
+                textarea {
+                    width: clamp(250px, 80vw, 680px);
+                    box-shadow: 2px 2px 5px var(--border-color);
+                }
             }
             .listQuestion {
                 position: relative;
                 bottom: 4px;
-              h5{
-                padding-left: 12px;
-              }
+                h5 {
+                    padding-left: 12px;
+                }
             }
             .answerList {
                 position: relative;
                 bottom: 6px;
-                fieldset{
+                fieldset {
                     position: relative;
                     right: 2px;
                 }
             }
-            .defaultBtn{
-              margin: 32px 3vw;
-              width: -webkit-fill-available;
+            .defaultBtn {
+                margin: 32px 3vw;
+                width: -webkit-fill-available;
             }
         }
     }

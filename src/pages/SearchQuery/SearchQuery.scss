@@ -1,39 +1,38 @@
-.searchPage{
+.searchPage {
     .search-page-wrapper {
-      position: relative;
-      margin-bottom: 70px;
-      .searchTitle {
-        padding: 68px 0 50px;
-        display: flex;
-        flex-direction: column;
-        .title{
-          margin-bottom: 20px;
-            h2{
-                margin: 0;
-                color: var(--main-text-color);
-                text-align: center;
-                font-family: var(--font-inter);
-                font-size: 50px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                text-transform: uppercase;
+        position: relative;
+        margin-bottom: 70px;
+        .searchTitle {
+            padding: 68px 0 50px;
+            display: flex;
+            flex-direction: column;
+            .title {
+                margin-bottom: 20px;
+                h2 {
+                    margin: 0;
+                    color: var(--main-text-color);
+                    text-align: center;
+                    font-family: var(--font-inter);
+                    font-size: 50px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    text-transform: uppercase;
+                }
+            }
+            .description {
+                span {
+                    color: var(--main-text-color);
+                    text-align: center;
+                    font-family: var(--font-inter);
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 40px; /* 200% */
+                    opacity: 0.6;
+                }
             }
         }
-        .description {
-          span{
-            color: var(--main-text-color);
-            text-align: center;
-            font-family: var(--font-inter);
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 40px; /* 200% */
-            opacity: 0.6;
-          }
-        }
-
-      }
     }
 }
-@import './MediaSearchQuery.scss'
+@import './MediaSearchQuery.scss';

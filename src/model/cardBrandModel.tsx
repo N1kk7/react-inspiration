@@ -1,4 +1,4 @@
 export interface IBrandThumb {
-    id: number
-    img: string
+    id: number;
+    img: string;
 }

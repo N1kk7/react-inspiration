@@ -1,98 +1,97 @@
-.saveCollectionModal{
-    .modal-wrapper{
+.saveCollectionModal {
+    .modal-wrapper {
         width: 671px !important;
         .modalTitle {
-          padding-top: 100px !important;
+            padding-top: 100px !important;
         }
         .collectionWrapper {
-          width: 642px;
-          height: 110px;
-          background-color: var(--thumb-border-color);
-          border-radius: 20px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0 15px;
-          .collectionImages {
-            height: inherit;
-            .images{
-                position: relative;
+            width: 642px;
+            height: 110px;
+            background-color: var(--thumb-border-color);
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            .collectionImages {
                 height: inherit;
-                .image{
-                    width: 46px;
-                    height: 80px;
-                    border-radius: 4px;
-                    background-color: #A5A5A5;
-                    display: inline-block;
+                .images {
+                    position: relative;
+                    height: inherit;
+                    .image {
+                        width: 46px;
+                        height: 80px;
+                        border-radius: 4px;
+                        background-color: #a5a5a5;
+                        display: inline-block;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(0%, -50%);
+                        left: 0;
+                    }
+                }
+                .collectionTitle {
+                    margin-left: 100px;
+                    text-align: start;
                     position: absolute;
                     top: 50%;
-                    transform: translate(0%, -50%);
-                    left: 0;
+                    h5 {
+                        color: var(--main-text-color);
+                        font-family: var(--font-inter);
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        margin: 0;
+                    }
+                    span {
+                        top: 6px;
+                        position: relative;
+                        color: var(--grey);
+                        font-family: var(--font-inter);
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
                 }
             }
-            .collectionTitle {
-              margin-left: 100px;
-              text-align: start;
-              position: absolute;
-              top: 50%;
-              h5{
-                color: var(--main-text-color);
-                font-family: var(--font-inter);
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
-                margin: 0;
-              }
-              span{
-                top: 6px;
-                position: relative;
-                color: var(--grey);
-                font-family: var(--font-inter);
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-              }
+            .collectionBtn {
+                display: flex;
+                .btn {
+                    margin: 0 9px;
+                    color: var(--grey);
+                    text-align: right;
+                    font-family: var(--font-inter);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    cursor: pointer;
+                }
+                .deleteBtn {
+                    color: red;
+                }
             }
-          } 
-          .collectionBtn {
-            display: flex;
-            .btn{
-                margin: 0 9px;
-                color: var(--grey);
-                text-align: right;
-                font-family: var(--font-inter);
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                cursor: pointer;
-            }
-            .deleteBtn {
-              color: red;
-            }
-          }
         }
         .buttonWrapper {
-          display: flex;
-          justify-content: space-between;
-          margin-top: 50px;
-          .createNew {
-            .defaultBtn{
-                width: 213px;
-                background-color: transparent;
-                border: 1px solid var(--border-color);
-                color: var(--main-text-color);
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            .createNew {
+                .defaultBtn {
+                    width: 213px;
+                    background-color: transparent;
+                    border: 1px solid var(--border-color);
+                    color: var(--main-text-color);
+                }
             }
-          }
-          .done {
-            text-align: end;
-            .defaultBtn{
-                width: 84px;
+            .done {
+                text-align: end;
+                .defaultBtn {
+                    width: 84px;
+                }
             }
-          }
         }
-        
     }
 }

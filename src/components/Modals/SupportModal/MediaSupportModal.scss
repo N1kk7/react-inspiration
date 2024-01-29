@@ -1,24 +1,24 @@
 @media screen and (max-width: 768px) {
-    .modal.supportModal{
+    .modal.supportModal {
         .supportWrapper {
-          .modalTitle{
-            padding: 29px 0 29px;
-          }
-
-          .inputWrapper {
-            width: 100% !important;
-            input{
-                width: -webkit-fill-available;
+            .modalTitle {
+                padding: 29px 0 29px;
             }
-          }
 
-          .describeRequest {
-            #description{
-              height: 70px;
-              border-radius: 15px;
-              margin-bottom: 30px;
+            .inputWrapper {
+                width: 100% !important;
+                input {
+                    width: -webkit-fill-available;
+                }
             }
-          }
+
+            .describeRequest {
+                #description {
+                    height: 70px;
+                    border-radius: 15px;
+                    margin-bottom: 30px;
+                }
+            }
         }
     }
 }

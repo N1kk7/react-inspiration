@@ -7,23 +7,22 @@
             align-items: center;
             .creatorAvatar {
                 // margin-bottom: 10px;
-                img{
+                img {
                     width: 150px; //60vw;
-
                 }
             }
             .creatorDescription {
                 margin: 0;
                 padding-bottom: 29px;
-                border-bottom: 1px solid #EBEBED;
-                .creatorName{
+                border-bottom: 1px solid #ebebed;
+                .creatorName {
                     justify-content: center;
                     margin-bottom: 10px;
-                    h2{
+                    h2 {
                         font-size: 20px;
                         margin: 25px 0 0;
                     }
-                    .defaultBtn{
+                    .defaultBtn {
                         display: none;
                     }
                 }
@@ -34,27 +33,27 @@
                     margin-bottom: 0;
 
                     .item {
-                    padding: 10px 0;
-                    width: fit-content;
-                    display: inline-flex;
-                    text-align: center;
-                    justify-content: center;
-                    align-items: baseline;
-                    margin: 0 11px;
+                        padding: 10px 0;
+                        width: fit-content;
+                        display: inline-flex;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: baseline;
+                        margin: 0 11px;
 
-                    img{
-                        width: 14px;
-                    }
-                    span{
-                        padding-left: 10px;
-                        font-size: 14px;
-                    }
+                        img {
+                            width: 14px;
+                        }
+                        span {
+                            padding-left: 10px;
+                            font-size: 14px;
+                        }
                     }
                     .location {
-                    margin: 0 10px 0 0;
+                        margin: 0 10px 0 0;
                     }
-                    .media{
-                    margin: 0 5px 0 0px;
+                    .media {
+                        margin: 0 5px 0 0px;
                     }
                 }
                 .creatorMessage {
@@ -63,8 +62,8 @@
                     margin: 30px 0 31px;
                     letter-spacing: 0.32px;
 
-                    p{
-                    font-size: 16px;
+                    p {
+                        font-size: 16px;
                     }
                 }
                 .socials {
@@ -75,8 +74,8 @@
                         margin: 0 17px;
                     }
 
-                    .defaultBtn{
-                    display: none;
+                    .defaultBtn {
+                        display: none;
                     }
                 }
                 .mobileBtn {
@@ -85,29 +84,25 @@
                     align-items: center;
                     position: relative;
                     .uploadBtn {
-                        .defaultBtn{
+                        .defaultBtn {
                             margin: 0;
                         }
                     }
                     .editBtn {
-                    .defaultBtn{
-                        margin: 0;
-                        background-color: transparent;
-                        color: var(--main-text-color);
-                        border: 1px solid var(--border-color);
-                    }
+                        .defaultBtn {
+                            margin: 0;
+                            background-color: transparent;
+                            color: var(--main-text-color);
+                            border: 1px solid var(--border-color);
+                        }
                     }
                 }
-
-
             }
 
-        // }.
-
+            // }.
         }
-        .swiper{
+        .swiper {
             display: none;
         }
-
     }
 }

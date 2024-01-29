@@ -1,16 +1,8 @@
-import React from "react";
-import './CreatorBrandFooter.scss'
-
+import React from 'react';
+import './CreatorBrandFooter.scss';
 
 const CreatorBrandFooter = () => {
-    
+    return <div className='creator-brand-footer'></div>;
+};
 
-
-    return (
-        <div className="creator-brand-footer">
-            
-        </div>
-    )
-}
-
-export default CreatorBrandFooter
+export default CreatorBrandFooter;

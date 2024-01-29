@@ -1,4 +1,4 @@
-.modal{
+.modal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@
     z-index: 2;
     top: 0;
 
-    .modal-wrapper{
+    .modal-wrapper {
         // width: 397px;
         width: 428px;
         height: 651px;
@@ -21,13 +21,13 @@
         position: relative;
         padding: 0 105px;
 
-        .backBtn{
+        .backBtn {
             position: absolute;
 
             top: 2vh;
             left: 3vh;
             cursor: pointer;
-            span{
+            span {
                 padding-left: 10px;
                 color: var(--grey);
                 font-family: var(--font-inter);
@@ -37,15 +37,15 @@
                 line-height: normal;
             }
         }
-        .closeBtn{
+        .closeBtn {
             position: absolute;
             top: 1.9vh;
             right: 2.3vh;
             cursor: pointer;
         }
-        .modalTitle{
+        .modalTitle {
             padding: 56px 0 49px;
-            h2{
+            h2 {
                 color: var(--main-text-color);
                 font-family: var(--font-inter);
                 font-size: 52.148px;
@@ -57,7 +57,7 @@
         }
         .modalTitleDescription {
             padding-bottom: 30px;
-            span{
+            span {
                 color: var(--grey);
                 text-align: center;
                 font-family: var(--font-inter);
@@ -66,10 +66,9 @@
                 font-weight: 400;
                 line-height: 15px; /* 107.143% */
             }
-
         }
-        .modalDescription{
-            span{
+        .modalDescription {
+            span {
                 color: var(--grey);
                 text-align: center;
                 font-family: var(--font-inter);
@@ -78,7 +77,7 @@
                 font-weight: 400;
                 line-height: 15px; /* 107.143% */
             }
-            .descriptionLink{
+            .descriptionLink {
                 display: inline-block;
                 color: var(--main-text-color);
                 text-align: center;
@@ -89,15 +88,12 @@
                 line-height: 15px;
                 margin-left: 5px;
                 border-bottom: 1px solid var(--main-text-color);
-                cursor: pointer
+                cursor: pointer;
             }
         }
-
     }
 }
 
-
-
 @import './SelectPlanModal/SelectPlanModal.scss';
 @import './SupportModal/SupportModal.scss';
-@import './MediaAllModal.scss'
+@import './MediaAllModal.scss';

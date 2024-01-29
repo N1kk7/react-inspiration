@@ -1,15 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
-
+import { createSlice } from '@reduxjs/toolkit';
 
 export const logInSlice = createSlice({
     name: 'logInSLice',
     initialState: {
         guestStatus: true,
         userPro: false,
-        userFree: false,
-     
-
-
+        userFree: false
     },
     reducers: {
         userLogIn: (state, action) => {
@@ -18,22 +14,21 @@ export const logInSlice = createSlice({
                     state.guestStatus = true;
                     state.userPro = false;
                     state.userFree = false;
-                break;
+                    break;
                 case 'userPro':
                     state.guestStatus = false;
                     state.userPro = true;
                     state.userFree = false;
-                break;
+                    break;
                 case 'userFree':
-                    
                     state.guestStatus = false;
                     state.userPro = false;
                     state.userFree = true;
-                break;
+                    break;
             }
         }
     }
-})
+});
 
 export const { userLogIn } = logInSlice.actions;
 export default logInSlice.reducer;

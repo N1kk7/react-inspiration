@@ -1,28 +1,22 @@
-import React from "react";
-import google from '../../assets/images/google.svg'
+import React from 'react';
+import google from '../../assets/images/google.svg';
 
-
-import './Shared.scss'
+import './Shared.scss';
+import { Link } from 'react-router-dom';
 
 const ContGoogle = () => {
-
     return (
-
         <>
-            <div className="contGoogle">
-                <div className="googleImg">
-                    <img src={google} alt="google" />
+            <Link to='#' className='contGoogle'>
+                <div className='googleImg'>
+                    <img src={google} alt='google' />
                 </div>
-                <div className="btnDescription">
-                    <span>
-                        Continue with Google
-                    </span>
+                <div className='btnDescription'>
+                    <span>Continue with Google</span>
                 </div>
-
-            </div>
+            </Link>
         </>
-    )
+    );
+};
 
-}
-
-export default ContGoogle
+export default ContGoogle;

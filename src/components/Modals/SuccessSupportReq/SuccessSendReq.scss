@@ -1,5 +1,5 @@
-.successSupportReq{
-    .successWrapper{
+.successSupportReq {
+    .successWrapper {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -9,13 +9,7 @@
         border-radius: 10px;
         background: var(--white);
         box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
-        // .image{
-        //     img{
-        //         width: 43px;
-        //         height: 43px;
-        //     }
 
-        // }
         .description {
             color: var(--main-text-color);
             font-family: var(--font-inter);
@@ -24,7 +18,5 @@
             font-weight: 500;
             line-height: 51.358px; /* 256.791% */
         }
-
-
     }
 }

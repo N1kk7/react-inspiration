@@ -1,6 +1,6 @@
 export interface IThumb {
-    id: number
-    img: string
-    avatar: string
-    userName: string
+    id: number;
+    img: string;
+    avatar: string;
+    userName: string;
 }

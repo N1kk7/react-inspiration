@@ -1,47 +1,34 @@
-import { createSlice } from "@reduxjs/toolkit";
-
-
+import { createSlice } from '@reduxjs/toolkit';
 
 export const selectPlanSlice = createSlice({
-
     name: 'selectPlanSlice',
     initialState: {
         selectPlanModal: false,
         paymentDetailsPage: false,
         getUnlimAccessModal: false,
         proPlan: false,
-        freePlan: false,
-
+        freePlan: false
     },
     reducers: {
         selectPlan: (state, action) => {
-
             switch (action.payload) {
                 case 'open-select-plan':
                     state.selectPlanModal = true;
-                    document.body.style.overflow ='hidden';
+                    document.body.style.overflow = 'hidden';
 
-
-                break;
+                    break;
                 case 'close-select-plan':
                     state.selectPlanModal = false;
                     document.body.style.overflow = 'unset';
 
-
-
-                break;
+                    break;
                 case 'go-back':
                     state.selectPlanModal = false;
 
-
-
-                break;
-
-
+                    break;
             }
         },
         choicePlan: (state, action) => {
-
             if (action.payload === 'pro') {
                 state.proPlan = true;
                 state.freePlan = false;
@@ -56,33 +43,26 @@ export const selectPlanSlice = createSlice({
             switch (action.payload) {
                 case 'open-payment-details':
                     state.paymentDetailsPage = true;
-                    
-                break;
+
+                    break;
                 case 'close-payment-details':
                     state.paymentDetailsPage = false;
-                break;
+                    break;
                 // case 'go-to-select-plan':
-
             }
-            
         },
         getUnlimAccess: (state, action) => {
             switch (action.payload) {
                 case 'open-unlim-access':
                     state.getUnlimAccessModal = true;
-                break;
+                    break;
                 case 'close-unlim-access':
                     state.getUnlimAccessModal = false;
-                break;
+                    break;
             }
-        },
-
+        }
     }
-
-
-
-
-})
+});
 
 export const { selectPlan, choicePlan, paymentDetails, getUnlimAccess } = selectPlanSlice.actions;
 export default selectPlanSlice.reducer;

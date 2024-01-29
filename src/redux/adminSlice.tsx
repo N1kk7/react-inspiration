@@ -1,9 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
-
-
+import { createSlice } from '@reduxjs/toolkit';
 
 export const adminSlice = createSlice({
-
     name: 'adminSlice',
     initialState: {
         admin: false,
@@ -21,14 +18,14 @@ export const adminSlice = createSlice({
                 case 'open':
                     state.admin = true;
 
-                break;
+                    break;
                 case 'close':
                     state.admin = false;
-                break;
+                    break;
             }
-        },
+        }
     }
-})
+});
 
 export const { adminLogIn, adminLogOut, adminPage } = adminSlice.actions;
 export default adminSlice.reducer;
