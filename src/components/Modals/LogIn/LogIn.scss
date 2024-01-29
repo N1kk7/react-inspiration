@@ -1,7 +1,7 @@
-.modalDescription{
+.modalDescription {
     margin-bottom: 80px;
 
-    span{
+    span {
         color: var(--grey);
         text-align: center;
         font-family: var(--font-inter);
@@ -10,7 +10,7 @@
         font-weight: 400;
         line-height: 15px; /* 136.364% */
     }
-    a{
+    a {
         color: var(--main-text-color);
         font-family: var(--font-inter);
         font-size: 11px;
@@ -20,11 +20,10 @@
         margin-left: 5px;
         padding-bottom: 0;
         border-bottom: 1px solid var(--Main-dark);
-
     }
 }
-.login{
-    .defaultBtn{
+.login {
+    .defaultBtn {
         margin: 6px auto 28px;
     }
 }

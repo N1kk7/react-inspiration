@@ -1,8 +1,8 @@
-.deleteCollection{
+.deleteCollection {
     background-color: transparent !important;
     z-index: 2 !important;
     opacity: 0.95;
-    .modal-wrapper{
+    .modal-wrapper {
         width: 386px !important;
         height: 194px !important;
         text-align: start;
@@ -40,7 +40,7 @@
                 cursor: pointer;
             }
             .deleteBtn {
-              color: red;
+                color: red;
             }
         }
     }

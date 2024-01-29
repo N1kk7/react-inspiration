@@ -1,4 +1,4 @@
-.unlog-footer{
+.unlog-footer {
     padding: 22px 0 150px;
     position: relative;
 
@@ -36,7 +36,7 @@
             width: 100%;
             max-width: calc(100% - 38px);
         }
-        .choiceMethod{
+        .choiceMethod {
             width: 100%;
             margin: 20px 0 20px;
         }
@@ -45,6 +45,7 @@
             input {
                 width: 100%;
                 max-width: calc(100% - 38px);
+                box-shadow: 2px 2px 5px var(--border-color);
             }
         }
         .defaultBtn {
@@ -66,7 +67,7 @@
             font-weight: 400;
             line-height: 15px;
             max-width: 317px;
-            a{
+            a {
                 color: var(--main-text-color);
                 font-family: var(--font-inter);
                 font-size: 11px;
@@ -77,23 +78,20 @@
                 text-decoration: none;
             }
         }
-
-
     }
-
 }
 .unlog-brand-footer {
     display: flex;
     justify-content: center;
     margin: 80px 0;
-    .signUp{
-        .defaultBtn{
+    .signUp {
+        .defaultBtn {
             width: fit-content;
             margin: 0 20px 0 0;
         }
     }
-    .logIn{
-        .defaultBtn{
+    .logIn {
+        .defaultBtn {
             width: fit-content;
             border-radius: 50px;
             border: 1px solid var(--border-color);
@@ -102,7 +100,6 @@
             margin: 0;
         }
     }
-
 }
 
-@import './MediaUnlogFooter.scss'
+@import './MediaUnlogFooter.scss';

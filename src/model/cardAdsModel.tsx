@@ -1,4 +1,4 @@
 export interface IAdsThumb {
-    id: number
-    img: string
+    id: number;
+    img: string;
 }

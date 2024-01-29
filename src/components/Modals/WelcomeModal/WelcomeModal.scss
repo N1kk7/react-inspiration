@@ -1,149 +1,132 @@
-.welcomeModal{
+.welcomeModal {
     .modal-wrapper {
-      height: auto;
-      .modalTitle{
-        padding: 56px 0 0px;
-        h2{
-          margin-bottom: 31px;
+        height: auto;
+        padding-bottom: 70px;
+        .modalTitle {
+            padding: 56px 0 0px;
+            h2 {
+                margin-bottom: 31px;
+            }
         }
 
-      }
+        .nameWrapper {
+            display: flex;
+            justify-content: space-around;
+            text-align: start;
+            .nameTitle {
+                h5 {
+                    color: var(--main-dark);
+                    font-family: var(--font-inter);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin-bottom: 10px;
+                }
+            }
 
-      .nameWrapper {
-        display: flex;
-        justify-content: space-around;
-        text-align: start;
-        .name{
-          .errorMessage {
+            .nameInput {
+                input {
+                    display: inline-flex;
+                    padding: 13px 19px;
+                    align-items: center;
+                    gap: 10px;
+                    border-radius: 50px;
+                    border: 1px solid var(--Button-Stroke, #ebebed);
+                    background: #ffffff;
+                    box-shadow: 2px 2px 5px var(--border-color);
+                }
+                input::placeholder {
+                    color: var(--grey);
+                    font-family: var(--font-inter);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+            .last {
+                // padding-left: 6px;
+                position: relative;
+                right: 5px;
+            }
+        }
+        .companyWrapper {
+            text-align: start;
+            padding-bottom: 27px;
             position: relative;
-            padding: 10px 10px 0 0;
-            top: 5px;
-            // span{
-
-            // }
-          }
-        }
-        .nameTitle{
-          // padding-left: px;
-            h5{
-                color: var(--main-dark);
-                font-family: var(--font-inter);
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
-                margin-bottom: 10px;
-
-            }
-
-        }
-
-        .nameInput {
-          input{
-            display: inline-flex;
-            padding: 13px 19px;
-            align-items: center;
-            gap: 10px;
-            border-radius: 50px;
-            border: 1px solid var(--Button-Stroke, #EBEBED);
-            background: #ffffff;
-          }
-          input::placeholder{
-            color: var(--grey);
-            font-family: var(--font-inter);
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-          }
-        }
-        .last{
-          // padding-left: 6px;
-          position: relative;
-          right: 5px;
-        }
-      }
-      .companyWrapper{
-        text-align: start;
-        padding-bottom: 27px;
-        position: relative;
-        .companyTitle{
-          padding-left: 14px;
-            h5{
-                color: var(--Main-dark, #141414);
-                font-family: Inter;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
-                margin: 20px 0 10px;
-
-            }
-        }
-        .companyInput{
-            position: relative;
-            cursor: pointer !important;
-            text-align: center;
-
-            .companyTypeInput{
-                display: inline-flex;
-                height: 19px;
-                width: 364px;
-                padding: 11px 19px;
-                align-items: center;
-                gap: 268px;
-                flex-shrink: 0;
-                border-radius: 50px;
-                border: 1px solid var(--Button-Stroke, #EBEBED);
-            }
-            img{
-                position: absolute;
-                right: 7%;
-                top: 56%;
-                transform: translate(-50%, -50%);
-            }
-            input::placeholder{
-              color: var(--main-text-color);
-              font-family: var(--font-inter);
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: normal;
-            }
-        }
-        .errorMessage{
-          text-align: center;
-          position: relative;
-          top: 15px;
-        }
-        .companyType {
-            position: absolute;
-            bottom: 5vh;
-            right: 0vw;
-            background-color: var(--white);
-            padding: 10px 40px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
-            ul{
-                padding-left: 0;
-
-                li{
-                    text-align: start !important;
-                    list-style-type: none;
-                    padding: 11px 0;
-                    color: var(--main-text-color);
-                    text-align: center;
+            .companyTitle {
+                padding-left: 14px;
+                h5 {
+                    color: var(--Main-dark, #141414);
                     font-family: Inter;
                     font-size: 14px;
                     font-style: normal;
-                    font-weight: 500;
+                    font-weight: 600;
                     line-height: normal;
-                    cursor: pointer;
+                    margin: 20px 0 10px;
+                }
+            }
+            .companyInput {
+                position: relative;
+                cursor: pointer !important;
+                text-align: center;
+
+                .companyTypeInput {
+                    display: inline-flex;
+                    height: 19px;
+                    width: 364px;
+                    padding: 11px 19px;
+                    align-items: center;
+                    gap: 268px;
+                    flex-shrink: 0;
+                    border-radius: 50px;
+                    border: 1px solid var(--Button-Stroke, #ebebed);
+                    box-shadow: 2px 2px 5px var(--border-color);
+                }
+                img {
+                    position: absolute;
+                    right: 7%;
+                    top: 56%;
+                    transform: translate(-50%, -50%);
+                }
+                input::placeholder {
+                    color: var(--main-text-color);
+                    font-family: var(--font-inter);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+            .companyType {
+                position: absolute;
+                bottom: 5vh;
+                right: 0vw;
+                background-color: var(--white);
+                padding: 10px 40px;
+                border-radius: 15px;
+                box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+                ul {
+                    padding-left: 0;
+
+                    li {
+                        text-align: start !important;
+                        list-style-type: none;
+                        padding: 11px 0;
+                        color: var(--main-text-color);
+                        text-align: center;
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        cursor: pointer;
+                    }
                 }
             }
         }
-      }
     }
 }
 
-@import './MediaWelcomeModal.scss'
+@import './MediaWelcomeModal.scss';

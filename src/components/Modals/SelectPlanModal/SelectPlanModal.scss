@@ -4,146 +4,140 @@
         width: 487px;
         height: 605px;
         .modalTitleDescription {
-          padding-bottom: 47px;
+            padding-bottom: 47px;
         }
-      .modalTitle {
-        padding: 56px 0 2px;
+        .modalTitle {
+            padding: 56px 0 2px;
 
-        h2{
-            margin-bottom: 16px;
-        }
-      }
-      .planWrapper {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 5px;
-        .plan{
-            position: relative;
-            width: 180px;
-            min-height: 259px;
-            flex-shrink: 0;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-            padding: 0 21px;
-            cursor: pointer;
-
-            & + .plan {
-                margin-left: 15px;
+            h2 {
+                margin-bottom: 16px;
             }
-
-            .planType {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              .type{
-                h2{
-                    color: var(--main-dark);
-                    font-family: Inter;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: normal;
-                    margin: 19px 0 11px;
-                    padding-left: 4px;
-                }
-
-              }
-              .coast{
-                color: var(--main-dark);
-                text-align: right;
-                font-family: Inter;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
+        }
+        .planWrapper {
+            display: flex;
+            justify-content: center;
+            margin: 0 5px;
+            .plan {
                 position: relative;
-                right: 4px;
-                top: 4px;
-                span{
-                    position: absolute;
-                    color: var(--grey);
-                    text-align: right;
-                    font-family: var(--font-inter);
-                    font-size: 9px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    bottom: -13px;
-                    width: max-content;
-                    right: -1px;
+                width: 180px;
+                min-height: 259px;
+                flex-shrink: 0;
+                border-radius: 10px;
+                border: 1px solid var(--border-color);
+                padding: 0 21px;
+                cursor: pointer;
 
+                & + .plan {
+                    margin-left: 15px;
                 }
-              }
-            }
-            .list{
-                text-align: start;
-                margin-bottom: 100px;
-                ul{
-                    padding-left: 18.5px;
-                    li{
-                        color: var(--grey);
-                        font-family: var(--font-inter);
+
+                .planType {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .type {
+                        h2 {
+                            color: var(--main-dark);
+                            font-family: Inter;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                            margin: 19px 0 11px;
+                            padding-left: 4px;
+                        }
+                    }
+                    .coast {
+                        color: var(--main-dark);
+                        text-align: right;
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        position: relative;
+                        right: 4px;
+                        top: 4px;
+                        span {
+                            position: absolute;
+                            color: var(--grey);
+                            text-align: right;
+                            font-family: var(--font-inter);
+                            font-size: 9px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            bottom: -13px;
+                            width: max-content;
+                            right: -1px;
+                        }
+                    }
+                }
+                .list {
+                    text-align: start;
+                    margin-bottom: 100px;
+                    ul {
+                        padding-left: 18.5px;
+                        li {
+                            color: var(--grey);
+                            font-family: var(--font-inter);
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            padding: 5px 0;
+                        }
+                    }
+                }
+                .planBtn {
+                    position: absolute;
+                    width: inherit;
+                    bottom: -10px;
+                    .defaultBtn {
+                        width: unset;
+                        margin: 4px 4px 30px;
+                        padding: 7px;
                         font-size: 14px;
                         font-style: normal;
-                        font-weight: 400;
+                        font-weight: 500;
                         line-height: normal;
-                        padding: 5px 0;
                     }
                 }
             }
-            .planBtn {
-                position: absolute;
-                width: inherit;
-                bottom: -10px;
-              .defaultBtn{
-                width: unset;
-                margin: 4px 4px 30px;
-                padding: 7px;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-              }
+            .free {
+                height: 200px;
             }
-
-
-        }
-        .free{
-            height: 200px;
-        }
-        .pro{
-            height: 275px;
-        }
-        .activePlan{
-            background-color: var(--main-text-color);
-            .planType{
-                .type{
-                    h2{
+            .pro {
+                height: 275px;
+            }
+            .activePlan {
+                background-color: var(--main-text-color);
+                .planType {
+                    .type {
+                        h2 {
+                            color: var(--white);
+                        }
+                    }
+                    .coast {
                         color: var(--white);
                     }
                 }
-                .coast{
-                    color: var(--white);
-
+                .list {
+                    ::marker {
+                        color: var(--white);
+                    }
                 }
-            }
-            .list{
-                ::marker{
-                    color: var(--white);
-
-                }
-            }
-            .planBtn{
-                .defaultBtn{
-                    background-color: var(--white);
-                    color: var(--main-dark);
-                }
-                .defaultBtn:hover{
-                    background-color: var(--thumb-background-color);
+                .planBtn {
+                    .defaultBtn {
+                        background-color: var(--white);
+                        color: var(--main-dark);
+                    }
+                    .defaultBtn:hover {
+                        background-color: var(--thumb-background-color);
+                    }
                 }
             }
         }
-      }
     }
 }
 
@@ -153,146 +147,140 @@
         width: 638px;
         height: 605px;
         .modalTitleDescription {
-          padding-bottom: 47px;
+            padding-bottom: 47px;
         }
-      .modalTitle {
-        padding: 56px 0 2px;
+        .modalTitle {
+            padding: 56px 0 2px;
 
-        h2{
-            margin-bottom: 16px;
-        }
-      }
-      .planWrapper {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 5px;
-        .plan{
-            position: relative;
-            width: 180px;
-            min-height: 259px;
-            flex-shrink: 0;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-            padding: 0 21px;
-            cursor: pointer;
-
-            & + .plan {
-                margin-left: 15px;
+            h2 {
+                margin-bottom: 16px;
             }
-
-            .planType {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              .type{
-                h2{
-                    color: var(--main-dark);
-                    font-family: Inter;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: normal;
-                    margin: 19px 0 11px;
-                    padding-left: 4px;
-                }
-
-              }
-              .coast{
-                color: var(--main-dark);
-                text-align: right;
-                font-family: Inter;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
+        }
+        .planWrapper {
+            display: flex;
+            justify-content: center;
+            margin: 0 5px;
+            .plan {
                 position: relative;
-                right: 4px;
-                top: 4px;
-                span{
-                    position: absolute;
-                    color: var(--grey);
-                    text-align: right;
-                    font-family: var(--font-inter);
-                    font-size: 9px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    bottom: -13px;
-                    width: max-content;
-                    right: -1px;
+                width: 180px;
+                min-height: 259px;
+                flex-shrink: 0;
+                border-radius: 10px;
+                border: 1px solid var(--border-color);
+                padding: 0 21px;
+                cursor: pointer;
 
+                & + .plan {
+                    margin-left: 15px;
                 }
-              }
-            }
-            .list{
-                text-align: start;
-                margin-bottom: 100px;
-                ul{
-                    padding-left: 18.5px;
-                    li{
-                        color: var(--grey);
-                        font-family: var(--font-inter);
+
+                .planType {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .type {
+                        h2 {
+                            color: var(--main-dark);
+                            font-family: Inter;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                            margin: 19px 0 11px;
+                            padding-left: 4px;
+                        }
+                    }
+                    .coast {
+                        color: var(--main-dark);
+                        text-align: right;
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        position: relative;
+                        right: 4px;
+                        top: 4px;
+                        span {
+                            position: absolute;
+                            color: var(--grey);
+                            text-align: right;
+                            font-family: var(--font-inter);
+                            font-size: 9px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            bottom: -13px;
+                            width: max-content;
+                            right: -1px;
+                        }
+                    }
+                }
+                .list {
+                    text-align: start;
+                    margin-bottom: 100px;
+                    ul {
+                        padding-left: 18.5px;
+                        li {
+                            color: var(--grey);
+                            font-family: var(--font-inter);
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            padding: 5px 0;
+                        }
+                    }
+                }
+                .planBtn {
+                    position: absolute;
+                    width: inherit;
+                    bottom: -10px;
+                    .defaultBtn {
+                        width: unset;
+                        margin: 4px 4px 30px;
+                        padding: 7px;
                         font-size: 14px;
                         font-style: normal;
-                        font-weight: 400;
+                        font-weight: 500;
                         line-height: normal;
-                        padding: 5px 0;
                     }
                 }
             }
-            .planBtn {
-                position: absolute;
-                width: inherit;
-                bottom: -10px;
-              .defaultBtn{
-                width: unset;
-                margin: 4px 4px 30px;
-                padding: 7px;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-              }
+            .free {
+                height: 200px;
             }
-
-
-        }
-        .free{
-            height: 200px;
-        }
-        .pro{
-            height: 275px;
-        }
-        .activePlan{
-            background-color: var(--main-text-color);
-            .planType{
-                .type{
-                    h2{
+            .pro {
+                height: 275px;
+            }
+            .activePlan {
+                background-color: var(--main-text-color);
+                .planType {
+                    .type {
+                        h2 {
+                            color: var(--white);
+                        }
+                    }
+                    .coast {
                         color: var(--white);
                     }
                 }
-                .coast{
-                    color: var(--white);
-
+                .list {
+                    ::marker {
+                        color: var(--white);
+                    }
                 }
-            }
-            .list{
-                ::marker{
-                    color: var(--white);
-
-                }
-            }
-            .planBtn{
-                .defaultBtn{
-                    background-color: var(--white);
-                    color: var(--main-dark);
-                }
-                .defaultBtn:hover{
-                    background-color: var(--thumb-background-color);
+                .planBtn {
+                    .defaultBtn {
+                        background-color: var(--white);
+                        color: var(--main-dark);
+                    }
+                    .defaultBtn:hover {
+                        background-color: var(--thumb-background-color);
+                    }
                 }
             }
         }
-      }
     }
 }
 
@@ -302,147 +290,142 @@
         width: 638px;
         height: 605px;
         .modalTitleDescription {
-          padding-bottom: 47px;
+            padding-bottom: 47px;
         }
-      .modalTitle {
-        padding: 56px 0 2px;
+        .modalTitle {
+            padding: 56px 0 2px;
 
-        h2{
-            margin-bottom: 16px;
-        }
-      }
-      .planWrapper {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 85px;
-        .plan{
-            position: relative;
-            width: 180px;
-            min-height: 259px;
-            flex-shrink: 0;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-            padding: 0 21px;
-            cursor: pointer;
-
-            & + .plan {
-                margin-left: 15px;
+            h2 {
+                margin-bottom: 16px;
             }
-
-            .planType {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              .type{
-                h2{
-                    color: var(--main-dark);
-                    font-family: Inter;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: normal;
-                    margin: 19px 0 11px;
-                    padding-left: 4px;
-                }
-
-              }
-              .coast{
-                color: var(--main-dark);
-                text-align: right;
-                font-family: Inter;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
+        }
+        .planWrapper {
+            display: flex;
+            justify-content: center;
+            margin: 0 85px;
+            .plan {
                 position: relative;
-                right: 4px;
-                top: 4px;
-                span{
-                    position: absolute;
-                    color: var(--grey);
-                    text-align: right;
-                    font-family: var(--font-inter);
-                    font-size: 9px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    bottom: -13px;
-                    width: max-content;
-                    right: -1px;
+                width: 180px;
+                min-height: 259px;
+                flex-shrink: 0;
+                border-radius: 10px;
+                border: 1px solid var(--border-color);
+                padding: 0 21px;
+                cursor: pointer;
 
+                & + .plan {
+                    margin-left: 15px;
                 }
-              }
-            }
-            .list{
-                text-align: start;
-                margin-bottom: 100px;
-                ul{
-                    padding-left: 18.5px;
-                    li{
-                        color: var(--grey);
-                        font-family: var(--font-inter);
+
+                .planType {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .type {
+                        h2 {
+                            color: var(--main-dark);
+                            font-family: Inter;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                            margin: 19px 0 11px;
+                            padding-left: 4px;
+                        }
+                    }
+                    .coast {
+                        color: var(--main-dark);
+                        text-align: right;
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        position: relative;
+                        right: 4px;
+                        top: 4px;
+                        span {
+                            position: absolute;
+                            color: var(--grey);
+                            text-align: right;
+                            font-family: var(--font-inter);
+                            font-size: 9px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            bottom: -13px;
+                            width: max-content;
+                            right: -1px;
+                        }
+                    }
+                }
+                .list {
+                    text-align: start;
+                    margin-bottom: 100px;
+                    ul {
+                        padding-left: 18.5px;
+                        li {
+                            color: var(--grey);
+                            font-family: var(--font-inter);
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            padding: 5px 0;
+                        }
+                    }
+                }
+                .planBtn {
+                    position: absolute;
+                    width: inherit;
+                    bottom: -10px;
+                    .defaultBtn {
+                        width: unset;
+                        margin: 4px 4px 30px;
+                        padding: 7px;
                         font-size: 14px;
                         font-style: normal;
-                        font-weight: 400;
+                        font-weight: 500;
                         line-height: normal;
-                        padding: 5px 0;
                     }
                 }
             }
-            .planBtn {
-                position: absolute;
-                width: inherit;
-                bottom: -10px;
-              .defaultBtn{
-                width: unset;
-                margin: 4px 4px 30px;
-                padding: 7px;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-              }
+            .free {
+                height: 200px;
+                cursor: initial;
             }
-
-
-        }
-        .free{
-            height: 200px;
-        }
-        .pro{
-            height: 275px;
-        }
-        .activePlan{
-            background-color: var(--main-text-color);
-            .planType{
-                .type{
-                    h2{
+            .pro {
+                height: 275px;
+            }
+            .activePlan {
+                background-color: var(--main-text-color);
+                .planType {
+                    .type {
+                        h2 {
+                            color: var(--white);
+                        }
+                    }
+                    .coast {
                         color: var(--white);
                     }
                 }
-                .coast{
-                    color: var(--white);
-
+                .list {
+                    ::marker {
+                        color: var(--white);
+                    }
                 }
-            }
-            .list{
-                ::marker{
-                    color: var(--white);
-
-                }
-            }
-            .planBtn{
-                .defaultBtn{
-                    background-color: var(--white);
-                    color: var(--main-dark);
-                }
-                .defaultBtn:hover{
-                    background-color: var(--thumb-background-color);
+                .planBtn {
+                    .defaultBtn {
+                        background-color: var(--white);
+                        color: var(--main-dark);
+                    }
+                    .defaultBtn:hover {
+                        background-color: var(--thumb-background-color);
+                    }
                 }
             }
         }
-      }
     }
 }
 
-@import './MediaSelectPlanModal.scss'
+@import './MediaSelectPlanModal.scss';

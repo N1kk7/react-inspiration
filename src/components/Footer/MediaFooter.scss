@@ -1,47 +1,46 @@
 @media screen and (max-width: 768px) {
-    .App-footer{
-        .container{
-          .footer-wrapper {
-            position: relative;
-            &:before {
-              content: '';
-              position: absolute;
-              width: 100vw;
-              height: 1px;
-              left: 50%;
-              transform: translateX(-50%);
-              top: 0;
-              background-color: #EBEBED;
+    .App-footer {
+        .container {
+            .footer-wrapper {
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 100vw;
+                    height: 1px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 0;
+                    background-color: #ebebed;
+                }
             }
-          }
 
             .top-footer {
                 justify-content: center;
                 .logoWrapper {
-                  .logo-description {
-                    display: none;
-                  }
+                    .logo-description {
+                        display: none;
+                    }
                 }
-              .listWrapper {
-                display: none;
-              }
+                .listWrapper {
+                    display: none;
+                }
             }
             .bottom-footer {
-              justify-content: center;
-              margin-top: 0;
+                justify-content: center;
+                margin-top: 0;
 
-              .buttonWrapper {
-                display: flex;
-                justify-content: space-between;
-                .vLine {
-                  display: none;
+                .buttonWrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    .vLine {
+                        display: none;
+                    }
                 }
-              }
-              .left-buttonWrapper {
-                display: none;
-              }
+                .left-buttonWrapper {
+                    display: none;
+                }
             }
         }
     }
-
 }

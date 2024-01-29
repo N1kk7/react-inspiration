@@ -1,14 +1,13 @@
-.getInfo{
+.getInfo {
     .modal-wrapper {
         height: 589px;
-        .questionTop{
+        .questionTop {
             padding-top: 76px;
             padding-left: 15px;
-
         }
         .modalQuestion {
             text-align: start;
-            h5{
+            h5 {
                 color: var(--main-text-color);
                 font-family: var(--font-inter);
                 font-size: 14px;
@@ -18,14 +17,14 @@
                 margin-bottom: 10px;
             }
         }
-        .listQuestion{
-            h5{
+        .listQuestion {
+            h5 {
                 padding-left: 15px;
                 margin: 20px 0 1px;
             }
         }
         .textArea {
-            textarea{
+            textarea {
                 margin: 0 auto;
                 display: flex;
                 width: 360px;
@@ -38,26 +37,27 @@
                 resize: none;
                 border: 1px solid var(--border-color);
                 background: var(--white);
+                box-shadow: 2px 2px 5px var(--border-color);
+            }
+            ::placeholder {
+                color: var(--grey);
+                font-family: Inter;
+                font-size: 14px;
+                font-style: italic;
+                font-weight: 400;
+                line-height: normal;
+            }
         }
-        ::placeholder{
-            color: var(--grey);
-            font-family: Inter;
-            font-size: 14px;
-            font-style: italic;
-            font-weight: 400;
-            line-height: normal;
-        }
-      }
-      .answerList {
-        text-align: start;
-        display: flex;
-        flex-direction: column;
+        .answerList {
+            text-align: start;
+            display: flex;
+            flex-direction: column;
 
-            fieldset{
+            fieldset {
                 border: none;
                 padding-bottom: 1px;
             }
-            label{
+            label {
                 list-style-type: none;
                 display: inline-flex;
                 width: -webkit-fill-available;
@@ -69,27 +69,21 @@
                 border-radius: 50px;
                 border: 1px solid var(--border-color);
                 margin: 5px 0 0;
-
+                box-shadow: 2px 2px 5px var(--border-color);
             }
-            input{
+            input {
                 display: none;
             }
-            input:checked + label{
+            input:checked + label {
                 background: var(--thumb-border-color);
                 border: 1px solid var(--thumb-border-color);
             }
-
-
-      }
-      .errorMessage {
-        position: relative;
-        top: 15px;
-      }
-      .defaultBtn{
-        margin: 30px 15px;
-        width: 362px;
-      }
+        }
+        .defaultBtn {
+            margin: 30px 15px;
+            width: 362px;
+        }
     }
 }
 
-@import './MediaGetInfoModal.scss'
+@import './MediaGetInfoModal.scss';

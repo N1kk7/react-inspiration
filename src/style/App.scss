@@ -2,96 +2,81 @@
 
 /* FONTS START */
 :root {
-  --font-caveat: 'Caveat';
-  --font-inter: 'Inter';
-  --font-family-caveat: var(--font-caveat), cursive;
-  --font-family-inter: var(--font-inter), sans-serif;
+    --font-caveat: 'Caveat';
+    --font-inter: 'Inter';
+    --font-family-caveat: var(--font-caveat), cursive;
+    --font-family-inter: var(--font-inter), sans-serif;
 
-  // COLORS
-  --main-text-color: #141414;
+    // COLORS
+    --main-text-color: #141414;
 
-  --border-color: #EBEBED;
-  --thumb-border-color: #F8F7F4;
+    --border-color: #ebebed;
+    --thumb-border-color: #f8f7f4;
 
-  --thumb-background-color: #CDCDCD;
-  --footer-background-color: #F6F6F6;
+    --thumb-background-color: #cdcdcd;
+    --footer-background-color: #f6f6f6;
 
-  --grey-lighter: #BEBEBE;
-  --grey: #9E9E9E;
-  --grey-darker: #595959;
+    --grey-lighter: #bebebe;
+    --grey: #9e9e9e;
+    --grey-darker: #595959;
 
-  --green: #05CD55;
+    --green: #05cd55;
 
-  --red: #FF5050;
+    --red: #ff5050;
 
-  --white: #FFFFFF;
-  --black: #000000;
+    --white: #ffffff;
+    --black: #000000;
 
-  // VARIABLES FROM DESIGN
-  --Main-dark: var(--main-text-color);
-  --Grey: var(--grey);
-  /* FONTS END */
+    // VARIABLES FROM DESIGN
+    --Main-dark: var(--main-text-color);
+    --Grey: var(--grey);
+    /* FONTS END */
 }
 
-
 html {
-  height: 100%;
-  min-width: 320px;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+    height: 100%;
+    min-width: 320px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 body {
-  font: 14px/1.2 var(--font-family-inter);
-  height: 100%;
-  min-width: 320px;
-  position: relative;
+    font: 14px/1.2 var(--font-family-inter);
+    height: 100%;
+    min-width: 320px;
+    position: relative;
 }
 
 .App {
-  text-align: center;
-  min-height: 100vh;
+    text-align: center;
+    min-height: 100vh;
 }
 
 .wrapper {
-  display: table;
-  width: 100%;
-  height: 100vh;
-  table-layout: fixed;
-  overflow: hidden;
+    display: table;
+    width: 100%;
+    height: 100vh;
+    table-layout: fixed;
+    overflow: hidden;
 }
 
 .container {
-  // max-width: 1180px;
-  max-width: clamp(240px, 1180px, 2000px);
-  width: calc(100% - 30px);
-  margin: 0 auto;
-  padding:  0 15px;
+    // max-width: 1180px;
+    max-width: clamp(240px, 1180px, 2000px);
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 footer {
-  height: 1px;
-  display: table-row;
+    height: 1px;
+    display: table-row;
 }
 
 .vLine {
-  display: inline-block;
-  width: 1px;
-  height: 20px;
-  background-color: var(--Grey, #9E9E9E);
-  margin: 0 10px;
-
-}
-
-.errorMessage{
-  margin-bottom: 8px;
-  span{
-    font-family: var(--font-inter);
-    color: red;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration-line: underline;
-  }
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background-color: var(--Grey, #9e9e9e);
+    margin: 0 10px;
 }

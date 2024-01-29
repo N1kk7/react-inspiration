@@ -1,9 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
-
-
+import { createSlice } from '@reduxjs/toolkit';
 
 export const getInfoSlice = createSlice({
-
     name: 'getInfoSlice',
     initialState: {
         getInfoModal: false,
@@ -11,9 +8,7 @@ export const getInfoSlice = createSlice({
         answer: '',
         disableGetInfoBtn: false,
         answerMessageError: false,
-        answerError: false,
-
-
+        answerError: false
     },
     reducers: {
         getInfo: (state, action) => {
@@ -21,68 +16,52 @@ export const getInfoSlice = createSlice({
                 case 'open-getInfo':
                     state.getInfoModal = true;
                     // document.body.style.overflow = 'fixed';
-                    document.body.style.overflow ='hidden';
+                    document.body.style.overflow = 'hidden';
 
-
-                break;
+                    break;
                 case 'close-getInfo':
                     state.getInfoModal = false;
                     document.body.style.overflow = 'unset';
 
-
-
-                break;
+                    break;
                 case 'go-back':
                     state.getInfoModal = false;
 
-
-
-                break;
-
-
+                    break;
             }
-
         },
         setMessage: (state, action) => {
-
-            state.answerMessage = action.payload
+            state.answerMessage = action.payload;
             if (state.answerMessage !== '' && state.answer !== '') {
                 state.disableGetInfoBtn = true;
             } else {
                 state.disableGetInfoBtn = false;
             }
-            
         },
         setAnswer: (state, action) => {
-
-            state.answer = action.payload
+            state.answer = action.payload;
             if (state.answerMessage !== '' && state.answer !== '') {
                 state.disableGetInfoBtn = true;
             } else {
                 state.disableGetInfoBtn = false;
             }
-
         },
         setInfoSliceError: (state, action) => {
-
-
             switch (action.payload) {
                 case 'set-message-error':
                     state.answerMessageError = true;
-                    
-                break;
+
+                    break;
                 case 'reset-message-error':
                     state.answerMessageError = false;
-                break;
+                    break;
                 case 'set-answer-error':
-                    
                     state.answerError = true;
-                break;
+                    break;
                 case 'reset-answer-error':
                     state.answerError = false;
-                break;
+                    break;
                 case 'reset-all-errors':
-                    
                     state.answerMessageError = false;
                     state.disableGetInfoBtn = false;
 
@@ -90,23 +69,11 @@ export const getInfoSlice = createSlice({
                     state.answerMessage = '';
                     state.answer = '';
 
-                break;
-
+                    break;
             }
-
-            
         }
-
-       
-
     }
-
-
-
-
-})
+});
 
 export const { getInfo, setAnswer, setMessage, setInfoSliceError } = getInfoSlice.actions;
 export default getInfoSlice.reducer;
-
-

@@ -1,67 +1,63 @@
 @media screen and (max-width: 768px) {
-
-    .modal.selectPlan, .modal.getUnlimAccess {
+    .modal.selectPlan,
+    .modal.getUnlimAccess {
         height: auto;
         .modal-wrapper {
             height: auto;
             padding: 0;
             overflow: scroll;
             .modalTitle {
-              padding: 0;
-              position: relative;
-              h2{
-                font-size: 24px;
-                margin-top: 40px;
-                margin-bottom: 21px;
-              }
+                padding: 0;
+                position: relative;
+                h2 {
+                    font-size: 24px;
+                    margin-top: 40px;
+                    margin-bottom: 21px;
+                }
             }
             .modalTitleDescription {
                 display: none;
             }
-            .planWrapper{
+            .planWrapper {
                 flex-direction: column-reverse;
                 align-items: center;
                 position: relative;
                 margin: 0;
                 padding: 0 20px;
-                .plan{
+                .plan {
                     width: calc(100% - 32px);
                     padding: 0 16px;
                     height: auto;
                     margin: 0 0 20px 0;
-                    .planType{
+                    .planType {
                         height: 5vh;
                         position: relative;
                         padding: 0 2vw;
                         top: 10px;
-
                     }
-                    .list{
-                        ul{
+                    .list {
+                        ul {
                             margin-top: 28px;
                             margin-left: 5px;
                             position: relative;
                             top: 12px;
-                            li{
+                            li {
                                 padding: 8px 0;
-                                span{
+                                span {
                                     letter-spacing: 1px;
                                 }
-
                             }
                         }
                     }
-                    .planBtn{
+                    .planBtn {
                         bottom: -7px;
                         // .defaultBtn{
                         //     position: relative;
                         //     top: 36px;
                         // }
-
                     }
                 }
             }
         }
-
     }
 }

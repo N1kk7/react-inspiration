@@ -1,39 +1,36 @@
-.projectPage{
+.projectPage {
     display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 93vh;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 93vh;
 
-    .thumbWrapper{
+    .thumbWrapper {
         display: flex;
         flex-direction: column;
-        .thumb{
+        .thumb {
             background-color: var(--thumb-border-color);
-             border-radius: 29.817px;;
+            border-radius: 29.817px;
             width: 321.111px;
             height: 543.595px;
             display: flex;
             justify-content: center;
             align-items: center;
-            .thumbItem{
+            .thumbItem {
                 background-color: var(--thumb-background-color);
                 width: 284.413px;
                 height: 506.897px;
                 border-radius: 18.349px;
                 position: relative;
                 .copyBtn {
-                  background-image: url(../../assets/images/copyLinkBtn.svg);
-                  background-color: var(--main-text-color);
-                  background-position: center center;
-                  background-repeat: no-repeat;
-                  border-radius: 50%;
-                  cursor: pointer;
-                  padding: 5px;
-                  height: 24px;
-                  width: 24px;
-
-
-
+                    background-image: url(../../assets/images/copyLinkBtn.svg);
+                    background-color: var(--main-text-color);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    padding: 5px;
+                    height: 24px;
+                    width: 24px;
                 }
                 .notesBtn {
                     background-image: url(../../assets/images/noteBtn.svg);
@@ -48,11 +45,10 @@
                     padding: 5px;
                     height: 24px;
                     width: 24px;
-
                 }
 
                 .pauseBtn,
-                .playBtn{
+                .playBtn {
                     background-image: url(../../assets/images/playBtn.svg);
                     background-color: var(--main-text-color);
                     background-position: center center;
@@ -73,9 +69,6 @@
                     background-image: url(../../assets/images/pauseBtn.svg);
                 }
             }
-
-
         }
-
     }
 }

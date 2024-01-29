@@ -1,61 +1,56 @@
 @media screen and (max-width: 768px) {
-    .modal.welcomeModal{
-    .modal-wrapper{
-        height: -webkit-fill-available;
-        .modalTitle {
-          padding: 40px 0 0px;
-          h2{
-            margin-bottom: 8px;
-
-          }
-        }
-        .modalTitleDescription{
-            padding-bottom: 25px;
-
-            span{
-                font-size: 16px;
-            }
-
-        }
-        .nameWrapper {
-            flex-direction: column;
-            .name{
-                .nameInput {
-                  input{
-                    width: -webkit-fill-available;
-                  }
+    .modal.welcomeModal {
+        .modal-wrapper {
+            height: -webkit-fill-available;
+            .modalTitle {
+                padding: 40px 0 0px;
+                h2 {
+                    margin-bottom: 8px;
                 }
             }
-            .last{
-                bottom: 7px;
-                right: 0px;
-            }
-        }
-        .companyWrapper {
-            padding-bottom: 40px;
+            .modalTitleDescription {
+                padding-bottom: 25px;
 
-            .companyTitle{
-                padding-left: 0;
-
-                h5{
-                    margin-top: 7px;
+                span {
+                    font-size: 16px;
                 }
             }
-            .companyInput {
-                .companyTypeInput{
-                    // width: clamp(270px , 80vw, 650px);
-                    width: -webkit-fill-available;
-                    // margin: 0 2vw;
+            .nameWrapper {
+                flex-direction: column;
+                .name {
+                    .nameInput {
+                        input {
+                            width: -webkit-fill-available;
+                            box-shadow: 2px 2px 5px var(--border-color);
+                        }
+                    }
+                }
+                .last {
+                    bottom: 7px;
+                    right: 0px;
                 }
             }
+            .companyWrapper {
+                padding-bottom: 40px;
 
-        }
-        .errorMessage {
-          text-align: center;
-        }
-        .defaultBtn{
-            margin: 0;
+                .companyTitle {
+                    padding-left: 0;
+
+                    h5 {
+                        margin-top: 7px;
+                    }
+                }
+                .companyInput {
+                    .companyTypeInput {
+                        // width: clamp(270px , 80vw, 650px);
+                        width: -webkit-fill-available;
+                        // margin: 0 2vw;
+                    }
+                }
+            }
+            .defaultBtn {
+                margin: 0;
+            }
         }
     }
-}
 }

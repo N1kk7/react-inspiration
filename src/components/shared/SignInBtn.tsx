@@ -1,16 +1,12 @@
-import React from "react";
-import './Shared.scss'
+import React from 'react';
+import './Shared.scss';
 
 const SignInBtn = () => {
-    
-    return(
+    return (
         <>
-            <div className="signInBtn">
-                Sign in
-            </div>
+            <div className='signInBtn'>Sign in</div>
         </>
+    );
+};
 
-    )
-}
-
-export default SignInBtn
+export default SignInBtn;

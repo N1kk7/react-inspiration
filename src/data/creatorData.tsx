@@ -1,19 +1,12 @@
 // import creatorAvatar from '../assets/images/creatorAvatar.png';
 import creatorAvatar from '../assets/images/creator-avatar.png';
 import tiktok from '../assets/images/tiktok.svg';
-import inst from '../assets/images/instagram.svg'
-import xSocial from '../assets/images/x.svg'
-import globeSocial from '../assets/images/globe.svg'
+import inst from '../assets/images/instagram.svg';
+import xSocial from '../assets/images/x.svg';
+import globeSocial from '../assets/images/globe.svg';
 import { ICreator } from '../model/creatorModel';
 
-
-
-
-
-
-
-
-const creatorData: ICreator ={
+const creatorData: ICreator = {
     id: 1,
     creatorImg: creatorAvatar,
     creator: 'UGC Creator',
@@ -24,9 +17,8 @@ const creatorData: ICreator ={
         tikTok: tiktok,
         instagram: inst,
         x: xSocial,
-        globe: globeSocial,
+        globe: globeSocial
     }
+};
 
-}
-
-export default creatorData
+export default creatorData;

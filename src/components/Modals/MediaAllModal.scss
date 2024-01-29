@@ -1,6 +1,5 @@
 @media screen and (max-width: 768px) {
-
-    .modal{
+    .modal {
         .modal-wrapper {
             justify-content: center;
             padding: 68px 20px;
@@ -8,31 +7,28 @@
             width: 100%;
             display: block;
 
-            .backBtn{
+            .backBtn {
                 top: 22px;
                 left: 20px;
                 width: 20px;
 
-                span{
+                span {
                     display: none;
                 }
             }
-            .closeBtn{
+            .closeBtn {
                 top: 21px;
                 right: 22px;
             }
-            .modalTitle{
+            .modalTitle {
                 padding: 56px 0 29px;
-                h2{
+                h2 {
                     font-size: 24px;
                     font-weight: 700;
                     line-height: 40px;
                     text-transform: initial;
                 }
             }
-
-
         }
     }
-
 }

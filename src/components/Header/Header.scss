@@ -1,148 +1,146 @@
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
-.headerMargin{
-  margin-bottom: 34px;
+.headerMargin {
+    margin-bottom: 34px;
 }
 
 .App-header {
-  display: grid;
-  grid-template-columns: 1fr 160px 1fr;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 0;
-  color: white;
-  .pageMenu {
-    text-align: start;
-    flex-grow: 1;
-    flex-shrink: 1;
-    padding-left: 20px;
-    .Page-Name{
-      display: inline-block;
-      color: var(--main-text-color);
-      text-align: center;
-      text-decoration: none;
-      font-family: inherit;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      padding-right: 68px;
-      cursor: pointer;
-    }
-  }
-  .Title-Page{
-    flex-grow: 0;
-    flex-shrink: 0;
-    color: var(--main-text-color);
-    text-align: center;
-    font-family: inherit;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  .login-menu {
-    text-align: end;
-    position: relative;
-    flex-grow: 1;
-    flex-shrink: 1;
-
-    button{
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-      padding: 11px 19px;
-      img{
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-15%, 13%);
-      }
-    }
-    .vLine{
-      margin: 0;
-      height: 25px;
-      position: absolute;
-      bottom: 5px;
-    }
-    .log-btn{
-      color: var(--main-text-color);
-      font-family: inherit;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-      padding: 11px 19px;
-      text-decoration: none;
-      background-image: linear-gradient(currentColor, currentColor);
-      background-position: 0% 100%;
-      background-repeat: no-repeat;
-      background-size: 0% 2px;
-      transition: background-size .3s;
-      position: relative;
-      top: 1px;
-    }
-    .go-pro{
-      margin: 0 8px;
-    }
-    .log-btn:hover{
-      background-size: 70% 2px;
-    }
-    .sign-btn,
-    .user-profileBtn{
-      background-color: var(--main-text-color);
-      border-radius: 50px;
-      color: #FFF;
-      text-align: center;
-      font-family: inherit;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-      margin-left: 26px;
-
-    }
-    .sign-btn:hover{
-      background-color: #595959;
-    }
-    .user-profileBtn{
-      width: 131px;
-      font-size: 12px;
-      padding: 13px 4px 13px 17px;
-      position: relative;
-      text-align: start;
-    }
-    .profilePopup {
-        position: absolute;
-        right: 0;
-        top: 5vh;
-        width: 171px;
-        border-radius: 15px;
-        background: var(--White, #FFF);
-        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
-        z-index: 3;
-        ul{
-          padding: 0 30px;
-          li{
+    display: grid;
+    grid-template-columns: 1fr 160px 1fr;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    color: white;
+    .pageMenu {
+        text-align: start;
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding-left: 20px;
+        .Page-Name {
+            display: inline-block;
             color: var(--main-text-color);
-            text-align: start;
-            font-family: var(--font-inter);
+            text-align: center;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            padding-right: 68px;
+            cursor: pointer;
+        }
+    }
+    .Title-Page {
+        flex-grow: 0;
+        flex-shrink: 0;
+        color: var(--main-text-color);
+        text-align: center;
+        font-family: inherit;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .login-menu {
+        text-align: end;
+        position: relative;
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            padding: 11px 19px;
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translate(-15%, 13%);
+            }
+        }
+        .vLine {
+            margin: 0;
+            height: 25px;
+            position: absolute;
+            bottom: 5px;
+        }
+        .log-btn {
+            color: var(--main-text-color);
+            font-family: inherit;
             font-size: 14px;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
-            list-style-type: none;
-            cursor: pointer;
-            padding: 15px 0;
-          }
+            padding: 11px 19px;
+            text-decoration: none;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size 0.3s;
+            position: relative;
+            top: 1px;
         }
-
+        .go-pro {
+            margin: 0 8px;
+        }
+        .log-btn:hover {
+            background-size: 70% 2px;
+        }
+        .sign-btn,
+        .user-profileBtn {
+            background-color: var(--main-text-color);
+            border-radius: 50px;
+            color: #fff;
+            text-align: center;
+            font-family: inherit;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-left: 26px;
+        }
+        .sign-btn:hover {
+            background-color: #595959;
+        }
+        .user-profileBtn {
+            width: 131px;
+            font-size: 12px;
+            padding: 13px 4px 13px 17px;
+            position: relative;
+            text-align: start;
+        }
+        .profilePopup {
+            position: absolute;
+            right: 0;
+            top: 5vh;
+            width: 171px;
+            border-radius: 15px;
+            background: var(--White, #fff);
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+            z-index: 3;
+            ul {
+                padding: 0 30px;
+                li {
+                    color: var(--main-text-color);
+                    text-align: start;
+                    font-family: var(--font-inter);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    list-style-type: none;
+                    cursor: pointer;
+                    padding: 15px 0;
+                }
+            }
+        }
     }
-  }
 }
 
-@import './MediaHeader.scss'
+@import './MediaHeader.scss';
