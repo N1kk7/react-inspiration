@@ -114,7 +114,7 @@
         &-button-prev {
             background: linear-gradient(90deg, #fff 0%, #fff 50%, transparent);
             background-repeat: no-repeat;
-            left: -5;
+            left: -5px;
             width: 40px;
             height: 44px;
 
@@ -123,13 +123,17 @@
                 background-image: url('../../assets/images/left.svg');
                 width: 7px;
                 height: 14px;
+                position: absolute;
+                top: 50%;
+                left: 8px;
+                transform: translateY(-50%);
             }
         }
 
         &-button-next {
             background: linear-gradient(90deg, transparent 0%, #fff 50%, #fff 100%);
             background-repeat: no-repeat;
-            right: -5;
+            right: -5px;
             width: 40px;
             height: 44px;
 
@@ -138,6 +142,10 @@
                 background-image: url('../../assets/images/right.svg');
                 width: 7px;
                 height: 14px;
+                position: absolute;
+                top: 50%;
+                right: 8px;
+                transform: translateY(-50%);
             }
         }
 

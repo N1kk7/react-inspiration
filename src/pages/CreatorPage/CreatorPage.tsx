@@ -18,20 +18,42 @@ import { Navigation } from 'swiper/modules';
 
 import UnlogBrandFooter from '../../components/Footer/UnlogFooter/UnlogBrandFooter';
 import Footer from '../../components/Footer/Footer';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import DefaultBtn from '../../components/shared/DefaultBtn';
 import GetUnlimAccess from '../../components/Modals/SelectPlanModal/GetUnlimAccess';
 import SupportModal from '../../components/Modals/SupportModal/SupportModal';
 import SuccessSendReq from '../../components/Modals/SuccessSupportReq/SuccessSendReq';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { popup } from '../../redux/rootSlice';
 
 const CreatorPage = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
     const getUnlimAccessModal = useSelector((state: any) => state.selectPlanState.getUnlimAccessModal);
     const supportModal = useSelector((state: any) => state.supportState.supportModal);
     const sendRequestModal = useSelector((state: any) => state.supportState.sendRequestModal);
 
     const [activeClass, setActiveClass] = useState<string>('ads');
+    const filterPopup = useSelector((state: any) => state.mainState.filterPopup);
+
+    const callModal = (btn: string) => {
+        const toggleFilter = () => {
+            filterPopup ? dispatch(popup('close-filter')) : dispatch(popup('open-filter'));
+        };
+
+        switch (btn) {
+            case 'filter':
+                guestStatus ? dispatch(popup('open-signIn')) : toggleFilter();
+
+                break;
+            case 'search':
+                guestStatus ? dispatch(popup('open-signIn')) : navigate('/search-page');
+
+                break;
+        }
+    };
 
     return (
         <>
@@ -121,19 +143,128 @@ const CreatorPage = () => {
                                 </ul>
                             </div>
                         )}
+
                         <Swiper slidesPerView='auto' spaceBetween={10} navigation={true} modules={[Navigation]} className='mySwiper'>
-                            <SwiperSlide>App / Digital</SwiperSlide>
-                            <SwiperSlide>Apparel / Fashion</SwiperSlide>
-                            <SwiperSlide>Beauty / Personal Care</SwiperSlide>
-                            <SwiperSlide>Business Services</SwiperSlide>
-                            <SwiperSlide>Electronics / Tech</SwiperSlide>
-                            <SwiperSlide>Financial Services</SwiperSlide>
-                            <SwiperSlide>Food / Beverage</SwiperSlide>
-                            <SwiperSlide>App / Digital</SwiperSlide>
-                            <SwiperSlide>Apparel / Fashion</SwiperSlide>
-                            <SwiperSlide>Beauty / Personal Care</SwiperSlide>
-                            <SwiperSlide>Business Services</SwiperSlide>
-                            <SwiperSlide>Electronics / Tech</SwiperSlide>
+                            <SwiperSlide>
+                                <Link
+                                    to='#'
+                                    onClick={() => {
+                                        callModal('filter');
+                                    }}
+                                >
+                                    App / Digital
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link
+                                    to='#'
+                                    onClick={() => {
+                                        callModal('filter');
+                                    }}
+                                >
+                                    Apparel / Fashion
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link
+                                    to='#'
+                                    onClick={() => {
+                                        callModal('filter');
+                                    }}
+                                >
+                                    Beauty / Personal Care
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link
+                                    to='#'
+                                    onClick={() => {
+                                        callModal('filter');
+                                    }}
+                                >
+                                    Business Services
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link
+                                    to='#'
+                                    onClick={() => {
+                                        callModal('filter');
+                                    }}
+                                >
+                                    Electronics / Tech
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link
+                                    to='#'
+                                    onClick={() => {
+                                        callModal('filter');
+                                    }}
+                                >
+                                    Financial Services
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link
+                                    to='#'
+                                    onClick={() => {
+                                        callModal('filter');
+                                    }}
+                                >
+                                    Food / Beverage
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link
+                                    to='#'
+                                    onClick={() => {
+                                        callModal('filter');
+                                    }}
+                                >
+                                    App / Digital
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link
+                                    to='#'
+                                    onClick={() => {
+                                        callModal('filter');
+                                    }}
+                                >
+                                    Apparel / Fashion
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link
+                                    to='#'
+                                    onClick={() => {
+                                        callModal('filter');
+                                    }}
+                                >
+                                    Beauty / Personal Care
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link
+                                    to='#'
+                                    onClick={() => {
+                                        callModal('filter');
+                                    }}
+                                >
+                                    Business Services
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link
+                                    to='#'
+                                    onClick={() => {
+                                        callModal('filter');
+                                    }}
+                                >
+                                    Electronics / Tech
+                                </Link>
+                            </SwiperSlide>
                         </Swiper>
                     </div>
 
