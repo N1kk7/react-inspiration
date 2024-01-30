@@ -1,0 +1,15 @@
+.linkCopied {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white);
+    border-radius: 50px;
+    background: #848383;
+    position: fixed;
+    left: 50%;
+    bottom: 50px;
+    z-index: 10;
+    padding: 11px 19px;
+}

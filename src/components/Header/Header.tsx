@@ -71,7 +71,7 @@ const Header = () => {
 
             </Link> */}
                     {!guestStatus && (
-                        <Link to='/creator-page/collections' className='Page-Name'>
+                        <Link to='/collection-page' className='Page-Name'>
                             My Collections
                         </Link>
                     )}
