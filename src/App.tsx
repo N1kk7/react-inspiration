@@ -23,6 +23,7 @@ import PaymentPage from './pages/PaymentPage/PaymentPage';
 import AdminPanel from './admin/AdminPanel/AdminPanel';
 import AdminLogin from './admin/AdminPanel/AdminLogin';
 import EditProfile from './pages/EditProfile/EditProfile';
+import LinkCopied from './components/Modals/LinkCopied/LinkCopied';
 
 import SubmitWorkPage from './pages/SubmitWorkPage/SubmitWorkPage/SubmitWorkPage';
 import EditWorkPage from './pages/SubmitWorkPage/EditWorkPage/EditWorkPage';
@@ -60,6 +61,7 @@ function App() {
     const submitPage = useSelector((state: any) => state.submitPageState.submitPage);
     const editAdPage = useSelector((state: any) => state.submitPageState.editPage);
     const subscriptionPage = useSelector((state: any) => state.subscriptionState.subscriptionPage);
+    const linkCopiedState = useSelector((state: any) => state.mainState.linkCopiedModal);
 
     const guestStatus = useSelector((state: any) => state.logInState.guestStatus);
 
@@ -74,6 +76,7 @@ function App() {
                 {welcomeModal && <WelcomeModal />}
                 {getInfoModal && <GetInfo />}
                 {selectPlanModal && <SelectPlan />}
+                {linkCopiedState && <LinkCopied />}
 
                 <Routes>
                     <Route index path='/' element={<MainPage />} />

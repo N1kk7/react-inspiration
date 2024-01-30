@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ThumbAdmin.scss';
 import './MediaThumbAdmin.scss';
 import { IThumb } from '../../../model/cardModelAdmin';
-import { creatorBrand } from '../../../redux/rootSlice';
+import { copiedLinkState, creatorBrand } from '../../../redux/rootSlice';
 import { useDispatch } from 'react-redux';
 
 interface ThumbModel {
@@ -16,6 +16,14 @@ export default function Thumb({ img, avatar, userName, id }: ThumbModel) {
     const [playClass, setPlayClass] = useState<string>('playBtn');
 
     const dispatch = useDispatch();
+
+    function handleLinkCopied(): void {
+        dispatch(copiedLinkState('copied-modal-open'));
+
+        setTimeout(() => {
+            dispatch(copiedLinkState('copied-modal-close'));
+        }, 5000);
+    }
 
     const togglePlay = () => {
         playClass === 'playBtn' ? setPlayClass('pauseBtn') : setPlayClass('playBtn');
@@ -35,11 +43,11 @@ export default function Thumb({ img, avatar, userName, id }: ThumbModel) {
                     </div>
                     <div className='thumbHover'>
                         {/* TODO make function for copyBtn to show popup "Link copied" */}
-                        <button className='copyBtn'></button>
+                        <button className='copyBtn' onClick={() => handleLinkCopied()}></button>
                         {/* TODO make function for notesBtn to show popup with login */}
                         <button className='notesBtn'></button>
                         {/* TODO make function for edit button */}
-                        <button className='editBtn'></button>
+                        {/* <button className='editBtn'></button> */}
 
                         <button className={playClass} onClick={() => togglePlay()}></button>
                     </div>

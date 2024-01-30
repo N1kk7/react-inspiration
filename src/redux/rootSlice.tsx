@@ -27,7 +27,9 @@ export const rootSlice = createSlice({
         creatorPage: false,
         brandPage: false,
 
-        deleteModal: false
+        deleteModal: false,
+
+        linkCopiedModal: false
     },
     reducers: {
         popup: (state, action) => {
@@ -198,9 +200,20 @@ export const rootSlice = createSlice({
                     state.deleteModal = false;
                     break;
             }
+        },
+
+        copiedLinkState: (state, action) => {
+            switch (action.payload) {
+                case 'copied-modal-open':
+                    state.linkCopiedModal = true;
+                    break;
+                case 'copied-modal-close':
+                    state.linkCopiedModal = false;
+                    break;
+            }
         }
     }
 });
 
-export const { popup, enterEmail, enterPassword, createPassword, confirmPassword, creatorBrand, checkPasswordError, deleteModalState } = rootSlice.actions;
+export const { popup, enterEmail, enterPassword, createPassword, confirmPassword, creatorBrand, checkPasswordError, deleteModalState, copiedLinkState } = rootSlice.actions;
 export default rootSlice.reducer;
